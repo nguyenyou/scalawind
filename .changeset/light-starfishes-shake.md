@@ -1,0 +1,5 @@
+---
+"scalawind": patch
+---
+
+md modifier

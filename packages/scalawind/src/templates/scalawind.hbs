@@ -22,6 +22,11 @@ case class SwStyle(style: String = "") {
     addClasses(hoverClasses)
   }
 
+  def md(mdStyle: SwStyle): SwStyle = {
+    val mdClasses = mdStyle.style.split("\\s+").map(cls => s"md:$cls").mkString(" ")
+    addClasses(mdClasses)
+  }
+
   override def toString: String = style
 }
 
@@ -45,6 +50,7 @@ object tw {
   def text_black: SwStyle = SwStyle().addClass(cls.text_black)
 
   def hover(hoverStyle: SwStyle): SwStyle = SwStyle().hover(hoverStyle)
+  def md(mdStyle: SwStyle): SwStyle = SwStyle().md(mdStyle)
 }
 
 inline def sw(inline styles: SwStyle): String =
@@ -57,6 +63,9 @@ private def swImpl(stylesExpr: Expr[SwStyle])(using Quotes): Expr[String] = {
     case Apply(Select(inner, "hover"), List(hoverStyle)) =>
       val hoverClasses = extractClassNames(hoverStyle).map(cls => s"hover:$cls")
       extractClassNames(inner) ++ hoverClasses
+    case Apply(Select(inner, "md"), List(mdStyle)) =>
+      val mdClasses = extractClassNames(mdStyle).map(cls => s"md:$cls")
+      extractClassNames(inner) ++ mdClasses
     case Apply(Ident(name), List(inner)) =>
       extractClassNames(inner) :+ name.replace("_", "-")
     case Inlined(_, _, inner) =>
