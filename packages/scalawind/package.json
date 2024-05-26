@@ -1,0 +1,15 @@
+{
+  "name": "scalawind",
+  "version": "0.0.1",
+  "description": "TailwindCSS with the robust type system of Scala",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  }
+}
