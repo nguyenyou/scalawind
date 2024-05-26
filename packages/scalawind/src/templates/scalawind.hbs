@@ -44,7 +44,7 @@ object tw {
   def text_white: SwStyle = SwStyle().addClass(cls.text_white)
   def text_black: SwStyle = SwStyle().addClass(cls.text_black)
 
-  def hover(hoverStyle: TwStyle): TwStyle = TwStyle().hover(hoverStyle)
+  def hover(hoverStyle: SwStyle): SwStyle = SwStyle().hover(hoverStyle)
 }
 
 inline def sw(inline styles: SwStyle): String =
