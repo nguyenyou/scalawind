@@ -233,8 +233,6 @@ export async function generate() {
     return fmtToTypewind(s);
   });
 
-  console.log(modifiers)
-
   const colors = [...colorSet].map((k) => JSON.stringify(k))
   // console.log(colors)
   // console.log(colorSet)
