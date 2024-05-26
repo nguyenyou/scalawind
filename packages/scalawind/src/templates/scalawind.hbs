@@ -2,7 +2,7 @@ package {{package}}
 
 import scala.quoted.*
 
-object tw {
+object cls {
   val flex = "flex"
   val bg_black = "bg-black"
   val bg_white = "bg-white"
@@ -18,7 +18,7 @@ case class SwStyle(style: String = "") {
   def addClass(className: String): SwStyle = addClasses(className)
 
   def hover(hoverStyle: SwStyle): SwStyle = {
-    val hoverClasses = hoverStyle.style.split("\\s+").map(tw => s"hover:$tw").mkString(" ")
+    val hoverClasses = hoverStyle.style.split("\\s+").map(cls => s"hover:$cls").mkString(" ")
     addClasses(hoverClasses)
   }
 
@@ -29,26 +29,26 @@ given Conversion[SwStyle, String] with
   def apply(swStyle: SwStyle): String = swStyle.style
 
 extension (swStyle: SwStyle)
-  def flex: SwStyle = swStyle.addClass(tw.flex)
-  def bg_black: SwStyle = swStyle.addClass(tw.bg_black)
-  def bg_white: SwStyle = swStyle.addClass(tw.bg_white)
-  def text_white: SwStyle = swStyle.addClass(tw.text_white)
-  def text_black: SwStyle = swStyle.addClass(tw.text_black)
+  def flex: SwStyle = swStyle.addClass(cls.flex)
+  def bg_black: SwStyle = swStyle.addClass(cls.bg_black)
+  def bg_white: SwStyle = swStyle.addClass(cls.bg_white)
+  def text_white: SwStyle = swStyle.addClass(cls.text_white)
+  def text_black: SwStyle = swStyle.addClass(cls.text_black)
 
-object sw {
+object tw {
   def apply(): SwStyle = SwStyle()
 
-  def flex: SwStyle = SwStyle().addClass(tw.flex)
-  def bg_black: SwStyle = SwStyle().addClass(tw.bg_black)
-  def bg_white: SwStyle = SwStyle().addClass(tw.bg_white)
-  def text_white: SwStyle = SwStyle().addClass(tw.text_white)
-  def text_black: SwStyle = SwStyle().addClass(tw.text_black)
+  def flex: SwStyle = SwStyle().addClass(cls.flex)
+  def bg_black: SwStyle = SwStyle().addClass(cls.bg_black)
+  def bg_white: SwStyle = SwStyle().addClass(cls.bg_white)
+  def text_white: SwStyle = SwStyle().addClass(cls.text_white)
+  def text_black: SwStyle = SwStyle().addClass(cls.text_black)
 }
 
-inline def sw(inline styles: TwStyle): String =
+inline def sw(inline styles: SwStyle): String =
   ${ swImpl('styles) }
 
-private def swImpl(stylesExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
+private def swImpl(stylesExpr: Expr[SwStyle])(using Quotes): Expr[String] = {
   import quotes.reflect.*
 
   def extractClassNames(term: Term): List[String] = term match {
@@ -70,6 +70,6 @@ private def swImpl(stylesExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
   val term = stylesExpr.asTerm
   val classNames = extractClassNames(term)
   val combinedClasses = classNames.mkString(" ")
-  report.info(s"Compiled classes: $combinedClasses")
+  report.info(s"Compiled: $combinedClasses")
   Expr(combinedClasses)
 }
