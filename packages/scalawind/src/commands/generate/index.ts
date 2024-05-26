@@ -247,7 +247,7 @@ export async function generate() {
   );
 
   const generatedScalawind = template({ package: "scalawind"})
-  const outputPath = path.join(process.cwd(), "./Scalawind.scala");
+  const outputPath = path.join(process.cwd(), "./scalawind.scala");
   // console.log(classesWithCandidateItem)
 
   fs.writeFileSync(
