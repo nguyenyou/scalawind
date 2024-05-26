@@ -233,7 +233,7 @@ export async function generate() {
     return fmtToTypewind(s);
   });
 
-  // console.log(modifiers)
+  console.log(modifiers)
 
   const colors = [...colorSet].map((k) => JSON.stringify(k))
   // console.log(colors)
@@ -246,7 +246,7 @@ export async function generate() {
     'utf8'
   );
 
-  const generatedScalawind = template({ package: "scalawind"})
+  const generatedScalawind = template({ package: "scalawind", modifiers})
   const outputPath = path.join(process.cwd(), "./scalawind.scala");
   // console.log(classesWithCandidateItem)
 
