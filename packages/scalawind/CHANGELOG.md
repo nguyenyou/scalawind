@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.10
+
+### Patch Changes
+
+- 667400c: modifiers
+
 ## 0.0.9
 
 ### Patch Changes

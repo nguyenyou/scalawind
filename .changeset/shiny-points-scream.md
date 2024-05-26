@@ -1,5 +1,0 @@
----
-"scalawind": patch
----
-
-modifiers
