@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.5
+
+### Patch Changes
+
+- 2510382: generate scalawind
+
 ## 0.0.4
 
 ### Patch Changes
