@@ -1,4 +1,6 @@
 import { defineConfig } from 'tsup';
+import fs from "fs-extra";
+import chalk from "chalk";
 
 export default defineConfig({
   entry: [
@@ -8,8 +10,18 @@ export default defineConfig({
   splitting: false,
   clean: true,
   platform: 'node',
-  external: ['scalawind', 'tailwindcss'],
-  format: ['cjs', 'esm'],
+  external: ['tailwindcss'],
+  format: ['esm'],
   target: 'esnext',
   dts: true,
+  onSuccess: async () => {
+    // start time
+    const start = Date.now();
+    await fs.copy("src/templates", "dist/templates");
+    console.log(
+      chalk.hex("#7c5cad")("TEMPLATES"),
+      "copied in",
+      chalk.green(`${Date.now() - start}ms`)
+    );
+  }
 });
