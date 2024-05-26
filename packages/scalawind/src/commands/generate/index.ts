@@ -116,7 +116,7 @@ function fmtRuleToCss(ruleSet: any) {
   return `${selector} ${fmtRuleset(ruleSet[selector])}`;
 }
 
-const fmtToTypewind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$');
+const fmtToTypewind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/g, '');
 
 export async function generate() {
   const ctx = await getTypewindContext();
@@ -182,7 +182,7 @@ export async function generate() {
       }
     }
 
-    return { prop: fmtToTypewind(s), type: 'Property', doc: css };
+    return { prop: fmtToTypewind(s), raw: s, type: 'Property', doc: css };
   })
 
 
@@ -238,13 +238,11 @@ export async function generate() {
   // console.log(colorSet)
   fs.writeFileSync(
     path.join(require.resolve('scalawind'), '../standard.json'),
-    JSON.stringify({
-      standard
-    }),
+    JSON.stringify(standard),
     'utf8'
   );
 
-  const generatedScalawind = template({ package: "scalawind", modifiers})
+  const generatedScalawind = template({ package: "scalawind", modifiers, standard})
   const outputPath = path.join(process.cwd(), "./scalawind.scala");
   // console.log(classesWithCandidateItem)
 

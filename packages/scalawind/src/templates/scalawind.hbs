@@ -3,11 +3,9 @@ package {{package}}
 import scala.quoted.*
 
 object cls {
-  val flex = "flex"
-  val bg_black = "bg-black"
-  val bg_white = "bg-white"
-  val text_white = "text-white"
-  val text_black = "text-black"
+  {{#each standard}}
+  val {{this.prop}} = "{{this.raw}}"
+  {{/each}}
 }
 
 case class SwStyle(style: String = "") {
@@ -31,20 +29,16 @@ given Conversion[SwStyle, String] with
   def apply(swStyle: SwStyle): String = swStyle.style
 
 extension (swStyle: SwStyle)
-  def flex: SwStyle = swStyle.addClass(cls.flex)
-  def bg_black: SwStyle = swStyle.addClass(cls.bg_black)
-  def bg_white: SwStyle = swStyle.addClass(cls.bg_white)
-  def text_white: SwStyle = swStyle.addClass(cls.text_white)
-  def text_black: SwStyle = swStyle.addClass(cls.text_black)
+  {{#each standard}}
+  def {{this.prop}}: SwStyle = swStyle.addClass(cls.{{this.prop}})
+  {{/each}}
 
 object tw {
   def apply(): SwStyle = SwStyle()
 
-  def flex: SwStyle = SwStyle().addClass(cls.flex)
-  def bg_black: SwStyle = SwStyle().addClass(cls.bg_black)
-  def bg_white: SwStyle = SwStyle().addClass(cls.bg_white)
-  def text_white: SwStyle = SwStyle().addClass(cls.text_white)
-  def text_black: SwStyle = SwStyle().addClass(cls.text_black)
+  {{#each standard}}
+  def {{this.prop}}: SwStyle = SwStyle().addClass(cls.{{this.prop}})
+  {{/each}}
 
   {{#each modifiers}}
   def {{this}}(styles: SwStyle): SwStyle = SwStyle().{{this}}(styles)
