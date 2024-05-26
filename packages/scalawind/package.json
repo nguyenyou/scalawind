@@ -6,10 +6,28 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "homepage": "https://scalawind.vercel.app",
+  "bin": {
+    "scalawind": "dist/cli.js"
+  },
+  "keywords": [
+    "scala",
+    "scala3",
+    "tailwind",
+    "tailwindcss",
+    "zero-runtime"
+  ],
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts"
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cac": "^6.7.14"
   }
 }

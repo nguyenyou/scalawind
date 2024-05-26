@@ -137,7 +137,18 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/scalawind: {}
+  packages/scalawind:
+    dependencies:
+      cac:
+        specifier: ^6.7.14
+        version: 6.7.14
+    devDependencies:
+      '@types/node':
+        specifier: ^20.11.24
+        version: 20.11.24
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
 
   packages/typescript-config: {}
 
