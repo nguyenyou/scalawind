@@ -1,5 +1,0 @@
----
-"scalawind": patch
----
-
-fix type
