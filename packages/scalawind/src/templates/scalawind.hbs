@@ -17,15 +17,12 @@ case class SwStyle(style: String = "") {
   }
   def addClass(className: String): SwStyle = addClasses(className)
 
-  def hover(hoverStyle: SwStyle): SwStyle = {
-    val hoverClasses = hoverStyle.style.split("\\s+").map(cls => s"hover:$cls").mkString(" ")
-    addClasses(hoverClasses)
+  {{#each modifiers}}
+  def {{this}}(styles: SwStyle): SwStyle = {
+    val classes = styles.style.split("\\s+").map(cls => s"{{this}}:$cls").mkString(" ")
+    addClasses(classes)
   }
-
-  def md(mdStyle: SwStyle): SwStyle = {
-    val mdClasses = mdStyle.style.split("\\s+").map(cls => s"md:$cls").mkString(" ")
-    addClasses(mdClasses)
-  }
+  {{/each}}
 
   override def toString: String = style
 }
@@ -49,8 +46,9 @@ object tw {
   def text_white: SwStyle = SwStyle().addClass(cls.text_white)
   def text_black: SwStyle = SwStyle().addClass(cls.text_black)
 
-  def hover(hoverStyle: SwStyle): SwStyle = SwStyle().hover(hoverStyle)
-  def md(mdStyle: SwStyle): SwStyle = SwStyle().md(mdStyle)
+  {{#each modifiers}}
+  def {{this}}(styles: SwStyle): SwStyle = SwStyle().{{this}}(styles)
+  {{/each}}
 }
 
 inline def sw(inline styles: SwStyle): String =
@@ -60,12 +58,11 @@ private def swImpl(stylesExpr: Expr[SwStyle])(using Quotes): Expr[String] = {
   import quotes.reflect.*
 
   def extractClassNames(term: Term): List[String] = term match {
-    case Apply(Select(inner, "hover"), List(hoverStyle)) =>
-      val hoverClasses = extractClassNames(hoverStyle).map(cls => s"hover:$cls")
-      extractClassNames(inner) ++ hoverClasses
-    case Apply(Select(inner, "md"), List(mdStyle)) =>
-      val mdClasses = extractClassNames(mdStyle).map(cls => s"md:$cls")
-      extractClassNames(inner) ++ mdClasses
+    {{#each modifiers}}
+    case Apply(Select(inner, "{{this}}"), List(styles)) =>
+      val classes = extractClassNames(styles).map(cls => s"{{this}}:$cls")
+      extractClassNames(inner) ++ classes
+    {{/each}}
     case Apply(Ident(name), List(inner)) =>
       extractClassNames(inner) :+ name.replace("_", "-")
     case Inlined(_, _, inner) =>
