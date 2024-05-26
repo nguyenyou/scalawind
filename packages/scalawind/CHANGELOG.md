@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.11
+
+### Patch Changes
+
+- 92b3fd9: standard class
+
 ## 0.0.10
 
 ### Patch Changes
