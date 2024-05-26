@@ -1,6 +1,6 @@
 {
   "name": "scalawind",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "TailwindCSS with the robust type system of Scala",
   "license": "MIT",
   "main": "./dist/index.js",
