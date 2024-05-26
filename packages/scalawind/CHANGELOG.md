@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.7
+
+### Patch Changes
+
+- 443a51d: add hover modifier
+
 ## 0.0.6
 
 ### Patch Changes
