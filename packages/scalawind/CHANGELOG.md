@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.8
+
+### Patch Changes
+
+- 20f8392: fix type
+
 ## 0.0.7
 
 ### Patch Changes
