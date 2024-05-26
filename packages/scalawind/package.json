@@ -1,6 +1,6 @@
 {
   "name": "scalawind",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "TailwindCSS with the robust type system of Scala",
   "license": "MIT",
   "type": "module",
