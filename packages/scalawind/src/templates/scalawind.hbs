@@ -2,7 +2,7 @@ package {{package}}
 
 import scala.quoted.*
 
-object cls {
+object clx {
   {{#each standard}}
   val {{this.prop}} = "{{this.raw}}"
   {{/each}}
@@ -17,7 +17,7 @@ case class SwStyle(style: String = "") {
 
   {{#each modifiers}}
   def {{this}}(styles: SwStyle): SwStyle = {
-    val classes = styles.style.split("\\s+").map(cls => s"{{this}}:$cls").mkString(" ")
+    val classes = styles.style.split("\\s+").map(clx => s"{{this}}:$clx").mkString(" ")
     addClasses(classes)
   }
   {{/each}}
@@ -30,14 +30,14 @@ given Conversion[SwStyle, String] with
 
 extension (swStyle: SwStyle)
   {{#each standard}}
-  def {{this.prop}}: SwStyle = swStyle.addClass(cls.{{this.prop}})
+  def {{this.prop}}: SwStyle = swStyle.addClass(clx.{{this.prop}})
   {{/each}}
 
 object tw {
   def apply(): SwStyle = SwStyle()
 
   {{#each standard}}
-  def {{this.prop}}: SwStyle = SwStyle().addClass(cls.{{this.prop}})
+  def {{this.prop}}: SwStyle = SwStyle().addClass(clx.{{this.prop}})
   {{/each}}
 
   {{#each modifiers}}
@@ -54,7 +54,7 @@ private def swImpl(stylesExpr: Expr[SwStyle])(using Quotes): Expr[String] = {
   def extractClassNames(term: Term): List[String] = term match {
     {{#each modifiers}}
     case Apply(Select(inner, "{{this}}"), List(styles)) =>
-      val classes = extractClassNames(styles).map(cls => s"{{this}}:$cls")
+      val classes = extractClassNames(styles).map(clx => s"{{this}}:$clx")
       extractClassNames(inner) ++ classes
     {{/each}}
     case Apply(Ident(name), List(inner)) =>
