@@ -1,6 +1,7 @@
 import { defineConfig } from 'tsup';
 import fs from "fs-extra";
 import chalk from "chalk";
+import { createRequire } from 'module';
 
 export default defineConfig({
   entry: [
@@ -11,7 +12,7 @@ export default defineConfig({
   clean: true,
   platform: 'node',
   external: ['tailwindcss'],
-  format: ['esm'],
+  format: ['cjs', 'esm'],
   target: 'esnext',
   dts: true,
   onSuccess: async () => {

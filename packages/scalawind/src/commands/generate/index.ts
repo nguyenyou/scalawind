@@ -17,28 +17,7 @@ const template = Handlebars.compile(scalawindTemplate);
 
 function createDoc(doc: string) {
   try {
-    let cssDoc = `
-    * \`\`\`scala
-    * ${transform({
-      filename: 'doc.css',
-      code: Buffer.from(doc),
-    })
-      .code.toString()
-      .replace(/\n/g, '\n    * ')}
-    * \`\`\`
-  `;
-    const config = loadConfig();
-    const remMatch = doc.match(/-?[0-9.]+rem/g);
-    const pxValue = config.rootFontSize;
-    if (remMatch) {
-      cssDoc = cssDoc.replace(
-        /(-?[0-9.]+)rem/g,
-        // There is a zero-width space between * and / in the closing comment
-        // without which typescript closes the tsdoc comment
-        (match, p1) => `${match} /* ${parseFloat(p1) * pxValue}px *​/`
-      );
-    }
-    return cssDoc;
+    return '';
   } catch (error) {
     return doc;
   }
@@ -223,6 +202,11 @@ export async function generate() {
   }
 
   const arbitrary = typeTemplate('Arbitrary', arbitraryStyles);
+  fs.writeFileSync(
+    path.join(require.resolve('scalawind'), '../arbitrary.json'),
+    JSON.stringify(arbitrary),
+    'utf8'
+  );
 
   const modifiers = [...ctx.variantMap.keys(), 'important']
   // Remove * from the list of modifiers to avoid syntax error
@@ -251,8 +235,4 @@ export async function generate() {
     generatedScalawind,
     'utf8'
   );
-
-  // const classList = ctx.getClassList() as string[];
-  // console.log(classList)
-  // console.log('generate')
 }

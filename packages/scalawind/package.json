@@ -3,13 +3,19 @@
   "version": "0.0.11",
   "description": "TailwindCSS with the robust type system of Scala",
   "license": "MIT",
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "homepage": "https://scalawind.vercel.app",
   "bin": {
     "scalawind": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/*": "./dist/*"
   },
   "keywords": [
     "scala",
@@ -18,9 +24,6 @@
     "tailwind",
     "tailwindcss",
     "zero-runtime"
-  ],
-  "files": [
-    "dist"
   ],
   "scripts": {
     "build": "tsup",
