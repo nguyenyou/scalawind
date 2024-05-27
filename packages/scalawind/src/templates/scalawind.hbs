@@ -39,7 +39,7 @@ object tw {
   {{#each modifiers}}
   def {{this}}(styles: TwStyle): TwStyle = TwStyle().{{this}}(styles)
   {{/each}}
-  def important()(styles: TwStyle): TwStyle = TwStyle().important(styles)
+  def important(styles: TwStyle): TwStyle = TwStyle().important(styles)
 }
 
 extension (twStyle: TwStyle)
