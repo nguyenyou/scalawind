@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="660" height="240" src=".github/assets/banner.png" alt="Write typesafe tailwindcss with Scalawind">
-</p>
+![Write typesafe Tailwindcss with Scalawind](.github/assets/banner.png 'Write typesafe Tailwindcss with Scalawind')
 
 <p align="center">
   <br/>
