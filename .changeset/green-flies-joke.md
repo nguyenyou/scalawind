@@ -1,0 +1,5 @@
+---
+"scalawind": minor
+---
+
+implicit macro
