@@ -69,6 +69,35 @@ You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite exam
 npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 ```
 
+## Tips
+
+### Reducing generated code
+Only including the utilities that you really use in your project, especially colorset. By default, TailwindCSS includes all of their colorset which make the generated scala code has to cover all the usages of these colors.
+
+You can pick some of them to use by overriding the config, like this:
+
+```js
+const colors = require("tailwindcss/colors");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: {
+    files: ["./index.html", "./scalajs-modules/**/*.js"],
+  },
+  theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      red: colors.red,
+    },
+  },
+};
+
+```
+
+
 ## Acknowledgement
 
 This project is inspired by https://github.com/mokshit06/typewind. Thank you a lot for making the library.
