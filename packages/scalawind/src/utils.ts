@@ -1,8 +1,6 @@
 import path from 'path';
 import resolveConfig from 'tailwindcss/resolveConfig.js';
-// @ts-ignore
-import pkg from 'tailwindcss/lib/lib/setupContextUtils.js';
-const { createContext } = pkg
+import { createContext } from 'tailwindcss/lib/lib/setupContextUtils.js';
 import fs from 'fs';
 
 export function loadConfig(): {
@@ -10,10 +8,13 @@ export function loadConfig(): {
   showPixelEquivalents: boolean;
   rootFontSize: number;
 } {
+  const pkg = require(path.join(process.cwd(), 'package.json'));
+
   return {
     configPath: './tailwind.config.js',
     showPixelEquivalents: false,
     rootFontSize: 16,
+    ...pkg?.typewind,
   };
 }
 
@@ -33,13 +34,14 @@ function getConfigPath() {
   }
 
   throw new Error(
-    'No tailwind config file found!\nIf your tailwind config file is not on the same folder. You need to specify your path though --input option.'
+    'No tailwind config file found!\nIf your tailwind config file is not on the same folder, check: https://typewind.dev/docs/installation/custom-config-file-path'
   );
 }
 
-export async function getTypewindContext() {
+export function createTypewindContext() {
   const configFile = getConfigPath();
-  const config = await import(configFile)
-  const fullConfig = resolveConfig(config);
-  return createContext(fullConfig)
+  const userConfig = resolveConfig(require(configFile!));
+  console.log(userConfig)
+
+  return createContext(userConfig);
 }

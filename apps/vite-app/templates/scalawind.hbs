@@ -1,0 +1,77 @@
+package {{package}}
+
+import scala.quoted.*
+
+object cls {
+  {{#each standard}}
+  val {{this.prop}} = "{{this.raw}}"
+  {{/each}}
+}
+
+case class SwStyle(style: String = "") {
+  def addClasses(classNames: String): SwStyle = {
+    val newStyle = s"$style ${classNames}".trim
+    SwStyle(newStyle)
+  }
+  def addClass(className: String): SwStyle = addClasses(className)
+
+  {{#each modifiers}}
+  def {{this}}(styles: SwStyle): SwStyle = {
+    val classes = styles.style.split("\\s+").map(cls => s"{{this}}:$cls").mkString(" ")
+    addClasses(classes)
+  }
+  {{/each}}
+
+  override def toString: String = style
+}
+
+given Conversion[SwStyle, String] with
+  def apply(swStyle: SwStyle): String = swStyle.style
+
+extension (swStyle: SwStyle)
+  {{#each standard}}
+  def {{this.prop}}: SwStyle = swStyle.addClass(cls.{{this.prop}})
+  {{/each}}
+
+object tw {
+  def apply(): SwStyle = SwStyle()
+
+  {{#each standard}}
+  def {{this.prop}}: SwStyle = SwStyle().addClass(cls.{{this.prop}})
+  {{/each}}
+
+  {{#each modifiers}}
+  def {{this}}(styles: SwStyle): SwStyle = SwStyle().{{this}}(styles)
+  {{/each}}
+}
+
+inline def sw(inline styles: SwStyle): String =
+  ${ swImpl('styles) }
+
+private def swImpl(stylesExpr: Expr[SwStyle])(using Quotes): Expr[String] = {
+  import quotes.reflect.*
+
+  def extractClassNames(term: Term): List[String] = term match {
+    {{#each modifiers}}
+    case Apply(Select(inner, "{{this}}"), List(styles)) =>
+      val classes = extractClassNames(styles).map(cls => s"{{this}}:$cls")
+      extractClassNames(inner) ++ classes
+    {{/each}}
+    case Apply(Ident(name), List(inner)) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Inlined(_, _, inner) =>
+      extractClassNames(inner)
+    case Select(inner, name) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Ident("tw") =>
+      Nil
+    case _ =>
+      report.errorAndAbort(s"Unexpected term: $term")
+  }
+
+  val term = stylesExpr.asTerm
+  val classNames = extractClassNames(term)
+  val combinedClasses = classNames.mkString(" ")
+  report.info(s"Compiled: $combinedClasses")
+  Expr(combinedClasses)
+}
