@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.1.0
+
+### Minor Changes
+
+- db4f771: implicit macro
+
 ## 0.0.17
 
 ### Patch Changes
