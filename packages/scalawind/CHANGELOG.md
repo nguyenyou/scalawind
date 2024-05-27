@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.14
+
+### Patch Changes
+
+- e857825: fix dup
+
 ## 0.0.13
 
 ### Patch Changes
