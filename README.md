@@ -114,7 +114,7 @@ will be:
 This behavior is the same as tailwindcss [ordering stacked modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states#ordering-stacked-modifiers) behavior
 
 
-### important
+### Important
 
 To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
 
@@ -127,6 +127,9 @@ The output will be:
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
+## Arbitrary
+
+In some cases, you might need to use some arbitrary values or arbitrary variants, then, in this case, the typesafe thing doesn't make sense, I suggest that you can just type in directly the arbitrary things that you want to use in strings.
 
 ## Tips
 
