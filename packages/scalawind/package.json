@@ -1,0 +1,44 @@
+{
+  "name": "scalawind",
+  "version": "0.0.17",
+  "description": "TailwindCSS with the robust type system of Scala",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "homepage": "https://scalawind.vercel.app",
+  "bin": {
+    "scalawind": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "keywords": [
+    "scala",
+    "scala3",
+    "macros",
+    "tailwind",
+    "tailwindcss",
+    "zero-runtime"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "lightningcss": "^1.25.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.24",
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.3.3"
+  }
+}

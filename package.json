@@ -1,0 +1,19 @@
+{
+  "name": "scalawind-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.3",
+    "tsup": "^6.5.0",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@9.0.6",
+  "engines": {
+    "node": ">=18"
+  }
+}
