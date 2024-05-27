@@ -16,8 +16,8 @@ case class TwStyle(style: String = "") {
   def addClass(className: String): TwStyle = addClasses(className)
 
   {{#each modifiers}}
-  def {{this}}(styles: TwStyle): TwStyle = {
-    val classes = styles.style.split("\\s+").map(clx => s"{{this}}:$clx").mkString(" ")
+  def {{this.name}}(styles: TwStyle): TwStyle = {
+    val classes = styles.style.split("\\s+").map(clx => s"{{this.value}}:$clx").mkString(" ")
     addClasses(classes)
   }
   {{/each}}
@@ -41,7 +41,7 @@ object tw {
   {{/each}}
 
   {{#each modifiers}}
-  def {{this}}(styles: TwStyle): TwStyle = TwStyle().{{this}}(styles)
+  def {{this.name}}(styles: TwStyle): TwStyle = TwStyle().{{this.name}}(styles)
   {{/each}}
   def important(styles: TwStyle): TwStyle = TwStyle().important(styles)
   def i(styles: TwStyle): TwStyle = TwStyle().i(styles)
@@ -61,8 +61,8 @@ def swImpl(twStyleExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
 
   def extractClassNames(term: Term): List[String] = term match {
     {{#each modifiers}}
-    case Apply(Select(inner, "{{this}}"), List(styles)) =>
-      val classes = extractClassNames(styles).map(clx => s"{{this}}:$clx")
+    case Apply(Select(inner, "{{this.name}}"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"{{this.value}}:$clx")
       extractClassNames(inner) ++ classes
     {{/each}}
     case Apply(Select(inner, "important"), List(styles)) =>
