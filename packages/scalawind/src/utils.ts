@@ -41,7 +41,5 @@ function getConfigPath() {
 export function createTypewindContext() {
   const configFile = getConfigPath();
   const userConfig = resolveConfig(require(configFile!));
-  console.log(userConfig)
-
   return createContext(userConfig);
 }
