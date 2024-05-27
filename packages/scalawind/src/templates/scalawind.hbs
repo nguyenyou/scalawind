@@ -55,9 +55,6 @@ def swImpl(twStyleExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
       val classes = extractClassNames(styles).map(clx => s"{{this}}:$clx")
       extractClassNames(inner) ++ classes
     {{/each}}
-    case Apply(Select(inner, "md"), List(mdStyle)) =>
-      val mdClasses = extractClassNames(mdStyle).map(cls => s"md:$cls")
-      extractClassNames(inner) ++ mdClasses
     case Apply(Ident(name), List(inner)) =>
       extractClassNames(inner) :+ name.replace("_", "-")
     case Inlined(_, _, inner) =>
