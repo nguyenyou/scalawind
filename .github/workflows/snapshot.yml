@@ -1,15 +1,15 @@
-name: Release Canary
+name: Snapshot Release
 
 on:
   push:
     branches:
-      - canary
+      - snapshot
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Release Canary
+    name: Snapshot Release
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -30,9 +30,9 @@ jobs:
         run: |
           pnpm build
 
-      - name: Release Canary
+      - name: Snapshot Release
         run: |
-          pnpm release:canary
+          pnpm release:snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
