@@ -14,7 +14,7 @@ export function loadConfig(): {
     configPath: './tailwind.config.js',
     showPixelEquivalents: false,
     rootFontSize: 16,
-    ...pkg?.typewind,
+    ...pkg?.scalawind,
   };
 }
 
@@ -34,11 +34,11 @@ function getConfigPath() {
   }
 
   throw new Error(
-    'No tailwind config file found!\nIf your tailwind config file is not on the same folder, check: https://typewind.dev/docs/installation/custom-config-file-path'
+    'No tailwind config file found!\nIf your tailwind config file is not on the same folder'
   );
 }
 
-export function createTypewindContext() {
+export function createScalawindContext() {
   const configFile = getConfigPath();
   const userConfig = resolveConfig(require(configFile!));
   return createContext(userConfig);
