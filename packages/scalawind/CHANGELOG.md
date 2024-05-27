@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.1.2
+
+### Patch Changes
+
+- 2686658: remove unreachable case
+
 ## 0.1.1
 
 ### Patch Changes
