@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.1.3
+
+### Patch Changes
+
+- 5fb023a: fix important modifier
+
 ## 0.1.2
 
 ### Patch Changes
