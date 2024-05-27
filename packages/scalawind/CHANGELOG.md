@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.12
+
+### Patch Changes
+
+- 664104d: correct gen now
+
 ## 0.0.11
 
 ### Patch Changes
