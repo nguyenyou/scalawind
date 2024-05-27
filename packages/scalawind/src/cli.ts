@@ -184,7 +184,11 @@ export async function generateTypes() {
     s = /^\d/.test(s) ? `_${s}` : s;
 
     return fmtToScalawind(s);
-  });
+  })
+  .map(mod => {
+    return ({ name: mod, value: mod.replace(/_/g, '-')})
+  })
+
 
   const generatedScalawind = template({ package: "scalawind", modifiers, standard})
   const outputPath = path.join(process.cwd(), "./scalawind.scala");
