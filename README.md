@@ -30,7 +30,7 @@ The idea is very simple, you can generate typesafe scala code from tailwind conf
 ```scala
 import scalawind.*
 
-val styles = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
+val styles: String = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
 // "bg-black text-white hover:bg-white hover:text-black
 ```
 
@@ -57,7 +57,21 @@ Then, add the `postinstall` script to your `package.json` to make sure the code 
 
 After generating, you will have a `scalawind.scala` file at the root of your project. You can move it to your preferred location and rename the package however you like.
 
-Done. You can experience typesafe tailwindcss now.
+Then, `import scalawind.*` and you're ready to go.
+
+```scala
+import scalawind.*
+
+button(
+  cls := sw(tw.bg_blue_500
+        .hover(tw.bg_blue_600).first_letter(tw.text_red_500.font_bold)
+        .text_white.rounded.py_3.px_4.md(tw.py_4.px_5)
+        .dark(tw.bg_sky_900.hover(tw.bg_sky_800))),
+  "Click me"
+)
+```
+
+That's it.
 
 ## Quickstart
 
