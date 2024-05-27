@@ -67,6 +67,53 @@ You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite exam
 npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 ```
 
+## Normal Usage
+
+### Fluent API
+
+Scalawind uses Fluent Syntax which can help us type faster and still benefit from type safety.
+
+```scala
+tw.bg_blue_500.text_white.rounded.py_3.px_4
+// Output: bg-blue-500 text-white rounded py-3 px-4
+```
+
+### Negative value
+
+To use classes which start with negative values like `-left-1`, just replace `-` with `_` underscore. In this case, you can type: `tw._left_1`
+
+
+## Modifiers
+
+### Ordering stacked modifiers
+
+```scala
+tw.dark(tw.groupHover(tw.focus(tw.bg_black)))
+```
+
+will be:
+
+```
+"dark:group-hover:focus:bg-black"
+```
+
+This behavior is the same as tailwindcss [ordering stacked modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states#ordering-stacked-modifiers) behavior
+
+
+### important
+
+To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
+
+```scala
+button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
+```
+
+The output will be:
+```
+<button class="!text-black hover:!text-blue-700">Click me</button>
+```
+
+
 ## Tips
 
 ### Reducing generated code
