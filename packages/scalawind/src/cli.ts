@@ -3,14 +3,9 @@
 import fs from 'fs';
 import path from 'path';
 import { transform } from 'lightningcss';
-import { createTypewindContext, loadConfig } from './utils';
+import { createScalawindContext, loadConfig } from './utils';
 
 import Handlebars from "handlebars";
-import { fileURLToPath } from 'url';
-
-// const __filename = fileURLToPath(import.meta.url);
-
-// const __dirname = path.dirname(__filename);
 
 const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scalawind.hbs"), "utf-8")
 
@@ -47,7 +42,7 @@ function createDoc(doc: string) {
   }
 }
 
-const fmtToTypewind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$');
+const fmtToScalawind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$');
 
 const objectTemplate = (
   props: { prop: string; type: string; doc?: string }[]
@@ -65,44 +60,6 @@ const typeTemplate = (
   props: { prop: string; type: string; doc?: string }[]
 ) => `
 type ${name} = ${objectTemplate(props)}
-`;
-
-const rootTypeTemplate = ({
-  others,
-  types,
-  modifiers,
-  colors,
-}: {
-  others: string[];
-  types: string[];
-  modifiers: string[];
-  colors: string[];
-}) =>
-  `type Property = Typewind & string;
-
-${others.join('\n')}
-
-type OpacityMap = {
-  [K in Opacity]: Property;
-} & Record<string, Property>;
-type Colors = {
-  ${colors.map((color) => `${color}: OpacityMap`).join(';\n')}
-}
-
-type Typewind = ${types.join(' & ')} & {
-  ${modifiers
-    .map((variant) => `${variant}(style: Property): Property`)
-    .join(';\n')}
-} & {
-  // [arbitraryVariant: string]: (style: Property) => Property;
-} & {
-  variant<T extends \`&\${string}\` | \`@\${string}\`>(variant: T, style: Property | string): Property;
-  raw(style: string): Property;
-}
-
-declare const tw: Typewind;
-
-export { tw };
 `;
 
 function getCandidateItem(
@@ -126,7 +83,7 @@ function getCandidateItem(
 }
 
 export async function generateTypes() {
-  const ctx = createTypewindContext();
+  const ctx = createScalawindContext();
 
   // only exists to generate rule-map for swc plugin
   // const candidateRuleMap = ctx.candidateRuleMap;
@@ -184,7 +141,7 @@ export async function generateTypes() {
           );
 
           if (isColor && rest && flatColorsList.includes(rest)) {
-            const key = fmtToTypewind(s) + '$';
+            const key = fmtToScalawind(s) + '$';
 
             colorSet.add(key);
           }
@@ -200,13 +157,13 @@ export async function generateTypes() {
       }
     }
 
-    return { prop: fmtToTypewind(s), raw: s, type: 'Property', doc: css };
+    return { prop: fmtToScalawind(s), raw: s, type: 'Property', doc: css };
   })
   
   const candidates = [...ctx.candidateRuleMap.entries()];
   const arbitraryStyles = [];
   for (const [name, rules] of candidates) {
-    const ident = fmtToTypewind(name) + '_';
+    const ident = fmtToScalawind(name) + '_';
     const styles: string[] = [];
 
     for (const [rule, fn] of rules) {
@@ -247,7 +204,7 @@ export async function generateTypes() {
   .map((s) => {
     s = /^\d/.test(s) ? `_${s}` : s;
 
-    return fmtToTypewind(s);
+    return fmtToScalawind(s);
   });
 
   // const root = rootTypeTemplate({
