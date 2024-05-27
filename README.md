@@ -69,6 +69,21 @@ npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 
 ## Modifiers
 
+### Ordering stacked modifiers
+
+```scala
+tw.dark(tw.groupHover(tw.focus(tw.bg_black)))
+```
+
+will be:
+
+```
+"dark:group-hover:focus:bg-black"
+```
+
+This behavior is the same as tailwindcss [ordering stacked modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states#ordering-stacked-modifiers) behavior
+
+
 ### important
 
 To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
