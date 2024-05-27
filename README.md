@@ -74,12 +74,12 @@ npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
 
 ```scala
-button(cls := sw(tw.text_red_500.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
+button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
 ```
 
 The output will be:
 ```
-<button class="text-red-500 !text-black hover:!text-blue-700">Click me</button>
+<button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
 
