@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.13
+
+### Patch Changes
+
+- a9bce40: remove unused code
+
 ## 0.0.12
 
 ### Patch Changes
