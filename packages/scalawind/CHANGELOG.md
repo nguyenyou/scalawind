@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.1.1
+
+### Patch Changes
+
+- ec0c8c1: fix template
+
 ## 0.1.0
 
 ### Minor Changes
