@@ -1,5 +1,12 @@
 # scalawind
 
+## 0.1.4
+
+### Patch Changes
+
+- 1dbfb82: fix multi word modifier
+- 270a669: add shortcut i for important modifier
+
 ## 0.1.3
 
 ### Patch Changes
