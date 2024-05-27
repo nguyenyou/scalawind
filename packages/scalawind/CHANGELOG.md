@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.0.17
+
+### Patch Changes
+
+- 2060c06: avoid conflict cls
+
 ## 0.0.16
 
 ### Patch Changes
