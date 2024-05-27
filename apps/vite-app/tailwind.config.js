@@ -163,9 +163,9 @@ module.exports = {
       auto: "auto",
       min: "min-content",
       max: "max-content",
-      "custom-1": "var(--height-custom-1)",
-      "custom-2": "var(--height-custom-2)",
-      "custom-3": "var(--height-custom-3)",
+      "h-custom-1": "var(--height-custom-1)",
+      "h-custom-2": "var(--height-custom-2)",
+      "h-custom-3": "var(--height-custom-3)",
     },
     minWidth: {
       fit: "fit-content",

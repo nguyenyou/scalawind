@@ -165,12 +165,12 @@ export async function generateTypes() {
   }
 
   const classesWithStandardSyntax = classList.filter((s) => !/\.|\//.test(s));
-  const classesWithCandidateItem = classesWithStandardSyntax.map((s) => {
+  const classesWithCandidateItem = [...new Set(classesWithStandardSyntax)].map((s) => {
     return [s, getCandidateItem(ctx.candidateRuleMap, s)] as const;
   });
 
   const colorSet = new Set<string>();
-  const standard = classesWithCandidateItem.map(([s, { rule: rules, rest }]) => {
+  const standard = [...new Set(classesWithCandidateItem)].map(([s, { rule: rules, rest }]) => {
     let css = '';
 
     if (rules) {
