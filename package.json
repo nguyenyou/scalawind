@@ -5,7 +5,10 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "release:canary": "pnpm version:canary && pnpm publish:canary",
+    "version:canary": "changeset version --snapshot canary",
+    "publish:canary": "changeset publish --tag canary"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.3",

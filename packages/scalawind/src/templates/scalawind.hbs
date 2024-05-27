@@ -21,6 +21,10 @@ case class TwStyle(style: String = "") {
     addClasses(classes)
   }
   {{/each}}
+  def important(styles: TwStyle): TwStyle = {
+    val classes = styles.style.split("\\s+").map(clx => s"!$clx").mkString(" ")
+    addClasses(classes)
+  }
 
   override def toString: String = style
 }
@@ -35,6 +39,7 @@ object tw {
   {{#each modifiers}}
   def {{this}}(styles: TwStyle): TwStyle = TwStyle().{{this}}(styles)
   {{/each}}
+  def important()(styles: TwStyle): TwStyle = TwStyle().important(styles)
 }
 
 extension (twStyle: TwStyle)
@@ -55,6 +60,9 @@ def swImpl(twStyleExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
       val classes = extractClassNames(styles).map(clx => s"{{this}}:$clx")
       extractClassNames(inner) ++ classes
     {{/each}}
+    case Apply(Select(inner, "important"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
     case Apply(Ident(name), List(inner)) =>
       extractClassNames(inner) :+ name.replace("_", "-")
     case Inlined(_, _, inner) =>

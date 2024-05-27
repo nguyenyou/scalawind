@@ -1,15 +1,15 @@
-name: Release
+name: Release Canary
 
 on:
   push:
     branches:
-      - main
+      - canary
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Release
+    name: Release Canary
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -26,12 +26,13 @@ jobs:
           corepack enable
           pnpm install
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: pnpm release
+      - name: Build
+        run: |
+          pnpm build
+
+      - name: Release Canary
+        run: |
+          pnpm release:canary
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
