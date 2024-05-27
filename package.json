@@ -5,7 +5,10 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "release:snapshot": "pnpm version:snapshot && pnpm publish:snapshot",
+    "version:snapshot": "changeset version --snapshot snapshot",
+    "publish:snapshot": "changeset publish --tag snapshot"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.3",

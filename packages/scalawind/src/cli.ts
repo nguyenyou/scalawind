@@ -85,27 +85,6 @@ function getCandidateItem(
 export async function generateTypes() {
   const ctx = createScalawindContext();
 
-  // only exists to generate rule-map for swc plugin
-  // const candidateRuleMap = ctx.candidateRuleMap;
-
-  // const candidateObj = Object.fromEntries(
-  //   [...candidateRuleMap.entries()]
-  //     .map(([k, rules]) => {
-  //       return [
-  //         k,
-  //         rules
-  //           .filter(
-  //             ([rule]: any) => rule.options?.values
-  //             // rule.options?.values.every1((v: any) => typeof v === 'string')
-  //           )
-  //           .map(([rule]: any) => Object.keys(rule.options?.values)),
-  //       ];
-  //     })
-  //     .filter(([k, v]) => v.length > 0)
-  // );
-
-  // fs.writeFileSync('./map.json', JSON.stringify(candidateObj));
-
   const classList = ctx.getClassList() as string[];
 
   const opacityMap = ctx.tailwindConfig.theme.opacity;
@@ -198,7 +177,7 @@ export async function generateTypes() {
 
   const arbitrary = typeTemplate('Arbitrary', arbitraryStyles);
 
-  const modifiers = [...ctx.variantMap.keys(), 'important']
+  const modifiers = [...ctx.variantMap.keys()]
   // Remove * from the list of modifiers to avoid syntax error
   .filter((s) => s !== '*')
   .map((s) => {
@@ -206,19 +185,6 @@ export async function generateTypes() {
 
     return fmtToScalawind(s);
   });
-
-  // const root = rootTypeTemplate({
-  //   others: [
-  //     standard,
-  //     arbitrary,
-  //     `type Opacity = ${Object.keys(opacityMap)
-  //       .map((k) => JSON.stringify(k))
-  //       .join(' | ')}`,
-  //   ],
-  //   types: ['Standard', 'Arbitrary', 'Colors'],
-  //   modifiers,
-  //   colors: [...colorSet].map((k) => JSON.stringify(k)),
-  // });
 
   const generatedScalawind = template({ package: "scalawind", modifiers, standard})
   const outputPath = path.join(process.cwd(), "./scalawind.scala");
