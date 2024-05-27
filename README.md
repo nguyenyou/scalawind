@@ -67,6 +67,22 @@ You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite exam
 npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 ```
 
+## Normal Usage
+
+### Fluent API
+
+Scalawind uses Fluent Syntax which can help us type faster and still benefit from type safety.
+
+```scala
+tw.bg_blue_500.text_white.rounded.py_3.px_4
+// Output: bg-blue-500 text-white rounded py-3 px-4
+```
+
+### Negative value
+
+To use classes which start with negative values like `-left-1`, just replace `-` with `_` underscore. In this case, you can type: `tw._left_1`
+
+
 ## Modifiers
 
 ### Ordering stacked modifiers
