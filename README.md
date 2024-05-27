@@ -67,6 +67,17 @@ You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite exam
 npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 ```
 
+## Modifiers
+
+### important
+
+To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
+
+```scala
+button(cls := sw(tw.text_red_500.important(tw.text_black)), "Click me")
+```
+
+
 ## Tips
 
 ### Reducing generated code
