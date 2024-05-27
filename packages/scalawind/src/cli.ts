@@ -42,7 +42,7 @@ function createDoc(doc: string) {
   }
 }
 
-const fmtToScalawind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$');
+const fmtToScalawind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '');
 
 const objectTemplate = (
   props: { prop: string; type: string; doc?: string }[]
