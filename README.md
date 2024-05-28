@@ -20,7 +20,7 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 
 # Scalawind - Zero-Runtime Typesafe TailwindCSS in Scala
 
-> This library is still very early and not production-ready yet, use at your own risk.
+> Although this library is still very early, the actual code is just a single file generated and output directly into your project. You can twist it, fix it, make changes to it however you like. 
 
 The idea is very simple, you can generate typesafe scala code from tailwind config file and use tailwind utility classes in a typesafe way.
 
