@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.1.8
+
+### Patch Changes
+
+- e5a453f: allow user passing custom package name and output path
+
 ## 0.1.7
 
 ### Patch Changes
