@@ -2,7 +2,7 @@
 
 <p align="center">
   <br/>
-  <a href="https://github.com/nguyenyou/scalawind">Scalawind</a> is a Zero-runtime Typesafe Tailwindcss in Scala
+  <a href="https://github.com/nguyenyou/scalawind">Scalawind</a> is a Zero-Runtime Typesafe Tailwindcss in Scala
   <br/><br/>
 </p>
 
@@ -18,7 +18,7 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 
 <br/>
 
-# Scalawind - Zero-runtime Typesafe TailwindCSS in Scala
+# Scalawind - Zero-Runtime Typesafe TailwindCSS in Scala
 
 > This library is still very early and not production-ready yet, use at your own risk.
 
