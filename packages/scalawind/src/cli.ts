@@ -102,9 +102,11 @@ export async function generateTypes() {
     return ({ name: mod, value: mod.replace(/_/g, '-')})
   })
 
+  const config = loadConfig();
 
-  const generatedScalawind = template({ package: "scalawind", modifiers, standard})
-  const outputPath = path.join(process.cwd(), "./scalawind.scala");
+
+  const generatedScalawind = template({ package: config.packageName, modifiers, standard})
+  const outputPath = path.join(process.cwd(), config.outputPath);
 
   fs.writeFileSync(
     outputPath,
