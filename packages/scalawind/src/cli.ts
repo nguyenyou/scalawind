@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Credit: https://github.com/Mokshit06/typewind/blob/main/packages/typewind/src/cli.ts
+
 import fs from 'fs';
 import path from 'path';
 import { createScalawindContext, loadConfig } from './utils';

@@ -1,3 +1,5 @@
+// Credit: https://github.com/Mokshit06/typewind/blob/main/packages/typewind/src/utils.ts
+
 import path from 'path';
 import resolveConfig from 'tailwindcss/resolveConfig.js';
 import { createContext } from 'tailwindcss/lib/lib/setupContextUtils.js';
