@@ -88,6 +88,6 @@ def swImpl(twStyleExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
   val term = twStyleExpr.asTerm
   val classNames = extractClassNames(term)
   val combinedClasses = classNames.mkString(" ")
-  report.info(s"Compiled classes: $combinedClasses")
+  report.info(s"Compiled: $combinedClasses")
   Expr(combinedClasses)
 }

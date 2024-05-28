@@ -131,10 +131,11 @@ The output will be:
 
 In some cases, you might need to use some arbitrary values or arbitrary variants, then, in this case, the typesafe thing doesn't make sense, I suggest that you can just type in directly the arbitrary things that you want to use in strings.
 
-## Tips
+## Reducing Generated Code Size
 
-### Reducing generated code
-Only including the utilities that you really use in your project, especially colorset. By default, TailwindCSS includes all of their colorset which make the generated scala code has to cover all the usages of these colors.
+### Colors
+
+By default, TailwindCSS includes all of their colorset which make the generated scala code has to cover all the usages of these colors.
 
 You can pick some of them to use by overriding the config, like this:
 
@@ -157,6 +158,27 @@ module.exports = {
   },
 };
 
+```
+
+### Core Plugins
+
+TailwindCSS by default includes all their core plugins for you, this will cause the generated scala code has to cover all the core plugins, you can pick only the plugins that you use:
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: {
+    files: ['./index.html', './scalajs-modules/**/*.js'],
+  },
+  corePlugins: [
+    'display',
+    'textColor',
+    'width',
+    'height',
+    'alignItems',
+    'justifyContent'
+  ]
+};
 ```
 
 ## Notes
