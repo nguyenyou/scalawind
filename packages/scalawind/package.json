@@ -5,7 +5,7 @@
   "license": "MIT",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "homepage": "https://scalawind.vercel.app",
+  "homepage": "https://github.com/nguyenyou/scalawind",
   "bin": {
     "scalawind": "dist/cli.js"
   },
