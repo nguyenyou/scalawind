@@ -9,7 +9,7 @@ import scalawind.*
 @main
 def App(): Unit =
   val container = dom.document.getElementById("app")
-  val styles: String = tw.w_screen.h_screen.flex.items_center.justify_center
+  val styles: String = tw.p_2.text_primary.hover(tw.bg_black.text_white)
   render(
     container,
     div(
