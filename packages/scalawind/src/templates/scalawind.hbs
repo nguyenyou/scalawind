@@ -2,12 +2,6 @@ package {{package}}
 
 import scala.quoted.*
 
-object clx {
-  {{#each standard}}
-  val {{this.prop}} = "{{this.raw}}"
-  {{/each}}
-}
-
 case class TwStyle(style: String = "") {
   def addClasses(classNames: String): TwStyle = {
     val newStyle = s"$style ${classNames}".trim
@@ -37,7 +31,7 @@ object tw {
   def apply(): TwStyle = TwStyle()
 
   {{#each standard}}
-  def {{this.prop}}: TwStyle = TwStyle().addClass(clx.{{this.prop}})
+  def {{this.prop}}: TwStyle = TwStyle().addClass("{{this.raw}}")
   {{/each}}
 
   {{#each modifiers}}
@@ -49,7 +43,7 @@ object tw {
 
 extension (twStyle: TwStyle)
   {{#each standard}}
-  def {{this.prop}}: TwStyle = twStyle.addClass(clx.{{this.prop}})
+  def {{this.prop}}: TwStyle = twStyle.addClass("{{this.raw}}")
   {{/each}}
 
 inline implicit def sw(inline twStyle: TwStyle): String =
