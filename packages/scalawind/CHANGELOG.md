@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.1.7
+
+### Patch Changes
+
+- d4904a3: remove unnecessary clx object, cause we're using a CLI for generating code.
+
 ## 0.1.6
 
 ### Patch Changes
