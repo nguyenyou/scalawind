@@ -33,8 +33,7 @@ val styles: String = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
 
 We use fluent syntax to type our tailwind classes. These classes will be compiled at compile-time so there's no runtime cost for this.
 
-The `sw` method is a macro that will do the compile classes.
-The `tw` object contains all the classes and modifiers.
+The `sw` method is a macro that will transform the all the function calls into just one single literal string at compile-time.
 
 ## How to use
 
