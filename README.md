@@ -2,9 +2,7 @@
 
 <p align="center">
   <br/>
-  <a href="https://github.com/nguyenyou/scalawind">Scalawind</a> is a zero-runtime typesafe tailwindcss for Scala &mdash;
-  <br/>
-  compile time, type safe, and scalable tailwindcss
+  <a href="https://github.com/nguyenyou/scalawind">Scalawind</a> is a Zero-runtime Typesafe Tailwindcss in Scala
   <br/><br/>
 </p>
 
