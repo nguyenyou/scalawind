@@ -7,15 +7,11 @@ import fs from 'fs';
 
 export function loadConfig(): {
   configPath: string;
-  showPixelEquivalents: boolean;
-  rootFontSize: number;
 } {
   const pkg = require(path.join(process.cwd(), 'package.json'));
 
   return {
     configPath: './tailwind.config.js',
-    showPixelEquivalents: false,
-    rootFontSize: 16,
     ...pkg?.scalawind,
   };
 }
