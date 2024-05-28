@@ -14,7 +14,7 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 - 🚀 Thanks Scala 3 macros, we can completely eliminate runtime cost. Only strings present in the final compiled code. No function calls. No overhead.
 - 🦄 Works with every UI libraries in ScalaJS ecosystem
 - 🎨 Customizable via user's tailwind config
-- 💪 Type-safe tailwindcss classes and autocomplete (via codegen)
+- 💪 Typesafe tailwindcss classes and autocomplete (via codegen)
 
 <br/>
 
@@ -22,8 +22,7 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 
 > This library is still very early and not production-ready yet, use at your own risk.
 
-The idea is very simple, you can generate typesafe scala code from tailwind config file and use them in a typesafe way.
-
+The idea is very simple, you can generate typesafe scala code from tailwind config file and use tailwind utility classes in a typesafe way.
 
 ```scala
 import scalawind.*
@@ -112,7 +111,7 @@ will be:
 This behavior is the same as tailwindcss [ordering stacked modifiers](https://tailwindcss.com/docs/hover-focus-and-other-states#ordering-stacked-modifiers) behavior
 
 
-### Important
+### Important modifier
 
 To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
 
