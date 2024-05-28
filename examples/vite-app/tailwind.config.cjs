@@ -26,6 +26,7 @@ module.exports = {
     'width',
     'height',
     'alignItems',
-    'justifyContent'
+    'justifyContent',
+    'padding'
   ]
 };
