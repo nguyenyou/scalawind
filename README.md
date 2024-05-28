@@ -35,12 +35,20 @@ We use fluent syntax to type our tailwind classes. These classes will be compile
 
 The `sw` method is a macro that will transform the all the function calls into just one single literal string at compile-time.
 
+## Quickstart
+
+You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite example that's already setup everything for you to get started.
+
+```bash
+$ npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
+```
+
 ## How to use
 
 Install the CLI, using any node package manager that you prefer:
 
-```
-# pnpm add -D scalawind
+```bash
+$ npm install scalawind --save-dev
 ```
 
 Then, add the `postinstall` script to your `package.json` to make sure the code will automatically run after install:
@@ -69,14 +77,6 @@ button(
 
 That's it.
 
-## Quickstart
-
-You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite example that's already setup everything for you to get started.
-
-```
-npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
-```
-
 ## Normal Usage
 
 ### Fluent API
@@ -103,7 +103,7 @@ tw.dark(tw.groupHover(tw.focus(tw.bg_black)))
 
 will be:
 
-```
+```scala
 "dark:group-hover:focus:bg-black"
 ```
 
@@ -119,7 +119,7 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 ```
 
 The output will be:
-```
+```html
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
