@@ -77,6 +77,25 @@ button(
 
 That's it.
 
+## Customize Generated Code
+
+You can provide your custom package name and output path by adding a `scalawind` field to the `package.json` file, for example:
+
+```json
+{
+  "name": "myapp",
+  "scripts": {},
+  "dependencies": {},
+  "scalawind": {
+    "outputPath": "./scalawind.scala",
+    "packageName": "scalawind"
+  },
+}
+```
+
+- `outputPath`: specify both the generated filename and also where to generate it.
+- `packageName`: is the name of the generated package.
+
 ## Normal Usage
 
 ### Fluent API

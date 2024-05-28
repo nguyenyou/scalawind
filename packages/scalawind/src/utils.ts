@@ -7,11 +7,15 @@ import fs from 'fs';
 
 export function loadConfig(): {
   configPath: string;
+  packageName: string;
+  outputPath: string;
 } {
   const pkg = require(path.join(process.cwd(), 'package.json'));
 
   return {
     configPath: './tailwind.config.js',
+    packageName: 'scalawind',
+    outputPath: './scalawind.scala',
     ...pkg?.scalawind,
   };
 }
