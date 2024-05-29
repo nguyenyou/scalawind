@@ -1,28 +1,17 @@
 package {{package}}
 
 import scala.quoted.*
+import scala.annotation.unused
 
 case class TwStyle(style: String = "") {
-  def addClasses(classNames: String): TwStyle = {
-    val newStyle = s"$style ${classNames}".trim
-    TwStyle(newStyle)
-  }
-  def addClass(className: String): TwStyle = addClasses(className)
+  def addClasses(@unused classNames: String): TwStyle = TwStyle()
+  def addClass(@unused className: String): TwStyle = TwStyle()
 
   {{#each modifiers}}
-  def {{this.name}}(styles: TwStyle): TwStyle = {
-    val classes = styles.style.split("\\s+").map(clx => s"{{this.value}}:$clx").mkString(" ")
-    addClasses(classes)
-  }
+  def {{this.name}}(@unused styles: TwStyle): TwStyle = TwStyle()
   {{/each}}
-  def important(styles: TwStyle): TwStyle = {
-    val classes = styles.style.split("\\s+").map(clx => s"!$clx").mkString(" ")
-    addClasses(classes)
-  }
-  def i(styles: TwStyle): TwStyle = {
-    val classes = styles.style.split("\\s+").map(clx => s"!$clx").mkString(" ")
-    addClasses(classes)
-  }
+  def important(@unused styles: TwStyle): TwStyle = TwStyle()
+  def i(@unused styles: TwStyle): TwStyle = TwStyle()
 
   override def toString: String = style
 }
@@ -31,19 +20,19 @@ object tw {
   def apply(): TwStyle = TwStyle()
 
   {{#each standard}}
-  def {{this.prop}}: TwStyle = TwStyle().addClass("{{this.raw}}")
+  def {{this.prop}}: TwStyle = TwStyle()
   {{/each}}
 
   {{#each modifiers}}
-  def {{this.name}}(styles: TwStyle): TwStyle = TwStyle().{{this.name}}(styles)
+  def {{this.name}}(@unused styles: TwStyle): TwStyle = TwStyle()
   {{/each}}
-  def important(styles: TwStyle): TwStyle = TwStyle().important(styles)
-  def i(styles: TwStyle): TwStyle = TwStyle().i(styles)
+  def important(@unused styles: TwStyle): TwStyle = TwStyle()
+  def i(@unused styles: TwStyle): TwStyle = TwStyle()
 }
 
 extension (twStyle: TwStyle)
   {{#each standard}}
-  def {{this.prop}}: TwStyle = twStyle.addClass("{{this.raw}}")
+  def {{this.prop}}: TwStyle = TwStyle()
   {{/each}}
 
 inline implicit def sw(inline twStyle: TwStyle): String =
