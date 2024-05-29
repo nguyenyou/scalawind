@@ -166,6 +166,8 @@ By default, TailwindCSS includes all of their colorset which make the generated 
 You can pick some of them to use by overriding the config, like this:
 
 ```js
+// tailwind.config.cjs
+
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
@@ -191,6 +193,8 @@ module.exports = {
 TailwindCSS by default includes all their core plugins for you, this will cause the generated scala code has to cover all the core plugins, you can pick only the plugins that you use:
 
 ```js
+// tailwind.config.cjs
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: {
@@ -204,6 +208,32 @@ module.exports = {
     'alignItems',
     'justifyContent'
   ]
+};
+```
+
+## Troubleshoot
+
+### Cannot read the tailwind config
+
+You might need to change the filename to `tailwind.config.cjs` and inside the config file, it should have `module.exports = {}`, for example:
+
+```js
+const colors = require("tailwindcss/colors");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: {
+    files: ["./index.html", "./scalajs-modules/**/*.js"],
+  },
+  theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      red: colors.red,
+    },
+  },
 };
 ```
 
