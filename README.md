@@ -28,7 +28,10 @@ The idea is very simple, you can generate typesafe scala code from tailwind conf
 import scalawind.*
 
 val styles: String = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
-// "bg-black text-white hover:bg-white hover:text-black
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "bg-black text-white hover:bg-white hover:text-black
 ```
 
 We use fluent syntax to type our tailwind classes. These classes will be compiled at compile-time so there's no runtime cost for this.
