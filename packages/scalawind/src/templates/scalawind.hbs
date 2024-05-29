@@ -30,7 +30,7 @@ extension (tailwind: Tailwind)
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
 
-inline implicit def sw(inline tailwind: Tailwind): String =
+inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
 def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {

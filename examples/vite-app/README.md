@@ -2,8 +2,6 @@
 
 ## Install NodeJS dependencies
 
-> In this example, I use npm, but you can whatever package manager you preferred.
-
 ```
 $ npm install
 ```
@@ -20,3 +18,4 @@ In another terminal:
 $ npm run dev
 ```
 
+Open: http://localhost:5173

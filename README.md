@@ -198,33 +198,6 @@ module.exports = {
 };
 ```
 
-## Notes
-
-### Macros
-
-The most reliable way right now is using `sw()` macro to compile the `tw` styles. However in the context of String you can omit the `sw()` and the library will implicitly call it for you. So, you can write:
-
-```scala
-val styles: String = tw.bg_black.text_white.hover(tw.bg_white.text_black) // without the sw()
-// Still output: bg-black text-white hover:bg-white hover:text-back
-```
-
-However, this is not work 100% time, for example, when using with `cls :=` method of Laminar, it doesn't work. So in this case, you need to explicitly use the `sw()` macro:
-
-```scala
-div(cls := sw(tw.bg_black.text_white.hover(tw.bg_white.text_black)))
-```
-
-In case you still try to omit the `sw()` call entirely, you can try to assign the `tw` to a String val first:
-
-```scala
-val styles: String = tw.bg_black.text_white.hover(tw.bg_white.text_black)
-
-div(cls := styles)
-```
-
-This is truely a technical constraint that I don't know how to overcome yet, if you guys know how to improve it, please help.
-
 ## Acknowledgement
 
 This project is inspired by https://github.com/mokshit06/typewind. Thank you a lot for making the library.
