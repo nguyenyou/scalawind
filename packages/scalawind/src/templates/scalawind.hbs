@@ -3,43 +3,40 @@ package {{package}}
 import scala.quoted.*
 import scala.annotation.unused
 
-case class TwStyle(style: String = "") {
-  def addClasses(@unused classNames: String): TwStyle = TwStyle()
-  def addClass(@unused className: String): TwStyle = TwStyle()
+case class Tailwind() {
+  def addClasses(@unused classNames: String): Tailwind = Tailwind()
+  def addClass(@unused className: String): Tailwind = Tailwind()
 
   {{#each modifiers}}
-  def {{this.name}}(@unused styles: TwStyle): TwStyle = TwStyle()
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
-  def important(@unused styles: TwStyle): TwStyle = TwStyle()
-  def i(@unused styles: TwStyle): TwStyle = TwStyle()
-
-  override def toString: String = style
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
 }
 
 object tw {
-  def apply(): TwStyle = TwStyle()
+  def apply(): Tailwind = Tailwind()
 
   {{#each standard}}
-  def {{this.prop}}: TwStyle = TwStyle()
+  def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
 
   {{#each modifiers}}
-  def {{this.name}}(@unused styles: TwStyle): TwStyle = TwStyle()
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
-  def important(@unused styles: TwStyle): TwStyle = TwStyle()
-  def i(@unused styles: TwStyle): TwStyle = TwStyle()
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
 }
 
-extension (twStyle: TwStyle)
+extension (tailwind: Tailwind)
   {{#each standard}}
-  def {{this.prop}}: TwStyle = TwStyle()
+  def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
 
-inline implicit def sw(inline twStyle: TwStyle): String =
-  ${ swImpl('twStyle) }
+inline implicit def sw(inline tailwind: Tailwind): String =
+  ${ swImpl('tailwind) }
 
-
-def swImpl(twStyleExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
+def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   import quotes.reflect.*
 
   def extractClassNames(term: Term): List[String] = term match {
@@ -60,7 +57,7 @@ def swImpl(twStyleExpr: Expr[TwStyle])(using Quotes): Expr[String] = {
       extractClassNames(inner)
     case Select(inner, name) =>
       extractClassNames(inner) :+ name.replace("_", "-")
-    case Ident("twStyle") =>
+    case Ident("tailwind") =>
       Nil
     case Ident("tw") =>
       Nil
