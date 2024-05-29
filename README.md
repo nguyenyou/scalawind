@@ -115,7 +115,10 @@ Scalawind uses Fluent Syntax which can help us type faster and still benefit fro
 
 ```scala
 tw.bg_blue_500.text_white.rounded.py_3.px_4
-// Output: bg-blue-500 text-white rounded py-3 px-4
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+"bg-blue-500 text-white rounded py-3 px-4"
 ```
 
 ### Negative value
@@ -129,11 +132,9 @@ To use classes which start with negative values like `-left-1`, just replace `-`
 
 ```scala
 tw.dark(tw.groupHover(tw.focus(tw.bg_black)))
-```
 
-will be:
+// ↓ ↓ ↓ ↓ ↓ ↓
 
-```scala
 "dark:group-hover:focus:bg-black"
 ```
 
@@ -146,10 +147,9 @@ To specify a class to be important, you can wrap it inside the `tw.important()` 
 
 ```scala
 button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
-```
 
-The output will be:
-```html
+// ↓ ↓ ↓ ↓ ↓ ↓
+
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
