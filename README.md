@@ -34,9 +34,9 @@ val styles: String = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
 val styles: String = "bg-black text-white hover:bg-white hover:text-black
 ```
 
-We use fluent syntax to type our tailwind classes. These classes will be compiled at compile-time so there's no runtime cost for this.
+We use fluent syntax to type our tailwind classes. These classes will be compiled at *compile-time* so there's no runtime cost for this.
 
-The `sw` method is a macro that will transform the all the function calls into just one single literal string at compile-time.
+The `sw` method is a macro that will transform the all the function calls into just one single literal string at *compile-time*.
 
 ## Quickstart
 
