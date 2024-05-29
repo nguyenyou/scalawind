@@ -4,9 +4,6 @@ import scala.quoted.*
 import scala.annotation.unused
 
 case class Tailwind() {
-  def addClasses(@unused classNames: String): Tailwind = Tailwind()
-  def addClass(@unused className: String): Tailwind = Tailwind()
-
   {{#each modifiers}}
   def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
