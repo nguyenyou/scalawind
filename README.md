@@ -78,6 +78,12 @@ button(
         .dark(tw.bg_sky_900.hover(tw.bg_sky_800))),
   "Click me"
 )
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+<button class="bg-blue-500 hover:bg-blue-600 first-letter:text-red-500 first-letter:font-bold text-white rounded py-3 px-4 md:py-4 md:px-5 dark:bg-sky-900 dark:hover:bg-sky-800">
+  Click Me
+</button>
 ```
 
 That's it.
