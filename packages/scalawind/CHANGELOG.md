@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.2.2
+
+### Patch Changes
+
+- 22d60e4: remove implicit conversion sw to unify the API
+
 ## 0.2.1
 
 ### Patch Changes
