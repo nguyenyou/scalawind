@@ -218,6 +218,8 @@ module.exports = {
 You might need to change the filename to `tailwind.config.cjs` and inside the config file, it should have `module.exports = {}`, for example:
 
 ```js
+// tailwind.config.cjs
+
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
