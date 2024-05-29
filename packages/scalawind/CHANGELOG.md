@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.2.1
+
+### Patch Changes
+
+- 46a8c48: rename to TwStyle to Tailwind
+
 ## 0.2.0
 
 ### Minor Changes
