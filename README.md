@@ -384,7 +384,9 @@ val styles: String = sw(tw.text_red_500.hover(tw.text_blue_500))
 val styles: String = "text-red-500 hover:text-blue-500"
 ```
 
-The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax. The most valuable part is the macros for compiling these fluent method calls into a string.
+As you can see, the whole scalawind thing includes two parts:
+- The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax.
+- The `sw` and  `swImpl` is the macro that will compile all those fluent thing into a string
 
 
 ## Acknowledgement
