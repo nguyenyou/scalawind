@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.2.3
+
+### Patch Changes
+
+- f06eadb: since we use scalawind everywhere in the codebase, these info might be annoying
+
 ## 0.2.2
 
 ### Patch Changes
