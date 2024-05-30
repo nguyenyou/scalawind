@@ -6,8 +6,6 @@
   <br/><br/>
 </p>
 
-https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-dddade787fda
-
 ## Features
 
 - ⚡️  Write faster with Fluent API
@@ -28,20 +26,30 @@ The idea is very simple, you can generate typesafe scala code from tailwind conf
 import scalawind.*
 
 val styles: String = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
-// "bg-black text-white hover:bg-white hover:text-black
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "bg-black text-white hover:bg-white hover:text-black
 ```
 
-We use fluent syntax to type our tailwind classes. These classes will be compiled at compile-time so there's no runtime cost for this.
+We use fluent syntax to type our tailwind classes. These classes will be compiled at *compile-time* so there's no runtime cost for this.
 
-The `sw` method is a macro that will do the compile classes.
-The `tw` object contains all the classes and modifiers.
+The `sw` method is a macro that will transform the all the function calls into just one single literal string at *compile-time*.
+
+## Quickstart
+
+You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite example that's already setup everything for you to get started.
+
+```bash
+$ npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
+```
 
 ## How to use
 
 Install the CLI, using any node package manager that you prefer:
 
-```
-# pnpm add -D scalawind
+```bash
+$ npm install scalawind --save-dev
 ```
 
 Then, add the `postinstall` script to your `package.json` to make sure the code will automatically run after install:
@@ -66,17 +74,34 @@ button(
         .dark(tw.bg_sky_900.hover(tw.bg_sky_800))),
   "Click me"
 )
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+<button class="bg-blue-500 hover:bg-blue-600 first-letter:text-red-500 first-letter:font-bold text-white rounded py-3 px-4 md:py-4 md:px-5 dark:bg-sky-900 dark:hover:bg-sky-800">
+  Click Me
+</button>
 ```
 
 That's it.
 
-## Quickstart
+## Customize Generated Code
 
-You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite example that's already setup everything for you to get started.
+You can provide your custom package name and output path by adding a `scalawind` field to the `package.json` file, for example:
 
+```json
+{
+  "name": "myapp",
+  "scripts": {},
+  "dependencies": {},
+  "scalawind": {
+    "outputPath": "./scalawind.scala",
+    "packageName": "scalawind"
+  },
+}
 ```
-npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
-```
+
+- `outputPath`: specify both the generated filename and also where to generate it.
+- `packageName`: is the name of the generated package.
 
 ## Normal Usage
 
@@ -86,7 +111,10 @@ Scalawind uses Fluent Syntax which can help us type faster and still benefit fro
 
 ```scala
 tw.bg_blue_500.text_white.rounded.py_3.px_4
-// Output: bg-blue-500 text-white rounded py-3 px-4
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+"bg-blue-500 text-white rounded py-3 px-4"
 ```
 
 ### Negative value
@@ -100,11 +128,9 @@ To use classes which start with negative values like `-left-1`, just replace `-`
 
 ```scala
 tw.dark(tw.groupHover(tw.focus(tw.bg_black)))
-```
 
-will be:
+// ↓ ↓ ↓ ↓ ↓ ↓
 
-```
 "dark:group-hover:focus:bg-black"
 ```
 
@@ -117,10 +143,9 @@ To specify a class to be important, you can wrap it inside the `tw.important()` 
 
 ```scala
 button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
-```
 
-The output will be:
-```
+// ↓ ↓ ↓ ↓ ↓ ↓
+
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
@@ -137,6 +162,8 @@ By default, TailwindCSS includes all of their colorset which make the generated 
 You can pick some of them to use by overriding the config, like this:
 
 ```js
+// tailwind.config.cjs
+
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
@@ -162,6 +189,8 @@ module.exports = {
 TailwindCSS by default includes all their core plugins for you, this will cause the generated scala code has to cover all the core plugins, you can pick only the plugins that you use:
 
 ```js
+// tailwind.config.cjs
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: {
@@ -178,32 +207,183 @@ module.exports = {
 };
 ```
 
-## Notes
+## Troubleshoot
 
-### Macros
+### Cannot read the tailwind config
 
-The most reliable way right now is using `sw()` macro to compile the `tw` styles. However in the context of String you can omit the `sw()` and the library will implicitly call it for you. So, you can write:
+You might need to change the filename to `tailwind.config.cjs` and inside the config file, it should have `module.exports = {}`, for example:
 
-```scala
-val styles: String = tw.bg_black.text_white.hover(tw.bg_white.text_black) // without the sw()
-// Still output: bg-black text-white hover:bg-white hover:text-back
+```js
+// tailwind.config.cjs
+
+const colors = require("tailwindcss/colors");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: {
+    files: ["./index.html", "./scalajs-modules/**/*.js"],
+  },
+  theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      red: colors.red,
+    },
+  },
+};
 ```
 
-However, this is not work 100% time, for example, when using with `cls :=` method of Laminar, it doesn't work. So in this case, you need to explicitly use the `sw()` macro:
+## How it works?
 
-```scala
-div(cls := sw(tw.bg_black.text_white.hover(tw.bg_white.text_black)))
+The Scalawind CLI reads your `tailwind.config.cjs` and using some utilities from the `tailwind` package to parse the config into a list of unititly classes. After that, we use a handlebar template to generate the actual scala code that you will use in your scala project.
+
+This is the handlebar template:
+
+```hbs
+package {{package}}
+
+import scala.quoted.*
+import scala.annotation.unused
+
+case class Tailwind() {
+  {{#each modifiers}}
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
+  {{/each}}
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+object tw {
+  def apply(): Tailwind = Tailwind()
+
+  {{#each standard}}
+  def {{this.prop}}: Tailwind = Tailwind()
+  {{/each}}
+
+  {{#each modifiers}}
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
+  {{/each}}
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+extension (tailwind: Tailwind)
+  {{#each standard}}
+  def {{this.prop}}: Tailwind = Tailwind()
+  {{/each}}
+
+inline def sw(inline tailwind: Tailwind): String =
+  ${ swImpl('tailwind) }
+
+def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+  import quotes.reflect.*
+
+  def extractClassNames(term: Term): List[String] = term match {
+    {{#each modifiers}}
+    case Apply(Select(inner, "{{this.name}}"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"{{this.value}}:$clx")
+      extractClassNames(inner) ++ classes
+    {{/each}}
+    case Apply(Select(inner, "important"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "i"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Ident(name), List(inner)) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Inlined(_, _, inner) =>
+      extractClassNames(inner)
+    case Select(inner, name) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Ident("tailwind") =>
+      Nil
+    case Ident("tw") =>
+      Nil
+    case _ =>
+      report.errorAndAbort(s"Unexpected term: $term")
+  }
+
+  val term = twStyleExpr.asTerm
+  val classNames = extractClassNames(term)
+  val combinedClasses = classNames.mkString(" ")
+  report.info(s"Compiled: $combinedClasses")
+  Expr(combinedClasses)
+}
 ```
 
-In case you still try to omit the `sw()` call entirely, you can try to assign the `tw` to a String val first:
+Now, let's take a look at this minimal `scalawind.scala` file that you can copy and paste into your source code.
 
 ```scala
-val styles: String = tw.bg_black.text_white.hover(tw.bg_white.text_black)
+package scalawind
 
-div(cls := styles)
+import scala.quoted.*
+import scala.annotation.unused
+
+case class Tailwind() {
+  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+object tw {
+  def apply(): Tailwind = Tailwind()
+
+  def text_blue_500: Tailwind = Tailwind()
+  def text_red_500: Tailwind = Tailwind()
+  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+extension (tailwind: Tailwind)
+  def text_blue_500: Tailwind = Tailwind()
+  def text_red_500: Tailwind = Tailwind()
+
+inline def sw(inline tailwind: Tailwind): String =
+  ${ swImpl('tailwind) }
+
+def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+  import quotes.reflect.*
+
+  def extractClassNames(term: Term): List[String] = term match {
+    case Apply(Select(inner, "hover"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"hover:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Ident(name), List(inner)) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Inlined(_, _, inner) =>
+      extractClassNames(inner)
+    case Select(inner, name) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Ident("tailwind") =>
+      Nil
+    case Ident("tw") =>
+      Nil
+    case _ =>
+      report.errorAndAbort(s"Unexpected term: $term")
+  }
+
+  val term = twStyleExpr.asTerm
+  val classNames = extractClassNames(term)
+  val combinedClasses = classNames.mkString(" ")
+  report.info(s"Compiled: $combinedClasses")
+  Expr(combinedClasses)
+}
 ```
 
-This is truely a technical constraint that I don't know how to overcome yet, if you guys know how to improve it, please help.
+Then use it:
+
+```scala
+val styles: String = sw(tw.text_red_500.hover(tw.text_blue_500))
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "text-red-500 hover:text-blue-500"
+```
+
+As you can see, the whole scalawind thing includes two parts:
+- The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax.
+- The `sw` and  `swImpl` is the macro that will compile all those fluent thing into a string
+
 
 ## Acknowledgement
 
