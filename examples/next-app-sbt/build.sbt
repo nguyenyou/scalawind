@@ -11,5 +11,5 @@ scalaJSLinkerConfig ~= {
 
 libraryDependencies += "com.github.japgolly.scalajs-react" %%% "core" % "3.0.0-beta3"
 
-Compile / fastLinkJS / scalaJSLinkerOutputDirectory := target.value / "next-modules"
-Compile / fullLinkJS / scalaJSLinkerOutputDirectory := target.value / "next-modules"
+Compile / fastLinkJS / scalaJSLinkerOutputDirectory := target.value / "scalajs-modules"
+Compile / fullLinkJS / scalaJSLinkerOutputDirectory := target.value / "scalajs-modules"
