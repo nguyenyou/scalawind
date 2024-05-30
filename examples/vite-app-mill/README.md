@@ -4,10 +4,6 @@
 
 In case you don't have NodeJS yet, this is my recommendation: https://github.com/Schniz/fnm
 
-## Install sbt
-
-Following the instructions here: https://www.scala-sbt.org/download/
-
 ## Install dependencies
 
 ```bash

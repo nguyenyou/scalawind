@@ -143,6 +143,6 @@ object IndexPage {
     .render_(render()())
     .build
 
-  @JSExportTopLevel(name = "Component", moduleID = "main")
+  @JSExportTopLevel(name = "Component", moduleID = "index")
   val component = scalaComponent.toJsComponent.raw
 }

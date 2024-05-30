@@ -1,1 +1,1 @@
-export { Component as default } from 'scala/main'
+export { Component as default } from 'scala/index'

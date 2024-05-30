@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "scalawind generate",
-    "dev:scala": "sbt \"~fastLinkJS\"",
-    "build:scala": "sbt \"fullLinkJS\""
+    "dev:scala": "./millw -w myapp.fastLinkJS",
+    "build:scala": "./millw myapp.fullLinkJS"
   },
   "dependencies": {
     "react": "19.0.0-rc-f994737d14-20240522",
