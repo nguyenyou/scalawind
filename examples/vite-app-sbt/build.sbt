@@ -2,8 +2,6 @@ import org.scalajs.linker.interface.ModuleSplitStyle
 
 enablePlugins(ScalaJSPlugin)
 
-externalNpm := baseDirectory.value
-
 scalaVersion := "3.3.3"
 scalaJSUseMainModuleInitializer := true
 
