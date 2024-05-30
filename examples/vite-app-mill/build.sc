@@ -1,6 +1,6 @@
 import mill._, scalalib._, scalajslib._, scalajslib.api._
 
-object frontend extends ScalaJSModule {
+object myapp extends ScalaJSModule {
   def scalaVersion = "3.3.3"
   def scalaJSVersion = "1.16.0"
 
