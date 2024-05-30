@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "scala/*": ["target/next-modules/*"]
+      "scala/*": ["target/scalajs-modules/*"]
     }
   }
 }

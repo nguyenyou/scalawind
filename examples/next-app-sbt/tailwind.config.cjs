@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./scalajs-modules/**/*.js",
+    "./target/scalajs-modules/**/*.js",
     "./pages/**/*.js",
   ],
   theme: {
