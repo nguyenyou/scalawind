@@ -3,7 +3,11 @@ const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: {
-    files: ['./index.html', './target/scalajs-modules/**/*.js'],
+    files: [
+      './index.html', 
+      './out/myapp/fastLinkJS.dest/**/*.js', 
+      './out/myapp/fullLinkJS.dest/**/*.js'
+    ],
   },
   theme: {
     colors: {

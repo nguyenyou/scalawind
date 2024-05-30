@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "postinstall": "scalawind generate",
-    "dev:scala": "./millw -w fastLinkJS",
-    "build:scala": "./millw fullLinkJS"
+    "dev:scala": "./millw -w myapp.fastLinkJS",
+    "build:scala": "./millw myapp.fullLinkJS"
   },
   "devDependencies": {
     "autoprefixer": "10.4.19",

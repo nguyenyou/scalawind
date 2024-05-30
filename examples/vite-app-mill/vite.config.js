@@ -7,7 +7,7 @@ export default defineConfig({
     alias: [
       {
         find: /^scalajs:(.*)$/,
-        replacement: `/out/frontend/${isProd ? 'full' : 'fast'}LinkJS.dest/$1`
+        replacement: `/out/myapp/${isProd ? 'full' : 'fast'}LinkJS.dest/$1`
       }
     ]
   }
