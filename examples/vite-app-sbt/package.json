@@ -1,0 +1,25 @@
+{
+  "name": "scalawind-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postinstall": "scalawind generate",
+    "dev:scala": "sbt \"~fastLinkJS\"",
+    "build:scala": "sbt \"fullLinkJS\""
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "scalawind": "latest",
+    "tailwindcss": "3.4.3",
+    "vite": "5.2.11"
+  },
+  "scalawind": {
+    "outputPath": "./src/main/scala/myapp/scalawind.scala",
+    "packageName": "scalawind"
+  }
+}
