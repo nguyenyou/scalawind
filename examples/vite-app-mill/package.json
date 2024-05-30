@@ -1,5 +1,5 @@
 {
-  "name": "scalawind-vite-sbt",
+  "name": "scalawind-vite-mill",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "postinstall": "scalawind generate",
-    "dev:scala": "sbt \"~fastLinkJS\"",
-    "build:scala": "sbt \"fullLinkJS\""
+    "dev:scala": "./millw -w fastLinkJS",
+    "build:scala": "./millw fullLinkJS"
   },
   "devDependencies": {
     "autoprefixer": "10.4.19",
@@ -19,7 +19,7 @@
     "vite": "5.2.11"
   },
   "scalawind": {
-    "outputPath": "./src/main/scala/myapp/scalawind.scala",
+    "outputPath": "./myapp/src/myapp/scalawind.scala",
     "packageName": "scalawind"
   }
 }
