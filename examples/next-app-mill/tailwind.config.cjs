@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./target/scalajs-modules/**/*.js",
+    "./out/myapp/fastLinkJS.dest/**/*.js",
     "./pages/**/*.js",
   ],
   theme: {
