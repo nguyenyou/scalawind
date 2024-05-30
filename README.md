@@ -239,6 +239,154 @@ module.exports = {
 };
 ```
 
+## How it works?
+
+The Scalawind CLI reads your `tailwind.config.cjs` and using some utilities from the `tailwind` package to parse the config into a list of unititly classes. After that, we use a handlebar template to generate the actual scala code that you will use in your scala project.
+
+This is the handlebar template:
+
+```hbs
+package {{package}}
+
+import scala.quoted.*
+import scala.annotation.unused
+
+case class Tailwind() {
+  {{#each modifiers}}
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
+  {{/each}}
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+object tw {
+  def apply(): Tailwind = Tailwind()
+
+  {{#each standard}}
+  def {{this.prop}}: Tailwind = Tailwind()
+  {{/each}}
+
+  {{#each modifiers}}
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
+  {{/each}}
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+extension (tailwind: Tailwind)
+  {{#each standard}}
+  def {{this.prop}}: Tailwind = Tailwind()
+  {{/each}}
+
+inline def sw(inline tailwind: Tailwind): String =
+  ${ swImpl('tailwind) }
+
+def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+  import quotes.reflect.*
+
+  def extractClassNames(term: Term): List[String] = term match {
+    {{#each modifiers}}
+    case Apply(Select(inner, "{{this.name}}"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"{{this.value}}:$clx")
+      extractClassNames(inner) ++ classes
+    {{/each}}
+    case Apply(Select(inner, "important"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "i"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Ident(name), List(inner)) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Inlined(_, _, inner) =>
+      extractClassNames(inner)
+    case Select(inner, name) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Ident("tailwind") =>
+      Nil
+    case Ident("tw") =>
+      Nil
+    case _ =>
+      report.errorAndAbort(s"Unexpected term: $term")
+  }
+
+  val term = twStyleExpr.asTerm
+  val classNames = extractClassNames(term)
+  val combinedClasses = classNames.mkString(" ")
+  report.info(s"Compiled: $combinedClasses")
+  Expr(combinedClasses)
+}
+```
+
+Now, let's take a look at this minimal `scalawind.scala` file that you can copy and paste into your source code.
+
+```scala
+package scalawind
+
+import scala.quoted.*
+import scala.annotation.unused
+
+case class Tailwind() {
+  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+object tw {
+  def apply(): Tailwind = Tailwind()
+
+  def text_blue_500: Tailwind = Tailwind()
+  def text_red_500: Tailwind = Tailwind()
+  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+extension (tailwind: Tailwind)
+  def text_blue_500: Tailwind = Tailwind()
+  def text_red_500: Tailwind = Tailwind()
+
+inline def sw(inline tailwind: Tailwind): String =
+  ${ swImpl('tailwind) }
+
+def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+  import quotes.reflect.*
+
+  def extractClassNames(term: Term): List[String] = term match {
+    case Apply(Select(inner, "hover"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"hover:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Ident(name), List(inner)) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Inlined(_, _, inner) =>
+      extractClassNames(inner)
+    case Select(inner, name) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Ident("tailwind") =>
+      Nil
+    case Ident("tw") =>
+      Nil
+    case _ =>
+      report.errorAndAbort(s"Unexpected term: $term")
+  }
+
+  val term = twStyleExpr.asTerm
+  val classNames = extractClassNames(term)
+  val combinedClasses = classNames.mkString(" ")
+  report.info(s"Compiled: $combinedClasses")
+  Expr(combinedClasses)
+}
+```
+
+Then use it:
+
+```scala
+val styles: String = sw(tw.text_red_500.hover(tw.text_blue_500))
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "text-red-500 hover:text-blue-500"
+```
+
+The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax. The most valuable part is the macros for compiling these fluent method calls into a string.
+
+
 ## Acknowledgement
 
 This project is inspired by https://github.com/mokshit06/typewind. Thank you a lot for making the library.
