@@ -48,6 +48,12 @@ $ npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 
 https://github.com/nguyenyou/scalawind/assets/38455472/ed0dc006-a263-49be-a809-8a8c1c340ec1
 
+There many examples for you to choose, you can take about at the examples folder. Pick one and replace `EXAMPLE_NAME_HERE` following the syntax: 
+
+```bash
+$ npx degit nguyenyou/scalawind/examples/EXAMPLE_NAME_HERE my-scalawind-app
+```
+
 ## How to use
 
 Install the CLI, using any node package manager that you prefer:
