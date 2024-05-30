@@ -65,6 +65,5 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   val term = twStyleExpr.asTerm
   val classNames = extractClassNames(term)
   val combinedClasses = classNames.mkString(" ")
-  report.info(s"Compiled: $combinedClasses")
   Expr(combinedClasses)
 }
