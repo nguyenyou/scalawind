@@ -1,0 +1,27 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "scalawind generate",
+    "dev:scala": "sbt \"~fastLinkJS\"",
+    "build:scala": "sbt \"fullLinkJS\""
+  },
+  "dependencies": {
+    "react": "19.0.0-rc-f994737d14-20240522",
+    "react-dom": "19.0.0-rc-f994737d14-20240522",
+    "next": "15.0.0-rc.0"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "scalawind": "^0.2.2",
+    "tailwindcss": "^3.4.1"
+  },
+  "scalawind": {
+    "outputPath": "./myapp/src/myapp/scalawind.scala"
+  }
+}

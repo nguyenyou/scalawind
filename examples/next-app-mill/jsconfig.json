@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "scala/*": ["out/myapp/fastLinkJS.dest/*"]
+    }
+  }
+}
