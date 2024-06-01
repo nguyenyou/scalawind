@@ -170,6 +170,7 @@ case class Tailwind() {
   def print(@unused styles: Tailwind): Tailwind = Tailwind()
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
+  def raw(@unused classString: String): Tailwind = Tailwind()
 }
 
 object tw {
@@ -356,6 +357,7 @@ object tw {
   def print(@unused styles: Tailwind): Tailwind = Tailwind()
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
+  def raw(@unused classString: String): Tailwind = Tailwind()
 }
 
 extension (tailwind: Tailwind)
@@ -873,6 +875,12 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
     case Apply(Select(inner, "print"), List(styles)) =>
       val classes = extractClassNames(styles).map(clx => s"print:$clx")
       extractClassNames(inner) ++ classes
+    case Apply(Select(Select(Ident("tw"), method), "raw"), List(Literal(StringConstant(classString)))) =>
+      val methodClass = method.replace("_", "-")
+      val rawClasses = classString.split("\\s+").toList
+      methodClass :: rawClasses
+    case Apply(Select(Ident("tw"), "raw"), List(Literal(StringConstant(classString)))) =>
+      classString.split("\\s+").toList
     case Apply(Select(inner, "important"), List(styles)) =>
       val classes = extractClassNames(styles).map(clx => s"!$clx")
       extractClassNames(inner) ++ classes
