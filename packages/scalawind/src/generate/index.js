@@ -2,6 +2,23 @@ import resolveConfig from 'tailwindcss/resolveConfig';
 import { createContext } from 'tailwindcss/lib/lib/setupContextUtils';
 import fs from 'fs'
 import path from 'path'
+import { transform } from 'lightningcss';
+
+function createDoc(doc) {
+  try {
+    let cssDoc = `/** {{{
+    * ${transform({
+      filename: 'doc.css',
+      code: Buffer.from(doc),
+    })
+      .code.toString()
+      .replace(/\n/g, '\n    * ')}}}}
+    */`;
+    return cssDoc;
+  } catch (error) {
+    return doc;
+  }
+}
 
 import Handlebars from "handlebars";
 import { writeToDisk } from './writer';
@@ -37,6 +54,7 @@ export function generateContent(userConfig, packageName) {
   });
 
   const colorSet = new Set();
+
   const standard = [...new Set(classesWithCandidateItem)].map(([s, { rule: rules, rest }]) => {
     let css = '';
 
@@ -67,7 +85,7 @@ export function generateContent(userConfig, packageName) {
       }
     }
 
-    return { prop: fmtToScalawind(s), raw: s, type: 'Property', doc: css };
+    return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
   
   const modifiers = [...variantMap.keys()]

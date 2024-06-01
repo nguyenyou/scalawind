@@ -15,6 +15,7 @@ object tw {
   def apply(): Tailwind = Tailwind()
 
   {{#each standard}}
+  {{this.doc}}
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
 
