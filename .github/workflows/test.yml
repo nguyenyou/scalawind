@@ -1,4 +1,4 @@
-name: Check PR
+name: Test
 
 on:
   pull_request:
@@ -8,8 +8,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release:
-    name: Release
+  test:
+    name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
