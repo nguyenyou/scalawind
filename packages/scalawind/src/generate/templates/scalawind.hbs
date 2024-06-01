@@ -28,6 +28,7 @@ object tw {
 
 extension (tailwind: Tailwind)
   {{#each standard}}
+  {{this.doc}}
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
 
