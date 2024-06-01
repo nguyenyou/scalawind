@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "scalawind generate",
+    "postinstall": "scalawind generate -o ./src/scalawind.scala",
     "dev:scala": "scala-cli --cli-version 1.3.2 --power package . -w -f -o scalajs-modules",
     "build:scala": "scala-cli --cli-version 1.3.2 --power package . -f -o scalajs-modules"
   },
@@ -20,8 +20,5 @@
     "postcss": "^8",
     "scalawind": "latest",
     "tailwindcss": "^3.4.1"
-  },
-  "scalawind": {
-    "outputPath": "./src/scalawind.scala"
   }
 }

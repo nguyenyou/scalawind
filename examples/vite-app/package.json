@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postinstall": "scalawind generate",
+    "postinstall": "scalawind generate -o ./src/scalawind.scala",
     "dev:scala": "scala-cli --cli-version 1.3.2 --power package . -w -f -o scalajs-modules",
     "build:scala": "scala-cli --cli-version 1.3.2 --power package . -f -o scalajs-modules"
   },
@@ -17,9 +17,5 @@
     "scalawind": "latest",
     "tailwindcss": "3.4.3",
     "vite": "5.2.11"
-  },
-  "scalawind": {
-    "outputPath": "./src/scalawind.scala",
-    "packageName": "scalawind"
   }
 }

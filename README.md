@@ -96,22 +96,11 @@ That's it.
 
 ## Customize Generated Code
 
-You can provide your custom package name and output path by adding a `scalawind` field to the `package.json` file, for example:
+The Scalawind CLI supports `-o` to specify the output path and `-p` to specify the generated package name. For example:
 
-```json
-{
-  "name": "myapp",
-  "scripts": {},
-  "dependencies": {},
-  "scalawind": {
-    "outputPath": "./scalawind.scala",
-    "packageName": "scalawind"
-  },
-}
+```bash
+$ scalawind generate -o ./src/main/scala/myapp/scalawind.scala -p scalawind
 ```
-
-- `outputPath`: specify both the generated filename and also where to generate it.
-- `packageName`: is the name of the generated package.
 
 ## Normal Usage
 
@@ -172,7 +161,7 @@ By default, TailwindCSS includes all of their colorset which make the generated 
 You can pick some of them to use by overriding the config, like this:
 
 ```js
-// tailwind.config.cjs
+// tailwind.config.js
 
 const colors = require("tailwindcss/colors");
 
@@ -199,7 +188,7 @@ module.exports = {
 TailwindCSS by default includes all their core plugins for you, this will cause the generated scala code has to cover all the core plugins, you can pick only the plugins that you use:
 
 ```js
-// tailwind.config.cjs
+// tailwind.config.js
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -217,37 +206,9 @@ module.exports = {
 };
 ```
 
-## Troubleshoot
-
-### Cannot read the tailwind config
-
-You might need to change the filename to `tailwind.config.cjs` and inside the config file, it should have `module.exports = {}`, for example:
-
-```js
-// tailwind.config.cjs
-
-const colors = require("tailwindcss/colors");
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: {
-    files: ["./index.html", "./scalajs-modules/**/*.js"],
-  },
-  theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      black: colors.black,
-      white: colors.white,
-      red: colors.red,
-    },
-  },
-};
-```
-
 ## How it works?
 
-The Scalawind CLI reads your `tailwind.config.cjs` and using some utilities from the `tailwind` package to parse the config into a list of unititly classes. After that, we use a handlebar template to generate the actual scala code that you will use in your scala project.
+The Scalawind CLI reads your `tailwind.config.js` and using some utilities from the `tailwind` package to parse the config into a list of unititly classes. After that, we use a handlebar template to generate the actual scala code that you will use in your scala project.
 
 This is the handlebar template:
 
