@@ -7,5 +7,6 @@ export const tailwindConfig = {
   },
   corePlugins: [
     'textColor',
+    'width'
   ]
 };
