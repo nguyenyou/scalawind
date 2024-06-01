@@ -104,10 +104,10 @@ $ scalawind generate -o ./src/main/scala/myapp/scalawind.scala -p scalawind
 
 ## Show Compiled Class On Mouse Hover
 
-You can turn on the show compiled class on mouse hover feature by adding the `--preview-compiled-result` to the command. For example:
+You can turn on the show compiled class on mouse hover feature by adding the `--preview-compiled-result` or `-pcr` to the command. For example:
 
 ```bash
-$ scalawind generate --preview-complied-result -o ./src/main/scala/myapp/scalawind.scala -p scalawind
+$ scalawind generate -pcr -o ./src/main/scala/myapp/scalawind.scala 
 ```
 
 ## Normal Usage
