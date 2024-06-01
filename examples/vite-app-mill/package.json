@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postinstall": "scalawind generate",
+    "postinstall": "scalawind generate -o ./myapp/src/myapp/scalawind.scala",
     "dev:scala": "./millw -w myapp.fastLinkJS",
     "build:scala": "./millw myapp.fullLinkJS"
   },
@@ -17,9 +17,5 @@
     "scalawind": "latest",
     "tailwindcss": "3.4.3",
     "vite": "5.2.11"
-  },
-  "scalawind": {
-    "outputPath": "./myapp/src/myapp/scalawind.scala",
-    "packageName": "scalawind"
   }
 }

@@ -1,10 +1,7 @@
-#!/usr/bin/env node
-
-// Credit: https://github.com/Mokshit06/typewind/blob/main/packages/typewind/src/cli.ts
-
-import fs from 'fs';
-import path from 'path';
-import { createScalawindContext, loadConfig } from './utils';
+import resolveConfig from 'tailwindcss/resolveConfig';
+import { createContext } from 'tailwindcss/lib/lib/setupContextUtils';
+import fs from 'fs'
+import path from 'path'
 
 import Handlebars from "handlebars";
 
@@ -12,34 +9,12 @@ const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scal
 
 const template = Handlebars.compile(scalawindTemplate);
 
-const fmtToScalawind = (s: string) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '');
+export default function generate(userConfig, outputPath, packageName) {
+  const config = resolveConfig(userConfig);
+  const ctx = createContext(config);
+  const classList = ctx.getClassList()
 
-function getCandidateItem(
-  map: Map<string, any>,
-  name: string,
-  rest: string | undefined = undefined
-): { rule: any; rest: string | undefined } {
-  let rule = map.get(name);
-
-  if (!rule && name.includes('-')) {
-    const arr = name.split('-');
-    const key = arr.slice(0, arr.length - 1).join('-');
-    return getCandidateItem(
-      map,
-      key,
-      [arr[arr.length - 1], rest].filter(Boolean).join('-')
-    );
-  }
-
-  return { rule, rest };
-}
-
-export async function generateTypes() {
-  const ctx = createScalawindContext();
-
-  const classList = ctx.getClassList() as string[];
-
-  const flatColorsList: string[] = [];
+  const flatColorsList = [];
 
   for (const [k, v] of Object.entries(ctx.tailwindConfig.theme.colors)) {
     if (typeof v === 'object') {
@@ -53,10 +28,10 @@ export async function generateTypes() {
 
   const classesWithStandardSyntax = classList.filter((s) => !/\.|\//.test(s));
   const classesWithCandidateItem = [...new Set(classesWithStandardSyntax)].map((s) => {
-    return [s, getCandidateItem(ctx.candidateRuleMap, s)] as const;
+    return [s, getCandidateItem(ctx.candidateRuleMap, s)];
   });
 
-  const colorSet = new Set<string>();
+  const colorSet = new Set();
   const standard = [...new Set(classesWithCandidateItem)].map(([s, { rule: rules, rest }]) => {
     let css = '';
 
@@ -67,7 +42,7 @@ export async function generateTypes() {
         if (typeof ruleOrFn === 'function') {
           const types = info.options.types;
           const isColor = types.some(
-            (t: Record<string, string>) => t.type == 'color'
+            (t) => t.type == 'color'
           );
 
           if (isColor && rest && flatColorsList.includes(rest)) {
@@ -102,11 +77,8 @@ export async function generateTypes() {
     return ({ name: mod, value: mod.replace(/_/g, '-')})
   })
 
-  const config = loadConfig();
 
-
-  const generatedScalawind = template({ package: config.packageName, modifiers, standard})
-  const outputPath = path.join(process.cwd(), config.outputPath);
+  const generatedScalawind = template({ package: packageName, modifiers, standard})
 
   fs.writeFileSync(
     outputPath,
@@ -115,11 +87,35 @@ export async function generateTypes() {
   );
 }
 
-function fmtRuleset(rule: any) {
+
+const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '');
+
+function getCandidateItem(
+  map,
+  name,
+  rest = undefined
+) {
+  let rule = map.get(name);
+
+  if (!rule && name.includes('-')) {
+    const arr = name.split('-');
+    const key = arr.slice(0, arr.length - 1).join('-');
+    return getCandidateItem(
+      map,
+      key,
+      [arr[arr.length - 1], rest].filter(Boolean).join('-')
+    );
+  }
+
+  return { rule, rest };
+}
+
+
+function fmtRuleset(rule) {
   return (
     '{' +
     Object.entries(rule)
-      .map(([prop, value]): any => {
+      .map(([prop, value]) => {
         if (!value) return '';
         if (typeof value === 'object') return `${prop} ${fmtRuleset(value)}`;
 
@@ -130,7 +126,7 @@ function fmtRuleset(rule: any) {
   );
 }
 
-function fmtNode(node: any) {
+function fmtNode(node) {
   if (node.type === 'atrule') {
     return `\\@${node.name} ${node.params} {${node.nodes
       .map(fmtNode)
@@ -144,12 +140,7 @@ function fmtNode(node: any) {
   }
 }
 
-function fmtRuleToCss(ruleSet: any) {
+function fmtRuleToCss(ruleSet) {
   const selector = Object.keys(ruleSet)[0];
   return `${selector} ${fmtRuleset(ruleSet[selector])}`;
 }
-
-generateTypes().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});

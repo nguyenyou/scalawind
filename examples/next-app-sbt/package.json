@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "scalawind generate",
+    "postinstall": "scalawind generate -o ./src/main/scala/myapp/scalawind.scala",
     "dev:scala": "sbt \"~fastLinkJS\"",
     "build:scala": "sbt \"fullLinkJS\""
   },
@@ -20,8 +20,5 @@
     "postcss": "^8",
     "scalawind": "latest",
     "tailwindcss": "^3.4.1"
-  },
-  "scalawind": {
-    "outputPath": "./src/main/scala/myapp/scalawind.scala"
   }
 }
