@@ -27,7 +27,7 @@ const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scal
 
 const template = Handlebars.compile(scalawindTemplate);
 
-export function generateContent(userConfig, packageName) {
+export function generateContent(userConfig, packageName = "scalawind", previewCompliedResult = false) {
   const resolvedConfig = resolveConfig(userConfig);
   const ctx = createContext(resolvedConfig);
 
@@ -163,8 +163,9 @@ function fmtRuleToCss(ruleSet) {
   return `${selector} ${fmtRuleset(ruleSet[selector])}`;
 }
 
-export default function generate(userConfig, outputPath, packageName) {
-  const content = generateContent(userConfig, packageName)
+export default function generate(userConfig, options) {
+  const { packageName, outputPath, previewCompliedResult } = options
+  const content = generateContent(userConfig, packageName, previewCompliedResult)
 
   writeToDisk(outputPath, content)
 }

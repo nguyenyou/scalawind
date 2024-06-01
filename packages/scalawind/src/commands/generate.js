@@ -13,6 +13,7 @@ const initOptionsSchema = z.object({
   cwd: z.string(),
   output: z.string(),
   packageName: z.string(),
+  previewCompliedResult: z.boolean()
 })
 
 export const generate = new Command()
@@ -29,6 +30,11 @@ export const generate = new Command()
     "scalawind"
   )
   .option(
+    "-pcr, --preview-complied-result <previewCompliedResult>",
+    "enable show preview compiled result",
+    false
+  )
+  .option(
     "-c, --cwd <cwd>",
     "the working directory. defaults to the current directory.",
     process.cwd()
@@ -41,6 +47,7 @@ export const generate = new Command()
       const cwd = path.resolve(options.cwd)
       const outputPath = path.join(cwd, options.output)
       const packageName = options.packageName
+      const previewCompliedResult = options.previewCompliedResult
 
       // Ensure target directory exists.
       if (!existsSync(cwd)) {
@@ -58,7 +65,7 @@ export const generate = new Command()
 
       const configObject = loadConfig(userConfigPath)
 
-      handler(configObject, outputPath, packageName)
+      handler(configObject, options)
 
       const duration = Math.floor(Date.now() - start)
 
