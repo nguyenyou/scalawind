@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.3.4
+
+### Patch Changes
+
+- 2b2e164: add raw method as an escape hatch
+
 ## 0.3.3
 
 ### Patch Changes
