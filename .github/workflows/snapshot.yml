@@ -37,6 +37,7 @@ jobs:
       - name: Build
         run: |
           pnpm build
+          cp README.md packages/scalawind/README.md
 
       - name: Snapshot Release
         run: |
