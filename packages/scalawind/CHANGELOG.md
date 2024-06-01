@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.3.2
+
+### Patch Changes
+
+- 6b9a4d5: add css doc
+
 ## 0.3.1
 
 ### Patch Changes
