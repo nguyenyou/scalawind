@@ -26,6 +26,6 @@ jobs:
           corepack enable
           pnpm install
 
-      - name: Check
+      - name: Unit Test
         run: |
-          pnpm check
+          pnpm test
