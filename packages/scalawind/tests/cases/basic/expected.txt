@@ -1,0 +1,876 @@
+package scalawind
+
+import scala.quoted.*
+import scala.annotation.unused
+
+case class Tailwind() {
+  def first_letter(@unused styles: Tailwind): Tailwind = Tailwind()
+  def first_line(@unused styles: Tailwind): Tailwind = Tailwind()
+  def marker(@unused styles: Tailwind): Tailwind = Tailwind()
+  def selection(@unused styles: Tailwind): Tailwind = Tailwind()
+  def file(@unused styles: Tailwind): Tailwind = Tailwind()
+  def placeholder(@unused styles: Tailwind): Tailwind = Tailwind()
+  def backdrop(@unused styles: Tailwind): Tailwind = Tailwind()
+  def before(@unused styles: Tailwind): Tailwind = Tailwind()
+  def after(@unused styles: Tailwind): Tailwind = Tailwind()
+  def first(@unused styles: Tailwind): Tailwind = Tailwind()
+  def last(@unused styles: Tailwind): Tailwind = Tailwind()
+  def only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def odd(@unused styles: Tailwind): Tailwind = Tailwind()
+  def even(@unused styles: Tailwind): Tailwind = Tailwind()
+  def first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def visited(@unused styles: Tailwind): Tailwind = Tailwind()
+  def target(@unused styles: Tailwind): Tailwind = Tailwind()
+  def open(@unused styles: Tailwind): Tailwind = Tailwind()
+  def default(@unused styles: Tailwind): Tailwind = Tailwind()
+  def checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
+  def placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
+  def autofill(@unused styles: Tailwind): Tailwind = Tailwind()
+  def optional(@unused styles: Tailwind): Tailwind = Tailwind()
+  def required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def valid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def invalid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def in_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def read_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def empty(@unused styles: Tailwind): Tailwind = Tailwind()
+  def focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
+  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
+  def focus(@unused styles: Tailwind): Tailwind = Tailwind()
+  def focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
+  def active(@unused styles: Tailwind): Tailwind = Tailwind()
+  def enabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_first(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_last(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_odd(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_even(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_visited(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_target(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_open(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_default(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_optional(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_valid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_empty(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_hover(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_focus(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_active(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_first(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_last(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_odd(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_even(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_visited(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_target(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_open(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_default(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_optional(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_valid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_empty(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_hover(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_focus(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_active(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer(@unused styles: Tailwind): Tailwind = Tailwind()
+  def has(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_has(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_has(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria(@unused styles: Tailwind): Tailwind = Tailwind()
+  def data(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_data(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_data(@unused styles: Tailwind): Tailwind = Tailwind()
+  def supports(@unused styles: Tailwind): Tailwind = Tailwind()
+  def motion_safe(@unused styles: Tailwind): Tailwind = Tailwind()
+  def motion_reduce(@unused styles: Tailwind): Tailwind = Tailwind()
+  def contrast_more(@unused styles: Tailwind): Tailwind = Tailwind()
+  def contrast_less(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_sm(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_md(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_lg(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_2xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max(@unused styles: Tailwind): Tailwind = Tailwind()
+  def sm(@unused styles: Tailwind): Tailwind = Tailwind()
+  def md(@unused styles: Tailwind): Tailwind = Tailwind()
+  def lg(@unused styles: Tailwind): Tailwind = Tailwind()
+  def xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def _2xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def min(@unused styles: Tailwind): Tailwind = Tailwind()
+  def portrait(@unused styles: Tailwind): Tailwind = Tailwind()
+  def landscape(@unused styles: Tailwind): Tailwind = Tailwind()
+  def ltr(@unused styles: Tailwind): Tailwind = Tailwind()
+  def rtl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def dark(@unused styles: Tailwind): Tailwind = Tailwind()
+  def forced_colors(@unused styles: Tailwind): Tailwind = Tailwind()
+  def print(@unused styles: Tailwind): Tailwind = Tailwind()
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+object tw {
+  def apply(): Tailwind = Tailwind()
+
+  def text_black: Tailwind = Tailwind()
+  def text_white: Tailwind = Tailwind()
+
+  def first_letter(@unused styles: Tailwind): Tailwind = Tailwind()
+  def first_line(@unused styles: Tailwind): Tailwind = Tailwind()
+  def marker(@unused styles: Tailwind): Tailwind = Tailwind()
+  def selection(@unused styles: Tailwind): Tailwind = Tailwind()
+  def file(@unused styles: Tailwind): Tailwind = Tailwind()
+  def placeholder(@unused styles: Tailwind): Tailwind = Tailwind()
+  def backdrop(@unused styles: Tailwind): Tailwind = Tailwind()
+  def before(@unused styles: Tailwind): Tailwind = Tailwind()
+  def after(@unused styles: Tailwind): Tailwind = Tailwind()
+  def first(@unused styles: Tailwind): Tailwind = Tailwind()
+  def last(@unused styles: Tailwind): Tailwind = Tailwind()
+  def only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def odd(@unused styles: Tailwind): Tailwind = Tailwind()
+  def even(@unused styles: Tailwind): Tailwind = Tailwind()
+  def first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def visited(@unused styles: Tailwind): Tailwind = Tailwind()
+  def target(@unused styles: Tailwind): Tailwind = Tailwind()
+  def open(@unused styles: Tailwind): Tailwind = Tailwind()
+  def default(@unused styles: Tailwind): Tailwind = Tailwind()
+  def checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
+  def placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
+  def autofill(@unused styles: Tailwind): Tailwind = Tailwind()
+  def optional(@unused styles: Tailwind): Tailwind = Tailwind()
+  def required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def valid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def invalid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def in_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def read_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def empty(@unused styles: Tailwind): Tailwind = Tailwind()
+  def focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
+  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
+  def focus(@unused styles: Tailwind): Tailwind = Tailwind()
+  def focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
+  def active(@unused styles: Tailwind): Tailwind = Tailwind()
+  def enabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_first(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_last(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_odd(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_even(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_visited(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_target(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_open(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_default(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_optional(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_valid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_empty(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_hover(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_focus(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_active(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_first(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_last(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_odd(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_even(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_visited(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_target(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_open(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_default(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_optional(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_valid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_empty(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_hover(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_focus(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_active(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer(@unused styles: Tailwind): Tailwind = Tailwind()
+  def has(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_has(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_has(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
+  def aria(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_aria(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_aria(@unused styles: Tailwind): Tailwind = Tailwind()
+  def data(@unused styles: Tailwind): Tailwind = Tailwind()
+  def group_data(@unused styles: Tailwind): Tailwind = Tailwind()
+  def peer_data(@unused styles: Tailwind): Tailwind = Tailwind()
+  def supports(@unused styles: Tailwind): Tailwind = Tailwind()
+  def motion_safe(@unused styles: Tailwind): Tailwind = Tailwind()
+  def motion_reduce(@unused styles: Tailwind): Tailwind = Tailwind()
+  def contrast_more(@unused styles: Tailwind): Tailwind = Tailwind()
+  def contrast_less(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_sm(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_md(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_lg(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max_2xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def max(@unused styles: Tailwind): Tailwind = Tailwind()
+  def sm(@unused styles: Tailwind): Tailwind = Tailwind()
+  def md(@unused styles: Tailwind): Tailwind = Tailwind()
+  def lg(@unused styles: Tailwind): Tailwind = Tailwind()
+  def xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def _2xl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def min(@unused styles: Tailwind): Tailwind = Tailwind()
+  def portrait(@unused styles: Tailwind): Tailwind = Tailwind()
+  def landscape(@unused styles: Tailwind): Tailwind = Tailwind()
+  def ltr(@unused styles: Tailwind): Tailwind = Tailwind()
+  def rtl(@unused styles: Tailwind): Tailwind = Tailwind()
+  def dark(@unused styles: Tailwind): Tailwind = Tailwind()
+  def forced_colors(@unused styles: Tailwind): Tailwind = Tailwind()
+  def print(@unused styles: Tailwind): Tailwind = Tailwind()
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+}
+
+extension (tailwind: Tailwind)
+  def text_black: Tailwind = Tailwind()
+  def text_white: Tailwind = Tailwind()
+
+inline def sw(inline tailwind: Tailwind): String =
+  ${ swImpl('tailwind) }
+
+def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+  import quotes.reflect.*
+
+  def extractClassNames(term: Term): List[String] = term match {
+    case Apply(Select(inner, "first_letter"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"first-letter:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "first_line"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"first-line:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "marker"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"marker:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "selection"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"selection:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "file"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"file:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "placeholder"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"placeholder:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "backdrop"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"backdrop:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "before"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"before:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "after"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"after:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "first"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"first:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "last"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"last:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "only"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"only:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "odd"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"odd:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "even"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"even:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "first_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"first-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "last_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"last-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "only_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"only-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "visited"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"visited:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "target"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"target:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "open"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"open:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "default"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"default:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "checked"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"checked:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "indeterminate"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"indeterminate:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "placeholder_shown"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"placeholder-shown:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "autofill"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"autofill:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "optional"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"optional:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "required"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"required:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "valid"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"valid:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "invalid"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"invalid:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "in_range"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"in-range:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "out_of_range"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"out-of-range:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "read_only"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"read-only:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "empty"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"empty:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "focus_within"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"focus-within:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "hover"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"hover:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "focus"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"focus:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "focus_visible"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"focus-visible:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "active"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"active:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "enabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"enabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "disabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"disabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_first"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-first:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_last"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-last:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_only"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-only:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_odd"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-odd:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_even"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-even:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_first_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-first-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_last_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-last-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_only_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-only-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_visited"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-visited:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_target"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-target:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_open"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-open:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_default"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-default:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_checked"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-checked:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_indeterminate"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-indeterminate:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_placeholder_shown"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-placeholder-shown:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_autofill"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-autofill:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_optional"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-optional:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_required"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-required:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_valid"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-valid:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_invalid"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-invalid:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_in_range"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-in-range:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_out_of_range"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-out-of-range:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_read_only"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-read-only:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_empty"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-empty:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_focus_within"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-focus-within:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_hover"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-hover:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_focus"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-focus:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_focus_visible"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-focus-visible:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_active"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-active:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_enabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-enabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_disabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-disabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_first"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-first:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_last"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-last:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_only"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-only:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_odd"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-odd:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_even"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-even:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_first_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-first-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_last_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-last-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_only_of_type"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-only-of-type:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_visited"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-visited:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_target"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-target:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_open"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-open:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_default"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-default:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_checked"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-checked:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_indeterminate"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-indeterminate:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_placeholder_shown"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-placeholder-shown:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_autofill"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-autofill:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_optional"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-optional:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_required"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-required:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_valid"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-valid:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_invalid"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-invalid:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_in_range"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-in-range:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_out_of_range"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-out-of-range:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_read_only"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-read-only:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_empty"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-empty:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_focus_within"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-focus-within:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_hover"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-hover:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_focus"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-focus:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_focus_visible"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-focus-visible:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_active"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-active:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_enabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-enabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_disabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-disabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "has"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"has:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_has"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-has:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_has"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-has:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_busy"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-busy:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_checked"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-checked:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_disabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-disabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_expanded"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-expanded:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_hidden"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-hidden:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_pressed"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-pressed:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_readonly"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-readonly:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_required"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-required:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria_selected"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria-selected:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "aria"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"aria:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_busy"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-busy:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_checked"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-checked:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_disabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-disabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_expanded"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-expanded:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_hidden"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-hidden:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_pressed"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-pressed:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_readonly"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-readonly:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_required"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-required:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria_selected"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria-selected:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_aria"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-aria:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_busy"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-busy:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_checked"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-checked:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_disabled"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-disabled:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_expanded"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-expanded:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_hidden"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-hidden:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_pressed"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-pressed:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_readonly"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-readonly:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_required"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-required:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria_selected"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria-selected:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_aria"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-aria:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "data"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"data:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "group_data"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"group-data:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "peer_data"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"peer-data:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "supports"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"supports:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "motion_safe"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"motion-safe:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "motion_reduce"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"motion-reduce:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "contrast_more"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"contrast-more:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "contrast_less"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"contrast-less:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "max_sm"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"max-sm:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "max_md"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"max-md:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "max_lg"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"max-lg:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "max_xl"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"max-xl:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "max_2xl"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"max-2xl:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "max"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"max:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "sm"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"sm:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "md"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"md:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "lg"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"lg:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "xl"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"xl:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "_2xl"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"-2xl:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "min"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"min:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "portrait"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"portrait:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "landscape"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"landscape:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "ltr"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"ltr:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "rtl"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"rtl:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "dark"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"dark:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "forced_colors"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"forced-colors:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "print"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"print:$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "important"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Select(inner, "i"), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"!$clx")
+      extractClassNames(inner) ++ classes
+    case Apply(Ident(name), List(inner)) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Inlined(_, _, inner) =>
+      extractClassNames(inner)
+    case Select(inner, name) =>
+      extractClassNames(inner) :+ name.replace("_", "-")
+    case Ident("tailwind") =>
+      Nil
+    case Ident("tw") =>
+      Nil
+    case _ =>
+      report.errorAndAbort(s"Unexpected term: $term")
+  }
+
+  val term = twStyleExpr.asTerm
+  val classNames = extractClassNames(term)
+  val combinedClasses = classNames.mkString(" ")
+  Expr(combinedClasses)
+}

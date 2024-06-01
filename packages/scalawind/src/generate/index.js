@@ -4,19 +4,24 @@ import fs from 'fs'
 import path from 'path'
 
 import Handlebars from "handlebars";
+import { writeToDisk } from './writer';
 
 const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scalawind.hbs"), "utf-8")
 
 const template = Handlebars.compile(scalawindTemplate);
 
-export default function generate(userConfig, outputPath, packageName) {
-  const config = resolveConfig(userConfig);
-  const ctx = createContext(config);
+export function generateContent(userConfig, packageName) {
+  const resolvedConfig = resolveConfig(userConfig);
+  const ctx = createContext(resolvedConfig);
+
   const classList = ctx.getClassList()
+  const tailwindConfig = ctx.tailwindConfig
+  const candidateRuleMap = ctx.candidateRuleMap
+  const variantMap = ctx.variantMap
 
   const flatColorsList = [];
 
-  for (const [k, v] of Object.entries(ctx.tailwindConfig.theme.colors)) {
+  for (const [k, v] of Object.entries(tailwindConfig.theme.colors)) {
     if (typeof v === 'object') {
       for (const col in v) {
         flatColorsList.push(k + '-' + col);
@@ -28,7 +33,7 @@ export default function generate(userConfig, outputPath, packageName) {
 
   const classesWithStandardSyntax = classList.filter((s) => !/\.|\//.test(s));
   const classesWithCandidateItem = [...new Set(classesWithStandardSyntax)].map((s) => {
-    return [s, getCandidateItem(ctx.candidateRuleMap, s)];
+    return [s, getCandidateItem(candidateRuleMap, s)];
   });
 
   const colorSet = new Set();
@@ -65,7 +70,7 @@ export default function generate(userConfig, outputPath, packageName) {
     return { prop: fmtToScalawind(s), raw: s, type: 'Property', doc: css };
   })
   
-  const modifiers = [...ctx.variantMap.keys()]
+  const modifiers = [...variantMap.keys()]
   // Remove * from the list of modifiers to avoid syntax error
   .filter((s) => s !== '*')
   .map((s) => {
@@ -80,13 +85,8 @@ export default function generate(userConfig, outputPath, packageName) {
 
   const generatedScalawind = template({ package: packageName, modifiers, standard})
 
-  fs.writeFileSync(
-    outputPath,
-    generatedScalawind,
-    'utf8'
-  );
+  return generatedScalawind
 }
-
 
 const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '');
 
@@ -143,4 +143,11 @@ function fmtNode(node) {
 function fmtRuleToCss(ruleSet) {
   const selector = Object.keys(ruleSet)[0];
   return `${selector} ${fmtRuleset(ruleSet[selector])}`;
+}
+
+export default function generate(userConfig, outputPath, packageName) {
+  console.log(JSON.stringify(userConfig, null, 4))
+  const content = generateContent(userConfig, packageName)
+
+  writeToDisk(outputPath, content)
 }
