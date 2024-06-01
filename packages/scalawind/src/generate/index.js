@@ -101,7 +101,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
   })
 
 
-  const generatedScalawind = template({ package: packageName, modifiers, standard})
+  const generatedScalawind = template({ package: packageName, modifiers, standard, previewCompliedResult })
 
   return generatedScalawind
 }
