@@ -181,6 +181,21 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
+## Arbitrary variants
+
+We have support for [arbitrary variants](https://tailwindcss.com/docs/adding-custom-styles#arbitrary-variants) feature.
+
+> Arbitrary variants are like arbitrary values but for doing on-the-fly selector modification, like you can with built-in pseudo-class variants like hover:{utility} or responsive variants like md:{utility} but using square bracket notation directly in your HTML.
+
+```scala
+val styles: String = tw.variant("&:nth-child(3)", tw.text_red_500)
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "[&:nth-child(3)]:text-red-500"
+```
+
+
 ## Escape Hatches
 
 There're cases you need some Tailwind classes that Scalawind currently doesn't support, you can use the `raw` method to directly write the utilities that you need, for example:

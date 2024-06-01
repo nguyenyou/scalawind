@@ -173,6 +173,7 @@ case class Tailwind() {
   def raw(@unused classString: String): Tailwind = Tailwind()
   def opacity(value: Int): Tailwind = Tailwind()
   def o(value: Int): Tailwind = Tailwind()
+  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
 }
 
 object tw {
@@ -822,6 +823,7 @@ object tw {
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
+  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
 }
 
 extension (tailwind: Tailwind)
@@ -1805,6 +1807,9 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       extractClassNames(inner).init :+ s"${extractClassNames(inner).last}/$value"
     case Apply(Select(inner, "o"), List(Literal(IntConstant(value)))) =>
       extractClassNames(inner).init :+ s"${extractClassNames(inner).last}/$value"
+    case Apply(Select(inner, "variant"), List(Literal(StringConstant(selector)), styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"[$selector]:$clx")
+      extractClassNames(inner) ++ classes
     case Apply(Select(Select(Ident("tw"), method), "raw"), List(Literal(StringConstant(classString)))) =>
       val methodClass = method.replace("_", "-")
       val rawClasses = classString.split("\\s+").toList
