@@ -164,8 +164,7 @@ function fmtRuleToCss(ruleSet) {
 }
 
 export default function generate(userConfig, options) {
-  const { packageName, outputPath, previewCompliedResult } = options
+  const { packageName, output, previewCompliedResult } = options
   const content = generateContent(userConfig, packageName, previewCompliedResult)
-
-  writeToDisk(outputPath, content)
+  writeToDisk(output, content)
 }

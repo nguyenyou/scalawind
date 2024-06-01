@@ -30,7 +30,7 @@ export const generate = new Command()
     "scalawind"
   )
   .option(
-    "-pcr, --preview-complied-result <previewCompliedResult>",
+    "-pcr, --preview-complied-result",
     "enable show preview compiled result",
     false
   )
@@ -45,10 +45,6 @@ export const generate = new Command()
 
       const options = initOptionsSchema.parse(opts)
       const cwd = path.resolve(options.cwd)
-      const outputPath = path.join(cwd, options.output)
-      const packageName = options.packageName
-      const previewCompliedResult = options.previewCompliedResult
-
       // Ensure target directory exists.
       if (!existsSync(cwd)) {
         logger.error(`The path ${cwd} does not exist. Please try again.`)
@@ -69,7 +65,7 @@ export const generate = new Command()
 
       const duration = Math.floor(Date.now() - start)
 
-      logger.success(`Generated ${outputPath} in ${duration}ms`)
+      logger.success(`Generated ${options.output} in ${duration}ms`)
 
     } catch (error) {
       handleError(error)
