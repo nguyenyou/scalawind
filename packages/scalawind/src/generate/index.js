@@ -12,6 +12,7 @@ function createDoc(doc) {
       code: Buffer.from(doc),
     })
       .code.toString()
+      .replace(/\\\//g, "/")
       .replace(/\n/g, '\n    * ')}}}}
     */`;
     return cssDoc;
@@ -21,7 +22,6 @@ function createDoc(doc) {
 }
 
 import Handlebars from "handlebars";
-import { writeToDisk } from './writer';
 
 const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scalawind.hbs"), "utf-8")
 
@@ -48,7 +48,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     }
   }
 
-  const classesWithStandardSyntax = classList.filter((s) => !/\.|\//.test(s));
+  const classesWithStandardSyntax = classList.filter((s) => !/\./.test(s));
   const classesWithCandidateItem = [...new Set(classesWithStandardSyntax)].map((s) => {
     return [s, getCandidateItem(candidateRuleMap, s)];
   });
@@ -97,7 +97,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     return fmtToScalawind(s);
   })
   .map(mod => {
-    return ({ name: mod, value: mod.replace(/_/g, '-')})
+    return ({ name: mod, value: mod})
   })
 
 
@@ -106,7 +106,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
   return generatedScalawind
 }
 
-const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '');
+const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '').replace(/\//, '$');
 
 function getCandidateItem(
   map,
@@ -161,6 +161,10 @@ function fmtNode(node) {
 function fmtRuleToCss(ruleSet) {
   const selector = Object.keys(ruleSet)[0];
   return `${selector} ${fmtRuleset(ruleSet[selector])}`;
+}
+
+export function writeToDisk(path, content) {
+  fs.writeFileSync(path, content, 'utf8');
 }
 
 export default function generate(userConfig, options) {
