@@ -128,6 +128,10 @@ tw.bg_blue_500.text_white.rounded.py_3.px_4
 
 To use classes which start with negative values like `-left-1`, just replace `-` with `_` underscore. In this case, you can type: `tw._left_1`
 
+### Percentage value
+
+For utilities like `w-1/2`, we have to replace the `/` backward slash character with the `$` dollar sign character because the `/` backward slash character is invalid for method name.
+
 
 ## Modifiers
 
