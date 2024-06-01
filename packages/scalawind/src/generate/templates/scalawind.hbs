@@ -9,6 +9,7 @@ case class Tailwind() {
   {{/each}}
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
+  def raw(@unused classString: String): Tailwind = Tailwind()
 }
 
 object tw {
@@ -24,6 +25,7 @@ object tw {
   {{/each}}
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
+  def raw(@unused classString: String): Tailwind = Tailwind()
 }
 
 extension (tailwind: Tailwind)
