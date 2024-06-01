@@ -132,6 +132,14 @@ To use classes which start with negative values like `-left-1`, just replace `-`
 
 For utilities like `w-1/2`, we have to replace the `/` backward slash character with the `$` dollar sign character because the `/` backward slash character is invalid for method name.
 
+```scala
+val styles: String = tw.w_1$2
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "w-1/2"
+```
+
 ### Color Opacity
 
 In case you need color opacity utility classes like `bg-red-500/20`, we have support for that:
