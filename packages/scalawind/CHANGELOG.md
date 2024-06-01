@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.3.7
+
+### Patch Changes
+
+- d66629d: support arbitrary variant
+
 ## 0.3.6
 
 ### Patch Changes
