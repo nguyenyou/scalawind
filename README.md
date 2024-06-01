@@ -152,7 +152,7 @@ val styles: String = tw.text_blue_500.opacity(10).bg_red_500
 val styles: String = "text-blue-500/10 bg-red-500"
 ```
 
-As you can see, the `opacity` method only apply the opacity value to the immediate preceding class.
+As you can see, the `opacity` method (or alias `o` method) only apply the opacity value to the immediate preceding class.
 
 ## Modifiers
 
