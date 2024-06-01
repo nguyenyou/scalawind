@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.3.3
+
+### Patch Changes
+
+- 55a1a55: allow user config whether to show preview compiled result or not
+
 ## 0.3.2
 
 ### Patch Changes
