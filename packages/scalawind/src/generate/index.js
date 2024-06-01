@@ -164,7 +164,6 @@ function fmtRuleToCss(ruleSet) {
 }
 
 export default function generate(userConfig, outputPath, packageName) {
-  console.log(JSON.stringify(userConfig, null, 4))
   const content = generateContent(userConfig, packageName)
 
   writeToDisk(outputPath, content)
