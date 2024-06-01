@@ -156,9 +156,23 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
-## Arbitrary
+## Escape Hatches
 
-In some cases, you might need to use some arbitrary values or arbitrary variants, then, in this case, the typesafe thing doesn't make sense, I suggest that you can just type in directly the arbitrary things that you want to use in strings.
+There're cases you need some Tailwind classes that Scalawind currently doesn't support, you can use the `raw` method to directly write the utilities that you need, for example:
+
+```scala
+tw.raw("some-very-special-class")
+```
+
+Of course, this method can be chain in the fluent style like any other methods:
+
+```scala
+val styles = sw(tw.text_black.bg_white.hover(tw.raw("text-white bg-black")))
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles = "text-black bg-white hover:text-white hover:bg-black"
+```
 
 ## Reducing Generated Code Size
 
