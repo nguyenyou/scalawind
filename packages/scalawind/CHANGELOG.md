@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.3.0
+
+### Minor Changes
+
+- 1c079ec: major rewrite cli, now we can support .js, .mjs, .ts, .js tailwind config
+
 ## 0.2.3
 
 ### Patch Changes
