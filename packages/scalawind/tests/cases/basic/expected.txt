@@ -175,7 +175,19 @@ case class Tailwind() {
 object tw {
   def apply(): Tailwind = Tailwind()
 
+  /** {{{
+    * .text-black {
+    *   color: #000;
+    * }
+    * }}}
+    */
   def text_black: Tailwind = Tailwind()
+  /** {{{
+    * .text-white {
+    *   color: #fff;
+    * }
+    * }}}
+    */
   def text_white: Tailwind = Tailwind()
 
   def first_letter(@unused styles: Tailwind): Tailwind = Tailwind()
@@ -347,7 +359,19 @@ object tw {
 }
 
 extension (tailwind: Tailwind)
+  /** {{{
+    * .text-black {
+    *   color: #000;
+    * }
+    * }}}
+    */
   def text_black: Tailwind = Tailwind()
+  /** {{{
+    * .text-white {
+    *   color: #fff;
+    * }
+    * }}}
+    */
   def text_white: Tailwind = Tailwind()
 
 inline def sw(inline tailwind: Tailwind): String =

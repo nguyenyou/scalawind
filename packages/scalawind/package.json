@@ -34,6 +34,7 @@
     "fast-glob": "^3.3.2",
     "handlebars": "^4.7.8",
     "jiti": "^1.17.2",
+    "lightningcss": "^1.19.0",
     "zod": "^3.20.2"
   },
   "devDependencies": {
