@@ -102,6 +102,14 @@ The Scalawind CLI supports `-o` to specify the output path and `-p` to specify t
 $ scalawind generate -o ./src/main/scala/myapp/scalawind.scala -p scalawind
 ```
 
+## Show Compiled Class On Mouse Hover
+
+You can turn on the show compiled class on mouse hover feature by adding the `--preview-compiled-result` or `-pcr` to the command. For example:
+
+```bash
+$ scalawind generate -pcr -o ./src/main/scala/myapp/scalawind.scala 
+```
+
 ## Normal Usage
 
 ### Fluent API
