@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.3.5
+
+### Patch Changes
+
+- 3a49bc3: support for class have slash like w-1/2
+
 ## 0.3.4
 
 ### Patch Changes
