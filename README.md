@@ -1,4 +1,4 @@
-![Write typesafe Tailwindcss with Scalawind](.github/assets/banner.png 'Write typesafe Tailwindcss with Scalawind')
+![Write typesafe Tailwindcss with Scalawind](https://raw.githubusercontent.com/nguyenyou/scalawind/main/.github/assets/banner.png 'Write typesafe Tailwindcss with Scalawind')
 
 <p align="center">
   <br/>
@@ -132,6 +132,27 @@ To use classes which start with negative values like `-left-1`, just replace `-`
 
 For utilities like `w-1/2`, we have to replace the `/` backward slash character with the `$` dollar sign character because the `/` backward slash character is invalid for method name.
 
+```scala
+val styles: String = tw.w_1$2
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "w-1/2"
+```
+
+### Color Opacity
+
+In case you need color opacity utility classes like `bg-red-500/20`, we have support for that:
+
+```scala
+val styles: String = tw.text_blue_500.opacity(10).bg_red_500
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "text-blue-500/10 bg-red-500"
+```
+
+As you can see, the `opacity` method only apply the opacity value to the immediate preceding class.
 
 ## Modifiers
 
