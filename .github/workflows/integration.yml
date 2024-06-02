@@ -34,11 +34,8 @@ jobs:
         working-directory: ./packages/scalawind
 
       - name: Link Package
-        run: bun install
-        working-directory: ./integration
-
-      - name: Generate
         run: |
+          bun install
           bun generate
           ls -al
         working-directory: ./integration
