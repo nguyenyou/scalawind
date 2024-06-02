@@ -50,11 +50,9 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   import quotes.reflect.*
 
   def extractClassNames(term: Term): List[String] = term match {
-    {{#each modifiers}}
-    case Apply(Select(inner, "{{this.name}}"), List(styles)) =>
-      val classes = extractClassNames(styles).map(clx => s"{{this.value}}:$clx")
+    case Apply(Select(inner, name), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"$name:$clx")
       extractClassNames(inner) ++ classes
-    {{/each}}
     case Apply(Select(inner, name), List(Literal(StringConstant(value)))) if name.endsWith("_") =>
       extractClassNames(inner) :+ s"${name.replace("_", "-")}[$value]"
     case Apply(Select(inner, "opacity"), List(Literal(IntConstant(value)))) =>
