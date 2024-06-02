@@ -193,7 +193,7 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
-## Arbitrary value
+## Arbitrary values
 
 We have support for [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) with quite similar signature, instead of wrapping your arbitrary value in square brackets, you now use function call. For example:
 
@@ -206,6 +206,9 @@ val styles: String = "bg-[#bada55] text-[22px]"
 ```
 
 Because this is quite "arbitrary" thing that you might not want your team to break your design system, you need to explicitly enable this feature via `--arbitrary-values` (or `-av` alias) flag.
+
+### Known issues with arbitrary values
+
 
 ## Arbitrary variants
 
