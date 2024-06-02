@@ -7,6 +7,7 @@ export const tailwindConfig = {
   corePlugins: [
     'textColor',
     'container',
-    'animation'
+    'animation',
+    'width'
   ]
 };

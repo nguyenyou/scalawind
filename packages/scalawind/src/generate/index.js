@@ -2,24 +2,7 @@ import resolveConfig from 'tailwindcss/resolveConfig';
 import { createContext } from 'tailwindcss/lib/lib/setupContextUtils';
 import fs from 'fs'
 import path from 'path'
-import { transform } from 'lightningcss';
-
-function createDoc(doc) {
-  try {
-    let cssDoc = `/** {{{
-    * ${transform({
-      filename: 'doc.css',
-      code: Buffer.from(doc),
-    })
-      .code.toString()
-      .replace(/\\\//g, "/")
-      .replace(/\n/g, '\n    * ')}}}}
-    */`;
-    return cssDoc;
-  } catch (error) {
-    return "";
-  }
-}
+import { createDoc } from './createDoc'
 
 import Handlebars from "handlebars";
 
@@ -48,8 +31,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     }
   }
 
-  const classesWithStandardSyntax = classList.filter((s) => !/\./.test(s));
-  const classesWithCandidateItem = [...new Set(classesWithStandardSyntax)].map((s) => {
+  const classesWithCandidateItem = [...new Set(classList)].map((s) => {
     return [s, getCandidateItem(candidateRuleMap, s)];
   });
 
@@ -87,26 +69,23 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
 
     return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
-  
+
   const modifiers = [...variantMap.keys()]
   // Remove * from the list of modifiers to avoid syntax error
   .filter((s) => s !== '*')
   .map((s) => {
     s = /^\d/.test(s) ? `_${s}` : s;
 
-    return fmtToScalawind(s);
-  })
-  .map(mod => {
+    const mod = fmtToScalawind(s);
     return ({ name: mod, value: mod})
   })
-
 
   const generatedScalawind = template({ package: packageName, modifiers, standard, previewCompliedResult })
 
   return generatedScalawind
 }
 
-const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '').replace(/\//, '$');
+const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '').replace(/\//, '$').replace(/\./, 'dot');
 
 function getCandidateItem(
   map,

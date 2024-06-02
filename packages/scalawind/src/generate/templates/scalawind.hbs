@@ -70,11 +70,11 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       val classes = extractClassNames(styles).map(clx => s"!$clx")
       extractClassNames(inner) ++ classes
     case Apply(Ident(name), List(inner)) =>
-      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/")
+      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
     case Inlined(_, _, inner) =>
       extractClassNames(inner)
     case Select(inner, name) =>
-      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/")
+      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
     case Ident("tailwind") =>
       Nil
     case Ident("tw") =>
