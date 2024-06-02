@@ -195,6 +195,8 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 
 ## Arbitrary values
 
+> This feature is not stable yet, it works but very limited
+
 We have support for [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) with quite similar signature, instead of wrapping your arbitrary value in square brackets, you now use function call. For example:
 
 ```scala
@@ -209,6 +211,7 @@ Because this is quite "arbitrary" thing that you might not want your team to bre
 
 ### Known issues with arbitrary values
 
+The arbitrary works well when use it alone and is the first method call in the chain, in other usecase, it might cause compile error, I'm trying to fix this.
 
 ## Arbitrary variants
 
