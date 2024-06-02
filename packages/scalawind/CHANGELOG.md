@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.4.1
+
+### Patch Changes
+
+- 13e49e9: refactor macro
+
 ## 0.4.0
 
 ### Patch Changes
