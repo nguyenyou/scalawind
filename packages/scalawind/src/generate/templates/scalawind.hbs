@@ -1,4 +1,4 @@
-package {{package}}
+package {{packageName}}
 
 import scala.quoted.*
 import scala.annotation.unused
@@ -10,19 +10,20 @@ case class Tailwind() {
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
+  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
   def opacity(value: Int): Tailwind = Tailwind()
   def o(value: Int): Tailwind = Tailwind()
-  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
 }
 
 object tw {
   def apply(): Tailwind = Tailwind()
-
   {{#each standard}}
   {{this.doc}}
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
-
+  {{#each arbitrary}}
+  def {{this}}(value: String): Tailwind = Tailwind()
+  {{/each}}
   {{#each modifiers}}
   def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
@@ -37,6 +38,10 @@ extension (tailwind: Tailwind)
   {{this.doc}}
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
+  {{#each arbitrary}}
+  def {{this}}(value: String): Tailwind = Tailwind()
+  {{/each}}
+
 
 inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }

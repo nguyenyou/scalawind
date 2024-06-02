@@ -70,6 +70,13 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
 
+  const candidates = [...candidateRuleMap.entries()];
+  const arbitrary = [];
+  for (const [name] of candidates) {
+    const ident = fmtToScalawind(name) + '_';
+    arbitrary.push(ident)
+  }
+
   const modifiers = [...variantMap.keys()]
   // Remove * from the list of modifiers to avoid syntax error
   .filter((s) => s !== '*')
@@ -80,7 +87,13 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     return ({ name: mod, value: mod})
   })
 
-  const generatedScalawind = template({ package: packageName, modifiers, standard, previewCompliedResult })
+  const generatedScalawind = template({ 
+    packageName, 
+    modifiers, 
+    standard, 
+    previewCompliedResult,
+    arbitrary,
+  })
 
   return generatedScalawind
 }

@@ -193,6 +193,18 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
+## Arbitrary value
+
+We have support for [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) with quite similar signature, instead of wrapping your arbitrary value in square brackets, you now use function call. For example:
+
+```scala
+val styles: String = tw.bg_("#bada55").text_("22px")
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "bg-[#bada55] text-[22px]"
+```
+
 ## Arbitrary variants
 
 We have support for [arbitrary variants](https://tailwindcss.com/docs/adding-custom-styles#arbitrary-variants) feature.
