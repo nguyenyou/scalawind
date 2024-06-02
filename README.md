@@ -18,6 +18,20 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 
 <br/>
 
+
+## Supported Tailwind Features
+
+- [x] Normal, like `flex items-center justify-center`
+- [x] Arbitrary values, like `bg-[#de3423] text-[#380d09] h-[100px]`
+- [x] Normal modifiers, like `hover:bg-red-500` or `md:text-xs`
+- [x] Important modifiers, like `!text-red-500`
+- [x] Arbitrary variants, like `[&:nth-child(3)]:text-red-500`
+- [x] Color opacity, like `bg-red-500/20`
+- [x] Raw, an escape hatch to pass in raw tailwind utility classes
+- [x] Negative values, like `-top-1`
+- [x] Percentage values, like `w-1/2`
+- [x] Dot values, like `w-1.5`
+
 # Scalawind - Zero-Runtime Typesafe TailwindCSS in Scala
 
 > Although this library is still very early, the actual code is just a single file generated and output directly into your project. You can twist it, fix it, make changes to it however you like. 
@@ -524,6 +538,7 @@ As you can see, the whole scalawind thing includes two parts:
   }
   ```
 </details>
+
 
 ## Acknowledgement
 
