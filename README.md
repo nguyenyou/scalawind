@@ -25,9 +25,9 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 - [x] Arbitrary values, like `bg-[#de3423] text-[#380d09] h-[100px]`
 - [x] Normal modifiers, like `hover:bg-red-500` or `md:text-xs`
 - [x] Important modifiers, like `!text-red-500`
+- [x] Raw, an escape hatch to pass in raw tailwind utility classes
 - [x] Arbitrary variants, like `[&:nth-child(3)]:text-red-500`
 - [x] Color opacity, like `bg-red-500/20`
-- [x] Raw, an escape hatch to pass in raw tailwind utility classes
 - [x] Negative values, like `-top-1`
 - [x] Percentage values, like `w-1/2`
 - [x] Dot values, like `w-1.5`
@@ -234,11 +234,11 @@ We have support for [arbitrary variants](https://tailwindcss.com/docs/adding-cus
 > Arbitrary variants are like arbitrary values but for doing on-the-fly selector modification, like you can with built-in pseudo-class variants like hover:{utility} or responsive variants like md:{utility} but using square bracket notation directly in your HTML.
 
 ```scala
-val styles: String = tw.variant("&:nth-child(3)", tw.text_red_500)
+val styles: String = tw.variant("&:nth-child(3)", tw.text_red_500.bg_black)
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
-val styles: String = "[&:nth-child(3)]:text-red-500"
+val styles: String = "[&:nth-child(3)]:text-red-500 [&:nth-child(3)]:bg-black"
 ```
 
 
