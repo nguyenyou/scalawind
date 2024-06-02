@@ -1,4 +1,4 @@
-name: Test
+name: Integration Test
 
 on:
   push:
@@ -9,7 +9,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   test:
-    name: Test
+    name: Integration Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
