@@ -1,0 +1,5 @@
+---
+"scalawind": patch
+---
+
+refactor macro
