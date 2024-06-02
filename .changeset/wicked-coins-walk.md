@@ -2,4 +2,4 @@
 "scalawind": patch
 ---
 
-refactor arbitrary
+refactor macro
