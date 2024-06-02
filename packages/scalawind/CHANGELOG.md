@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.4.0
+
+### Patch Changes
+
+- 9a608cd: Support arbitrary values
+
 ## 0.3.8
 
 ### Patch Changes
