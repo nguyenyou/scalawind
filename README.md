@@ -445,16 +445,6 @@ As you can see, the whole scalawind thing includes two parts:
 - The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax.
 - The `sw` and  `swImpl` is the macro that will compile all those fluent thing into a string
 
-## Troubleshoot
-
-### Method too large
-
-Unlike Tailwind which generate code based on your actual usage of utility classes in your source code, Scalawind needs to generate all the utility classes in advance so that we can benefit from type safety.
-
-This pre-generation behavior might generate a huge `extractClassNames` method used in our macro, which traverse over the fluent method calls to extract utilities classes.
-
-In order to solve this problem, we suggest that you follow the [Reducing Generated Code Size](#reducing-generated-code-size) section.
-
 ## Acknowledgement
 
 This project is inspired by https://github.com/mokshit06/typewind. Thank you a lot for making the library.
