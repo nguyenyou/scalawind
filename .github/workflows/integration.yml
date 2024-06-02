@@ -37,10 +37,9 @@ jobs:
         run: bun link
         working-directory: ./packages/scalawind
 
-      - name: Link Package
+      - name: Test
         run: |
           bun install
           bun generate
-          ls -al
           scala-cli test .
         working-directory: ./integration
