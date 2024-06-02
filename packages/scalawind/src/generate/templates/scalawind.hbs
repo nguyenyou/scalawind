@@ -52,9 +52,6 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   def extractClassNames(term: Term): List[String] = term match {
     case Apply(Select(inner, name), List(Literal(StringConstant(value)))) if name.endsWith("_") =>
       extractClassNames(inner) :+ s"${name.replace("_", "-")}[$value]"
-    case Apply(Select(inner, name), List(styles)) =>
-      val classes = extractClassNames(styles).map(clx => s"$name:$clx")
-      extractClassNames(inner) ++ classes
     case Apply(Select(inner, "opacity"), List(Literal(IntConstant(value)))) =>
       extractClassNames(inner).init :+ s"${extractClassNames(inner).last}/$value"
     case Apply(Select(inner, "o"), List(Literal(IntConstant(value)))) =>
@@ -76,6 +73,9 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       extractClassNames(inner) ++ classes
     case Apply(Ident(name), List(inner)) =>
       extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
+    case Apply(Select(inner, name), List(styles)) =>
+      val classes = extractClassNames(styles).map(clx => s"$name:$clx")
+      extractClassNames(inner) ++ classes
     case Inlined(_, _, inner) =>
       extractClassNames(inner)
     case Select(inner, name) =>
