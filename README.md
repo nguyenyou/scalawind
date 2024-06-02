@@ -193,6 +193,20 @@ button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700
 <button class="!text-black hover:!text-blue-700">Click me</button>
 ```
 
+## Arbitrary value
+
+We have support for [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) with quite similar signature, instead of wrapping your arbitrary value in square brackets, you now use function call. For example:
+
+```scala
+val styles: String = tw.bg_("#bada55").text_("22px")
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "bg-[#bada55] text-[22px]"
+```
+
+Because this is quite "arbitrary" thing that you might not want your team to break your design system, you need to explicitly enable this feature via `--arbitrary-values` (or `-av` alias) flag.
+
 ## Arbitrary variants
 
 We have support for [arbitrary variants](https://tailwindcss.com/docs/adding-custom-styles#arbitrary-variants) feature.
@@ -429,6 +443,15 @@ As you can see, the whole scalawind thing includes two parts:
 - The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax.
 - The `sw` and  `swImpl` is the macro that will compile all those fluent thing into a string
 
+## Troubleshoot
+
+### Method too large
+
+Unlike Tailwind which generate code based on your actual usage of utility classes in your source code, Scalawind needs to generate all the utility classes in advance so that we can benefit from type safety.
+
+This pre-generation behavior might generate a huge `extractClassNames` method used in our macro, which traverse over the fluent method calls to extract utilities classes.
+
+In order to solve this problem, we suggest that you follow the [Reducing Generated Code Size](#reducing-generated-code-size) section.
 
 ## Acknowledgement
 

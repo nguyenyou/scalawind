@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 export const tailwindConfig = {
   theme: {
     colors: {
@@ -8,6 +9,6 @@ export const tailwindConfig = {
     'textColor',
     'container',
     'animation',
-    'width'
+    'width',
   ]
 };

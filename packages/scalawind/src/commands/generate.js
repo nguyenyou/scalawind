@@ -13,7 +13,8 @@ const initOptionsSchema = z.object({
   cwd: z.string(),
   output: z.string(),
   packageName: z.string(),
-  previewCompliedResult: z.boolean()
+  previewCompliedResult: z.boolean(),
+  arbitraryValues: z.boolean()
 })
 
 export const generate = new Command()
@@ -32,6 +33,11 @@ export const generate = new Command()
   .option(
     "-pcr, --preview-complied-result",
     "enable show preview compiled result",
+    false
+  )
+  .option(
+    "-av, --arbitrary-values",
+    "enable support for arbitrary values",
     false
   )
   .option(
