@@ -1,0 +1,6 @@
+{
+  "name": "integration-test",
+  "dependencies": {
+    "scalawind": "link:scalawind"
+  }
+}

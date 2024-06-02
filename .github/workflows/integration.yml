@@ -1,0 +1,44 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - integration
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Install Dependencies & Build
+        run: |
+          corepack enable
+          pnpm install
+          pnpm build
+
+      - name: Register Link Package
+        run: bun link
+        working-directory: ./packages/scalawind
+
+      - name: Link Package
+        run: bun install
+        working-directory: ./integration
+
+      - name: Generate
+        run: |
+          bunx scalawind generate
+          ls -al
+        working-directory: ./integration
