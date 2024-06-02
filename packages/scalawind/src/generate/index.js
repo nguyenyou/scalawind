@@ -74,6 +74,11 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
   const arbitrary = [];
   for (const [name] of candidates) {
     const ident = fmtToScalawind(name) + '_';
+    // edge case, we don't want the *_ method
+    if(ident === "*_") {
+      continue
+    }
+    
     arbitrary.push(ident)
   }
 
