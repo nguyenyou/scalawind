@@ -1,5 +1,12 @@
 # scalawind
 
+## 0.3.8
+
+### Patch Changes
+
+- 8003cee: add support for dot value, such as w-1.5
+- 24d1d31: fix bug css doc cause code break
+
 ## 0.3.7
 
 ### Patch Changes
