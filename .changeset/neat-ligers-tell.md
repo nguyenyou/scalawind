@@ -1,5 +1,0 @@
----
-"scalawind": minor
----
-
-refactor macro
