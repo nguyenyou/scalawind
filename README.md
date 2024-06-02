@@ -140,6 +140,18 @@ val styles: String = tw.w_1$2
 val styles: String = "w-1/2"
 ```
 
+### Dot value
+
+For utilities like `w-1.5`, we have to replace the `.` dot character with the `dot` word. Example usage:
+
+```scala
+val styles: String = tw.w_1dot2
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+val styles: String = "w-1.2"
+```
+
 ### Color Opacity
 
 In case you need color opacity utility classes like `bg-red-500/20`, we have support for that:

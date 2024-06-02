@@ -1,4 +1,3 @@
 export const tailwindConfig = {
-  theme: {
-  },
+  theme: {},
 };

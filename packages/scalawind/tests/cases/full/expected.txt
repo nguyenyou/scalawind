@@ -179,13 +179,7 @@ case class Tailwind() {
 object tw {
   def apply(): Tailwind = Tailwind()
 
-  .container {width: 100%;}
-\@media (min-width: 640px) {.container {max-width: 640px;}}
-\@media (min-width: 768px) {.container {max-width: 768px;}}
-\@media (min-width: 1024px) {.container {max-width: 1024px;}}
-\@media (min-width: 1280px) {.container {max-width: 1280px;}}
-\@media (min-width: 1536px) {.container {max-width: 1536px;}}
-
+  
   def container: Tailwind = Tailwind()
   /** {{{
     * .sr-only {
@@ -511,6 +505,34 @@ object tw {
     */
   def inset_px: Tailwind = Tailwind()
   /** {{{
+    * .inset-0.5 {
+    *   inset: .125rem;
+    * }
+    * }}}
+    */
+  def inset_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-1.5 {
+    *   inset: .375rem;
+    * }
+    * }}}
+    */
+  def inset_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-2.5 {
+    *   inset: .625rem;
+    * }
+    * }}}
+    */
+  def inset_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-3.5 {
+    *   inset: .875rem;
+    * }
+    * }}}
+    */
+  def inset_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .inset-1/2 {
     *   inset: 50%;
     * }
@@ -714,6 +736,26 @@ object tw {
     * }}}
     */
   def _inset_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -1006,6 +1048,38 @@ object tw {
     */
   def inset_x_px: Tailwind = Tailwind()
   /** {{{
+    * .inset-x-0.5 {
+    *   left: .125rem;
+    *   right: .125rem;
+    * }
+    * }}}
+    */
+  def inset_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-x-1.5 {
+    *   left: .375rem;
+    *   right: .375rem;
+    * }
+    * }}}
+    */
+  def inset_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-x-2.5 {
+    *   left: .625rem;
+    *   right: .625rem;
+    * }
+    * }}}
+    */
+  def inset_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-x-3.5 {
+    *   left: .875rem;
+    *   right: .875rem;
+    * }
+    * }}}
+    */
+  def inset_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .inset-x-1/2 {
     *   left: 50%;
     *   right: 50%;
@@ -1216,6 +1290,26 @@ object tw {
     * }}}
     */
   def _inset_x_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -1508,6 +1602,38 @@ object tw {
     */
   def inset_y_px: Tailwind = Tailwind()
   /** {{{
+    * .inset-y-0.5 {
+    *   top: .125rem;
+    *   bottom: .125rem;
+    * }
+    * }}}
+    */
+  def inset_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-y-1.5 {
+    *   top: .375rem;
+    *   bottom: .375rem;
+    * }
+    * }}}
+    */
+  def inset_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-y-2.5 {
+    *   top: .625rem;
+    *   bottom: .625rem;
+    * }
+    * }}}
+    */
+  def inset_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-y-3.5 {
+    *   top: .875rem;
+    *   bottom: .875rem;
+    * }
+    * }}}
+    */
+  def inset_y_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .inset-y-1/2 {
     *   top: 50%;
     *   bottom: 50%;
@@ -1718,6 +1844,26 @@ object tw {
     * }}}
     */
   def _inset_y_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -1978,6 +2124,34 @@ object tw {
     */
   def start_px: Tailwind = Tailwind()
   /** {{{
+    * .start-0.5 {
+    *   inset-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def start_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .start-1.5 {
+    *   inset-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def start_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .start-2.5 {
+    *   inset-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def start_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .start-3.5 {
+    *   inset-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def start_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .start-1/2 {
     *   inset-inline-start: 50%;
     * }
@@ -2181,6 +2355,26 @@ object tw {
     * }}}
     */
   def _start_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -2441,6 +2635,34 @@ object tw {
     */
   def end_px: Tailwind = Tailwind()
   /** {{{
+    * .end-0.5 {
+    *   inset-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def end_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .end-1.5 {
+    *   inset-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def end_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .end-2.5 {
+    *   inset-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def end_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .end-3.5 {
+    *   inset-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def end_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .end-1/2 {
     *   inset-inline-end: 50%;
     * }
@@ -2644,6 +2866,26 @@ object tw {
     * }}}
     */
   def _end_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -2904,6 +3146,34 @@ object tw {
     */
   def top_px: Tailwind = Tailwind()
   /** {{{
+    * .top-0.5 {
+    *   top: .125rem;
+    * }
+    * }}}
+    */
+  def top_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .top-1.5 {
+    *   top: .375rem;
+    * }
+    * }}}
+    */
+  def top_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .top-2.5 {
+    *   top: .625rem;
+    * }
+    * }}}
+    */
+  def top_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .top-3.5 {
+    *   top: .875rem;
+    * }
+    * }}}
+    */
+  def top_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .top-1/2 {
     *   top: 50%;
     * }
@@ -3107,6 +3377,26 @@ object tw {
     * }}}
     */
   def _top_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -3367,6 +3657,34 @@ object tw {
     */
   def right_px: Tailwind = Tailwind()
   /** {{{
+    * .right-0.5 {
+    *   right: .125rem;
+    * }
+    * }}}
+    */
+  def right_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .right-1.5 {
+    *   right: .375rem;
+    * }
+    * }}}
+    */
+  def right_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .right-2.5 {
+    *   right: .625rem;
+    * }
+    * }}}
+    */
+  def right_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .right-3.5 {
+    *   right: .875rem;
+    * }
+    * }}}
+    */
+  def right_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .right-1/2 {
     *   right: 50%;
     * }
@@ -3570,6 +3888,26 @@ object tw {
     * }}}
     */
   def _right_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -3830,6 +4168,34 @@ object tw {
     */
   def bottom_px: Tailwind = Tailwind()
   /** {{{
+    * .bottom-0.5 {
+    *   bottom: .125rem;
+    * }
+    * }}}
+    */
+  def bottom_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .bottom-1.5 {
+    *   bottom: .375rem;
+    * }
+    * }}}
+    */
+  def bottom_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .bottom-2.5 {
+    *   bottom: .625rem;
+    * }
+    * }}}
+    */
+  def bottom_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .bottom-3.5 {
+    *   bottom: .875rem;
+    * }
+    * }}}
+    */
+  def bottom_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .bottom-1/2 {
     *   bottom: 50%;
     * }
@@ -4033,6 +4399,26 @@ object tw {
     * }}}
     */
   def _bottom_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -4293,6 +4679,34 @@ object tw {
     */
   def left_px: Tailwind = Tailwind()
   /** {{{
+    * .left-0.5 {
+    *   left: .125rem;
+    * }
+    * }}}
+    */
+  def left_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .left-1.5 {
+    *   left: .375rem;
+    * }
+    * }}}
+    */
+  def left_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .left-2.5 {
+    *   left: .625rem;
+    * }
+    * }}}
+    */
+  def left_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .left-3.5 {
+    *   left: .875rem;
+    * }
+    * }}}
+    */
+  def left_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .left-1/2 {
     *   left: 50%;
     * }
@@ -4496,6 +4910,26 @@ object tw {
     * }}}
     */
   def _left_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -5694,6 +6128,34 @@ object tw {
     */
   def m_px: Tailwind = Tailwind()
   /** {{{
+    * .m-0.5 {
+    *   margin: .125rem;
+    * }
+    * }}}
+    */
+  def m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .m-1.5 {
+    *   margin: .375rem;
+    * }
+    * }}}
+    */
+  def m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .m-2.5 {
+    *   margin: .625rem;
+    * }
+    * }}}
+    */
+  def m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .m-3.5 {
+    *   margin: .875rem;
+    * }
+    * }}}
+    */
+  def m_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -5848,6 +6310,26 @@ object tw {
     * }}}
     */
   def _m_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mx-0 {
     *   margin-left: 0;
@@ -6105,6 +6587,38 @@ object tw {
     */
   def mx_px: Tailwind = Tailwind()
   /** {{{
+    * .mx-0.5 {
+    *   margin-left: .125rem;
+    *   margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mx-1.5 {
+    *   margin-left: .375rem;
+    *   margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mx-2.5 {
+    *   margin-left: .625rem;
+    *   margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mx-3.5 {
+    *   margin-left: .875rem;
+    *   margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def mx_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -6259,6 +6773,26 @@ object tw {
     * }}}
     */
   def _mx_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_3dot5: Tailwind = Tailwind()
   /** {{{
     * .my-0 {
     *   margin-top: 0;
@@ -6516,6 +7050,38 @@ object tw {
     */
   def my_px: Tailwind = Tailwind()
   /** {{{
+    * .my-0.5 {
+    *   margin-top: .125rem;
+    *   margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .my-1.5 {
+    *   margin-top: .375rem;
+    *   margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .my-2.5 {
+    *   margin-top: .625rem;
+    *   margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .my-3.5 {
+    *   margin-top: .875rem;
+    *   margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def my_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -6670,6 +7236,26 @@ object tw {
     * }}}
     */
   def _my_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_3dot5: Tailwind = Tailwind()
   /** {{{
     * .ms-0 {
     *   margin-inline-start: 0;
@@ -6895,6 +7481,34 @@ object tw {
     */
   def ms_px: Tailwind = Tailwind()
   /** {{{
+    * .ms-0.5 {
+    *   margin-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ms-1.5 {
+    *   margin-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ms-2.5 {
+    *   margin-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ms-3.5 {
+    *   margin-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def ms_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -7049,6 +7663,26 @@ object tw {
     * }}}
     */
   def _ms_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_3dot5: Tailwind = Tailwind()
   /** {{{
     * .me-0 {
     *   margin-inline-end: 0;
@@ -7274,6 +7908,34 @@ object tw {
     */
   def me_px: Tailwind = Tailwind()
   /** {{{
+    * .me-0.5 {
+    *   margin-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .me-1.5 {
+    *   margin-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .me-2.5 {
+    *   margin-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .me-3.5 {
+    *   margin-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def me_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -7428,6 +8090,26 @@ object tw {
     * }}}
     */
   def _me_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mt-0 {
     *   margin-top: 0;
@@ -7653,6 +8335,34 @@ object tw {
     */
   def mt_px: Tailwind = Tailwind()
   /** {{{
+    * .mt-0.5 {
+    *   margin-top: .125rem;
+    * }
+    * }}}
+    */
+  def mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mt-1.5 {
+    *   margin-top: .375rem;
+    * }
+    * }}}
+    */
+  def mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mt-2.5 {
+    *   margin-top: .625rem;
+    * }
+    * }}}
+    */
+  def mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mt-3.5 {
+    *   margin-top: .875rem;
+    * }
+    * }}}
+    */
+  def mt_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -7807,6 +8517,26 @@ object tw {
     * }}}
     */
   def _mt_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mr-0 {
     *   margin-right: 0;
@@ -8032,6 +8762,34 @@ object tw {
     */
   def mr_px: Tailwind = Tailwind()
   /** {{{
+    * .mr-0.5 {
+    *   margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mr-1.5 {
+    *   margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mr-2.5 {
+    *   margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mr-3.5 {
+    *   margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def mr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -8186,6 +8944,26 @@ object tw {
     * }}}
     */
   def _mr_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mb-0 {
     *   margin-bottom: 0;
@@ -8411,6 +9189,34 @@ object tw {
     */
   def mb_px: Tailwind = Tailwind()
   /** {{{
+    * .mb-0.5 {
+    *   margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mb-1.5 {
+    *   margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mb-2.5 {
+    *   margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mb-3.5 {
+    *   margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def mb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -8565,6 +9371,26 @@ object tw {
     * }}}
     */
   def _mb_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_3dot5: Tailwind = Tailwind()
   /** {{{
     * .ml-0 {
     *   margin-left: 0;
@@ -8790,6 +9616,34 @@ object tw {
     */
   def ml_px: Tailwind = Tailwind()
   /** {{{
+    * .ml-0.5 {
+    *   margin-left: .125rem;
+    * }
+    * }}}
+    */
+  def ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ml-1.5 {
+    *   margin-left: .375rem;
+    * }
+    * }}}
+    */
+  def ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ml-2.5 {
+    *   margin-left: .625rem;
+    * }
+    * }}}
+    */
+  def ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ml-3.5 {
+    *   margin-left: .875rem;
+    * }
+    * }}}
+    */
+  def ml_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -8944,6 +9798,26 @@ object tw {
     * }}}
     */
   def _ml_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_3dot5: Tailwind = Tailwind()
   /** {{{
     * .box-border {
     *   box-sizing: border-box;
@@ -9453,6 +10327,38 @@ object tw {
     */
   def size_px: Tailwind = Tailwind()
   /** {{{
+    * .size-0.5 {
+    *   width: .125rem;
+    *   height: .125rem;
+    * }
+    * }}}
+    */
+  def size_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .size-1.5 {
+    *   width: .375rem;
+    *   height: .375rem;
+    * }
+    * }}}
+    */
+  def size_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .size-2.5 {
+    *   width: .625rem;
+    *   height: .625rem;
+    * }
+    * }}}
+    */
+  def size_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .size-3.5 {
+    *   width: .875rem;
+    *   height: .875rem;
+    * }
+    * }}}
+    */
+  def size_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .size-1/2 {
     *   width: 50%;
     *   height: 50%;
@@ -9917,6 +10823,34 @@ object tw {
     */
   def h_px: Tailwind = Tailwind()
   /** {{{
+    * .h-0.5 {
+    *   height: .125rem;
+    * }
+    * }}}
+    */
+  def h_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .h-1.5 {
+    *   height: .375rem;
+    * }
+    * }}}
+    */
+  def h_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .h-2.5 {
+    *   height: .625rem;
+    * }
+    * }}}
+    */
+  def h_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .h-3.5 {
+    *   height: .875rem;
+    * }
+    * }}}
+    */
+  def h_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .h-1/2 {
     *   height: 50%;
     * }
@@ -10295,6 +11229,34 @@ object tw {
     */
   def max_h_px: Tailwind = Tailwind()
   /** {{{
+    * .max-h-0.5 {
+    *   maxHeight: .125rem;
+    * }
+    * }}}
+    */
+  def max_h_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-h-1.5 {
+    *   maxHeight: .375rem;
+    * }
+    * }}}
+    */
+  def max_h_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-h-2.5 {
+    *   maxHeight: .625rem;
+    * }
+    * }}}
+    */
+  def max_h_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-h-3.5 {
+    *   maxHeight: .875rem;
+    * }
+    * }}}
+    */
+  def max_h_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .max-h-none {
     *   maxHeight: none;
     * }
@@ -10575,6 +11537,34 @@ object tw {
     */
   def min_h_px: Tailwind = Tailwind()
   /** {{{
+    * .min-h-0.5 {
+    *   minHeight: .125rem;
+    * }
+    * }}}
+    */
+  def min_h_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-h-1.5 {
+    *   minHeight: .375rem;
+    * }
+    * }}}
+    */
+  def min_h_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-h-2.5 {
+    *   minHeight: .625rem;
+    * }
+    * }}}
+    */
+  def min_h_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-h-3.5 {
+    *   minHeight: .875rem;
+    * }
+    * }}}
+    */
+  def min_h_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .min-h-full {
     *   minHeight: 100%;
     * }
@@ -10854,6 +11844,34 @@ object tw {
     * }}}
     */
   def w_px: Tailwind = Tailwind()
+  /** {{{
+    * .w-0.5 {
+    *   width: .125rem;
+    * }
+    * }}}
+    */
+  def w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1.5 {
+    *   width: .375rem;
+    * }
+    * }}}
+    */
+  def w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-2.5 {
+    *   width: .625rem;
+    * }
+    * }}}
+    */
+  def w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-3.5 {
+    *   width: .875rem;
+    * }
+    * }}}
+    */
+  def w_3dot5: Tailwind = Tailwind()
   /** {{{
     * .w-1/2 {
     *   width: 50%;
@@ -11310,6 +12328,34 @@ object tw {
     */
   def min_w_px: Tailwind = Tailwind()
   /** {{{
+    * .min-w-0.5 {
+    *   minWidth: .125rem;
+    * }
+    * }}}
+    */
+  def min_w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-w-1.5 {
+    *   minWidth: .375rem;
+    * }
+    * }}}
+    */
+  def min_w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-w-2.5 {
+    *   minWidth: .625rem;
+    * }
+    * }}}
+    */
+  def min_w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-w-3.5 {
+    *   minWidth: .875rem;
+    * }
+    * }}}
+    */
+  def min_w_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .min-w-full {
     *   minWidth: 100%;
     * }
@@ -11554,6 +12600,34 @@ object tw {
     * }}}
     */
   def max_w_px: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-0.5 {
+    *   maxWidth: .125rem;
+    * }
+    * }}}
+    */
+  def max_w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-1.5 {
+    *   maxWidth: .375rem;
+    * }
+    * }}}
+    */
+  def max_w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-2.5 {
+    *   maxWidth: .625rem;
+    * }
+    * }}}
+    */
+  def max_w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-3.5 {
+    *   maxWidth: .875rem;
+    * }
+    * }}}
+    */
+  def max_w_3dot5: Tailwind = Tailwind()
   /** {{{
     * .max-w-none {
     *   maxWidth: none;
@@ -12032,6 +13106,34 @@ object tw {
     * }}}
     */
   def basis_px: Tailwind = Tailwind()
+  /** {{{
+    * .basis-0.5 {
+    *   flex-basis: .125rem;
+    * }
+    * }}}
+    */
+  def basis_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .basis-1.5 {
+    *   flex-basis: .375rem;
+    * }
+    * }}}
+    */
+  def basis_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .basis-2.5 {
+    *   flex-basis: .625rem;
+    * }
+    * }}}
+    */
+  def basis_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .basis-3.5 {
+    *   flex-basis: .875rem;
+    * }
+    * }}}
+    */
+  def basis_3dot5: Tailwind = Tailwind()
   /** {{{
     * .basis-1/2 {
     *   flex-basis: 50%;
@@ -12667,6 +13769,58 @@ object tw {
     */
   def border_spacing_px: Tailwind = Tailwind()
   /** {{{
+    * .border-spacing-0.5 {
+    *   --tw-border-spacing-x: .125rem;
+    *   --tw-border-spacing-y: .125rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-1.5 {
+    *   --tw-border-spacing-x: .375rem;
+    *   --tw-border-spacing-y: .375rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-2.5 {
+    *   --tw-border-spacing-x: .625rem;
+    *   --tw-border-spacing-y: .625rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-3.5 {
+    *   --tw-border-spacing-x: .875rem;
+    *   --tw-border-spacing-y: .875rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .border-spacing-x-0 {
     *   --tw-border-spacing-x: 0px;
     *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
@@ -13039,6 +14193,54 @@ object tw {
     */
   def border_spacing_x_px: Tailwind = Tailwind()
   /** {{{
+    * .border-spacing-x-0.5 {
+    *   --tw-border-spacing-x: .125rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-x-1.5 {
+    *   --tw-border-spacing-x: .375rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-x-2.5 {
+    *   --tw-border-spacing-x: .625rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-x-3.5 {
+    *   --tw-border-spacing-x: .875rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .border-spacing-y-0 {
     *   --tw-border-spacing-y: 0px;
     *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
@@ -13410,6 +14612,54 @@ object tw {
     * }}}
     */
   def border_spacing_y_px: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-0.5 {
+    *   --tw-border-spacing-y: .125rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-1.5 {
+    *   --tw-border-spacing-y: .375rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-2.5 {
+    *   --tw-border-spacing-y: .625rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-3.5 {
+    *   --tw-border-spacing-y: .875rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * .origin-center {
     *   transformOrigin: center;
@@ -13846,6 +15096,54 @@ object tw {
     */
   def translate_x_px: Tailwind = Tailwind()
   /** {{{
+    * .translate-x-0.5 {
+    *   --tw-translate-x: .125rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-x-1.5 {
+    *   --tw-translate-x: .375rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-x-2.5 {
+    *   --tw-translate-x: .625rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-x-3.5 {
+    *   --tw-translate-x: .875rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .translate-x-1/2 {
     *   --tw-translate-x: 50%;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -14084,6 +15382,26 @@ object tw {
     * }}}
     */
   def _translate_x_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -14492,6 +15810,54 @@ object tw {
     */
   def translate_y_px: Tailwind = Tailwind()
   /** {{{
+    * .translate-y-0.5 {
+    *   --tw-translate-y: .125rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-y-1.5 {
+    *   --tw-translate-y: .375rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-y-2.5 {
+    *   --tw-translate-y: .625rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-y-3.5 {
+    *   --tw-translate-y: .875rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .translate-y-1/2 {
     *   --tw-translate-y: 50%;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -14730,6 +16096,26 @@ object tw {
     * }}}
     */
   def _translate_y_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -15677,13 +17063,13 @@ object tw {
     * }}}
     */
   def animate_none: Tailwind = Tailwind()
-  .animate-spin {@keyframes spin {to {transform: rotate(360deg)}}}
+  
   def animate_spin: Tailwind = Tailwind()
-  .animate-ping {@keyframes ping {75%, 100% {transform: scale(2);opacity: 0}}}
+  
   def animate_ping: Tailwind = Tailwind()
-  .animate-pulse {@keyframes pulse {50% {opacity: .5}}}
+  
   def animate_pulse: Tailwind = Tailwind()
-  .animate-bounce {@keyframes bounce {0%, 100% {transform: translateY(-25%);animationTimingFunction: cubic-bezier(0.8,0,1,1)};50% {transform: none;animationTimingFunction: cubic-bezier(0,0,0.2,1)}}}
+  
   def animate_bounce: Tailwind = Tailwind()
   /** {{{
     * .cursor-auto {
@@ -16372,6 +17758,34 @@ object tw {
     */
   def scroll_m_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-m-0.5 {
+    *   scroll-margin: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-m-1.5 {
+    *   scroll-margin: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-m-2.5 {
+    *   scroll-margin: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-m-3.5 {
+    *   scroll-margin: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_m_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -16526,6 +17940,26 @@ object tw {
     * }}}
     */
   def _scroll_m_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mx-0 {
     *   scroll-margin-left: 0;
@@ -16775,6 +18209,38 @@ object tw {
     */
   def scroll_mx_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mx-0.5 {
+    *   scroll-margin-left: .125rem;
+    *   scroll-margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mx-1.5 {
+    *   scroll-margin-left: .375rem;
+    *   scroll-margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mx-2.5 {
+    *   scroll-margin-left: .625rem;
+    *   scroll-margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mx-3.5 {
+    *   scroll-margin-left: .875rem;
+    *   scroll-margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -16929,6 +18395,26 @@ object tw {
     * }}}
     */
   def _scroll_mx_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-my-0 {
     *   scroll-margin-top: 0;
@@ -17178,6 +18664,38 @@ object tw {
     */
   def scroll_my_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-my-0.5 {
+    *   scroll-margin-top: .125rem;
+    *   scroll-margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-my-1.5 {
+    *   scroll-margin-top: .375rem;
+    *   scroll-margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-my-2.5 {
+    *   scroll-margin-top: .625rem;
+    *   scroll-margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-my-3.5 {
+    *   scroll-margin-top: .875rem;
+    *   scroll-margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_my_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -17332,6 +18850,26 @@ object tw {
     * }}}
     */
   def _scroll_my_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-ms-0 {
     *   scroll-margin-inline-start: 0;
@@ -17550,6 +19088,34 @@ object tw {
     */
   def scroll_ms_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-ms-0.5 {
+    *   scroll-margin-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ms-1.5 {
+    *   scroll-margin-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ms-2.5 {
+    *   scroll-margin-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ms-3.5 {
+    *   scroll-margin-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -17704,6 +19270,26 @@ object tw {
     * }}}
     */
   def _scroll_ms_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-me-0 {
     *   scroll-margin-inline-end: 0;
@@ -17922,6 +19508,34 @@ object tw {
     */
   def scroll_me_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-me-0.5 {
+    *   scroll-margin-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-me-1.5 {
+    *   scroll-margin-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-me-2.5 {
+    *   scroll-margin-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-me-3.5 {
+    *   scroll-margin-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_me_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -18076,6 +19690,26 @@ object tw {
     * }}}
     */
   def _scroll_me_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mt-0 {
     *   scroll-margin-top: 0;
@@ -18294,6 +19928,34 @@ object tw {
     */
   def scroll_mt_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mt-0.5 {
+    *   scroll-margin-top: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mt-1.5 {
+    *   scroll-margin-top: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mt-2.5 {
+    *   scroll-margin-top: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mt-3.5 {
+    *   scroll-margin-top: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -18448,6 +20110,26 @@ object tw {
     * }}}
     */
   def _scroll_mt_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mr-0 {
     *   scroll-margin-right: 0;
@@ -18666,6 +20348,34 @@ object tw {
     */
   def scroll_mr_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mr-0.5 {
+    *   scroll-margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mr-1.5 {
+    *   scroll-margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mr-2.5 {
+    *   scroll-margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mr-3.5 {
+    *   scroll-margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -18820,6 +20530,26 @@ object tw {
     * }}}
     */
   def _scroll_mr_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mb-0 {
     *   scroll-margin-bottom: 0;
@@ -19038,6 +20768,34 @@ object tw {
     */
   def scroll_mb_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mb-0.5 {
+    *   scroll-margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mb-1.5 {
+    *   scroll-margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mb-2.5 {
+    *   scroll-margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mb-3.5 {
+    *   scroll-margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -19192,6 +20950,26 @@ object tw {
     * }}}
     */
   def _scroll_mb_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-ml-0 {
     *   scroll-margin-left: 0;
@@ -19410,6 +21188,34 @@ object tw {
     */
   def scroll_ml_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-ml-0.5 {
+    *   scroll-margin-left: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ml-1.5 {
+    *   scroll-margin-left: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ml-2.5 {
+    *   scroll-margin-left: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ml-3.5 {
+    *   scroll-margin-left: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -19564,6 +21370,26 @@ object tw {
     * }}}
     */
   def _scroll_ml_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-p-0 {
     *   scroll-padding: 0;
@@ -19781,6 +21607,34 @@ object tw {
     * }}}
     */
   def scroll_p_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-0.5 {
+    *   scroll-padding: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_p_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-1.5 {
+    *   scroll-padding: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_p_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-2.5 {
+    *   scroll-padding: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_p_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-3.5 {
+    *   scroll-padding: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_p_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-px-0 {
     *   scroll-padding-left: 0;
@@ -20030,6 +21884,38 @@ object tw {
     */
   def scroll_px_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-px-0.5 {
+    *   scroll-padding-left: .125rem;
+    *   scroll-padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_px_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-px-1.5 {
+    *   scroll-padding-left: .375rem;
+    *   scroll-padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_px_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-px-2.5 {
+    *   scroll-padding-left: .625rem;
+    *   scroll-padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_px_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-px-3.5 {
+    *   scroll-padding-left: .875rem;
+    *   scroll-padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_px_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-py-0 {
     *   scroll-padding-top: 0;
     *   scroll-padding-bottom: 0;
@@ -20278,6 +22164,38 @@ object tw {
     */
   def scroll_py_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-py-0.5 {
+    *   scroll-padding-top: .125rem;
+    *   scroll-padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_py_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-py-1.5 {
+    *   scroll-padding-top: .375rem;
+    *   scroll-padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_py_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-py-2.5 {
+    *   scroll-padding-top: .625rem;
+    *   scroll-padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_py_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-py-3.5 {
+    *   scroll-padding-top: .875rem;
+    *   scroll-padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_py_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-ps-0 {
     *   scroll-padding-inline-start: 0;
     * }
@@ -20494,6 +22412,34 @@ object tw {
     * }}}
     */
   def scroll_ps_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-0.5 {
+    *   scroll-padding-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-1.5 {
+    *   scroll-padding-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-2.5 {
+    *   scroll-padding-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-3.5 {
+    *   scroll-padding-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-pe-0 {
     *   scroll-padding-inline-end: 0;
@@ -20712,6 +22658,34 @@ object tw {
     */
   def scroll_pe_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-pe-0.5 {
+    *   scroll-padding-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pe-1.5 {
+    *   scroll-padding-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pe-2.5 {
+    *   scroll-padding-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pe-3.5 {
+    *   scroll-padding-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-pt-0 {
     *   scroll-padding-top: 0;
     * }
@@ -20928,6 +22902,34 @@ object tw {
     * }}}
     */
   def scroll_pt_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-0.5 {
+    *   scroll-padding-top: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-1.5 {
+    *   scroll-padding-top: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-2.5 {
+    *   scroll-padding-top: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-3.5 {
+    *   scroll-padding-top: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-pr-0 {
     *   scroll-padding-right: 0;
@@ -21146,6 +23148,34 @@ object tw {
     */
   def scroll_pr_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-pr-0.5 {
+    *   scroll-padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pr-1.5 {
+    *   scroll-padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pr-2.5 {
+    *   scroll-padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pr-3.5 {
+    *   scroll-padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-pb-0 {
     *   scroll-padding-bottom: 0;
     * }
@@ -21363,6 +23393,34 @@ object tw {
     */
   def scroll_pb_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-pb-0.5 {
+    *   scroll-padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pb-1.5 {
+    *   scroll-padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pb-2.5 {
+    *   scroll-padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pb-3.5 {
+    *   scroll-padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-pl-0 {
     *   scroll-padding-left: 0;
     * }
@@ -21579,6 +23637,34 @@ object tw {
     * }}}
     */
   def scroll_pl_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-0.5 {
+    *   scroll-padding-left: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-1.5 {
+    *   scroll-padding-left: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-2.5 {
+    *   scroll-padding-left: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-3.5 {
+    *   scroll-padding-left: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_3dot5: Tailwind = Tailwind()
   /** {{{
     * .list-inside {
     *   list-style-position: inside;
@@ -22784,6 +24870,34 @@ object tw {
     */
   def gap_px: Tailwind = Tailwind()
   /** {{{
+    * .gap-0.5 {
+    *   gap: .125rem;
+    * }
+    * }}}
+    */
+  def gap_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-1.5 {
+    *   gap: .375rem;
+    * }
+    * }}}
+    */
+  def gap_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-2.5 {
+    *   gap: .625rem;
+    * }
+    * }}}
+    */
+  def gap_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-3.5 {
+    *   gap: .875rem;
+    * }
+    * }}}
+    */
+  def gap_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .gap-x-0 {
     *   columnGap: 0px;
     * }
@@ -23001,6 +25115,34 @@ object tw {
     */
   def gap_x_px: Tailwind = Tailwind()
   /** {{{
+    * .gap-x-0.5 {
+    *   columnGap: .125rem;
+    * }
+    * }}}
+    */
+  def gap_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-x-1.5 {
+    *   columnGap: .375rem;
+    * }
+    * }}}
+    */
+  def gap_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-x-2.5 {
+    *   columnGap: .625rem;
+    * }
+    * }}}
+    */
+  def gap_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-x-3.5 {
+    *   columnGap: .875rem;
+    * }
+    * }}}
+    */
+  def gap_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .gap-y-0 {
     *   rowGap: 0px;
     * }
@@ -23217,6 +25359,34 @@ object tw {
     * }}}
     */
   def gap_y_px: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-0.5 {
+    *   rowGap: .125rem;
+    * }
+    * }}}
+    */
+  def gap_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-1.5 {
+    *   rowGap: .375rem;
+    * }
+    * }}}
+    */
+  def gap_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-2.5 {
+    *   rowGap: .625rem;
+    * }
+    * }}}
+    */
+  def gap_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-3.5 {
+    *   rowGap: .875rem;
+    * }
+    * }}}
+    */
+  def gap_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * .space-x-0 {
     *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
@@ -23559,6 +25729,50 @@ object tw {
     */
   def space_x_px: Tailwind = Tailwind()
   /** {{{
+    * .space-x-0.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.125rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.125rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-x-1.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.375rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.375rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-x-2.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.625rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.625rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-x-3.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.875rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.875rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -23713,6 +25927,26 @@ object tw {
     * }}}
     */
   def _space_x_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_3dot5: Tailwind = Tailwind()
   /** {{{
     * .space-y-0 {
     *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
@@ -24055,6 +26289,50 @@ object tw {
     */
   def space_y_px: Tailwind = Tailwind()
   /** {{{
+    * .space-y-0.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.125rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.125rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-y-1.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.375rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.375rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-y-2.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.625rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.625rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-y-3.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.875rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.875rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -24209,6 +26487,26 @@ object tw {
     * }}}
     */
   def _space_y_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * .space-y-reverse &gt; :not([hidden]) ~ :not([hidden]) {
     *   --tw-space-y-reverse: 1;
@@ -63015,6 +65313,34 @@ object tw {
     */
   def p_px: Tailwind = Tailwind()
   /** {{{
+    * .p-0.5 {
+    *   padding: .125rem;
+    * }
+    * }}}
+    */
+  def p_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .p-1.5 {
+    *   padding: .375rem;
+    * }
+    * }}}
+    */
+  def p_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .p-2.5 {
+    *   padding: .625rem;
+    * }
+    * }}}
+    */
+  def p_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .p-3.5 {
+    *   padding: .875rem;
+    * }
+    * }}}
+    */
+  def p_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .px-0 {
     *   padding-left: 0;
     *   padding-right: 0;
@@ -63262,6 +65588,38 @@ object tw {
     * }}}
     */
   def px_px: Tailwind = Tailwind()
+  /** {{{
+    * .px-0.5 {
+    *   padding-left: .125rem;
+    *   padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def px_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .px-1.5 {
+    *   padding-left: .375rem;
+    *   padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def px_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .px-2.5 {
+    *   padding-left: .625rem;
+    *   padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def px_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .px-3.5 {
+    *   padding-left: .875rem;
+    *   padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def px_3dot5: Tailwind = Tailwind()
   /** {{{
     * .py-0 {
     *   padding-top: 0;
@@ -63511,6 +65869,38 @@ object tw {
     */
   def py_px: Tailwind = Tailwind()
   /** {{{
+    * .py-0.5 {
+    *   padding-top: .125rem;
+    *   padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def py_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .py-1.5 {
+    *   padding-top: .375rem;
+    *   padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def py_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .py-2.5 {
+    *   padding-top: .625rem;
+    *   padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def py_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .py-3.5 {
+    *   padding-top: .875rem;
+    *   padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def py_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .ps-0 {
     *   padding-inline-start: 0;
     * }
@@ -63727,6 +66117,34 @@ object tw {
     * }}}
     */
   def ps_px: Tailwind = Tailwind()
+  /** {{{
+    * .ps-0.5 {
+    *   padding-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def ps_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ps-1.5 {
+    *   padding-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def ps_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ps-2.5 {
+    *   padding-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def ps_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ps-3.5 {
+    *   padding-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def ps_3dot5: Tailwind = Tailwind()
   /** {{{
     * .pe-0 {
     *   padding-inline-end: 0;
@@ -63945,6 +66363,34 @@ object tw {
     */
   def pe_px: Tailwind = Tailwind()
   /** {{{
+    * .pe-0.5 {
+    *   padding-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def pe_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pe-1.5 {
+    *   padding-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def pe_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pe-2.5 {
+    *   padding-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def pe_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pe-3.5 {
+    *   padding-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def pe_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .pt-0 {
     *   padding-top: 0;
     * }
@@ -64161,6 +66607,34 @@ object tw {
     * }}}
     */
   def pt_px: Tailwind = Tailwind()
+  /** {{{
+    * .pt-0.5 {
+    *   padding-top: .125rem;
+    * }
+    * }}}
+    */
+  def pt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pt-1.5 {
+    *   padding-top: .375rem;
+    * }
+    * }}}
+    */
+  def pt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pt-2.5 {
+    *   padding-top: .625rem;
+    * }
+    * }}}
+    */
+  def pt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pt-3.5 {
+    *   padding-top: .875rem;
+    * }
+    * }}}
+    */
+  def pt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .pr-0 {
     *   padding-right: 0;
@@ -64379,6 +66853,34 @@ object tw {
     */
   def pr_px: Tailwind = Tailwind()
   /** {{{
+    * .pr-0.5 {
+    *   padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def pr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pr-1.5 {
+    *   padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def pr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pr-2.5 {
+    *   padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def pr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pr-3.5 {
+    *   padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def pr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .pb-0 {
     *   padding-bottom: 0;
     * }
@@ -64596,6 +67098,34 @@ object tw {
     */
   def pb_px: Tailwind = Tailwind()
   /** {{{
+    * .pb-0.5 {
+    *   padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def pb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pb-1.5 {
+    *   padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def pb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pb-2.5 {
+    *   padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def pb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pb-3.5 {
+    *   padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def pb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .pl-0 {
     *   padding-left: 0;
     * }
@@ -64812,6 +67342,34 @@ object tw {
     * }}}
     */
   def pl_px: Tailwind = Tailwind()
+  /** {{{
+    * .pl-0.5 {
+    *   padding-left: .125rem;
+    * }
+    * }}}
+    */
+  def pl_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pl-1.5 {
+    *   padding-left: .375rem;
+    * }
+    * }}}
+    */
+  def pl_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pl-2.5 {
+    *   padding-left: .625rem;
+    * }
+    * }}}
+    */
+  def pl_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pl-3.5 {
+    *   padding-left: .875rem;
+    * }
+    * }}}
+    */
+  def pl_3dot5: Tailwind = Tailwind()
   /** {{{
     * .text-left {
     *   text-align: left;
@@ -65072,6 +67630,34 @@ object tw {
     */
   def indent_px: Tailwind = Tailwind()
   /** {{{
+    * .indent-0.5 {
+    *   text-indent: .125rem;
+    * }
+    * }}}
+    */
+  def indent_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .indent-1.5 {
+    *   text-indent: .375rem;
+    * }
+    * }}}
+    */
+  def indent_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .indent-2.5 {
+    *   text-indent: .625rem;
+    * }
+    * }}}
+    */
+  def indent_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .indent-3.5 {
+    *   text-indent: .875rem;
+    * }
+    * }}}
+    */
+  def indent_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -65226,6 +67812,26 @@ object tw {
     * }}}
     */
   def _indent_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_3dot5: Tailwind = Tailwind()
   /** {{{
     * .align-baseline {
     *   vertical-align: baseline;
@@ -87173,13 +89779,7 @@ object tw {
 }
 
 extension (tailwind: Tailwind)
-  .container {width: 100%;}
-\@media (min-width: 640px) {.container {max-width: 640px;}}
-\@media (min-width: 768px) {.container {max-width: 768px;}}
-\@media (min-width: 1024px) {.container {max-width: 1024px;}}
-\@media (min-width: 1280px) {.container {max-width: 1280px;}}
-\@media (min-width: 1536px) {.container {max-width: 1536px;}}
-
+  
   def container: Tailwind = Tailwind()
   /** {{{
     * .sr-only {
@@ -87505,6 +90105,34 @@ extension (tailwind: Tailwind)
     */
   def inset_px: Tailwind = Tailwind()
   /** {{{
+    * .inset-0.5 {
+    *   inset: .125rem;
+    * }
+    * }}}
+    */
+  def inset_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-1.5 {
+    *   inset: .375rem;
+    * }
+    * }}}
+    */
+  def inset_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-2.5 {
+    *   inset: .625rem;
+    * }
+    * }}}
+    */
+  def inset_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-3.5 {
+    *   inset: .875rem;
+    * }
+    * }}}
+    */
+  def inset_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .inset-1/2 {
     *   inset: 50%;
     * }
@@ -87708,6 +90336,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _inset_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -88000,6 +90648,38 @@ extension (tailwind: Tailwind)
     */
   def inset_x_px: Tailwind = Tailwind()
   /** {{{
+    * .inset-x-0.5 {
+    *   left: .125rem;
+    *   right: .125rem;
+    * }
+    * }}}
+    */
+  def inset_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-x-1.5 {
+    *   left: .375rem;
+    *   right: .375rem;
+    * }
+    * }}}
+    */
+  def inset_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-x-2.5 {
+    *   left: .625rem;
+    *   right: .625rem;
+    * }
+    * }}}
+    */
+  def inset_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-x-3.5 {
+    *   left: .875rem;
+    *   right: .875rem;
+    * }
+    * }}}
+    */
+  def inset_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .inset-x-1/2 {
     *   left: 50%;
     *   right: 50%;
@@ -88210,6 +90890,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _inset_x_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_x_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -88502,6 +91202,38 @@ extension (tailwind: Tailwind)
     */
   def inset_y_px: Tailwind = Tailwind()
   /** {{{
+    * .inset-y-0.5 {
+    *   top: .125rem;
+    *   bottom: .125rem;
+    * }
+    * }}}
+    */
+  def inset_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-y-1.5 {
+    *   top: .375rem;
+    *   bottom: .375rem;
+    * }
+    * }}}
+    */
+  def inset_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-y-2.5 {
+    *   top: .625rem;
+    *   bottom: .625rem;
+    * }
+    * }}}
+    */
+  def inset_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .inset-y-3.5 {
+    *   top: .875rem;
+    *   bottom: .875rem;
+    * }
+    * }}}
+    */
+  def inset_y_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .inset-y-1/2 {
     *   top: 50%;
     *   bottom: 50%;
@@ -88712,6 +91444,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _inset_y_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _inset_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -88972,6 +91724,34 @@ extension (tailwind: Tailwind)
     */
   def start_px: Tailwind = Tailwind()
   /** {{{
+    * .start-0.5 {
+    *   inset-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def start_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .start-1.5 {
+    *   inset-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def start_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .start-2.5 {
+    *   inset-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def start_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .start-3.5 {
+    *   inset-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def start_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .start-1/2 {
     *   inset-inline-start: 50%;
     * }
@@ -89175,6 +91955,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _start_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _start_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -89435,6 +92235,34 @@ extension (tailwind: Tailwind)
     */
   def end_px: Tailwind = Tailwind()
   /** {{{
+    * .end-0.5 {
+    *   inset-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def end_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .end-1.5 {
+    *   inset-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def end_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .end-2.5 {
+    *   inset-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def end_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .end-3.5 {
+    *   inset-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def end_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .end-1/2 {
     *   inset-inline-end: 50%;
     * }
@@ -89638,6 +92466,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _end_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _end_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -89898,6 +92746,34 @@ extension (tailwind: Tailwind)
     */
   def top_px: Tailwind = Tailwind()
   /** {{{
+    * .top-0.5 {
+    *   top: .125rem;
+    * }
+    * }}}
+    */
+  def top_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .top-1.5 {
+    *   top: .375rem;
+    * }
+    * }}}
+    */
+  def top_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .top-2.5 {
+    *   top: .625rem;
+    * }
+    * }}}
+    */
+  def top_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .top-3.5 {
+    *   top: .875rem;
+    * }
+    * }}}
+    */
+  def top_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .top-1/2 {
     *   top: 50%;
     * }
@@ -90101,6 +92977,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _top_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _top_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -90361,6 +93257,34 @@ extension (tailwind: Tailwind)
     */
   def right_px: Tailwind = Tailwind()
   /** {{{
+    * .right-0.5 {
+    *   right: .125rem;
+    * }
+    * }}}
+    */
+  def right_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .right-1.5 {
+    *   right: .375rem;
+    * }
+    * }}}
+    */
+  def right_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .right-2.5 {
+    *   right: .625rem;
+    * }
+    * }}}
+    */
+  def right_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .right-3.5 {
+    *   right: .875rem;
+    * }
+    * }}}
+    */
+  def right_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .right-1/2 {
     *   right: 50%;
     * }
@@ -90564,6 +93488,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _right_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _right_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -90824,6 +93768,34 @@ extension (tailwind: Tailwind)
     */
   def bottom_px: Tailwind = Tailwind()
   /** {{{
+    * .bottom-0.5 {
+    *   bottom: .125rem;
+    * }
+    * }}}
+    */
+  def bottom_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .bottom-1.5 {
+    *   bottom: .375rem;
+    * }
+    * }}}
+    */
+  def bottom_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .bottom-2.5 {
+    *   bottom: .625rem;
+    * }
+    * }}}
+    */
+  def bottom_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .bottom-3.5 {
+    *   bottom: .875rem;
+    * }
+    * }}}
+    */
+  def bottom_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .bottom-1/2 {
     *   bottom: 50%;
     * }
@@ -91027,6 +93999,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _bottom_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _bottom_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -91287,6 +94279,34 @@ extension (tailwind: Tailwind)
     */
   def left_px: Tailwind = Tailwind()
   /** {{{
+    * .left-0.5 {
+    *   left: .125rem;
+    * }
+    * }}}
+    */
+  def left_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .left-1.5 {
+    *   left: .375rem;
+    * }
+    * }}}
+    */
+  def left_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .left-2.5 {
+    *   left: .625rem;
+    * }
+    * }}}
+    */
+  def left_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .left-3.5 {
+    *   left: .875rem;
+    * }
+    * }}}
+    */
+  def left_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .left-1/2 {
     *   left: 50%;
     * }
@@ -91490,6 +94510,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _left_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _left_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -92688,6 +95728,34 @@ extension (tailwind: Tailwind)
     */
   def m_px: Tailwind = Tailwind()
   /** {{{
+    * .m-0.5 {
+    *   margin: .125rem;
+    * }
+    * }}}
+    */
+  def m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .m-1.5 {
+    *   margin: .375rem;
+    * }
+    * }}}
+    */
+  def m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .m-2.5 {
+    *   margin: .625rem;
+    * }
+    * }}}
+    */
+  def m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .m-3.5 {
+    *   margin: .875rem;
+    * }
+    * }}}
+    */
+  def m_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -92842,6 +95910,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _m_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _m_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mx-0 {
     *   margin-left: 0;
@@ -93099,6 +96187,38 @@ extension (tailwind: Tailwind)
     */
   def mx_px: Tailwind = Tailwind()
   /** {{{
+    * .mx-0.5 {
+    *   margin-left: .125rem;
+    *   margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mx-1.5 {
+    *   margin-left: .375rem;
+    *   margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mx-2.5 {
+    *   margin-left: .625rem;
+    *   margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mx-3.5 {
+    *   margin-left: .875rem;
+    *   margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def mx_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -93253,6 +96373,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _mx_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mx_3dot5: Tailwind = Tailwind()
   /** {{{
     * .my-0 {
     *   margin-top: 0;
@@ -93510,6 +96650,38 @@ extension (tailwind: Tailwind)
     */
   def my_px: Tailwind = Tailwind()
   /** {{{
+    * .my-0.5 {
+    *   margin-top: .125rem;
+    *   margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .my-1.5 {
+    *   margin-top: .375rem;
+    *   margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .my-2.5 {
+    *   margin-top: .625rem;
+    *   margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .my-3.5 {
+    *   margin-top: .875rem;
+    *   margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def my_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -93664,6 +96836,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _my_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _my_3dot5: Tailwind = Tailwind()
   /** {{{
     * .ms-0 {
     *   margin-inline-start: 0;
@@ -93889,6 +97081,34 @@ extension (tailwind: Tailwind)
     */
   def ms_px: Tailwind = Tailwind()
   /** {{{
+    * .ms-0.5 {
+    *   margin-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ms-1.5 {
+    *   margin-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ms-2.5 {
+    *   margin-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ms-3.5 {
+    *   margin-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def ms_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -94043,6 +97263,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _ms_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ms_3dot5: Tailwind = Tailwind()
   /** {{{
     * .me-0 {
     *   margin-inline-end: 0;
@@ -94268,6 +97508,34 @@ extension (tailwind: Tailwind)
     */
   def me_px: Tailwind = Tailwind()
   /** {{{
+    * .me-0.5 {
+    *   margin-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .me-1.5 {
+    *   margin-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .me-2.5 {
+    *   margin-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .me-3.5 {
+    *   margin-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def me_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -94422,6 +97690,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _me_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _me_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mt-0 {
     *   margin-top: 0;
@@ -94647,6 +97935,34 @@ extension (tailwind: Tailwind)
     */
   def mt_px: Tailwind = Tailwind()
   /** {{{
+    * .mt-0.5 {
+    *   margin-top: .125rem;
+    * }
+    * }}}
+    */
+  def mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mt-1.5 {
+    *   margin-top: .375rem;
+    * }
+    * }}}
+    */
+  def mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mt-2.5 {
+    *   margin-top: .625rem;
+    * }
+    * }}}
+    */
+  def mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mt-3.5 {
+    *   margin-top: .875rem;
+    * }
+    * }}}
+    */
+  def mt_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -94801,6 +98117,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _mt_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mr-0 {
     *   margin-right: 0;
@@ -95026,6 +98362,34 @@ extension (tailwind: Tailwind)
     */
   def mr_px: Tailwind = Tailwind()
   /** {{{
+    * .mr-0.5 {
+    *   margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mr-1.5 {
+    *   margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mr-2.5 {
+    *   margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mr-3.5 {
+    *   margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def mr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -95180,6 +98544,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _mr_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mr_3dot5: Tailwind = Tailwind()
   /** {{{
     * .mb-0 {
     *   margin-bottom: 0;
@@ -95405,6 +98789,34 @@ extension (tailwind: Tailwind)
     */
   def mb_px: Tailwind = Tailwind()
   /** {{{
+    * .mb-0.5 {
+    *   margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mb-1.5 {
+    *   margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mb-2.5 {
+    *   margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .mb-3.5 {
+    *   margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def mb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -95559,6 +98971,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _mb_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _mb_3dot5: Tailwind = Tailwind()
   /** {{{
     * .ml-0 {
     *   margin-left: 0;
@@ -95784,6 +99216,34 @@ extension (tailwind: Tailwind)
     */
   def ml_px: Tailwind = Tailwind()
   /** {{{
+    * .ml-0.5 {
+    *   margin-left: .125rem;
+    * }
+    * }}}
+    */
+  def ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ml-1.5 {
+    *   margin-left: .375rem;
+    * }
+    * }}}
+    */
+  def ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ml-2.5 {
+    *   margin-left: .625rem;
+    * }
+    * }}}
+    */
+  def ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ml-3.5 {
+    *   margin-left: .875rem;
+    * }
+    * }}}
+    */
+  def ml_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -95938,6 +99398,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _ml_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _ml_3dot5: Tailwind = Tailwind()
   /** {{{
     * .box-border {
     *   box-sizing: border-box;
@@ -96447,6 +99927,38 @@ extension (tailwind: Tailwind)
     */
   def size_px: Tailwind = Tailwind()
   /** {{{
+    * .size-0.5 {
+    *   width: .125rem;
+    *   height: .125rem;
+    * }
+    * }}}
+    */
+  def size_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .size-1.5 {
+    *   width: .375rem;
+    *   height: .375rem;
+    * }
+    * }}}
+    */
+  def size_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .size-2.5 {
+    *   width: .625rem;
+    *   height: .625rem;
+    * }
+    * }}}
+    */
+  def size_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .size-3.5 {
+    *   width: .875rem;
+    *   height: .875rem;
+    * }
+    * }}}
+    */
+  def size_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .size-1/2 {
     *   width: 50%;
     *   height: 50%;
@@ -96911,6 +100423,34 @@ extension (tailwind: Tailwind)
     */
   def h_px: Tailwind = Tailwind()
   /** {{{
+    * .h-0.5 {
+    *   height: .125rem;
+    * }
+    * }}}
+    */
+  def h_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .h-1.5 {
+    *   height: .375rem;
+    * }
+    * }}}
+    */
+  def h_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .h-2.5 {
+    *   height: .625rem;
+    * }
+    * }}}
+    */
+  def h_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .h-3.5 {
+    *   height: .875rem;
+    * }
+    * }}}
+    */
+  def h_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .h-1/2 {
     *   height: 50%;
     * }
@@ -97289,6 +100829,34 @@ extension (tailwind: Tailwind)
     */
   def max_h_px: Tailwind = Tailwind()
   /** {{{
+    * .max-h-0.5 {
+    *   maxHeight: .125rem;
+    * }
+    * }}}
+    */
+  def max_h_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-h-1.5 {
+    *   maxHeight: .375rem;
+    * }
+    * }}}
+    */
+  def max_h_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-h-2.5 {
+    *   maxHeight: .625rem;
+    * }
+    * }}}
+    */
+  def max_h_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-h-3.5 {
+    *   maxHeight: .875rem;
+    * }
+    * }}}
+    */
+  def max_h_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .max-h-none {
     *   maxHeight: none;
     * }
@@ -97569,6 +101137,34 @@ extension (tailwind: Tailwind)
     */
   def min_h_px: Tailwind = Tailwind()
   /** {{{
+    * .min-h-0.5 {
+    *   minHeight: .125rem;
+    * }
+    * }}}
+    */
+  def min_h_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-h-1.5 {
+    *   minHeight: .375rem;
+    * }
+    * }}}
+    */
+  def min_h_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-h-2.5 {
+    *   minHeight: .625rem;
+    * }
+    * }}}
+    */
+  def min_h_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-h-3.5 {
+    *   minHeight: .875rem;
+    * }
+    * }}}
+    */
+  def min_h_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .min-h-full {
     *   minHeight: 100%;
     * }
@@ -97848,6 +101444,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def w_px: Tailwind = Tailwind()
+  /** {{{
+    * .w-0.5 {
+    *   width: .125rem;
+    * }
+    * }}}
+    */
+  def w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1.5 {
+    *   width: .375rem;
+    * }
+    * }}}
+    */
+  def w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-2.5 {
+    *   width: .625rem;
+    * }
+    * }}}
+    */
+  def w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-3.5 {
+    *   width: .875rem;
+    * }
+    * }}}
+    */
+  def w_3dot5: Tailwind = Tailwind()
   /** {{{
     * .w-1/2 {
     *   width: 50%;
@@ -98304,6 +101928,34 @@ extension (tailwind: Tailwind)
     */
   def min_w_px: Tailwind = Tailwind()
   /** {{{
+    * .min-w-0.5 {
+    *   minWidth: .125rem;
+    * }
+    * }}}
+    */
+  def min_w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-w-1.5 {
+    *   minWidth: .375rem;
+    * }
+    * }}}
+    */
+  def min_w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-w-2.5 {
+    *   minWidth: .625rem;
+    * }
+    * }}}
+    */
+  def min_w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .min-w-3.5 {
+    *   minWidth: .875rem;
+    * }
+    * }}}
+    */
+  def min_w_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .min-w-full {
     *   minWidth: 100%;
     * }
@@ -98548,6 +102200,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def max_w_px: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-0.5 {
+    *   maxWidth: .125rem;
+    * }
+    * }}}
+    */
+  def max_w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-1.5 {
+    *   maxWidth: .375rem;
+    * }
+    * }}}
+    */
+  def max_w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-2.5 {
+    *   maxWidth: .625rem;
+    * }
+    * }}}
+    */
+  def max_w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .max-w-3.5 {
+    *   maxWidth: .875rem;
+    * }
+    * }}}
+    */
+  def max_w_3dot5: Tailwind = Tailwind()
   /** {{{
     * .max-w-none {
     *   maxWidth: none;
@@ -99026,6 +102706,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def basis_px: Tailwind = Tailwind()
+  /** {{{
+    * .basis-0.5 {
+    *   flex-basis: .125rem;
+    * }
+    * }}}
+    */
+  def basis_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .basis-1.5 {
+    *   flex-basis: .375rem;
+    * }
+    * }}}
+    */
+  def basis_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .basis-2.5 {
+    *   flex-basis: .625rem;
+    * }
+    * }}}
+    */
+  def basis_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .basis-3.5 {
+    *   flex-basis: .875rem;
+    * }
+    * }}}
+    */
+  def basis_3dot5: Tailwind = Tailwind()
   /** {{{
     * .basis-1/2 {
     *   flex-basis: 50%;
@@ -99661,6 +103369,58 @@ extension (tailwind: Tailwind)
     */
   def border_spacing_px: Tailwind = Tailwind()
   /** {{{
+    * .border-spacing-0.5 {
+    *   --tw-border-spacing-x: .125rem;
+    *   --tw-border-spacing-y: .125rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-1.5 {
+    *   --tw-border-spacing-x: .375rem;
+    *   --tw-border-spacing-y: .375rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-2.5 {
+    *   --tw-border-spacing-x: .625rem;
+    *   --tw-border-spacing-y: .625rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-3.5 {
+    *   --tw-border-spacing-x: .875rem;
+    *   --tw-border-spacing-y: .875rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .border-spacing-x-0 {
     *   --tw-border-spacing-x: 0px;
     *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
@@ -100033,6 +103793,54 @@ extension (tailwind: Tailwind)
     */
   def border_spacing_x_px: Tailwind = Tailwind()
   /** {{{
+    * .border-spacing-x-0.5 {
+    *   --tw-border-spacing-x: .125rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-x-1.5 {
+    *   --tw-border-spacing-x: .375rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-x-2.5 {
+    *   --tw-border-spacing-x: .625rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-x-3.5 {
+    *   --tw-border-spacing-x: .875rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .border-spacing-y-0 {
     *   --tw-border-spacing-y: 0px;
     *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
@@ -100404,6 +104212,54 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def border_spacing_y_px: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-0.5 {
+    *   --tw-border-spacing-y: .125rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-1.5 {
+    *   --tw-border-spacing-y: .375rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-2.5 {
+    *   --tw-border-spacing-y: .625rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .border-spacing-y-3.5 {
+    *   --tw-border-spacing-y: .875rem;
+    *   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    * 
+    *   @defaults border-spacing {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def border_spacing_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * .origin-center {
     *   transformOrigin: center;
@@ -100840,6 +104696,54 @@ extension (tailwind: Tailwind)
     */
   def translate_x_px: Tailwind = Tailwind()
   /** {{{
+    * .translate-x-0.5 {
+    *   --tw-translate-x: .125rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-x-1.5 {
+    *   --tw-translate-x: .375rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-x-2.5 {
+    *   --tw-translate-x: .625rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-x-3.5 {
+    *   --tw-translate-x: .875rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .translate-x-1/2 {
     *   --tw-translate-x: 50%;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -101078,6 +104982,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _translate_x_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_x_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -101486,6 +105410,54 @@ extension (tailwind: Tailwind)
     */
   def translate_y_px: Tailwind = Tailwind()
   /** {{{
+    * .translate-y-0.5 {
+    *   --tw-translate-y: .125rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-y-1.5 {
+    *   --tw-translate-y: .375rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-y-2.5 {
+    *   --tw-translate-y: .625rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .translate-y-3.5 {
+    *   --tw-translate-y: .875rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    * 
+    *   @defaults transform {
+    *     
+    *   }
+    * }
+    * }}}
+    */
+  def translate_y_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .translate-y-1/2 {
     *   --tw-translate-y: 50%;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -101724,6 +105696,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _translate_y_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _translate_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -102671,13 +106663,13 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def animate_none: Tailwind = Tailwind()
-  .animate-spin {@keyframes spin {to {transform: rotate(360deg)}}}
+  
   def animate_spin: Tailwind = Tailwind()
-  .animate-ping {@keyframes ping {75%, 100% {transform: scale(2);opacity: 0}}}
+  
   def animate_ping: Tailwind = Tailwind()
-  .animate-pulse {@keyframes pulse {50% {opacity: .5}}}
+  
   def animate_pulse: Tailwind = Tailwind()
-  .animate-bounce {@keyframes bounce {0%, 100% {transform: translateY(-25%);animationTimingFunction: cubic-bezier(0.8,0,1,1)};50% {transform: none;animationTimingFunction: cubic-bezier(0,0,0.2,1)}}}
+  
   def animate_bounce: Tailwind = Tailwind()
   /** {{{
     * .cursor-auto {
@@ -103366,6 +107358,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_m_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-m-0.5 {
+    *   scroll-margin: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-m-1.5 {
+    *   scroll-margin: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-m-2.5 {
+    *   scroll-margin: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-m-3.5 {
+    *   scroll-margin: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_m_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -103520,6 +107540,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_m_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_m_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mx-0 {
     *   scroll-margin-left: 0;
@@ -103769,6 +107809,38 @@ extension (tailwind: Tailwind)
     */
   def scroll_mx_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mx-0.5 {
+    *   scroll-margin-left: .125rem;
+    *   scroll-margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mx-1.5 {
+    *   scroll-margin-left: .375rem;
+    *   scroll-margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mx-2.5 {
+    *   scroll-margin-left: .625rem;
+    *   scroll-margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mx-3.5 {
+    *   scroll-margin-left: .875rem;
+    *   scroll-margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mx_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -103923,6 +107995,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_mx_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mx_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-my-0 {
     *   scroll-margin-top: 0;
@@ -104172,6 +108264,38 @@ extension (tailwind: Tailwind)
     */
   def scroll_my_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-my-0.5 {
+    *   scroll-margin-top: .125rem;
+    *   scroll-margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-my-1.5 {
+    *   scroll-margin-top: .375rem;
+    *   scroll-margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-my-2.5 {
+    *   scroll-margin-top: .625rem;
+    *   scroll-margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-my-3.5 {
+    *   scroll-margin-top: .875rem;
+    *   scroll-margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_my_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -104326,6 +108450,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_my_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_my_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-ms-0 {
     *   scroll-margin-inline-start: 0;
@@ -104544,6 +108688,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_ms_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-ms-0.5 {
+    *   scroll-margin-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ms-1.5 {
+    *   scroll-margin-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ms-2.5 {
+    *   scroll-margin-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ms-3.5 {
+    *   scroll-margin-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_ms_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -104698,6 +108870,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_ms_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ms_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-me-0 {
     *   scroll-margin-inline-end: 0;
@@ -104916,6 +109108,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_me_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-me-0.5 {
+    *   scroll-margin-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-me-1.5 {
+    *   scroll-margin-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-me-2.5 {
+    *   scroll-margin-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-me-3.5 {
+    *   scroll-margin-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_me_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -105070,6 +109290,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_me_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_me_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mt-0 {
     *   scroll-margin-top: 0;
@@ -105288,6 +109528,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_mt_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mt-0.5 {
+    *   scroll-margin-top: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mt-1.5 {
+    *   scroll-margin-top: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mt-2.5 {
+    *   scroll-margin-top: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mt-3.5 {
+    *   scroll-margin-top: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mt_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -105442,6 +109710,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_mt_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mr-0 {
     *   scroll-margin-right: 0;
@@ -105660,6 +109948,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_mr_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mr-0.5 {
+    *   scroll-margin-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mr-1.5 {
+    *   scroll-margin-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mr-2.5 {
+    *   scroll-margin-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mr-3.5 {
+    *   scroll-margin-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -105814,6 +110130,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_mr_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mr_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-mb-0 {
     *   scroll-margin-bottom: 0;
@@ -106032,6 +110368,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_mb_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-mb-0.5 {
+    *   scroll-margin-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mb-1.5 {
+    *   scroll-margin-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mb-2.5 {
+    *   scroll-margin-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-mb-3.5 {
+    *   scroll-margin-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_mb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -106186,6 +110550,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_mb_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_mb_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-ml-0 {
     *   scroll-margin-left: 0;
@@ -106404,6 +110788,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_ml_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-ml-0.5 {
+    *   scroll-margin-left: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ml-1.5 {
+    *   scroll-margin-left: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ml-2.5 {
+    *   scroll-margin-left: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ml-3.5 {
+    *   scroll-margin-left: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_ml_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -106558,6 +110970,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _scroll_ml_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _scroll_ml_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-p-0 {
     *   scroll-padding: 0;
@@ -106775,6 +111207,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def scroll_p_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-0.5 {
+    *   scroll-padding: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_p_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-1.5 {
+    *   scroll-padding: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_p_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-2.5 {
+    *   scroll-padding: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_p_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-p-3.5 {
+    *   scroll-padding: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_p_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-px-0 {
     *   scroll-padding-left: 0;
@@ -107024,6 +111484,38 @@ extension (tailwind: Tailwind)
     */
   def scroll_px_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-px-0.5 {
+    *   scroll-padding-left: .125rem;
+    *   scroll-padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_px_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-px-1.5 {
+    *   scroll-padding-left: .375rem;
+    *   scroll-padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_px_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-px-2.5 {
+    *   scroll-padding-left: .625rem;
+    *   scroll-padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_px_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-px-3.5 {
+    *   scroll-padding-left: .875rem;
+    *   scroll-padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_px_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-py-0 {
     *   scroll-padding-top: 0;
     *   scroll-padding-bottom: 0;
@@ -107272,6 +111764,38 @@ extension (tailwind: Tailwind)
     */
   def scroll_py_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-py-0.5 {
+    *   scroll-padding-top: .125rem;
+    *   scroll-padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_py_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-py-1.5 {
+    *   scroll-padding-top: .375rem;
+    *   scroll-padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_py_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-py-2.5 {
+    *   scroll-padding-top: .625rem;
+    *   scroll-padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_py_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-py-3.5 {
+    *   scroll-padding-top: .875rem;
+    *   scroll-padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_py_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-ps-0 {
     *   scroll-padding-inline-start: 0;
     * }
@@ -107488,6 +112012,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def scroll_ps_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-0.5 {
+    *   scroll-padding-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-1.5 {
+    *   scroll-padding-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-2.5 {
+    *   scroll-padding-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-ps-3.5 {
+    *   scroll-padding-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_ps_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-pe-0 {
     *   scroll-padding-inline-end: 0;
@@ -107706,6 +112258,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_pe_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-pe-0.5 {
+    *   scroll-padding-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pe-1.5 {
+    *   scroll-padding-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pe-2.5 {
+    *   scroll-padding-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pe-3.5 {
+    *   scroll-padding-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pe_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-pt-0 {
     *   scroll-padding-top: 0;
     * }
@@ -107922,6 +112502,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def scroll_pt_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-0.5 {
+    *   scroll-padding-top: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-1.5 {
+    *   scroll-padding-top: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-2.5 {
+    *   scroll-padding-top: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pt-3.5 {
+    *   scroll-padding-top: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .scroll-pr-0 {
     *   scroll-padding-right: 0;
@@ -108140,6 +112748,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_pr_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-pr-0.5 {
+    *   scroll-padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pr-1.5 {
+    *   scroll-padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pr-2.5 {
+    *   scroll-padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pr-3.5 {
+    *   scroll-padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-pb-0 {
     *   scroll-padding-bottom: 0;
     * }
@@ -108357,6 +112993,34 @@ extension (tailwind: Tailwind)
     */
   def scroll_pb_px: Tailwind = Tailwind()
   /** {{{
+    * .scroll-pb-0.5 {
+    *   scroll-padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pb-1.5 {
+    *   scroll-padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pb-2.5 {
+    *   scroll-padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pb-3.5 {
+    *   scroll-padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .scroll-pl-0 {
     *   scroll-padding-left: 0;
     * }
@@ -108573,6 +113237,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def scroll_pl_px: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-0.5 {
+    *   scroll-padding-left: .125rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-1.5 {
+    *   scroll-padding-left: .375rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-2.5 {
+    *   scroll-padding-left: .625rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .scroll-pl-3.5 {
+    *   scroll-padding-left: .875rem;
+    * }
+    * }}}
+    */
+  def scroll_pl_3dot5: Tailwind = Tailwind()
   /** {{{
     * .list-inside {
     *   list-style-position: inside;
@@ -109778,6 +114470,34 @@ extension (tailwind: Tailwind)
     */
   def gap_px: Tailwind = Tailwind()
   /** {{{
+    * .gap-0.5 {
+    *   gap: .125rem;
+    * }
+    * }}}
+    */
+  def gap_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-1.5 {
+    *   gap: .375rem;
+    * }
+    * }}}
+    */
+  def gap_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-2.5 {
+    *   gap: .625rem;
+    * }
+    * }}}
+    */
+  def gap_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-3.5 {
+    *   gap: .875rem;
+    * }
+    * }}}
+    */
+  def gap_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .gap-x-0 {
     *   columnGap: 0px;
     * }
@@ -109995,6 +114715,34 @@ extension (tailwind: Tailwind)
     */
   def gap_x_px: Tailwind = Tailwind()
   /** {{{
+    * .gap-x-0.5 {
+    *   columnGap: .125rem;
+    * }
+    * }}}
+    */
+  def gap_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-x-1.5 {
+    *   columnGap: .375rem;
+    * }
+    * }}}
+    */
+  def gap_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-x-2.5 {
+    *   columnGap: .625rem;
+    * }
+    * }}}
+    */
+  def gap_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-x-3.5 {
+    *   columnGap: .875rem;
+    * }
+    * }}}
+    */
+  def gap_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .gap-y-0 {
     *   rowGap: 0px;
     * }
@@ -110211,6 +114959,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def gap_y_px: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-0.5 {
+    *   rowGap: .125rem;
+    * }
+    * }}}
+    */
+  def gap_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-1.5 {
+    *   rowGap: .375rem;
+    * }
+    * }}}
+    */
+  def gap_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-2.5 {
+    *   rowGap: .625rem;
+    * }
+    * }}}
+    */
+  def gap_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .gap-y-3.5 {
+    *   rowGap: .875rem;
+    * }
+    * }}}
+    */
+  def gap_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * .space-x-0 {
     *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
@@ -110553,6 +115329,50 @@ extension (tailwind: Tailwind)
     */
   def space_x_px: Tailwind = Tailwind()
   /** {{{
+    * .space-x-0.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.125rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.125rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-x-1.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.375rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.375rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-x-2.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.625rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.625rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-x-3.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-x-reverse: 0;
+    *     margin-right: calc(.875rem * var(--tw-space-x-reverse));
+    *     margin-left: calc(.875rem * calc(1 - var(--tw-space-x-reverse)));
+    *   }
+    * }
+    * }}}
+    */
+  def space_x_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -110707,6 +115527,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _space_x_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_x_3dot5: Tailwind = Tailwind()
   /** {{{
     * .space-y-0 {
     *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
@@ -111049,6 +115889,50 @@ extension (tailwind: Tailwind)
     */
   def space_y_px: Tailwind = Tailwind()
   /** {{{
+    * .space-y-0.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.125rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.125rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-y-1.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.375rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.375rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-y-2.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.625rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.625rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .space-y-3.5 {
+    *   &amp; &gt; :not([hidden]) ~ :not([hidden]) {
+    *     --tw-space-y-reverse: 0;
+    *     margin-top: calc(.875rem * calc(1 - var(--tw-space-y-reverse)));
+    *     margin-bottom: calc(.875rem * var(--tw-space-y-reverse));
+    *   }
+    * }
+    * }}}
+    */
+  def space_y_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -111203,6 +116087,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _space_y_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _space_y_3dot5: Tailwind = Tailwind()
   /** {{{
     * .space-y-reverse &gt; :not([hidden]) ~ :not([hidden]) {
     *   --tw-space-y-reverse: 1;
@@ -150009,6 +154913,34 @@ extension (tailwind: Tailwind)
     */
   def p_px: Tailwind = Tailwind()
   /** {{{
+    * .p-0.5 {
+    *   padding: .125rem;
+    * }
+    * }}}
+    */
+  def p_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .p-1.5 {
+    *   padding: .375rem;
+    * }
+    * }}}
+    */
+  def p_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .p-2.5 {
+    *   padding: .625rem;
+    * }
+    * }}}
+    */
+  def p_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .p-3.5 {
+    *   padding: .875rem;
+    * }
+    * }}}
+    */
+  def p_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .px-0 {
     *   padding-left: 0;
     *   padding-right: 0;
@@ -150256,6 +155188,38 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def px_px: Tailwind = Tailwind()
+  /** {{{
+    * .px-0.5 {
+    *   padding-left: .125rem;
+    *   padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def px_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .px-1.5 {
+    *   padding-left: .375rem;
+    *   padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def px_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .px-2.5 {
+    *   padding-left: .625rem;
+    *   padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def px_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .px-3.5 {
+    *   padding-left: .875rem;
+    *   padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def px_3dot5: Tailwind = Tailwind()
   /** {{{
     * .py-0 {
     *   padding-top: 0;
@@ -150505,6 +155469,38 @@ extension (tailwind: Tailwind)
     */
   def py_px: Tailwind = Tailwind()
   /** {{{
+    * .py-0.5 {
+    *   padding-top: .125rem;
+    *   padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def py_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .py-1.5 {
+    *   padding-top: .375rem;
+    *   padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def py_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .py-2.5 {
+    *   padding-top: .625rem;
+    *   padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def py_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .py-3.5 {
+    *   padding-top: .875rem;
+    *   padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def py_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .ps-0 {
     *   padding-inline-start: 0;
     * }
@@ -150721,6 +155717,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def ps_px: Tailwind = Tailwind()
+  /** {{{
+    * .ps-0.5 {
+    *   padding-inline-start: .125rem;
+    * }
+    * }}}
+    */
+  def ps_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ps-1.5 {
+    *   padding-inline-start: .375rem;
+    * }
+    * }}}
+    */
+  def ps_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ps-2.5 {
+    *   padding-inline-start: .625rem;
+    * }
+    * }}}
+    */
+  def ps_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .ps-3.5 {
+    *   padding-inline-start: .875rem;
+    * }
+    * }}}
+    */
+  def ps_3dot5: Tailwind = Tailwind()
   /** {{{
     * .pe-0 {
     *   padding-inline-end: 0;
@@ -150939,6 +155963,34 @@ extension (tailwind: Tailwind)
     */
   def pe_px: Tailwind = Tailwind()
   /** {{{
+    * .pe-0.5 {
+    *   padding-inline-end: .125rem;
+    * }
+    * }}}
+    */
+  def pe_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pe-1.5 {
+    *   padding-inline-end: .375rem;
+    * }
+    * }}}
+    */
+  def pe_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pe-2.5 {
+    *   padding-inline-end: .625rem;
+    * }
+    * }}}
+    */
+  def pe_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pe-3.5 {
+    *   padding-inline-end: .875rem;
+    * }
+    * }}}
+    */
+  def pe_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .pt-0 {
     *   padding-top: 0;
     * }
@@ -151155,6 +156207,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def pt_px: Tailwind = Tailwind()
+  /** {{{
+    * .pt-0.5 {
+    *   padding-top: .125rem;
+    * }
+    * }}}
+    */
+  def pt_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pt-1.5 {
+    *   padding-top: .375rem;
+    * }
+    * }}}
+    */
+  def pt_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pt-2.5 {
+    *   padding-top: .625rem;
+    * }
+    * }}}
+    */
+  def pt_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pt-3.5 {
+    *   padding-top: .875rem;
+    * }
+    * }}}
+    */
+  def pt_3dot5: Tailwind = Tailwind()
   /** {{{
     * .pr-0 {
     *   padding-right: 0;
@@ -151373,6 +156453,34 @@ extension (tailwind: Tailwind)
     */
   def pr_px: Tailwind = Tailwind()
   /** {{{
+    * .pr-0.5 {
+    *   padding-right: .125rem;
+    * }
+    * }}}
+    */
+  def pr_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pr-1.5 {
+    *   padding-right: .375rem;
+    * }
+    * }}}
+    */
+  def pr_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pr-2.5 {
+    *   padding-right: .625rem;
+    * }
+    * }}}
+    */
+  def pr_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pr-3.5 {
+    *   padding-right: .875rem;
+    * }
+    * }}}
+    */
+  def pr_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .pb-0 {
     *   padding-bottom: 0;
     * }
@@ -151590,6 +156698,34 @@ extension (tailwind: Tailwind)
     */
   def pb_px: Tailwind = Tailwind()
   /** {{{
+    * .pb-0.5 {
+    *   padding-bottom: .125rem;
+    * }
+    * }}}
+    */
+  def pb_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pb-1.5 {
+    *   padding-bottom: .375rem;
+    * }
+    * }}}
+    */
+  def pb_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pb-2.5 {
+    *   padding-bottom: .625rem;
+    * }
+    * }}}
+    */
+  def pb_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pb-3.5 {
+    *   padding-bottom: .875rem;
+    * }
+    * }}}
+    */
+  def pb_3dot5: Tailwind = Tailwind()
+  /** {{{
     * .pl-0 {
     *   padding-left: 0;
     * }
@@ -151806,6 +156942,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def pl_px: Tailwind = Tailwind()
+  /** {{{
+    * .pl-0.5 {
+    *   padding-left: .125rem;
+    * }
+    * }}}
+    */
+  def pl_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pl-1.5 {
+    *   padding-left: .375rem;
+    * }
+    * }}}
+    */
+  def pl_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pl-2.5 {
+    *   padding-left: .625rem;
+    * }
+    * }}}
+    */
+  def pl_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .pl-3.5 {
+    *   padding-left: .875rem;
+    * }
+    * }}}
+    */
+  def pl_3dot5: Tailwind = Tailwind()
   /** {{{
     * .text-left {
     *   text-align: left;
@@ -152066,6 +157230,34 @@ extension (tailwind: Tailwind)
     */
   def indent_px: Tailwind = Tailwind()
   /** {{{
+    * .indent-0.5 {
+    *   text-indent: .125rem;
+    * }
+    * }}}
+    */
+  def indent_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .indent-1.5 {
+    *   text-indent: .375rem;
+    * }
+    * }}}
+    */
+  def indent_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .indent-2.5 {
+    *   text-indent: .625rem;
+    * }
+    * }}}
+    */
+  def indent_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .indent-3.5 {
+    *   text-indent: .875rem;
+    * }
+    * }}}
+    */
+  def indent_3dot5: Tailwind = Tailwind()
+  /** {{{
     * 
     * }}}
     */
@@ -152220,6 +157412,26 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def _indent_px: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * 
+    * }}}
+    */
+  def _indent_3dot5: Tailwind = Tailwind()
   /** {{{
     * .align-baseline {
     *   vertical-align: baseline;
@@ -174515,11 +179727,11 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       val classes = extractClassNames(styles).map(clx => s"!$clx")
       extractClassNames(inner) ++ classes
     case Apply(Ident(name), List(inner)) =>
-      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/")
+      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
     case Inlined(_, _, inner) =>
       extractClassNames(inner)
     case Select(inner, name) =>
-      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/")
+      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
     case Ident("tailwind") =>
       Nil
     case Ident("tw") =>

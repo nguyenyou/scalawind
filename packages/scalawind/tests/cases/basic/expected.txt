@@ -179,6 +179,8 @@ case class Tailwind() {
 object tw {
   def apply(): Tailwind = Tailwind()
 
+  
+  def container: Tailwind = Tailwind()
   /** {{{
     * .w-0 {
     *   width: 0;
@@ -403,6 +405,34 @@ object tw {
     * }}}
     */
   def w_px: Tailwind = Tailwind()
+  /** {{{
+    * .w-0.5 {
+    *   width: .125rem;
+    * }
+    * }}}
+    */
+  def w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1.5 {
+    *   width: .375rem;
+    * }
+    * }}}
+    */
+  def w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-2.5 {
+    *   width: .625rem;
+    * }
+    * }}}
+    */
+  def w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-3.5 {
+    *   width: .875rem;
+    * }
+    * }}}
+    */
+  def w_3dot5: Tailwind = Tailwind()
   /** {{{
     * .w-1/2 {
     *   width: 50%;
@@ -642,19 +672,27 @@ object tw {
     */
   def w_fit: Tailwind = Tailwind()
   /** {{{
+    * .animate-none {
+    *   animation: none;
+    * }
+    * }}}
+    */
+  def animate_none: Tailwind = Tailwind()
+  
+  def animate_spin: Tailwind = Tailwind()
+  
+  def animate_ping: Tailwind = Tailwind()
+  
+  def animate_pulse: Tailwind = Tailwind()
+  
+  def animate_bounce: Tailwind = Tailwind()
+  /** {{{
     * .text-black {
     *   color: #000;
     * }
     * }}}
     */
   def text_black: Tailwind = Tailwind()
-  /** {{{
-    * .text-white {
-    *   color: #fff;
-    * }
-    * }}}
-    */
-  def text_white: Tailwind = Tailwind()
 
   def first_letter(@unused styles: Tailwind): Tailwind = Tailwind()
   def first_line(@unused styles: Tailwind): Tailwind = Tailwind()
@@ -827,6 +865,8 @@ object tw {
 }
 
 extension (tailwind: Tailwind)
+  
+  def container: Tailwind = Tailwind()
   /** {{{
     * .w-0 {
     *   width: 0;
@@ -1051,6 +1091,34 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def w_px: Tailwind = Tailwind()
+  /** {{{
+    * .w-0.5 {
+    *   width: .125rem;
+    * }
+    * }}}
+    */
+  def w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1.5 {
+    *   width: .375rem;
+    * }
+    * }}}
+    */
+  def w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-2.5 {
+    *   width: .625rem;
+    * }
+    * }}}
+    */
+  def w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-3.5 {
+    *   width: .875rem;
+    * }
+    * }}}
+    */
+  def w_3dot5: Tailwind = Tailwind()
   /** {{{
     * .w-1/2 {
     *   width: 50%;
@@ -1290,19 +1358,27 @@ extension (tailwind: Tailwind)
     */
   def w_fit: Tailwind = Tailwind()
   /** {{{
+    * .animate-none {
+    *   animation: none;
+    * }
+    * }}}
+    */
+  def animate_none: Tailwind = Tailwind()
+  
+  def animate_spin: Tailwind = Tailwind()
+  
+  def animate_ping: Tailwind = Tailwind()
+  
+  def animate_pulse: Tailwind = Tailwind()
+  
+  def animate_bounce: Tailwind = Tailwind()
+  /** {{{
     * .text-black {
     *   color: #000;
     * }
     * }}}
     */
   def text_black: Tailwind = Tailwind()
-  /** {{{
-    * .text-white {
-    *   color: #fff;
-    * }
-    * }}}
-    */
-  def text_white: Tailwind = Tailwind()
 
 inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
@@ -1823,11 +1899,11 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       val classes = extractClassNames(styles).map(clx => s"!$clx")
       extractClassNames(inner) ++ classes
     case Apply(Ident(name), List(inner)) =>
-      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/")
+      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
     case Inlined(_, _, inner) =>
       extractClassNames(inner)
     case Select(inner, name) =>
-      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/")
+      extractClassNames(inner) :+ name.replace("_", "-").replace("$", "/").replace("dot", ".")
     case Ident("tailwind") =>
       Nil
     case Ident("tw") =>
