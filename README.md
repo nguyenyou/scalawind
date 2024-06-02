@@ -445,6 +445,86 @@ As you can see, the whole scalawind thing includes two parts:
 - The `case class Tailwind`, the `object tw` and the `extension (tailwind: Tailwind):` is just there for the Fluent Syntax.
 - The `sw` and  `swImpl` is the macro that will compile all those fluent thing into a string
 
+### Alternative Implementation
+
+<details>
+  <summary>Approach 1</summary>
+  
+  ```scala
+  inline def sw(inline tailwind: Tailwind): String =
+    ${ swImpl('tailwind) }
+
+  def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+    import quotes.reflect.*
+
+    def extractClassNames(term: Term): List[String] = {
+      var stack = List(term)
+      var classNames = List.empty[String]
+
+      while (stack.nonEmpty) {
+        stack.head match {
+          case Inlined(_, _, inner) =>
+            stack = inner :: stack.tail
+          case Select(inner, name) =>
+            classNames = name.replace("_", "-") :: classNames
+            stack = inner :: stack.tail
+          case Ident("tw") =>
+            stack = stack.tail
+          case unexpectedTerm =>
+            report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
+        }
+      }
+      classNames.reverse
+    }
+
+    val term = tailwindExpr.asTerm
+    val classNames = extractClassNames(term)
+    val combinedClasses = classNames.reverse.mkString(" ")
+    report.info(s"$term")
+    Expr(combinedClasses)
+  }
+  ```
+</details>
+
+<details>
+<summary>Approach 2</summary>
+
+  ```scala
+  def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+    import quotes.reflect.*
+
+    def extractClassNames(term: Term): List[String] = {
+      var currentTerm: Option[Term] = Some(term)
+      var classNames = List.empty[String]
+
+      while (currentTerm.isDefined) {
+        currentTerm match {
+          case Some(Inlined(_, _, inner)) =>
+            currentTerm = Some(inner)
+          case Some(Select(inner, name)) =>
+            classNames = classNames :+ name.replace("_", "-")
+            currentTerm = Some(inner)
+          case Some(Ident("tw")) =>
+            currentTerm = None
+          case Some(unexpectedTerm) =>
+            report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
+          case None =>
+            // This should never happen
+            report.errorAndAbort("Unexpected None in currentTerm")
+        }
+      }
+      classNames.reverse
+    }
+
+    val term = twStyleExpr.asTerm
+    val classNames = extractClassNames(term)
+    val combinedClasses = classNames.mkString(" ")
+    report.info(s"Extracted term: $term, combined classes: $combinedClasses")
+    Expr(combinedClasses)
+  }
+  ```
+</details>
+
 ## Acknowledgement
 
 This project is inspired by https://github.com/mokshit06/typewind. Thank you a lot for making the library.
