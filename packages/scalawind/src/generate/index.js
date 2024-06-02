@@ -10,7 +10,7 @@ const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scal
 
 const template = Handlebars.compile(scalawindTemplate);
 
-export function generateContent(userConfig, packageName = "scalawind", previewCompliedResult = false) {
+export function generateContent(userConfig, packageName = "scalawind", previewCompliedResult = false, arbitraryValues = false) {
   const resolvedConfig = resolveConfig(userConfig);
   const ctx = createContext(resolvedConfig);
 
@@ -72,14 +72,16 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
 
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];
-  for (const [name] of candidates) {
-    const ident = fmtToScalawind(name) + '_';
-    // edge case, we don't want the *_ method
-    if(ident === "*_") {
-      continue
+  if(arbitraryValues) {
+    for (const [name] of candidates) {
+      const ident = fmtToScalawind(name) + '_';
+      // edge case, we don't want the *_ method
+      if(ident === "*_") {
+        continue
+      }
+  
+      arbitrary.push({ methodName: ident, value: `${name}-`})
     }
-    
-    arbitrary.push(ident)
   }
 
   const modifiers = [...variantMap.keys()]
@@ -165,7 +167,7 @@ export function writeToDisk(path, content) {
 }
 
 export default function generate(userConfig, options) {
-  const { packageName, output, previewCompliedResult } = options
-  const content = generateContent(userConfig, packageName, previewCompliedResult)
+  const { packageName, output, previewCompliedResult, arbitraryValues } = options
+  const content = generateContent(userConfig, packageName, previewCompliedResult, arbitraryValues)
   writeToDisk(output, content)
 }

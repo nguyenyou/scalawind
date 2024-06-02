@@ -22,7 +22,7 @@ object tw {
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
   {{#each arbitrary}}
-  def {{this}}(value: String): Tailwind = Tailwind()
+  def {{this.methodName}}(value: String): Tailwind = Tailwind()
   {{/each}}
   {{#each modifiers}}
   def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
@@ -39,7 +39,7 @@ extension (tailwind: Tailwind)
   def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
   {{#each arbitrary}}
-  def {{this}}(value: String): Tailwind = Tailwind()
+  def {{this.methodName}}(value: String): Tailwind = Tailwind()
   {{/each}}
 
 
@@ -56,8 +56,8 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       extractClassNames(inner) ++ classes
     {{/each}}
     {{#each arbitrary}}
-    case Apply(Select(inner, "{{this}}"), List(Literal(StringConstant(value)))) =>
-      extractClassNames(inner) :+ s"{{this}}[$value]"
+    case Apply(Select(inner, "{{this.methodName}}"), List(Literal(StringConstant(value)))) =>
+      extractClassNames(inner) :+ s"{{this.value}}[$value]"
     {{/each}}
     case Apply(Select(inner, "opacity"), List(Literal(IntConstant(value)))) =>
       extractClassNames(inner).init :+ s"${extractClassNames(inner).last}/$value"

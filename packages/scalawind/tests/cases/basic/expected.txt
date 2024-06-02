@@ -1887,13 +1887,13 @@ def swImpl(twStyleExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       val classes = extractClassNames(styles).map(clx => s"print:$clx")
       extractClassNames(inner) ++ classes
     case Apply(Select(inner, "container_"), List(Literal(StringConstant(value)))) =>
-      extractClassNames(inner) :+ s"container_[$value]"
+      extractClassNames(inner) :+ s"container-[$value]"
     case Apply(Select(inner, "w_"), List(Literal(StringConstant(value)))) =>
-      extractClassNames(inner) :+ s"w_[$value]"
+      extractClassNames(inner) :+ s"w-[$value]"
     case Apply(Select(inner, "animate_"), List(Literal(StringConstant(value)))) =>
-      extractClassNames(inner) :+ s"animate_[$value]"
+      extractClassNames(inner) :+ s"animate-[$value]"
     case Apply(Select(inner, "text_"), List(Literal(StringConstant(value)))) =>
-      extractClassNames(inner) :+ s"text_[$value]"
+      extractClassNames(inner) :+ s"text-[$value]"
     case Apply(Select(inner, "opacity"), List(Literal(IntConstant(value)))) =>
       extractClassNames(inner).init :+ s"${extractClassNames(inner).last}/$value"
     case Apply(Select(inner, "o"), List(Literal(IntConstant(value)))) =>
