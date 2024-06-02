@@ -179,13 +179,7 @@ case class Tailwind() {
 object tw {
   def apply(): Tailwind = Tailwind()
 
-  .container {width: 100%;}
-\@media (min-width: 640px) {.container {max-width: 640px;}}
-\@media (min-width: 768px) {.container {max-width: 768px;}}
-\@media (min-width: 1024px) {.container {max-width: 1024px;}}
-\@media (min-width: 1280px) {.container {max-width: 1280px;}}
-\@media (min-width: 1536px) {.container {max-width: 1536px;}}
-
+  
   def container: Tailwind = Tailwind()
   /** {{{
     * .sr-only {
@@ -15677,13 +15671,13 @@ object tw {
     * }}}
     */
   def animate_none: Tailwind = Tailwind()
-  .animate-spin {@keyframes spin {to {transform: rotate(360deg)}}}
+  
   def animate_spin: Tailwind = Tailwind()
-  .animate-ping {@keyframes ping {75%, 100% {transform: scale(2);opacity: 0}}}
+  
   def animate_ping: Tailwind = Tailwind()
-  .animate-pulse {@keyframes pulse {50% {opacity: .5}}}
+  
   def animate_pulse: Tailwind = Tailwind()
-  .animate-bounce {@keyframes bounce {0%, 100% {transform: translateY(-25%);animationTimingFunction: cubic-bezier(0.8,0,1,1)};50% {transform: none;animationTimingFunction: cubic-bezier(0,0,0.2,1)}}}
+  
   def animate_bounce: Tailwind = Tailwind()
   /** {{{
     * .cursor-auto {
@@ -87173,13 +87167,7 @@ object tw {
 }
 
 extension (tailwind: Tailwind)
-  .container {width: 100%;}
-\@media (min-width: 640px) {.container {max-width: 640px;}}
-\@media (min-width: 768px) {.container {max-width: 768px;}}
-\@media (min-width: 1024px) {.container {max-width: 1024px;}}
-\@media (min-width: 1280px) {.container {max-width: 1280px;}}
-\@media (min-width: 1536px) {.container {max-width: 1536px;}}
-
+  
   def container: Tailwind = Tailwind()
   /** {{{
     * .sr-only {
@@ -102671,13 +102659,13 @@ extension (tailwind: Tailwind)
     * }}}
     */
   def animate_none: Tailwind = Tailwind()
-  .animate-spin {@keyframes spin {to {transform: rotate(360deg)}}}
+  
   def animate_spin: Tailwind = Tailwind()
-  .animate-ping {@keyframes ping {75%, 100% {transform: scale(2);opacity: 0}}}
+  
   def animate_ping: Tailwind = Tailwind()
-  .animate-pulse {@keyframes pulse {50% {opacity: .5}}}
+  
   def animate_pulse: Tailwind = Tailwind()
-  .animate-bounce {@keyframes bounce {0%, 100% {transform: translateY(-25%);animationTimingFunction: cubic-bezier(0.8,0,1,1)};50% {transform: none;animationTimingFunction: cubic-bezier(0,0,0.2,1)}}}
+  
   def animate_bounce: Tailwind = Tailwind()
   /** {{{
     * .cursor-auto {

@@ -1,12 +1,12 @@
 export const tailwindConfig = {
   theme: {
     colors: {
-      black: "#000",
-      white: "#fff",
-    },
+      black: '#000'
+    }
   },
   corePlugins: [
     'textColor',
-    'width'
+    'container',
+    'animation'
   ]
 };

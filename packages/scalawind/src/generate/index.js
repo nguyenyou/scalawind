@@ -17,7 +17,7 @@ function createDoc(doc) {
     */`;
     return cssDoc;
   } catch (error) {
-    return doc;
+    return "";
   }
 }
 
