@@ -39,6 +39,6 @@ jobs:
 
       - name: Generate
         run: |
-          bunx scalawind generate
+          bun generate
           ls -al
         working-directory: ./integration

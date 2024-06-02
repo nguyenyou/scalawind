@@ -1,5 +1,9 @@
 {
   "name": "integration-test",
+  "type": "module",
+  "scripts": {
+    "generate": "scalawind generate"
+  },
   "dependencies": {
     "scalawind": "link:scalawind"
   }
