@@ -126,4 +126,16 @@ class ComplexChainingTests extends munit.FunSuite {
       ) == "[&:nth-child(3)]:underline list-disc mx-5 text-white"
     )
   }
+  test("dot values, percentage values") {
+    assert(
+      sw(
+        tw.w_1$2.h_1dot5._left_1
+      ) == "w-1/2 h-1.5 -left-1"
+    )
+    assert(
+      sw(
+        tw.md(tw.hover(tw.w_1$2.h_1dot5._left_1))
+      ) == "md:hover:w-1/2 md:hover:h-1.5 md:hover:-left-1"
+    )
+  }
 }
