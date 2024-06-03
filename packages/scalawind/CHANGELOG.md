@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.2
+
+### Patch Changes
+
+- 4693997: always support arbitrary values, previously user have to enable via flag
+
 ## 0.5.1
 
 ### Patch Changes
