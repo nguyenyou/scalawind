@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.5
+
+### Patch Changes
+
+- 620e144: rename TW to Tailwind, because of name conflict
+
 ## 0.5.4
 
 ### Patch Changes
