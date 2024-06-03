@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.6
+
+### Patch Changes
+
+- fdd3562: percentage value now use the "per" word instead of the "$" dollar sign
+
 ## 0.5.5
 
 ### Patch Changes
