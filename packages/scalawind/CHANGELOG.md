@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.1
+
+### Patch Changes
+
+- ecbb9cd: fix the preview compiled result flag from previous refactor
+
 ## 0.5.0
 
 ### Minor Changes
