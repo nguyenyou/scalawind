@@ -1,0 +1,10 @@
+{
+  "name": "integration-test",
+  "type": "module",
+  "scripts": {
+    "generate": "scalawind generate -pcr -av -o ./src/scalawind.scala"
+  },
+  "dependencies": {
+    "scalawind": "link:scalawind"
+  }
+}

@@ -1,21 +1,27 @@
-name: Test
+name: Integration Test
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - integration
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   test:
-    name: Test
+    name: Integration Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      
+
+      - uses: oven-sh/setup-bun@v1
+      - uses: coursier/cache-action@v6
+      - uses: VirtusLab/scala-cli-setup@main
+        with:
+          jvm: adopt:11
+
       - name: Setup Node.js 20.x
         uses: actions/setup-node@v4
         with:
