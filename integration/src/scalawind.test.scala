@@ -5,6 +5,7 @@ import scalawind.*
 class SimpleSingleTests extends munit.FunSuite {
   test("normal") {
     assert(sw(tw.flex.items_center.justify_center) == "flex items-center justify-center")
+    assert(sw(tw.bg_blue_500.text_white.rounded.py_3.px_4) == "bg-blue-500 text-white rounded py-3 px-4")
   }
   test("modifier") {
     assert(sw(tw.hover(tw.text_red_500)) == "hover:text-red-500")
@@ -33,8 +34,21 @@ class SimpleSingleTests extends munit.FunSuite {
 }
 
 class ComplexChainingTests extends munit.FunSuite {
-  test("responsive") {
+  test("stacked modifiers") {
     assert(sw(tw.md(tw.hover(tw.text_red_500))) == "md:hover:text-red-500")
+    assert(
+      sw(
+        tw.bg_blue_500
+          .hover(tw.bg_blue_600)
+          .first_letter(tw.text_red_500.font_bold)
+          .text_white
+          .rounded
+          .py_3
+          .px_4
+          .md(tw.py_4.px_5)
+          .dark(tw.bg_sky_900.hover(tw.bg_sky_800))
+      ) == "bg-blue-500 hover:bg-blue-600 first-letter:text-red-500 first-letter:font-bold text-white rounded py-3 px-4 md:py-4 md:px-5 dark:bg-sky-900 dark:hover:bg-sky-800"
+    )
   }
   test("arbitrary values") {
     assert(sw(tw.flex.text_("#ff0").items_center.bg_("#00f")) == "flex text-[#ff0] items-center bg-[#00f]")
