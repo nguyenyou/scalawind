@@ -12,4 +12,22 @@ class ScalawindTests extends munit.FunSuite {
   test("arbitrary values") {
     assert(sw(tw.text_("#ff0")) == "text-[#ff0]")
   }
+  test("opacity color") {
+    assert(sw(tw.bg_red_400.opacity(10)) == "bg-red-400/10")
+  }
+  test("opacity color") {
+    assert(sw(tw.bg_red_400.opacity(10)) == "bg-red-400/10")
+  }
+  test("dot values") {
+    assert(sw(tw.w_1dot5) == "w-1.5")
+  }
+  test("percentage values") {
+    assert(sw(tw.w_1$2) == "w-1/2")
+  }
+  test("negative values") {
+    assert(sw(tw._left_1) == "-left-1")
+  }
+  test("raw values") {
+    assert(sw(tw.raw("text-green-400")) == "text-green-400")
+  }
 }
