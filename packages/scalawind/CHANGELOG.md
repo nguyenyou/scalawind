@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.4
+
+### Patch Changes
+
+- 41d1762: rename Tailwind to TW for short
+
 ## 0.5.3
 
 ### Patch Changes
