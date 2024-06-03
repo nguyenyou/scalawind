@@ -41,5 +41,5 @@ jobs:
         run: |
           bun install
           bun generate
-          scala-cli test .
+          scala-cli test src
         working-directory: ./integration
