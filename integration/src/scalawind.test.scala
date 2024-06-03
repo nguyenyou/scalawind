@@ -2,18 +2,15 @@
 
 import scalawind.*
 
-class ScalawindTests extends munit.FunSuite {
+class SimpleSingleTests extends munit.FunSuite {
   test("normal") {
     assert(sw(tw.flex.items_center.justify_center) == "flex items-center justify-center")
   }
   test("modifier") {
-    assert(sw(tw.md(tw.hover(tw.text_red_500))) == "md:hover:text-red-500")
+    assert(sw(tw.hover(tw.text_red_500)) == "hover:text-red-500")
   }
   test("arbitrary values") {
     assert(sw(tw.text_("#ff0")) == "text-[#ff0]")
-  }
-  test("opacity color") {
-    assert(sw(tw.bg_red_400.opacity(10)) == "bg-red-400/10")
   }
   test("opacity color") {
     assert(sw(tw.bg_red_400.opacity(10)) == "bg-red-400/10")
@@ -29,5 +26,11 @@ class ScalawindTests extends munit.FunSuite {
   }
   test("raw values") {
     assert(sw(tw.raw("text-green-400")) == "text-green-400")
+  }
+}
+
+class ComplexChainingTests extends munit.FunSuite {
+  test("responsive") {
+    assert(sw(tw.md(tw.hover(tw.text_red_500))) == "md:hover:text-red-500")
   }
 }
