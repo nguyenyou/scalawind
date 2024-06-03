@@ -119,6 +119,8 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   val term = tailwindExpr.asTerm
   val classNames = extractClassNames(term)
   val combinedClasses = classNames.reverse.mkString(" ")
+  {{#if previewCompliedResult}}
   report.info(s"$combinedClasses")
+  {{/if}}
   Expr(combinedClasses)
 }
