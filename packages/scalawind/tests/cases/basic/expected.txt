@@ -3,1395 +3,1395 @@ package scalawind
 import scala.quoted.*
 import scala.annotation.unused
 
-case class Tailwind() {
-  def first_letter(@unused styles: Tailwind): Tailwind = Tailwind()
-  def first_line(@unused styles: Tailwind): Tailwind = Tailwind()
-  def marker(@unused styles: Tailwind): Tailwind = Tailwind()
-  def selection(@unused styles: Tailwind): Tailwind = Tailwind()
-  def file(@unused styles: Tailwind): Tailwind = Tailwind()
-  def placeholder(@unused styles: Tailwind): Tailwind = Tailwind()
-  def backdrop(@unused styles: Tailwind): Tailwind = Tailwind()
-  def before(@unused styles: Tailwind): Tailwind = Tailwind()
-  def after(@unused styles: Tailwind): Tailwind = Tailwind()
-  def first(@unused styles: Tailwind): Tailwind = Tailwind()
-  def last(@unused styles: Tailwind): Tailwind = Tailwind()
-  def only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def odd(@unused styles: Tailwind): Tailwind = Tailwind()
-  def even(@unused styles: Tailwind): Tailwind = Tailwind()
-  def first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def visited(@unused styles: Tailwind): Tailwind = Tailwind()
-  def target(@unused styles: Tailwind): Tailwind = Tailwind()
-  def open(@unused styles: Tailwind): Tailwind = Tailwind()
-  def default(@unused styles: Tailwind): Tailwind = Tailwind()
-  def checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
-  def placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
-  def autofill(@unused styles: Tailwind): Tailwind = Tailwind()
-  def optional(@unused styles: Tailwind): Tailwind = Tailwind()
-  def required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def valid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def invalid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def in_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def read_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def empty(@unused styles: Tailwind): Tailwind = Tailwind()
-  def focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
-  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
-  def focus(@unused styles: Tailwind): Tailwind = Tailwind()
-  def focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
-  def active(@unused styles: Tailwind): Tailwind = Tailwind()
-  def enabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_first(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_last(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_odd(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_even(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_visited(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_target(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_open(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_default(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_optional(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_valid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_empty(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_hover(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_focus(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_active(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_first(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_last(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_odd(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_even(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_visited(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_target(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_open(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_default(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_optional(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_valid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_empty(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_hover(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_focus(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_active(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer(@unused styles: Tailwind): Tailwind = Tailwind()
-  def has(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_has(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_has(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria(@unused styles: Tailwind): Tailwind = Tailwind()
-  def data(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_data(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_data(@unused styles: Tailwind): Tailwind = Tailwind()
-  def supports(@unused styles: Tailwind): Tailwind = Tailwind()
-  def motion_safe(@unused styles: Tailwind): Tailwind = Tailwind()
-  def motion_reduce(@unused styles: Tailwind): Tailwind = Tailwind()
-  def contrast_more(@unused styles: Tailwind): Tailwind = Tailwind()
-  def contrast_less(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_sm(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_md(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_lg(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_2xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max(@unused styles: Tailwind): Tailwind = Tailwind()
-  def sm(@unused styles: Tailwind): Tailwind = Tailwind()
-  def md(@unused styles: Tailwind): Tailwind = Tailwind()
-  def lg(@unused styles: Tailwind): Tailwind = Tailwind()
-  def xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def _2xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def min(@unused styles: Tailwind): Tailwind = Tailwind()
-  def portrait(@unused styles: Tailwind): Tailwind = Tailwind()
-  def landscape(@unused styles: Tailwind): Tailwind = Tailwind()
-  def ltr(@unused styles: Tailwind): Tailwind = Tailwind()
-  def rtl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def dark(@unused styles: Tailwind): Tailwind = Tailwind()
-  def forced_colors(@unused styles: Tailwind): Tailwind = Tailwind()
-  def print(@unused styles: Tailwind): Tailwind = Tailwind()
-  def important(@unused styles: Tailwind): Tailwind = Tailwind()
-  def i(@unused styles: Tailwind): Tailwind = Tailwind()
-  def raw(@unused classString: String): Tailwind = Tailwind()
-  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-  def opacity(value: Int): Tailwind = Tailwind()
-  def o(value: Int): Tailwind = Tailwind()
+case class TW() {
+  def first_letter(@unused styles: TW): TW = TW()
+  def first_line(@unused styles: TW): TW = TW()
+  def marker(@unused styles: TW): TW = TW()
+  def selection(@unused styles: TW): TW = TW()
+  def file(@unused styles: TW): TW = TW()
+  def placeholder(@unused styles: TW): TW = TW()
+  def backdrop(@unused styles: TW): TW = TW()
+  def before(@unused styles: TW): TW = TW()
+  def after(@unused styles: TW): TW = TW()
+  def first(@unused styles: TW): TW = TW()
+  def last(@unused styles: TW): TW = TW()
+  def only(@unused styles: TW): TW = TW()
+  def odd(@unused styles: TW): TW = TW()
+  def even(@unused styles: TW): TW = TW()
+  def first_of_type(@unused styles: TW): TW = TW()
+  def last_of_type(@unused styles: TW): TW = TW()
+  def only_of_type(@unused styles: TW): TW = TW()
+  def visited(@unused styles: TW): TW = TW()
+  def target(@unused styles: TW): TW = TW()
+  def open(@unused styles: TW): TW = TW()
+  def default(@unused styles: TW): TW = TW()
+  def checked(@unused styles: TW): TW = TW()
+  def indeterminate(@unused styles: TW): TW = TW()
+  def placeholder_shown(@unused styles: TW): TW = TW()
+  def autofill(@unused styles: TW): TW = TW()
+  def optional(@unused styles: TW): TW = TW()
+  def required(@unused styles: TW): TW = TW()
+  def valid(@unused styles: TW): TW = TW()
+  def invalid(@unused styles: TW): TW = TW()
+  def in_range(@unused styles: TW): TW = TW()
+  def out_of_range(@unused styles: TW): TW = TW()
+  def read_only(@unused styles: TW): TW = TW()
+  def empty(@unused styles: TW): TW = TW()
+  def focus_within(@unused styles: TW): TW = TW()
+  def hover(@unused styles: TW): TW = TW()
+  def focus(@unused styles: TW): TW = TW()
+  def focus_visible(@unused styles: TW): TW = TW()
+  def active(@unused styles: TW): TW = TW()
+  def enabled(@unused styles: TW): TW = TW()
+  def disabled(@unused styles: TW): TW = TW()
+  def group_first(@unused styles: TW): TW = TW()
+  def group_last(@unused styles: TW): TW = TW()
+  def group_only(@unused styles: TW): TW = TW()
+  def group_odd(@unused styles: TW): TW = TW()
+  def group_even(@unused styles: TW): TW = TW()
+  def group_first_of_type(@unused styles: TW): TW = TW()
+  def group_last_of_type(@unused styles: TW): TW = TW()
+  def group_only_of_type(@unused styles: TW): TW = TW()
+  def group_visited(@unused styles: TW): TW = TW()
+  def group_target(@unused styles: TW): TW = TW()
+  def group_open(@unused styles: TW): TW = TW()
+  def group_default(@unused styles: TW): TW = TW()
+  def group_checked(@unused styles: TW): TW = TW()
+  def group_indeterminate(@unused styles: TW): TW = TW()
+  def group_placeholder_shown(@unused styles: TW): TW = TW()
+  def group_autofill(@unused styles: TW): TW = TW()
+  def group_optional(@unused styles: TW): TW = TW()
+  def group_required(@unused styles: TW): TW = TW()
+  def group_valid(@unused styles: TW): TW = TW()
+  def group_invalid(@unused styles: TW): TW = TW()
+  def group_in_range(@unused styles: TW): TW = TW()
+  def group_out_of_range(@unused styles: TW): TW = TW()
+  def group_read_only(@unused styles: TW): TW = TW()
+  def group_empty(@unused styles: TW): TW = TW()
+  def group_focus_within(@unused styles: TW): TW = TW()
+  def group_hover(@unused styles: TW): TW = TW()
+  def group_focus(@unused styles: TW): TW = TW()
+  def group_focus_visible(@unused styles: TW): TW = TW()
+  def group_active(@unused styles: TW): TW = TW()
+  def group_enabled(@unused styles: TW): TW = TW()
+  def group_disabled(@unused styles: TW): TW = TW()
+  def group(@unused styles: TW): TW = TW()
+  def peer_first(@unused styles: TW): TW = TW()
+  def peer_last(@unused styles: TW): TW = TW()
+  def peer_only(@unused styles: TW): TW = TW()
+  def peer_odd(@unused styles: TW): TW = TW()
+  def peer_even(@unused styles: TW): TW = TW()
+  def peer_first_of_type(@unused styles: TW): TW = TW()
+  def peer_last_of_type(@unused styles: TW): TW = TW()
+  def peer_only_of_type(@unused styles: TW): TW = TW()
+  def peer_visited(@unused styles: TW): TW = TW()
+  def peer_target(@unused styles: TW): TW = TW()
+  def peer_open(@unused styles: TW): TW = TW()
+  def peer_default(@unused styles: TW): TW = TW()
+  def peer_checked(@unused styles: TW): TW = TW()
+  def peer_indeterminate(@unused styles: TW): TW = TW()
+  def peer_placeholder_shown(@unused styles: TW): TW = TW()
+  def peer_autofill(@unused styles: TW): TW = TW()
+  def peer_optional(@unused styles: TW): TW = TW()
+  def peer_required(@unused styles: TW): TW = TW()
+  def peer_valid(@unused styles: TW): TW = TW()
+  def peer_invalid(@unused styles: TW): TW = TW()
+  def peer_in_range(@unused styles: TW): TW = TW()
+  def peer_out_of_range(@unused styles: TW): TW = TW()
+  def peer_read_only(@unused styles: TW): TW = TW()
+  def peer_empty(@unused styles: TW): TW = TW()
+  def peer_focus_within(@unused styles: TW): TW = TW()
+  def peer_hover(@unused styles: TW): TW = TW()
+  def peer_focus(@unused styles: TW): TW = TW()
+  def peer_focus_visible(@unused styles: TW): TW = TW()
+  def peer_active(@unused styles: TW): TW = TW()
+  def peer_enabled(@unused styles: TW): TW = TW()
+  def peer_disabled(@unused styles: TW): TW = TW()
+  def peer(@unused styles: TW): TW = TW()
+  def has(@unused styles: TW): TW = TW()
+  def group_has(@unused styles: TW): TW = TW()
+  def peer_has(@unused styles: TW): TW = TW()
+  def aria_busy(@unused styles: TW): TW = TW()
+  def aria_checked(@unused styles: TW): TW = TW()
+  def aria_disabled(@unused styles: TW): TW = TW()
+  def aria_expanded(@unused styles: TW): TW = TW()
+  def aria_hidden(@unused styles: TW): TW = TW()
+  def aria_pressed(@unused styles: TW): TW = TW()
+  def aria_readonly(@unused styles: TW): TW = TW()
+  def aria_required(@unused styles: TW): TW = TW()
+  def aria_selected(@unused styles: TW): TW = TW()
+  def aria(@unused styles: TW): TW = TW()
+  def group_aria_busy(@unused styles: TW): TW = TW()
+  def group_aria_checked(@unused styles: TW): TW = TW()
+  def group_aria_disabled(@unused styles: TW): TW = TW()
+  def group_aria_expanded(@unused styles: TW): TW = TW()
+  def group_aria_hidden(@unused styles: TW): TW = TW()
+  def group_aria_pressed(@unused styles: TW): TW = TW()
+  def group_aria_readonly(@unused styles: TW): TW = TW()
+  def group_aria_required(@unused styles: TW): TW = TW()
+  def group_aria_selected(@unused styles: TW): TW = TW()
+  def group_aria(@unused styles: TW): TW = TW()
+  def peer_aria_busy(@unused styles: TW): TW = TW()
+  def peer_aria_checked(@unused styles: TW): TW = TW()
+  def peer_aria_disabled(@unused styles: TW): TW = TW()
+  def peer_aria_expanded(@unused styles: TW): TW = TW()
+  def peer_aria_hidden(@unused styles: TW): TW = TW()
+  def peer_aria_pressed(@unused styles: TW): TW = TW()
+  def peer_aria_readonly(@unused styles: TW): TW = TW()
+  def peer_aria_required(@unused styles: TW): TW = TW()
+  def peer_aria_selected(@unused styles: TW): TW = TW()
+  def peer_aria(@unused styles: TW): TW = TW()
+  def data(@unused styles: TW): TW = TW()
+  def group_data(@unused styles: TW): TW = TW()
+  def peer_data(@unused styles: TW): TW = TW()
+  def supports(@unused styles: TW): TW = TW()
+  def motion_safe(@unused styles: TW): TW = TW()
+  def motion_reduce(@unused styles: TW): TW = TW()
+  def contrast_more(@unused styles: TW): TW = TW()
+  def contrast_less(@unused styles: TW): TW = TW()
+  def max_sm(@unused styles: TW): TW = TW()
+  def max_md(@unused styles: TW): TW = TW()
+  def max_lg(@unused styles: TW): TW = TW()
+  def max_xl(@unused styles: TW): TW = TW()
+  def max_2xl(@unused styles: TW): TW = TW()
+  def max(@unused styles: TW): TW = TW()
+  def sm(@unused styles: TW): TW = TW()
+  def md(@unused styles: TW): TW = TW()
+  def lg(@unused styles: TW): TW = TW()
+  def xl(@unused styles: TW): TW = TW()
+  def _2xl(@unused styles: TW): TW = TW()
+  def min(@unused styles: TW): TW = TW()
+  def portrait(@unused styles: TW): TW = TW()
+  def landscape(@unused styles: TW): TW = TW()
+  def ltr(@unused styles: TW): TW = TW()
+  def rtl(@unused styles: TW): TW = TW()
+  def dark(@unused styles: TW): TW = TW()
+  def forced_colors(@unused styles: TW): TW = TW()
+  def print(@unused styles: TW): TW = TW()
+  def important(@unused styles: TW): TW = TW()
+  def i(@unused styles: TW): TW = TW()
+  def raw(@unused classString: String): TW = TW()
+  def variant(selector: String, styles: TW): TW = TW()
+  def opacity(value: Int): TW = TW()
+  def o(value: Int): TW = TW()
 }
 
 object tw:
-  def apply(): Tailwind = Tailwind()
+  def apply(): TW = TW()
   
-  def container: Tailwind = Tailwind()
+  def container: TW = TW()
   /** {{{
     * .w-0 {
     *   width: 0;
     * }
     * }}}
     */
-  def w_0: Tailwind = Tailwind()
+  def w_0: TW = TW()
   /** {{{
     * .w-1 {
     *   width: .25rem;
     * }
     * }}}
     */
-  def w_1: Tailwind = Tailwind()
+  def w_1: TW = TW()
   /** {{{
     * .w-2 {
     *   width: .5rem;
     * }
     * }}}
     */
-  def w_2: Tailwind = Tailwind()
+  def w_2: TW = TW()
   /** {{{
     * .w-3 {
     *   width: .75rem;
     * }
     * }}}
     */
-  def w_3: Tailwind = Tailwind()
+  def w_3: TW = TW()
   /** {{{
     * .w-4 {
     *   width: 1rem;
     * }
     * }}}
     */
-  def w_4: Tailwind = Tailwind()
+  def w_4: TW = TW()
   /** {{{
     * .w-5 {
     *   width: 1.25rem;
     * }
     * }}}
     */
-  def w_5: Tailwind = Tailwind()
+  def w_5: TW = TW()
   /** {{{
     * .w-6 {
     *   width: 1.5rem;
     * }
     * }}}
     */
-  def w_6: Tailwind = Tailwind()
+  def w_6: TW = TW()
   /** {{{
     * .w-7 {
     *   width: 1.75rem;
     * }
     * }}}
     */
-  def w_7: Tailwind = Tailwind()
+  def w_7: TW = TW()
   /** {{{
     * .w-8 {
     *   width: 2rem;
     * }
     * }}}
     */
-  def w_8: Tailwind = Tailwind()
+  def w_8: TW = TW()
   /** {{{
     * .w-9 {
     *   width: 2.25rem;
     * }
     * }}}
     */
-  def w_9: Tailwind = Tailwind()
+  def w_9: TW = TW()
   /** {{{
     * .w-10 {
     *   width: 2.5rem;
     * }
     * }}}
     */
-  def w_10: Tailwind = Tailwind()
+  def w_10: TW = TW()
   /** {{{
     * .w-11 {
     *   width: 2.75rem;
     * }
     * }}}
     */
-  def w_11: Tailwind = Tailwind()
+  def w_11: TW = TW()
   /** {{{
     * .w-12 {
     *   width: 3rem;
     * }
     * }}}
     */
-  def w_12: Tailwind = Tailwind()
+  def w_12: TW = TW()
   /** {{{
     * .w-14 {
     *   width: 3.5rem;
     * }
     * }}}
     */
-  def w_14: Tailwind = Tailwind()
+  def w_14: TW = TW()
   /** {{{
     * .w-16 {
     *   width: 4rem;
     * }
     * }}}
     */
-  def w_16: Tailwind = Tailwind()
+  def w_16: TW = TW()
   /** {{{
     * .w-20 {
     *   width: 5rem;
     * }
     * }}}
     */
-  def w_20: Tailwind = Tailwind()
+  def w_20: TW = TW()
   /** {{{
     * .w-24 {
     *   width: 6rem;
     * }
     * }}}
     */
-  def w_24: Tailwind = Tailwind()
+  def w_24: TW = TW()
   /** {{{
     * .w-28 {
     *   width: 7rem;
     * }
     * }}}
     */
-  def w_28: Tailwind = Tailwind()
+  def w_28: TW = TW()
   /** {{{
     * .w-32 {
     *   width: 8rem;
     * }
     * }}}
     */
-  def w_32: Tailwind = Tailwind()
+  def w_32: TW = TW()
   /** {{{
     * .w-36 {
     *   width: 9rem;
     * }
     * }}}
     */
-  def w_36: Tailwind = Tailwind()
+  def w_36: TW = TW()
   /** {{{
     * .w-40 {
     *   width: 10rem;
     * }
     * }}}
     */
-  def w_40: Tailwind = Tailwind()
+  def w_40: TW = TW()
   /** {{{
     * .w-44 {
     *   width: 11rem;
     * }
     * }}}
     */
-  def w_44: Tailwind = Tailwind()
+  def w_44: TW = TW()
   /** {{{
     * .w-48 {
     *   width: 12rem;
     * }
     * }}}
     */
-  def w_48: Tailwind = Tailwind()
+  def w_48: TW = TW()
   /** {{{
     * .w-52 {
     *   width: 13rem;
     * }
     * }}}
     */
-  def w_52: Tailwind = Tailwind()
+  def w_52: TW = TW()
   /** {{{
     * .w-56 {
     *   width: 14rem;
     * }
     * }}}
     */
-  def w_56: Tailwind = Tailwind()
+  def w_56: TW = TW()
   /** {{{
     * .w-60 {
     *   width: 15rem;
     * }
     * }}}
     */
-  def w_60: Tailwind = Tailwind()
+  def w_60: TW = TW()
   /** {{{
     * .w-64 {
     *   width: 16rem;
     * }
     * }}}
     */
-  def w_64: Tailwind = Tailwind()
+  def w_64: TW = TW()
   /** {{{
     * .w-72 {
     *   width: 18rem;
     * }
     * }}}
     */
-  def w_72: Tailwind = Tailwind()
+  def w_72: TW = TW()
   /** {{{
     * .w-80 {
     *   width: 20rem;
     * }
     * }}}
     */
-  def w_80: Tailwind = Tailwind()
+  def w_80: TW = TW()
   /** {{{
     * .w-96 {
     *   width: 24rem;
     * }
     * }}}
     */
-  def w_96: Tailwind = Tailwind()
+  def w_96: TW = TW()
   /** {{{
     * .w-auto {
     *   width: auto;
     * }
     * }}}
     */
-  def w_auto: Tailwind = Tailwind()
+  def w_auto: TW = TW()
   /** {{{
     * .w-px {
     *   width: 1px;
     * }
     * }}}
     */
-  def w_px: Tailwind = Tailwind()
+  def w_px: TW = TW()
   /** {{{
     * .w-0.5 {
     *   width: .125rem;
     * }
     * }}}
     */
-  def w_0dot5: Tailwind = Tailwind()
+  def w_0dot5: TW = TW()
   /** {{{
     * .w-1.5 {
     *   width: .375rem;
     * }
     * }}}
     */
-  def w_1dot5: Tailwind = Tailwind()
+  def w_1dot5: TW = TW()
   /** {{{
     * .w-2.5 {
     *   width: .625rem;
     * }
     * }}}
     */
-  def w_2dot5: Tailwind = Tailwind()
+  def w_2dot5: TW = TW()
   /** {{{
     * .w-3.5 {
     *   width: .875rem;
     * }
     * }}}
     */
-  def w_3dot5: Tailwind = Tailwind()
+  def w_3dot5: TW = TW()
   /** {{{
     * .w-1/2 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_1$2: Tailwind = Tailwind()
+  def w_1$2: TW = TW()
   /** {{{
     * .w-1/3 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_1$3: Tailwind = Tailwind()
+  def w_1$3: TW = TW()
   /** {{{
     * .w-2/3 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_2$3: Tailwind = Tailwind()
+  def w_2$3: TW = TW()
   /** {{{
     * .w-1/4 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_1$4: Tailwind = Tailwind()
+  def w_1$4: TW = TW()
   /** {{{
     * .w-2/4 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_2$4: Tailwind = Tailwind()
+  def w_2$4: TW = TW()
   /** {{{
     * .w-3/4 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_3$4: Tailwind = Tailwind()
+  def w_3$4: TW = TW()
   /** {{{
     * .w-1/5 {
     *   width: 20%;
     * }
     * }}}
     */
-  def w_1$5: Tailwind = Tailwind()
+  def w_1$5: TW = TW()
   /** {{{
     * .w-2/5 {
     *   width: 40%;
     * }
     * }}}
     */
-  def w_2$5: Tailwind = Tailwind()
+  def w_2$5: TW = TW()
   /** {{{
     * .w-3/5 {
     *   width: 60%;
     * }
     * }}}
     */
-  def w_3$5: Tailwind = Tailwind()
+  def w_3$5: TW = TW()
   /** {{{
     * .w-4/5 {
     *   width: 80%;
     * }
     * }}}
     */
-  def w_4$5: Tailwind = Tailwind()
+  def w_4$5: TW = TW()
   /** {{{
     * .w-1/6 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_1$6: Tailwind = Tailwind()
+  def w_1$6: TW = TW()
   /** {{{
     * .w-2/6 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_2$6: Tailwind = Tailwind()
+  def w_2$6: TW = TW()
   /** {{{
     * .w-3/6 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_3$6: Tailwind = Tailwind()
+  def w_3$6: TW = TW()
   /** {{{
     * .w-4/6 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_4$6: Tailwind = Tailwind()
+  def w_4$6: TW = TW()
   /** {{{
     * .w-5/6 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_5$6: Tailwind = Tailwind()
+  def w_5$6: TW = TW()
   /** {{{
     * .w-1/12 {
     *   width: 8.33333%;
     * }
     * }}}
     */
-  def w_1$12: Tailwind = Tailwind()
+  def w_1$12: TW = TW()
   /** {{{
     * .w-2/12 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_2$12: Tailwind = Tailwind()
+  def w_2$12: TW = TW()
   /** {{{
     * .w-3/12 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_3$12: Tailwind = Tailwind()
+  def w_3$12: TW = TW()
   /** {{{
     * .w-4/12 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_4$12: Tailwind = Tailwind()
+  def w_4$12: TW = TW()
   /** {{{
     * .w-5/12 {
     *   width: 41.6667%;
     * }
     * }}}
     */
-  def w_5$12: Tailwind = Tailwind()
+  def w_5$12: TW = TW()
   /** {{{
     * .w-6/12 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_6$12: Tailwind = Tailwind()
+  def w_6$12: TW = TW()
   /** {{{
     * .w-7/12 {
     *   width: 58.3333%;
     * }
     * }}}
     */
-  def w_7$12: Tailwind = Tailwind()
+  def w_7$12: TW = TW()
   /** {{{
     * .w-8/12 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_8$12: Tailwind = Tailwind()
+  def w_8$12: TW = TW()
   /** {{{
     * .w-9/12 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_9$12: Tailwind = Tailwind()
+  def w_9$12: TW = TW()
   /** {{{
     * .w-10/12 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_10$12: Tailwind = Tailwind()
+  def w_10$12: TW = TW()
   /** {{{
     * .w-11/12 {
     *   width: 91.6667%;
     * }
     * }}}
     */
-  def w_11$12: Tailwind = Tailwind()
+  def w_11$12: TW = TW()
   /** {{{
     * .w-full {
     *   width: 100%;
     * }
     * }}}
     */
-  def w_full: Tailwind = Tailwind()
+  def w_full: TW = TW()
   /** {{{
     * .w-screen {
     *   width: 100vw;
     * }
     * }}}
     */
-  def w_screen: Tailwind = Tailwind()
+  def w_screen: TW = TW()
   /** {{{
     * .w-svw {
     *   width: 100svw;
     * }
     * }}}
     */
-  def w_svw: Tailwind = Tailwind()
+  def w_svw: TW = TW()
   /** {{{
     * .w-lvw {
     *   width: 100lvw;
     * }
     * }}}
     */
-  def w_lvw: Tailwind = Tailwind()
+  def w_lvw: TW = TW()
   /** {{{
     * .w-dvw {
     *   width: 100dvw;
     * }
     * }}}
     */
-  def w_dvw: Tailwind = Tailwind()
+  def w_dvw: TW = TW()
   /** {{{
     * .w-min {
     *   width: min-content;
     * }
     * }}}
     */
-  def w_min: Tailwind = Tailwind()
+  def w_min: TW = TW()
   /** {{{
     * .w-max {
     *   width: max-content;
     * }
     * }}}
     */
-  def w_max: Tailwind = Tailwind()
+  def w_max: TW = TW()
   /** {{{
     * .w-fit {
     *   width: fit-content;
     * }
     * }}}
     */
-  def w_fit: Tailwind = Tailwind()
+  def w_fit: TW = TW()
   /** {{{
     * .animate-none {
     *   animation: none;
     * }
     * }}}
     */
-  def animate_none: Tailwind = Tailwind()
+  def animate_none: TW = TW()
   
-  def animate_spin: Tailwind = Tailwind()
+  def animate_spin: TW = TW()
   
-  def animate_ping: Tailwind = Tailwind()
+  def animate_ping: TW = TW()
   
-  def animate_pulse: Tailwind = Tailwind()
+  def animate_pulse: TW = TW()
   
-  def animate_bounce: Tailwind = Tailwind()
+  def animate_bounce: TW = TW()
   /** {{{
     * .text-black {
     *   color: #000;
     * }
     * }}}
     */
-  def text_black: Tailwind = Tailwind()
-  def container_(value: String): Tailwind = Tailwind()
-  def w_(value: String): Tailwind = Tailwind()
-  def animate_(value: String): Tailwind = Tailwind()
-  def text_(value: String): Tailwind = Tailwind()
-  def first_letter(@unused styles: Tailwind): Tailwind = Tailwind()
-  def first_line(@unused styles: Tailwind): Tailwind = Tailwind()
-  def marker(@unused styles: Tailwind): Tailwind = Tailwind()
-  def selection(@unused styles: Tailwind): Tailwind = Tailwind()
-  def file(@unused styles: Tailwind): Tailwind = Tailwind()
-  def placeholder(@unused styles: Tailwind): Tailwind = Tailwind()
-  def backdrop(@unused styles: Tailwind): Tailwind = Tailwind()
-  def before(@unused styles: Tailwind): Tailwind = Tailwind()
-  def after(@unused styles: Tailwind): Tailwind = Tailwind()
-  def first(@unused styles: Tailwind): Tailwind = Tailwind()
-  def last(@unused styles: Tailwind): Tailwind = Tailwind()
-  def only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def odd(@unused styles: Tailwind): Tailwind = Tailwind()
-  def even(@unused styles: Tailwind): Tailwind = Tailwind()
-  def first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def visited(@unused styles: Tailwind): Tailwind = Tailwind()
-  def target(@unused styles: Tailwind): Tailwind = Tailwind()
-  def open(@unused styles: Tailwind): Tailwind = Tailwind()
-  def default(@unused styles: Tailwind): Tailwind = Tailwind()
-  def checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
-  def placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
-  def autofill(@unused styles: Tailwind): Tailwind = Tailwind()
-  def optional(@unused styles: Tailwind): Tailwind = Tailwind()
-  def required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def valid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def invalid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def in_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def read_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def empty(@unused styles: Tailwind): Tailwind = Tailwind()
-  def focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
-  def hover(@unused styles: Tailwind): Tailwind = Tailwind()
-  def focus(@unused styles: Tailwind): Tailwind = Tailwind()
-  def focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
-  def active(@unused styles: Tailwind): Tailwind = Tailwind()
-  def enabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_first(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_last(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_odd(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_even(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_visited(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_target(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_open(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_default(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_optional(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_valid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_empty(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_hover(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_focus(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_active(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_first(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_last(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_odd(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_even(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_first_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_last_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_only_of_type(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_visited(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_target(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_open(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_default(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_indeterminate(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_placeholder_shown(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_autofill(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_optional(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_valid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_invalid(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_in_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_out_of_range(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_read_only(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_empty(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_focus_within(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_hover(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_focus(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_focus_visible(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_active(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_enabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer(@unused styles: Tailwind): Tailwind = Tailwind()
-  def has(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_has(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_has(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
-  def aria(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_aria(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_busy(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_checked(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_disabled(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_expanded(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_hidden(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_pressed(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_readonly(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_required(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria_selected(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_aria(@unused styles: Tailwind): Tailwind = Tailwind()
-  def data(@unused styles: Tailwind): Tailwind = Tailwind()
-  def group_data(@unused styles: Tailwind): Tailwind = Tailwind()
-  def peer_data(@unused styles: Tailwind): Tailwind = Tailwind()
-  def supports(@unused styles: Tailwind): Tailwind = Tailwind()
-  def motion_safe(@unused styles: Tailwind): Tailwind = Tailwind()
-  def motion_reduce(@unused styles: Tailwind): Tailwind = Tailwind()
-  def contrast_more(@unused styles: Tailwind): Tailwind = Tailwind()
-  def contrast_less(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_sm(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_md(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_lg(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max_2xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def max(@unused styles: Tailwind): Tailwind = Tailwind()
-  def sm(@unused styles: Tailwind): Tailwind = Tailwind()
-  def md(@unused styles: Tailwind): Tailwind = Tailwind()
-  def lg(@unused styles: Tailwind): Tailwind = Tailwind()
-  def xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def _2xl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def min(@unused styles: Tailwind): Tailwind = Tailwind()
-  def portrait(@unused styles: Tailwind): Tailwind = Tailwind()
-  def landscape(@unused styles: Tailwind): Tailwind = Tailwind()
-  def ltr(@unused styles: Tailwind): Tailwind = Tailwind()
-  def rtl(@unused styles: Tailwind): Tailwind = Tailwind()
-  def dark(@unused styles: Tailwind): Tailwind = Tailwind()
-  def forced_colors(@unused styles: Tailwind): Tailwind = Tailwind()
-  def print(@unused styles: Tailwind): Tailwind = Tailwind()
-  def important(@unused styles: Tailwind): Tailwind = Tailwind()
-  def i(@unused styles: Tailwind): Tailwind = Tailwind()
-  def raw(@unused classString: String): Tailwind = Tailwind()
-  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
+  def text_black: TW = TW()
+  def container_(value: String): TW = TW()
+  def w_(value: String): TW = TW()
+  def animate_(value: String): TW = TW()
+  def text_(value: String): TW = TW()
+  def first_letter(@unused styles: TW): TW = TW()
+  def first_line(@unused styles: TW): TW = TW()
+  def marker(@unused styles: TW): TW = TW()
+  def selection(@unused styles: TW): TW = TW()
+  def file(@unused styles: TW): TW = TW()
+  def placeholder(@unused styles: TW): TW = TW()
+  def backdrop(@unused styles: TW): TW = TW()
+  def before(@unused styles: TW): TW = TW()
+  def after(@unused styles: TW): TW = TW()
+  def first(@unused styles: TW): TW = TW()
+  def last(@unused styles: TW): TW = TW()
+  def only(@unused styles: TW): TW = TW()
+  def odd(@unused styles: TW): TW = TW()
+  def even(@unused styles: TW): TW = TW()
+  def first_of_type(@unused styles: TW): TW = TW()
+  def last_of_type(@unused styles: TW): TW = TW()
+  def only_of_type(@unused styles: TW): TW = TW()
+  def visited(@unused styles: TW): TW = TW()
+  def target(@unused styles: TW): TW = TW()
+  def open(@unused styles: TW): TW = TW()
+  def default(@unused styles: TW): TW = TW()
+  def checked(@unused styles: TW): TW = TW()
+  def indeterminate(@unused styles: TW): TW = TW()
+  def placeholder_shown(@unused styles: TW): TW = TW()
+  def autofill(@unused styles: TW): TW = TW()
+  def optional(@unused styles: TW): TW = TW()
+  def required(@unused styles: TW): TW = TW()
+  def valid(@unused styles: TW): TW = TW()
+  def invalid(@unused styles: TW): TW = TW()
+  def in_range(@unused styles: TW): TW = TW()
+  def out_of_range(@unused styles: TW): TW = TW()
+  def read_only(@unused styles: TW): TW = TW()
+  def empty(@unused styles: TW): TW = TW()
+  def focus_within(@unused styles: TW): TW = TW()
+  def hover(@unused styles: TW): TW = TW()
+  def focus(@unused styles: TW): TW = TW()
+  def focus_visible(@unused styles: TW): TW = TW()
+  def active(@unused styles: TW): TW = TW()
+  def enabled(@unused styles: TW): TW = TW()
+  def disabled(@unused styles: TW): TW = TW()
+  def group_first(@unused styles: TW): TW = TW()
+  def group_last(@unused styles: TW): TW = TW()
+  def group_only(@unused styles: TW): TW = TW()
+  def group_odd(@unused styles: TW): TW = TW()
+  def group_even(@unused styles: TW): TW = TW()
+  def group_first_of_type(@unused styles: TW): TW = TW()
+  def group_last_of_type(@unused styles: TW): TW = TW()
+  def group_only_of_type(@unused styles: TW): TW = TW()
+  def group_visited(@unused styles: TW): TW = TW()
+  def group_target(@unused styles: TW): TW = TW()
+  def group_open(@unused styles: TW): TW = TW()
+  def group_default(@unused styles: TW): TW = TW()
+  def group_checked(@unused styles: TW): TW = TW()
+  def group_indeterminate(@unused styles: TW): TW = TW()
+  def group_placeholder_shown(@unused styles: TW): TW = TW()
+  def group_autofill(@unused styles: TW): TW = TW()
+  def group_optional(@unused styles: TW): TW = TW()
+  def group_required(@unused styles: TW): TW = TW()
+  def group_valid(@unused styles: TW): TW = TW()
+  def group_invalid(@unused styles: TW): TW = TW()
+  def group_in_range(@unused styles: TW): TW = TW()
+  def group_out_of_range(@unused styles: TW): TW = TW()
+  def group_read_only(@unused styles: TW): TW = TW()
+  def group_empty(@unused styles: TW): TW = TW()
+  def group_focus_within(@unused styles: TW): TW = TW()
+  def group_hover(@unused styles: TW): TW = TW()
+  def group_focus(@unused styles: TW): TW = TW()
+  def group_focus_visible(@unused styles: TW): TW = TW()
+  def group_active(@unused styles: TW): TW = TW()
+  def group_enabled(@unused styles: TW): TW = TW()
+  def group_disabled(@unused styles: TW): TW = TW()
+  def group(@unused styles: TW): TW = TW()
+  def peer_first(@unused styles: TW): TW = TW()
+  def peer_last(@unused styles: TW): TW = TW()
+  def peer_only(@unused styles: TW): TW = TW()
+  def peer_odd(@unused styles: TW): TW = TW()
+  def peer_even(@unused styles: TW): TW = TW()
+  def peer_first_of_type(@unused styles: TW): TW = TW()
+  def peer_last_of_type(@unused styles: TW): TW = TW()
+  def peer_only_of_type(@unused styles: TW): TW = TW()
+  def peer_visited(@unused styles: TW): TW = TW()
+  def peer_target(@unused styles: TW): TW = TW()
+  def peer_open(@unused styles: TW): TW = TW()
+  def peer_default(@unused styles: TW): TW = TW()
+  def peer_checked(@unused styles: TW): TW = TW()
+  def peer_indeterminate(@unused styles: TW): TW = TW()
+  def peer_placeholder_shown(@unused styles: TW): TW = TW()
+  def peer_autofill(@unused styles: TW): TW = TW()
+  def peer_optional(@unused styles: TW): TW = TW()
+  def peer_required(@unused styles: TW): TW = TW()
+  def peer_valid(@unused styles: TW): TW = TW()
+  def peer_invalid(@unused styles: TW): TW = TW()
+  def peer_in_range(@unused styles: TW): TW = TW()
+  def peer_out_of_range(@unused styles: TW): TW = TW()
+  def peer_read_only(@unused styles: TW): TW = TW()
+  def peer_empty(@unused styles: TW): TW = TW()
+  def peer_focus_within(@unused styles: TW): TW = TW()
+  def peer_hover(@unused styles: TW): TW = TW()
+  def peer_focus(@unused styles: TW): TW = TW()
+  def peer_focus_visible(@unused styles: TW): TW = TW()
+  def peer_active(@unused styles: TW): TW = TW()
+  def peer_enabled(@unused styles: TW): TW = TW()
+  def peer_disabled(@unused styles: TW): TW = TW()
+  def peer(@unused styles: TW): TW = TW()
+  def has(@unused styles: TW): TW = TW()
+  def group_has(@unused styles: TW): TW = TW()
+  def peer_has(@unused styles: TW): TW = TW()
+  def aria_busy(@unused styles: TW): TW = TW()
+  def aria_checked(@unused styles: TW): TW = TW()
+  def aria_disabled(@unused styles: TW): TW = TW()
+  def aria_expanded(@unused styles: TW): TW = TW()
+  def aria_hidden(@unused styles: TW): TW = TW()
+  def aria_pressed(@unused styles: TW): TW = TW()
+  def aria_readonly(@unused styles: TW): TW = TW()
+  def aria_required(@unused styles: TW): TW = TW()
+  def aria_selected(@unused styles: TW): TW = TW()
+  def aria(@unused styles: TW): TW = TW()
+  def group_aria_busy(@unused styles: TW): TW = TW()
+  def group_aria_checked(@unused styles: TW): TW = TW()
+  def group_aria_disabled(@unused styles: TW): TW = TW()
+  def group_aria_expanded(@unused styles: TW): TW = TW()
+  def group_aria_hidden(@unused styles: TW): TW = TW()
+  def group_aria_pressed(@unused styles: TW): TW = TW()
+  def group_aria_readonly(@unused styles: TW): TW = TW()
+  def group_aria_required(@unused styles: TW): TW = TW()
+  def group_aria_selected(@unused styles: TW): TW = TW()
+  def group_aria(@unused styles: TW): TW = TW()
+  def peer_aria_busy(@unused styles: TW): TW = TW()
+  def peer_aria_checked(@unused styles: TW): TW = TW()
+  def peer_aria_disabled(@unused styles: TW): TW = TW()
+  def peer_aria_expanded(@unused styles: TW): TW = TW()
+  def peer_aria_hidden(@unused styles: TW): TW = TW()
+  def peer_aria_pressed(@unused styles: TW): TW = TW()
+  def peer_aria_readonly(@unused styles: TW): TW = TW()
+  def peer_aria_required(@unused styles: TW): TW = TW()
+  def peer_aria_selected(@unused styles: TW): TW = TW()
+  def peer_aria(@unused styles: TW): TW = TW()
+  def data(@unused styles: TW): TW = TW()
+  def group_data(@unused styles: TW): TW = TW()
+  def peer_data(@unused styles: TW): TW = TW()
+  def supports(@unused styles: TW): TW = TW()
+  def motion_safe(@unused styles: TW): TW = TW()
+  def motion_reduce(@unused styles: TW): TW = TW()
+  def contrast_more(@unused styles: TW): TW = TW()
+  def contrast_less(@unused styles: TW): TW = TW()
+  def max_sm(@unused styles: TW): TW = TW()
+  def max_md(@unused styles: TW): TW = TW()
+  def max_lg(@unused styles: TW): TW = TW()
+  def max_xl(@unused styles: TW): TW = TW()
+  def max_2xl(@unused styles: TW): TW = TW()
+  def max(@unused styles: TW): TW = TW()
+  def sm(@unused styles: TW): TW = TW()
+  def md(@unused styles: TW): TW = TW()
+  def lg(@unused styles: TW): TW = TW()
+  def xl(@unused styles: TW): TW = TW()
+  def _2xl(@unused styles: TW): TW = TW()
+  def min(@unused styles: TW): TW = TW()
+  def portrait(@unused styles: TW): TW = TW()
+  def landscape(@unused styles: TW): TW = TW()
+  def ltr(@unused styles: TW): TW = TW()
+  def rtl(@unused styles: TW): TW = TW()
+  def dark(@unused styles: TW): TW = TW()
+  def forced_colors(@unused styles: TW): TW = TW()
+  def print(@unused styles: TW): TW = TW()
+  def important(@unused styles: TW): TW = TW()
+  def i(@unused styles: TW): TW = TW()
+  def raw(@unused classString: String): TW = TW()
+  def variant(selector: String, styles: TW): TW = TW()
 
-extension (tailwind: Tailwind)
+extension (tailwind: TW)
   
-  def container: Tailwind = Tailwind()
+  def container: TW = TW()
   /** {{{
     * .w-0 {
     *   width: 0;
     * }
     * }}}
     */
-  def w_0: Tailwind = Tailwind()
+  def w_0: TW = TW()
   /** {{{
     * .w-1 {
     *   width: .25rem;
     * }
     * }}}
     */
-  def w_1: Tailwind = Tailwind()
+  def w_1: TW = TW()
   /** {{{
     * .w-2 {
     *   width: .5rem;
     * }
     * }}}
     */
-  def w_2: Tailwind = Tailwind()
+  def w_2: TW = TW()
   /** {{{
     * .w-3 {
     *   width: .75rem;
     * }
     * }}}
     */
-  def w_3: Tailwind = Tailwind()
+  def w_3: TW = TW()
   /** {{{
     * .w-4 {
     *   width: 1rem;
     * }
     * }}}
     */
-  def w_4: Tailwind = Tailwind()
+  def w_4: TW = TW()
   /** {{{
     * .w-5 {
     *   width: 1.25rem;
     * }
     * }}}
     */
-  def w_5: Tailwind = Tailwind()
+  def w_5: TW = TW()
   /** {{{
     * .w-6 {
     *   width: 1.5rem;
     * }
     * }}}
     */
-  def w_6: Tailwind = Tailwind()
+  def w_6: TW = TW()
   /** {{{
     * .w-7 {
     *   width: 1.75rem;
     * }
     * }}}
     */
-  def w_7: Tailwind = Tailwind()
+  def w_7: TW = TW()
   /** {{{
     * .w-8 {
     *   width: 2rem;
     * }
     * }}}
     */
-  def w_8: Tailwind = Tailwind()
+  def w_8: TW = TW()
   /** {{{
     * .w-9 {
     *   width: 2.25rem;
     * }
     * }}}
     */
-  def w_9: Tailwind = Tailwind()
+  def w_9: TW = TW()
   /** {{{
     * .w-10 {
     *   width: 2.5rem;
     * }
     * }}}
     */
-  def w_10: Tailwind = Tailwind()
+  def w_10: TW = TW()
   /** {{{
     * .w-11 {
     *   width: 2.75rem;
     * }
     * }}}
     */
-  def w_11: Tailwind = Tailwind()
+  def w_11: TW = TW()
   /** {{{
     * .w-12 {
     *   width: 3rem;
     * }
     * }}}
     */
-  def w_12: Tailwind = Tailwind()
+  def w_12: TW = TW()
   /** {{{
     * .w-14 {
     *   width: 3.5rem;
     * }
     * }}}
     */
-  def w_14: Tailwind = Tailwind()
+  def w_14: TW = TW()
   /** {{{
     * .w-16 {
     *   width: 4rem;
     * }
     * }}}
     */
-  def w_16: Tailwind = Tailwind()
+  def w_16: TW = TW()
   /** {{{
     * .w-20 {
     *   width: 5rem;
     * }
     * }}}
     */
-  def w_20: Tailwind = Tailwind()
+  def w_20: TW = TW()
   /** {{{
     * .w-24 {
     *   width: 6rem;
     * }
     * }}}
     */
-  def w_24: Tailwind = Tailwind()
+  def w_24: TW = TW()
   /** {{{
     * .w-28 {
     *   width: 7rem;
     * }
     * }}}
     */
-  def w_28: Tailwind = Tailwind()
+  def w_28: TW = TW()
   /** {{{
     * .w-32 {
     *   width: 8rem;
     * }
     * }}}
     */
-  def w_32: Tailwind = Tailwind()
+  def w_32: TW = TW()
   /** {{{
     * .w-36 {
     *   width: 9rem;
     * }
     * }}}
     */
-  def w_36: Tailwind = Tailwind()
+  def w_36: TW = TW()
   /** {{{
     * .w-40 {
     *   width: 10rem;
     * }
     * }}}
     */
-  def w_40: Tailwind = Tailwind()
+  def w_40: TW = TW()
   /** {{{
     * .w-44 {
     *   width: 11rem;
     * }
     * }}}
     */
-  def w_44: Tailwind = Tailwind()
+  def w_44: TW = TW()
   /** {{{
     * .w-48 {
     *   width: 12rem;
     * }
     * }}}
     */
-  def w_48: Tailwind = Tailwind()
+  def w_48: TW = TW()
   /** {{{
     * .w-52 {
     *   width: 13rem;
     * }
     * }}}
     */
-  def w_52: Tailwind = Tailwind()
+  def w_52: TW = TW()
   /** {{{
     * .w-56 {
     *   width: 14rem;
     * }
     * }}}
     */
-  def w_56: Tailwind = Tailwind()
+  def w_56: TW = TW()
   /** {{{
     * .w-60 {
     *   width: 15rem;
     * }
     * }}}
     */
-  def w_60: Tailwind = Tailwind()
+  def w_60: TW = TW()
   /** {{{
     * .w-64 {
     *   width: 16rem;
     * }
     * }}}
     */
-  def w_64: Tailwind = Tailwind()
+  def w_64: TW = TW()
   /** {{{
     * .w-72 {
     *   width: 18rem;
     * }
     * }}}
     */
-  def w_72: Tailwind = Tailwind()
+  def w_72: TW = TW()
   /** {{{
     * .w-80 {
     *   width: 20rem;
     * }
     * }}}
     */
-  def w_80: Tailwind = Tailwind()
+  def w_80: TW = TW()
   /** {{{
     * .w-96 {
     *   width: 24rem;
     * }
     * }}}
     */
-  def w_96: Tailwind = Tailwind()
+  def w_96: TW = TW()
   /** {{{
     * .w-auto {
     *   width: auto;
     * }
     * }}}
     */
-  def w_auto: Tailwind = Tailwind()
+  def w_auto: TW = TW()
   /** {{{
     * .w-px {
     *   width: 1px;
     * }
     * }}}
     */
-  def w_px: Tailwind = Tailwind()
+  def w_px: TW = TW()
   /** {{{
     * .w-0.5 {
     *   width: .125rem;
     * }
     * }}}
     */
-  def w_0dot5: Tailwind = Tailwind()
+  def w_0dot5: TW = TW()
   /** {{{
     * .w-1.5 {
     *   width: .375rem;
     * }
     * }}}
     */
-  def w_1dot5: Tailwind = Tailwind()
+  def w_1dot5: TW = TW()
   /** {{{
     * .w-2.5 {
     *   width: .625rem;
     * }
     * }}}
     */
-  def w_2dot5: Tailwind = Tailwind()
+  def w_2dot5: TW = TW()
   /** {{{
     * .w-3.5 {
     *   width: .875rem;
     * }
     * }}}
     */
-  def w_3dot5: Tailwind = Tailwind()
+  def w_3dot5: TW = TW()
   /** {{{
     * .w-1/2 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_1$2: Tailwind = Tailwind()
+  def w_1$2: TW = TW()
   /** {{{
     * .w-1/3 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_1$3: Tailwind = Tailwind()
+  def w_1$3: TW = TW()
   /** {{{
     * .w-2/3 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_2$3: Tailwind = Tailwind()
+  def w_2$3: TW = TW()
   /** {{{
     * .w-1/4 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_1$4: Tailwind = Tailwind()
+  def w_1$4: TW = TW()
   /** {{{
     * .w-2/4 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_2$4: Tailwind = Tailwind()
+  def w_2$4: TW = TW()
   /** {{{
     * .w-3/4 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_3$4: Tailwind = Tailwind()
+  def w_3$4: TW = TW()
   /** {{{
     * .w-1/5 {
     *   width: 20%;
     * }
     * }}}
     */
-  def w_1$5: Tailwind = Tailwind()
+  def w_1$5: TW = TW()
   /** {{{
     * .w-2/5 {
     *   width: 40%;
     * }
     * }}}
     */
-  def w_2$5: Tailwind = Tailwind()
+  def w_2$5: TW = TW()
   /** {{{
     * .w-3/5 {
     *   width: 60%;
     * }
     * }}}
     */
-  def w_3$5: Tailwind = Tailwind()
+  def w_3$5: TW = TW()
   /** {{{
     * .w-4/5 {
     *   width: 80%;
     * }
     * }}}
     */
-  def w_4$5: Tailwind = Tailwind()
+  def w_4$5: TW = TW()
   /** {{{
     * .w-1/6 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_1$6: Tailwind = Tailwind()
+  def w_1$6: TW = TW()
   /** {{{
     * .w-2/6 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_2$6: Tailwind = Tailwind()
+  def w_2$6: TW = TW()
   /** {{{
     * .w-3/6 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_3$6: Tailwind = Tailwind()
+  def w_3$6: TW = TW()
   /** {{{
     * .w-4/6 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_4$6: Tailwind = Tailwind()
+  def w_4$6: TW = TW()
   /** {{{
     * .w-5/6 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_5$6: Tailwind = Tailwind()
+  def w_5$6: TW = TW()
   /** {{{
     * .w-1/12 {
     *   width: 8.33333%;
     * }
     * }}}
     */
-  def w_1$12: Tailwind = Tailwind()
+  def w_1$12: TW = TW()
   /** {{{
     * .w-2/12 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_2$12: Tailwind = Tailwind()
+  def w_2$12: TW = TW()
   /** {{{
     * .w-3/12 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_3$12: Tailwind = Tailwind()
+  def w_3$12: TW = TW()
   /** {{{
     * .w-4/12 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_4$12: Tailwind = Tailwind()
+  def w_4$12: TW = TW()
   /** {{{
     * .w-5/12 {
     *   width: 41.6667%;
     * }
     * }}}
     */
-  def w_5$12: Tailwind = Tailwind()
+  def w_5$12: TW = TW()
   /** {{{
     * .w-6/12 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_6$12: Tailwind = Tailwind()
+  def w_6$12: TW = TW()
   /** {{{
     * .w-7/12 {
     *   width: 58.3333%;
     * }
     * }}}
     */
-  def w_7$12: Tailwind = Tailwind()
+  def w_7$12: TW = TW()
   /** {{{
     * .w-8/12 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_8$12: Tailwind = Tailwind()
+  def w_8$12: TW = TW()
   /** {{{
     * .w-9/12 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_9$12: Tailwind = Tailwind()
+  def w_9$12: TW = TW()
   /** {{{
     * .w-10/12 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_10$12: Tailwind = Tailwind()
+  def w_10$12: TW = TW()
   /** {{{
     * .w-11/12 {
     *   width: 91.6667%;
     * }
     * }}}
     */
-  def w_11$12: Tailwind = Tailwind()
+  def w_11$12: TW = TW()
   /** {{{
     * .w-full {
     *   width: 100%;
     * }
     * }}}
     */
-  def w_full: Tailwind = Tailwind()
+  def w_full: TW = TW()
   /** {{{
     * .w-screen {
     *   width: 100vw;
     * }
     * }}}
     */
-  def w_screen: Tailwind = Tailwind()
+  def w_screen: TW = TW()
   /** {{{
     * .w-svw {
     *   width: 100svw;
     * }
     * }}}
     */
-  def w_svw: Tailwind = Tailwind()
+  def w_svw: TW = TW()
   /** {{{
     * .w-lvw {
     *   width: 100lvw;
     * }
     * }}}
     */
-  def w_lvw: Tailwind = Tailwind()
+  def w_lvw: TW = TW()
   /** {{{
     * .w-dvw {
     *   width: 100dvw;
     * }
     * }}}
     */
-  def w_dvw: Tailwind = Tailwind()
+  def w_dvw: TW = TW()
   /** {{{
     * .w-min {
     *   width: min-content;
     * }
     * }}}
     */
-  def w_min: Tailwind = Tailwind()
+  def w_min: TW = TW()
   /** {{{
     * .w-max {
     *   width: max-content;
     * }
     * }}}
     */
-  def w_max: Tailwind = Tailwind()
+  def w_max: TW = TW()
   /** {{{
     * .w-fit {
     *   width: fit-content;
     * }
     * }}}
     */
-  def w_fit: Tailwind = Tailwind()
+  def w_fit: TW = TW()
   /** {{{
     * .animate-none {
     *   animation: none;
     * }
     * }}}
     */
-  def animate_none: Tailwind = Tailwind()
+  def animate_none: TW = TW()
   
-  def animate_spin: Tailwind = Tailwind()
+  def animate_spin: TW = TW()
   
-  def animate_ping: Tailwind = Tailwind()
+  def animate_ping: TW = TW()
   
-  def animate_pulse: Tailwind = Tailwind()
+  def animate_pulse: TW = TW()
   
-  def animate_bounce: Tailwind = Tailwind()
+  def animate_bounce: TW = TW()
   /** {{{
     * .text-black {
     *   color: #000;
     * }
     * }}}
     */
-  def text_black: Tailwind = Tailwind()
-  def container_(value: String): Tailwind = Tailwind()
-  def w_(value: String): Tailwind = Tailwind()
-  def animate_(value: String): Tailwind = Tailwind()
-  def text_(value: String): Tailwind = Tailwind()
+  def text_black: TW = TW()
+  def container_(value: String): TW = TW()
+  def w_(value: String): TW = TW()
+  def animate_(value: String): TW = TW()
+  def text_(value: String): TW = TW()
 
-inline def sw(inline tailwind: Tailwind): String =
+inline def sw(inline tailwind: TW): String =
   ${ swImpl('tailwind) }
 
-def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
+def swImpl(tailwindExpr: Expr[TW])(using Quotes): Expr[String] =
   import quotes.reflect.*
 
-  def fmtToTailwind(rawName: String) =
+  def fmtToTW(rawName: String) =
     rawName.replace("_", "-").replace("$", "/").replace("dot", ".")
 
   def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
@@ -1413,14 +1413,14 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
         case Inlined(_, _, inner) =>
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Select(inner, name) =>
-          val methodName = fmtToTailwind(name)
+          val methodName = fmtToTW(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
           classNames = classNames :+ className
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Ident("tw") =>
         // No action needed, just continue processing the remaining stack
         case Apply(Ident(name), List(arg)) =>
-          val methodName = fmtToTailwind(name)
+          val methodName = fmtToTW(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
           classNames = classNames :+ className
           stack = (arg, currentPrefix, currentImportant) :: stack
@@ -1429,17 +1429,17 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
           classNames = classNames :+ className
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Apply(Select(inner, name), List(Literal(StringConstant(value)))) =>
-          val methodName = fmtToTailwind(name)
+          val methodName = fmtToTW(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
           classNames = classNames :+ className
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Apply(Apply(Ident(name), args), List(Literal(StringConstant(value)))) =>
-          val methodName = fmtToTailwind(name)
+          val methodName = fmtToTW(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
           classNames = classNames :+ className
           stack = args.map(arg => (arg, currentPrefix, currentImportant)) ++ stack
         case Apply(Select(Ident("tw"), name), List(inner)) =>
-          val methodName = fmtToTailwind(name)
+          val methodName = fmtToTW(name)
           stack = (inner, s"$currentPrefix${methodName}:", currentImportant) :: stack
         case Apply(Select(inner, "variant"), List(Literal(StringConstant(selector)), styles)) =>
           val variantPrefix = s"$currentPrefix[$selector]:" // Use the selector as provided
@@ -1447,7 +1447,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
           classNames = classNames ++ styleClasses
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Apply(Select(inner, name), args) =>
-          val methodName = fmtToTailwind(name)
+          val methodName = fmtToTW(name)
           val innerClasses = args.flatMap(arg => extractClassNames(arg, s"$currentPrefix${methodName}:"))
           classNames = classNames ++ innerClasses
           stack = (inner, currentPrefix, currentImportant) :: stack
