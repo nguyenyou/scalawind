@@ -176,7 +176,7 @@ case class Tailwind() {
   def o(value: Int): Tailwind = Tailwind()
 }
 
-object tw {
+object tw:
   def apply(): Tailwind = Tailwind()
   
   def container: Tailwind = Tailwind()
@@ -864,7 +864,6 @@ object tw {
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
   def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-}
 
 extension (tailwind: Tailwind)
   
@@ -1386,11 +1385,10 @@ extension (tailwind: Tailwind)
   def animate_(value: String): Tailwind = Tailwind()
   def text_(value: String): Tailwind = Tailwind()
 
-
 inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
-def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
+def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   import quotes.reflect.*
 
   def fmtToTailwind(rawName: String) =
@@ -1465,4 +1463,3 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   val combinedClasses = classNames.reverse.mkString(" ")
   report.info(s"$combinedClasses")
   Expr(combinedClasses)
-}
