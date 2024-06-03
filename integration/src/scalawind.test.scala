@@ -27,6 +27,9 @@ class SimpleSingleTests extends munit.FunSuite {
   test("raw values") {
     assert(sw(tw.raw("text-green-400")) == "text-green-400")
   }
+  test("important modifier") {
+    assert(sw(tw.important(tw.text_red_400)) == "!text-red-400")
+  }
 }
 
 class ComplexChainingTests extends munit.FunSuite {
@@ -35,5 +38,11 @@ class ComplexChainingTests extends munit.FunSuite {
   }
   test("arbitrary values") {
     assert(sw(tw.flex.text_("#ff0").items_center.bg_("#00f")) == "flex text-[#ff0] items-center bg-[#00f]")
+  }
+  test("important modifer") {
+    assert(sw(tw.sm(tw.hover(tw.important(tw.font_bold)))) == "sm:hover:!font-bold")
+  }
+  test("arbitrary variant") {
+    assert(sw(tw.lg(tw.variant("&:nth-child(3)", tw.hover(tw.underline)))) == "lg:[&:nth-child(3)]:hover:underline")
   }
 }
