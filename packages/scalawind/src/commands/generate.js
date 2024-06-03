@@ -36,11 +36,6 @@ export const generate = new Command()
     false
   )
   .option(
-    "-av, --arbitrary-values",
-    "enable support for arbitrary values",
-    false
-  )
-  .option(
     "-c, --cwd <cwd>",
     "the working directory. defaults to the current directory.",
     process.cwd()

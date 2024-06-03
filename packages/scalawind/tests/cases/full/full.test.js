@@ -5,7 +5,7 @@ import { generateContent } from '../../../src/generate'
 import { tailwindConfig } from './config'
 
 test('full config test', () => {
-  const actual = generateContent(tailwindConfig, "scalawind", true, true)
+  const actual = generateContent(tailwindConfig, "scalawind", true)
   const expected = fs.readFileSync(path.join(__dirname, "./expected.txt"), "utf8")
   expect(actual).toBe(expected)
 })
