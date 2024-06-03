@@ -14,7 +14,6 @@ const initOptionsSchema = z.object({
   output: z.string(),
   packageName: z.string(),
   previewCompliedResult: z.boolean(),
-  arbitraryValues: z.boolean()
 })
 
 export const generate = new Command()
