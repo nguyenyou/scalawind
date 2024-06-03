@@ -3,51 +3,51 @@ package {{packageName}}
 import scala.quoted.*
 import scala.annotation.unused
 
-case class TW() {
+case class Tailwind() {
   {{#each modifiers}}
-  def {{this.name}}(@unused styles: TW): TW = TW()
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
-  def important(@unused styles: TW): TW = TW()
-  def i(@unused styles: TW): TW = TW()
-  def raw(@unused classString: String): TW = TW()
-  def variant(selector: String, styles: TW): TW = TW()
-  def opacity(value: Int): TW = TW()
-  def o(value: Int): TW = TW()
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+  def raw(@unused classString: String): Tailwind = Tailwind()
+  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
+  def opacity(value: Int): Tailwind = Tailwind()
+  def o(value: Int): Tailwind = Tailwind()
 }
 
 object tw:
-  def apply(): TW = TW()
+  def apply(): Tailwind = Tailwind()
   {{#each standard}}
   {{this.doc}}
-  def {{this.prop}}: TW = TW()
+  def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
   {{#each arbitrary}}
-  def {{this.methodName}}(value: String): TW = TW()
+  def {{this.methodName}}(value: String): Tailwind = Tailwind()
   {{/each}}
   {{#each modifiers}}
-  def {{this.name}}(@unused styles: TW): TW = TW()
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
-  def important(@unused styles: TW): TW = TW()
-  def i(@unused styles: TW): TW = TW()
-  def raw(@unused classString: String): TW = TW()
-  def variant(selector: String, styles: TW): TW = TW()
+  def important(@unused styles: Tailwind): Tailwind = Tailwind()
+  def i(@unused styles: Tailwind): Tailwind = Tailwind()
+  def raw(@unused classString: String): Tailwind = Tailwind()
+  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
 
-extension (tailwind: TW)
+extension (tailwind: Tailwind)
   {{#each standard}}
   {{this.doc}}
-  def {{this.prop}}: TW = TW()
+  def {{this.prop}}: Tailwind = Tailwind()
   {{/each}}
   {{#each arbitrary}}
-  def {{this.methodName}}(value: String): TW = TW()
+  def {{this.methodName}}(value: String): Tailwind = Tailwind()
   {{/each}}
 
-inline def sw(inline tailwind: TW): String =
+inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
-def swImpl(tailwindExpr: Expr[TW])(using Quotes): Expr[String] =
+def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   import quotes.reflect.*
 
-  def fmtToTW(rawName: String) =
+  def fmtToTailwind(rawName: String) =
     rawName.replace("_", "-").replace("$", "/").replace("dot", ".")
 
   def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
@@ -69,14 +69,14 @@ def swImpl(tailwindExpr: Expr[TW])(using Quotes): Expr[String] =
         case Inlined(_, _, inner) =>
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Select(inner, name) =>
-          val methodName = fmtToTW(name)
+          val methodName = fmtToTailwind(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
           classNames = classNames :+ className
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Ident("tw") =>
         // No action needed, just continue processing the remaining stack
         case Apply(Ident(name), List(arg)) =>
-          val methodName = fmtToTW(name)
+          val methodName = fmtToTailwind(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
           classNames = classNames :+ className
           stack = (arg, currentPrefix, currentImportant) :: stack
@@ -85,17 +85,17 @@ def swImpl(tailwindExpr: Expr[TW])(using Quotes): Expr[String] =
           classNames = classNames :+ className
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Apply(Select(inner, name), List(Literal(StringConstant(value)))) =>
-          val methodName = fmtToTW(name)
+          val methodName = fmtToTailwind(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
           classNames = classNames :+ className
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Apply(Apply(Ident(name), args), List(Literal(StringConstant(value)))) =>
-          val methodName = fmtToTW(name)
+          val methodName = fmtToTailwind(name)
           val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
           classNames = classNames :+ className
           stack = args.map(arg => (arg, currentPrefix, currentImportant)) ++ stack
         case Apply(Select(Ident("tw"), name), List(inner)) =>
-          val methodName = fmtToTW(name)
+          val methodName = fmtToTailwind(name)
           stack = (inner, s"$currentPrefix${methodName}:", currentImportant) :: stack
         case Apply(Select(inner, "variant"), List(Literal(StringConstant(selector)), styles)) =>
           val variantPrefix = s"$currentPrefix[$selector]:" // Use the selector as provided
@@ -103,7 +103,7 @@ def swImpl(tailwindExpr: Expr[TW])(using Quotes): Expr[String] =
           classNames = classNames ++ styleClasses
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Apply(Select(inner, name), args) =>
-          val methodName = fmtToTW(name)
+          val methodName = fmtToTailwind(name)
           val innerClasses = args.flatMap(arg => extractClassNames(arg, s"$currentPrefix${methodName}:"))
           classNames = classNames ++ innerClasses
           stack = (inner, currentPrefix, currentImportant) :: stack
