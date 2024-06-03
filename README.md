@@ -36,7 +36,7 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 
 > Although this library is still very early, the actual code is just a single file generated and output directly into your project. You can twist it, fix it, make changes to it however you like. 
 
-![Integration Testing](https://github.com/nguyenyou/scalawind/actions/workflows/test.yml/badge.svg)
+![Integration Testing](https://github.com/nguyenyou/scalawind/actions/workflows/integration-test.yml/badge.svg)
 
 The idea is very simple, you can generate typesafe scala code from tailwind config file and use tailwind utility classes in a typesafe way.
 
