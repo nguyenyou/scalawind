@@ -48,7 +48,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   import quotes.reflect.*
 
   def fmtToTailwind(rawName: String) =
-    rawName.replace("_", "-").replace("$", "/").replace("dot", ".")
+    rawName.replace("_", "-").replace("per", "/").replace("dot", ".")
 
   def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
     var stack = List((term, prefix, important))

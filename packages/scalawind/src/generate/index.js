@@ -103,7 +103,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
   return generatedScalawind
 }
 
-const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '').replace(/\//, '$').replace(/\./, 'dot');
+const fmtToScalawind = (s) => s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '').replace(/\//, 'per').replace(/\./, 'dot');
 
 function getCandidateItem(
   map,

@@ -46,7 +46,7 @@ class SimpleSingleTests extends munit.FunSuite {
   test("percentage values") {
     assert(
       sw(
-        tw.w_1$2
+        tw.w_1per2
       ) == "w-1/2"
     )
   }
@@ -129,12 +129,12 @@ class ComplexChainingTests extends munit.FunSuite {
   test("dot values, percentage values") {
     assert(
       sw(
-        tw.w_1$2.h_1dot5._left_1
+        tw.w_1per2.h_1dot5._left_1
       ) == "w-1/2 h-1.5 -left-1"
     )
     assert(
       sw(
-        tw.md(tw.hover(tw.w_1$2.h_1dot5._left_1))
+        tw.md(tw.hover(tw.w_1per2.h_1dot5._left_1))
       ) == "md:hover:w-1/2 md:hover:h-1.5 md:hover:-left-1"
     )
   }
