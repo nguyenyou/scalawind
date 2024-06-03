@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.3
+
+### Patch Changes
+
+- 004a8e6: update generated code more scala3 syntax
+
 ## 0.5.2
 
 ### Patch Changes
