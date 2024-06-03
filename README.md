@@ -72,7 +72,7 @@ $ npx degit nguyenyou/scalawind/examples/EXAMPLE_NAME_HERE my-scalawind-app
 
 ## How to use
 
-Install the CLI, using any node package manager that you prefer:
+Install the CLI, use any node package manager that you prefer:
 
 ```bash
 $ npm install scalawind --save-dev
