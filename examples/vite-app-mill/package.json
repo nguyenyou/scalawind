@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postinstall": "scalawind generate -o ./myapp/src/myapp/scalawind.scala",
+    "postinstall": "scalawind generate -pcr -o ./myapp/src/myapp/scalawind.scala",
     "dev:scala": "./millw -w myapp.fastLinkJS",
     "build:scala": "./millw myapp.fullLinkJS"
   },
