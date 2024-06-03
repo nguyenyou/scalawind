@@ -537,42 +537,42 @@ object tw:
     * }
     * }}}
     */
-  def inset_1$2: Tailwind = Tailwind()
+  def inset_1per2: Tailwind = Tailwind()
   /** {{{
     * .inset-1/3 {
     *   inset: 33.3333%;
     * }
     * }}}
     */
-  def inset_1$3: Tailwind = Tailwind()
+  def inset_1per3: Tailwind = Tailwind()
   /** {{{
     * .inset-2/3 {
     *   inset: 66.6667%;
     * }
     * }}}
     */
-  def inset_2$3: Tailwind = Tailwind()
+  def inset_2per3: Tailwind = Tailwind()
   /** {{{
     * .inset-1/4 {
     *   inset: 25%;
     * }
     * }}}
     */
-  def inset_1$4: Tailwind = Tailwind()
+  def inset_1per4: Tailwind = Tailwind()
   /** {{{
     * .inset-2/4 {
     *   inset: 50%;
     * }
     * }}}
     */
-  def inset_2$4: Tailwind = Tailwind()
+  def inset_2per4: Tailwind = Tailwind()
   /** {{{
     * .inset-3/4 {
     *   inset: 75%;
     * }
     * }}}
     */
-  def inset_3$4: Tailwind = Tailwind()
+  def inset_3per4: Tailwind = Tailwind()
   /** {{{
     * .inset-full {
     *   inset: 100%;
@@ -759,32 +759,32 @@ object tw:
     * 
     * }}}
     */
-  def _inset_1$2: Tailwind = Tailwind()
+  def _inset_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_1$3: Tailwind = Tailwind()
+  def _inset_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_2$3: Tailwind = Tailwind()
+  def _inset_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_1$4: Tailwind = Tailwind()
+  def _inset_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_2$4: Tailwind = Tailwind()
+  def _inset_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_3$4: Tailwind = Tailwind()
+  def _inset_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -1085,7 +1085,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_x_1$2: Tailwind = Tailwind()
+  def inset_x_1per2: Tailwind = Tailwind()
   /** {{{
     * .inset-x-1/3 {
     *   left: 33.3333%;
@@ -1093,7 +1093,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_x_1$3: Tailwind = Tailwind()
+  def inset_x_1per3: Tailwind = Tailwind()
   /** {{{
     * .inset-x-2/3 {
     *   left: 66.6667%;
@@ -1101,7 +1101,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_x_2$3: Tailwind = Tailwind()
+  def inset_x_2per3: Tailwind = Tailwind()
   /** {{{
     * .inset-x-1/4 {
     *   left: 25%;
@@ -1109,7 +1109,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_x_1$4: Tailwind = Tailwind()
+  def inset_x_1per4: Tailwind = Tailwind()
   /** {{{
     * .inset-x-2/4 {
     *   left: 50%;
@@ -1117,7 +1117,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_x_2$4: Tailwind = Tailwind()
+  def inset_x_2per4: Tailwind = Tailwind()
   /** {{{
     * .inset-x-3/4 {
     *   left: 75%;
@@ -1125,7 +1125,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_x_3$4: Tailwind = Tailwind()
+  def inset_x_3per4: Tailwind = Tailwind()
   /** {{{
     * .inset-x-full {
     *   left: 100%;
@@ -1313,32 +1313,32 @@ object tw:
     * 
     * }}}
     */
-  def _inset_x_1$2: Tailwind = Tailwind()
+  def _inset_x_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_1$3: Tailwind = Tailwind()
+  def _inset_x_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_2$3: Tailwind = Tailwind()
+  def _inset_x_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_1$4: Tailwind = Tailwind()
+  def _inset_x_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_2$4: Tailwind = Tailwind()
+  def _inset_x_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_3$4: Tailwind = Tailwind()
+  def _inset_x_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -1639,7 +1639,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_y_1$2: Tailwind = Tailwind()
+  def inset_y_1per2: Tailwind = Tailwind()
   /** {{{
     * .inset-y-1/3 {
     *   top: 33.3333%;
@@ -1647,7 +1647,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_y_1$3: Tailwind = Tailwind()
+  def inset_y_1per3: Tailwind = Tailwind()
   /** {{{
     * .inset-y-2/3 {
     *   top: 66.6667%;
@@ -1655,7 +1655,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_y_2$3: Tailwind = Tailwind()
+  def inset_y_2per3: Tailwind = Tailwind()
   /** {{{
     * .inset-y-1/4 {
     *   top: 25%;
@@ -1663,7 +1663,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_y_1$4: Tailwind = Tailwind()
+  def inset_y_1per4: Tailwind = Tailwind()
   /** {{{
     * .inset-y-2/4 {
     *   top: 50%;
@@ -1671,7 +1671,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_y_2$4: Tailwind = Tailwind()
+  def inset_y_2per4: Tailwind = Tailwind()
   /** {{{
     * .inset-y-3/4 {
     *   top: 75%;
@@ -1679,7 +1679,7 @@ object tw:
     * }
     * }}}
     */
-  def inset_y_3$4: Tailwind = Tailwind()
+  def inset_y_3per4: Tailwind = Tailwind()
   /** {{{
     * .inset-y-full {
     *   top: 100%;
@@ -1867,32 +1867,32 @@ object tw:
     * 
     * }}}
     */
-  def _inset_y_1$2: Tailwind = Tailwind()
+  def _inset_y_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_1$3: Tailwind = Tailwind()
+  def _inset_y_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_2$3: Tailwind = Tailwind()
+  def _inset_y_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_1$4: Tailwind = Tailwind()
+  def _inset_y_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_2$4: Tailwind = Tailwind()
+  def _inset_y_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_3$4: Tailwind = Tailwind()
+  def _inset_y_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -2156,42 +2156,42 @@ object tw:
     * }
     * }}}
     */
-  def start_1$2: Tailwind = Tailwind()
+  def start_1per2: Tailwind = Tailwind()
   /** {{{
     * .start-1/3 {
     *   inset-inline-start: 33.3333%;
     * }
     * }}}
     */
-  def start_1$3: Tailwind = Tailwind()
+  def start_1per3: Tailwind = Tailwind()
   /** {{{
     * .start-2/3 {
     *   inset-inline-start: 66.6667%;
     * }
     * }}}
     */
-  def start_2$3: Tailwind = Tailwind()
+  def start_2per3: Tailwind = Tailwind()
   /** {{{
     * .start-1/4 {
     *   inset-inline-start: 25%;
     * }
     * }}}
     */
-  def start_1$4: Tailwind = Tailwind()
+  def start_1per4: Tailwind = Tailwind()
   /** {{{
     * .start-2/4 {
     *   inset-inline-start: 50%;
     * }
     * }}}
     */
-  def start_2$4: Tailwind = Tailwind()
+  def start_2per4: Tailwind = Tailwind()
   /** {{{
     * .start-3/4 {
     *   inset-inline-start: 75%;
     * }
     * }}}
     */
-  def start_3$4: Tailwind = Tailwind()
+  def start_3per4: Tailwind = Tailwind()
   /** {{{
     * .start-full {
     *   inset-inline-start: 100%;
@@ -2378,32 +2378,32 @@ object tw:
     * 
     * }}}
     */
-  def _start_1$2: Tailwind = Tailwind()
+  def _start_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_1$3: Tailwind = Tailwind()
+  def _start_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_2$3: Tailwind = Tailwind()
+  def _start_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_1$4: Tailwind = Tailwind()
+  def _start_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_2$4: Tailwind = Tailwind()
+  def _start_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_3$4: Tailwind = Tailwind()
+  def _start_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -2667,42 +2667,42 @@ object tw:
     * }
     * }}}
     */
-  def end_1$2: Tailwind = Tailwind()
+  def end_1per2: Tailwind = Tailwind()
   /** {{{
     * .end-1/3 {
     *   inset-inline-end: 33.3333%;
     * }
     * }}}
     */
-  def end_1$3: Tailwind = Tailwind()
+  def end_1per3: Tailwind = Tailwind()
   /** {{{
     * .end-2/3 {
     *   inset-inline-end: 66.6667%;
     * }
     * }}}
     */
-  def end_2$3: Tailwind = Tailwind()
+  def end_2per3: Tailwind = Tailwind()
   /** {{{
     * .end-1/4 {
     *   inset-inline-end: 25%;
     * }
     * }}}
     */
-  def end_1$4: Tailwind = Tailwind()
+  def end_1per4: Tailwind = Tailwind()
   /** {{{
     * .end-2/4 {
     *   inset-inline-end: 50%;
     * }
     * }}}
     */
-  def end_2$4: Tailwind = Tailwind()
+  def end_2per4: Tailwind = Tailwind()
   /** {{{
     * .end-3/4 {
     *   inset-inline-end: 75%;
     * }
     * }}}
     */
-  def end_3$4: Tailwind = Tailwind()
+  def end_3per4: Tailwind = Tailwind()
   /** {{{
     * .end-full {
     *   inset-inline-end: 100%;
@@ -2889,32 +2889,32 @@ object tw:
     * 
     * }}}
     */
-  def _end_1$2: Tailwind = Tailwind()
+  def _end_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_1$3: Tailwind = Tailwind()
+  def _end_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_2$3: Tailwind = Tailwind()
+  def _end_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_1$4: Tailwind = Tailwind()
+  def _end_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_2$4: Tailwind = Tailwind()
+  def _end_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_3$4: Tailwind = Tailwind()
+  def _end_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -3178,42 +3178,42 @@ object tw:
     * }
     * }}}
     */
-  def top_1$2: Tailwind = Tailwind()
+  def top_1per2: Tailwind = Tailwind()
   /** {{{
     * .top-1/3 {
     *   top: 33.3333%;
     * }
     * }}}
     */
-  def top_1$3: Tailwind = Tailwind()
+  def top_1per3: Tailwind = Tailwind()
   /** {{{
     * .top-2/3 {
     *   top: 66.6667%;
     * }
     * }}}
     */
-  def top_2$3: Tailwind = Tailwind()
+  def top_2per3: Tailwind = Tailwind()
   /** {{{
     * .top-1/4 {
     *   top: 25%;
     * }
     * }}}
     */
-  def top_1$4: Tailwind = Tailwind()
+  def top_1per4: Tailwind = Tailwind()
   /** {{{
     * .top-2/4 {
     *   top: 50%;
     * }
     * }}}
     */
-  def top_2$4: Tailwind = Tailwind()
+  def top_2per4: Tailwind = Tailwind()
   /** {{{
     * .top-3/4 {
     *   top: 75%;
     * }
     * }}}
     */
-  def top_3$4: Tailwind = Tailwind()
+  def top_3per4: Tailwind = Tailwind()
   /** {{{
     * .top-full {
     *   top: 100%;
@@ -3400,32 +3400,32 @@ object tw:
     * 
     * }}}
     */
-  def _top_1$2: Tailwind = Tailwind()
+  def _top_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_1$3: Tailwind = Tailwind()
+  def _top_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_2$3: Tailwind = Tailwind()
+  def _top_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_1$4: Tailwind = Tailwind()
+  def _top_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_2$4: Tailwind = Tailwind()
+  def _top_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_3$4: Tailwind = Tailwind()
+  def _top_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -3689,42 +3689,42 @@ object tw:
     * }
     * }}}
     */
-  def right_1$2: Tailwind = Tailwind()
+  def right_1per2: Tailwind = Tailwind()
   /** {{{
     * .right-1/3 {
     *   right: 33.3333%;
     * }
     * }}}
     */
-  def right_1$3: Tailwind = Tailwind()
+  def right_1per3: Tailwind = Tailwind()
   /** {{{
     * .right-2/3 {
     *   right: 66.6667%;
     * }
     * }}}
     */
-  def right_2$3: Tailwind = Tailwind()
+  def right_2per3: Tailwind = Tailwind()
   /** {{{
     * .right-1/4 {
     *   right: 25%;
     * }
     * }}}
     */
-  def right_1$4: Tailwind = Tailwind()
+  def right_1per4: Tailwind = Tailwind()
   /** {{{
     * .right-2/4 {
     *   right: 50%;
     * }
     * }}}
     */
-  def right_2$4: Tailwind = Tailwind()
+  def right_2per4: Tailwind = Tailwind()
   /** {{{
     * .right-3/4 {
     *   right: 75%;
     * }
     * }}}
     */
-  def right_3$4: Tailwind = Tailwind()
+  def right_3per4: Tailwind = Tailwind()
   /** {{{
     * .right-full {
     *   right: 100%;
@@ -3911,32 +3911,32 @@ object tw:
     * 
     * }}}
     */
-  def _right_1$2: Tailwind = Tailwind()
+  def _right_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_1$3: Tailwind = Tailwind()
+  def _right_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_2$3: Tailwind = Tailwind()
+  def _right_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_1$4: Tailwind = Tailwind()
+  def _right_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_2$4: Tailwind = Tailwind()
+  def _right_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_3$4: Tailwind = Tailwind()
+  def _right_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -4200,42 +4200,42 @@ object tw:
     * }
     * }}}
     */
-  def bottom_1$2: Tailwind = Tailwind()
+  def bottom_1per2: Tailwind = Tailwind()
   /** {{{
     * .bottom-1/3 {
     *   bottom: 33.3333%;
     * }
     * }}}
     */
-  def bottom_1$3: Tailwind = Tailwind()
+  def bottom_1per3: Tailwind = Tailwind()
   /** {{{
     * .bottom-2/3 {
     *   bottom: 66.6667%;
     * }
     * }}}
     */
-  def bottom_2$3: Tailwind = Tailwind()
+  def bottom_2per3: Tailwind = Tailwind()
   /** {{{
     * .bottom-1/4 {
     *   bottom: 25%;
     * }
     * }}}
     */
-  def bottom_1$4: Tailwind = Tailwind()
+  def bottom_1per4: Tailwind = Tailwind()
   /** {{{
     * .bottom-2/4 {
     *   bottom: 50%;
     * }
     * }}}
     */
-  def bottom_2$4: Tailwind = Tailwind()
+  def bottom_2per4: Tailwind = Tailwind()
   /** {{{
     * .bottom-3/4 {
     *   bottom: 75%;
     * }
     * }}}
     */
-  def bottom_3$4: Tailwind = Tailwind()
+  def bottom_3per4: Tailwind = Tailwind()
   /** {{{
     * .bottom-full {
     *   bottom: 100%;
@@ -4422,32 +4422,32 @@ object tw:
     * 
     * }}}
     */
-  def _bottom_1$2: Tailwind = Tailwind()
+  def _bottom_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_1$3: Tailwind = Tailwind()
+  def _bottom_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_2$3: Tailwind = Tailwind()
+  def _bottom_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_1$4: Tailwind = Tailwind()
+  def _bottom_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_2$4: Tailwind = Tailwind()
+  def _bottom_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_3$4: Tailwind = Tailwind()
+  def _bottom_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -4711,42 +4711,42 @@ object tw:
     * }
     * }}}
     */
-  def left_1$2: Tailwind = Tailwind()
+  def left_1per2: Tailwind = Tailwind()
   /** {{{
     * .left-1/3 {
     *   left: 33.3333%;
     * }
     * }}}
     */
-  def left_1$3: Tailwind = Tailwind()
+  def left_1per3: Tailwind = Tailwind()
   /** {{{
     * .left-2/3 {
     *   left: 66.6667%;
     * }
     * }}}
     */
-  def left_2$3: Tailwind = Tailwind()
+  def left_2per3: Tailwind = Tailwind()
   /** {{{
     * .left-1/4 {
     *   left: 25%;
     * }
     * }}}
     */
-  def left_1$4: Tailwind = Tailwind()
+  def left_1per4: Tailwind = Tailwind()
   /** {{{
     * .left-2/4 {
     *   left: 50%;
     * }
     * }}}
     */
-  def left_2$4: Tailwind = Tailwind()
+  def left_2per4: Tailwind = Tailwind()
   /** {{{
     * .left-3/4 {
     *   left: 75%;
     * }
     * }}}
     */
-  def left_3$4: Tailwind = Tailwind()
+  def left_3per4: Tailwind = Tailwind()
   /** {{{
     * .left-full {
     *   left: 100%;
@@ -4933,32 +4933,32 @@ object tw:
     * 
     * }}}
     */
-  def _left_1$2: Tailwind = Tailwind()
+  def _left_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_1$3: Tailwind = Tailwind()
+  def _left_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_2$3: Tailwind = Tailwind()
+  def _left_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_1$4: Tailwind = Tailwind()
+  def _left_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_2$4: Tailwind = Tailwind()
+  def _left_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_3$4: Tailwind = Tailwind()
+  def _left_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -10364,7 +10364,7 @@ object tw:
     * }
     * }}}
     */
-  def size_1$2: Tailwind = Tailwind()
+  def size_1per2: Tailwind = Tailwind()
   /** {{{
     * .size-1/3 {
     *   width: 33.3333%;
@@ -10372,7 +10372,7 @@ object tw:
     * }
     * }}}
     */
-  def size_1$3: Tailwind = Tailwind()
+  def size_1per3: Tailwind = Tailwind()
   /** {{{
     * .size-2/3 {
     *   width: 66.6667%;
@@ -10380,7 +10380,7 @@ object tw:
     * }
     * }}}
     */
-  def size_2$3: Tailwind = Tailwind()
+  def size_2per3: Tailwind = Tailwind()
   /** {{{
     * .size-1/4 {
     *   width: 25%;
@@ -10388,7 +10388,7 @@ object tw:
     * }
     * }}}
     */
-  def size_1$4: Tailwind = Tailwind()
+  def size_1per4: Tailwind = Tailwind()
   /** {{{
     * .size-2/4 {
     *   width: 50%;
@@ -10396,7 +10396,7 @@ object tw:
     * }
     * }}}
     */
-  def size_2$4: Tailwind = Tailwind()
+  def size_2per4: Tailwind = Tailwind()
   /** {{{
     * .size-3/4 {
     *   width: 75%;
@@ -10404,7 +10404,7 @@ object tw:
     * }
     * }}}
     */
-  def size_3$4: Tailwind = Tailwind()
+  def size_3per4: Tailwind = Tailwind()
   /** {{{
     * .size-1/5 {
     *   width: 20%;
@@ -10412,7 +10412,7 @@ object tw:
     * }
     * }}}
     */
-  def size_1$5: Tailwind = Tailwind()
+  def size_1per5: Tailwind = Tailwind()
   /** {{{
     * .size-2/5 {
     *   width: 40%;
@@ -10420,7 +10420,7 @@ object tw:
     * }
     * }}}
     */
-  def size_2$5: Tailwind = Tailwind()
+  def size_2per5: Tailwind = Tailwind()
   /** {{{
     * .size-3/5 {
     *   width: 60%;
@@ -10428,7 +10428,7 @@ object tw:
     * }
     * }}}
     */
-  def size_3$5: Tailwind = Tailwind()
+  def size_3per5: Tailwind = Tailwind()
   /** {{{
     * .size-4/5 {
     *   width: 80%;
@@ -10436,7 +10436,7 @@ object tw:
     * }
     * }}}
     */
-  def size_4$5: Tailwind = Tailwind()
+  def size_4per5: Tailwind = Tailwind()
   /** {{{
     * .size-1/6 {
     *   width: 16.6667%;
@@ -10444,7 +10444,7 @@ object tw:
     * }
     * }}}
     */
-  def size_1$6: Tailwind = Tailwind()
+  def size_1per6: Tailwind = Tailwind()
   /** {{{
     * .size-2/6 {
     *   width: 33.3333%;
@@ -10452,7 +10452,7 @@ object tw:
     * }
     * }}}
     */
-  def size_2$6: Tailwind = Tailwind()
+  def size_2per6: Tailwind = Tailwind()
   /** {{{
     * .size-3/6 {
     *   width: 50%;
@@ -10460,7 +10460,7 @@ object tw:
     * }
     * }}}
     */
-  def size_3$6: Tailwind = Tailwind()
+  def size_3per6: Tailwind = Tailwind()
   /** {{{
     * .size-4/6 {
     *   width: 66.6667%;
@@ -10468,7 +10468,7 @@ object tw:
     * }
     * }}}
     */
-  def size_4$6: Tailwind = Tailwind()
+  def size_4per6: Tailwind = Tailwind()
   /** {{{
     * .size-5/6 {
     *   width: 83.3333%;
@@ -10476,7 +10476,7 @@ object tw:
     * }
     * }}}
     */
-  def size_5$6: Tailwind = Tailwind()
+  def size_5per6: Tailwind = Tailwind()
   /** {{{
     * .size-1/12 {
     *   width: 8.33333%;
@@ -10484,7 +10484,7 @@ object tw:
     * }
     * }}}
     */
-  def size_1$12: Tailwind = Tailwind()
+  def size_1per12: Tailwind = Tailwind()
   /** {{{
     * .size-2/12 {
     *   width: 16.6667%;
@@ -10492,7 +10492,7 @@ object tw:
     * }
     * }}}
     */
-  def size_2$12: Tailwind = Tailwind()
+  def size_2per12: Tailwind = Tailwind()
   /** {{{
     * .size-3/12 {
     *   width: 25%;
@@ -10500,7 +10500,7 @@ object tw:
     * }
     * }}}
     */
-  def size_3$12: Tailwind = Tailwind()
+  def size_3per12: Tailwind = Tailwind()
   /** {{{
     * .size-4/12 {
     *   width: 33.3333%;
@@ -10508,7 +10508,7 @@ object tw:
     * }
     * }}}
     */
-  def size_4$12: Tailwind = Tailwind()
+  def size_4per12: Tailwind = Tailwind()
   /** {{{
     * .size-5/12 {
     *   width: 41.6667%;
@@ -10516,7 +10516,7 @@ object tw:
     * }
     * }}}
     */
-  def size_5$12: Tailwind = Tailwind()
+  def size_5per12: Tailwind = Tailwind()
   /** {{{
     * .size-6/12 {
     *   width: 50%;
@@ -10524,7 +10524,7 @@ object tw:
     * }
     * }}}
     */
-  def size_6$12: Tailwind = Tailwind()
+  def size_6per12: Tailwind = Tailwind()
   /** {{{
     * .size-7/12 {
     *   width: 58.3333%;
@@ -10532,7 +10532,7 @@ object tw:
     * }
     * }}}
     */
-  def size_7$12: Tailwind = Tailwind()
+  def size_7per12: Tailwind = Tailwind()
   /** {{{
     * .size-8/12 {
     *   width: 66.6667%;
@@ -10540,7 +10540,7 @@ object tw:
     * }
     * }}}
     */
-  def size_8$12: Tailwind = Tailwind()
+  def size_8per12: Tailwind = Tailwind()
   /** {{{
     * .size-9/12 {
     *   width: 75%;
@@ -10548,7 +10548,7 @@ object tw:
     * }
     * }}}
     */
-  def size_9$12: Tailwind = Tailwind()
+  def size_9per12: Tailwind = Tailwind()
   /** {{{
     * .size-10/12 {
     *   width: 83.3333%;
@@ -10556,7 +10556,7 @@ object tw:
     * }
     * }}}
     */
-  def size_10$12: Tailwind = Tailwind()
+  def size_10per12: Tailwind = Tailwind()
   /** {{{
     * .size-11/12 {
     *   width: 91.6667%;
@@ -10564,7 +10564,7 @@ object tw:
     * }
     * }}}
     */
-  def size_11$12: Tailwind = Tailwind()
+  def size_11per12: Tailwind = Tailwind()
   /** {{{
     * .size-full {
     *   width: 100%;
@@ -10855,105 +10855,105 @@ object tw:
     * }
     * }}}
     */
-  def h_1$2: Tailwind = Tailwind()
+  def h_1per2: Tailwind = Tailwind()
   /** {{{
     * .h-1/3 {
     *   height: 33.3333%;
     * }
     * }}}
     */
-  def h_1$3: Tailwind = Tailwind()
+  def h_1per3: Tailwind = Tailwind()
   /** {{{
     * .h-2/3 {
     *   height: 66.6667%;
     * }
     * }}}
     */
-  def h_2$3: Tailwind = Tailwind()
+  def h_2per3: Tailwind = Tailwind()
   /** {{{
     * .h-1/4 {
     *   height: 25%;
     * }
     * }}}
     */
-  def h_1$4: Tailwind = Tailwind()
+  def h_1per4: Tailwind = Tailwind()
   /** {{{
     * .h-2/4 {
     *   height: 50%;
     * }
     * }}}
     */
-  def h_2$4: Tailwind = Tailwind()
+  def h_2per4: Tailwind = Tailwind()
   /** {{{
     * .h-3/4 {
     *   height: 75%;
     * }
     * }}}
     */
-  def h_3$4: Tailwind = Tailwind()
+  def h_3per4: Tailwind = Tailwind()
   /** {{{
     * .h-1/5 {
     *   height: 20%;
     * }
     * }}}
     */
-  def h_1$5: Tailwind = Tailwind()
+  def h_1per5: Tailwind = Tailwind()
   /** {{{
     * .h-2/5 {
     *   height: 40%;
     * }
     * }}}
     */
-  def h_2$5: Tailwind = Tailwind()
+  def h_2per5: Tailwind = Tailwind()
   /** {{{
     * .h-3/5 {
     *   height: 60%;
     * }
     * }}}
     */
-  def h_3$5: Tailwind = Tailwind()
+  def h_3per5: Tailwind = Tailwind()
   /** {{{
     * .h-4/5 {
     *   height: 80%;
     * }
     * }}}
     */
-  def h_4$5: Tailwind = Tailwind()
+  def h_4per5: Tailwind = Tailwind()
   /** {{{
     * .h-1/6 {
     *   height: 16.6667%;
     * }
     * }}}
     */
-  def h_1$6: Tailwind = Tailwind()
+  def h_1per6: Tailwind = Tailwind()
   /** {{{
     * .h-2/6 {
     *   height: 33.3333%;
     * }
     * }}}
     */
-  def h_2$6: Tailwind = Tailwind()
+  def h_2per6: Tailwind = Tailwind()
   /** {{{
     * .h-3/6 {
     *   height: 50%;
     * }
     * }}}
     */
-  def h_3$6: Tailwind = Tailwind()
+  def h_3per6: Tailwind = Tailwind()
   /** {{{
     * .h-4/6 {
     *   height: 66.6667%;
     * }
     * }}}
     */
-  def h_4$6: Tailwind = Tailwind()
+  def h_4per6: Tailwind = Tailwind()
   /** {{{
     * .h-5/6 {
     *   height: 83.3333%;
     * }
     * }}}
     */
-  def h_5$6: Tailwind = Tailwind()
+  def h_5per6: Tailwind = Tailwind()
   /** {{{
     * .h-full {
     *   height: 100%;
@@ -11877,182 +11877,182 @@ object tw:
     * }
     * }}}
     */
-  def w_1$2: Tailwind = Tailwind()
+  def w_1per2: Tailwind = Tailwind()
   /** {{{
     * .w-1/3 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_1$3: Tailwind = Tailwind()
+  def w_1per3: Tailwind = Tailwind()
   /** {{{
     * .w-2/3 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_2$3: Tailwind = Tailwind()
+  def w_2per3: Tailwind = Tailwind()
   /** {{{
     * .w-1/4 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_1$4: Tailwind = Tailwind()
+  def w_1per4: Tailwind = Tailwind()
   /** {{{
     * .w-2/4 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_2$4: Tailwind = Tailwind()
+  def w_2per4: Tailwind = Tailwind()
   /** {{{
     * .w-3/4 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_3$4: Tailwind = Tailwind()
+  def w_3per4: Tailwind = Tailwind()
   /** {{{
     * .w-1/5 {
     *   width: 20%;
     * }
     * }}}
     */
-  def w_1$5: Tailwind = Tailwind()
+  def w_1per5: Tailwind = Tailwind()
   /** {{{
     * .w-2/5 {
     *   width: 40%;
     * }
     * }}}
     */
-  def w_2$5: Tailwind = Tailwind()
+  def w_2per5: Tailwind = Tailwind()
   /** {{{
     * .w-3/5 {
     *   width: 60%;
     * }
     * }}}
     */
-  def w_3$5: Tailwind = Tailwind()
+  def w_3per5: Tailwind = Tailwind()
   /** {{{
     * .w-4/5 {
     *   width: 80%;
     * }
     * }}}
     */
-  def w_4$5: Tailwind = Tailwind()
+  def w_4per5: Tailwind = Tailwind()
   /** {{{
     * .w-1/6 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_1$6: Tailwind = Tailwind()
+  def w_1per6: Tailwind = Tailwind()
   /** {{{
     * .w-2/6 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_2$6: Tailwind = Tailwind()
+  def w_2per6: Tailwind = Tailwind()
   /** {{{
     * .w-3/6 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_3$6: Tailwind = Tailwind()
+  def w_3per6: Tailwind = Tailwind()
   /** {{{
     * .w-4/6 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_4$6: Tailwind = Tailwind()
+  def w_4per6: Tailwind = Tailwind()
   /** {{{
     * .w-5/6 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_5$6: Tailwind = Tailwind()
+  def w_5per6: Tailwind = Tailwind()
   /** {{{
     * .w-1/12 {
     *   width: 8.33333%;
     * }
     * }}}
     */
-  def w_1$12: Tailwind = Tailwind()
+  def w_1per12: Tailwind = Tailwind()
   /** {{{
     * .w-2/12 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_2$12: Tailwind = Tailwind()
+  def w_2per12: Tailwind = Tailwind()
   /** {{{
     * .w-3/12 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_3$12: Tailwind = Tailwind()
+  def w_3per12: Tailwind = Tailwind()
   /** {{{
     * .w-4/12 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_4$12: Tailwind = Tailwind()
+  def w_4per12: Tailwind = Tailwind()
   /** {{{
     * .w-5/12 {
     *   width: 41.6667%;
     * }
     * }}}
     */
-  def w_5$12: Tailwind = Tailwind()
+  def w_5per12: Tailwind = Tailwind()
   /** {{{
     * .w-6/12 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_6$12: Tailwind = Tailwind()
+  def w_6per12: Tailwind = Tailwind()
   /** {{{
     * .w-7/12 {
     *   width: 58.3333%;
     * }
     * }}}
     */
-  def w_7$12: Tailwind = Tailwind()
+  def w_7per12: Tailwind = Tailwind()
   /** {{{
     * .w-8/12 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_8$12: Tailwind = Tailwind()
+  def w_8per12: Tailwind = Tailwind()
   /** {{{
     * .w-9/12 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_9$12: Tailwind = Tailwind()
+  def w_9per12: Tailwind = Tailwind()
   /** {{{
     * .w-10/12 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_10$12: Tailwind = Tailwind()
+  def w_10per12: Tailwind = Tailwind()
   /** {{{
     * .w-11/12 {
     *   width: 91.6667%;
     * }
     * }}}
     */
-  def w_11$12: Tailwind = Tailwind()
+  def w_11per12: Tailwind = Tailwind()
   /** {{{
     * .w-full {
     *   width: 100%;
@@ -13139,182 +13139,182 @@ object tw:
     * }
     * }}}
     */
-  def basis_1$2: Tailwind = Tailwind()
+  def basis_1per2: Tailwind = Tailwind()
   /** {{{
     * .basis-1/3 {
     *   flex-basis: 33.3333%;
     * }
     * }}}
     */
-  def basis_1$3: Tailwind = Tailwind()
+  def basis_1per3: Tailwind = Tailwind()
   /** {{{
     * .basis-2/3 {
     *   flex-basis: 66.6667%;
     * }
     * }}}
     */
-  def basis_2$3: Tailwind = Tailwind()
+  def basis_2per3: Tailwind = Tailwind()
   /** {{{
     * .basis-1/4 {
     *   flex-basis: 25%;
     * }
     * }}}
     */
-  def basis_1$4: Tailwind = Tailwind()
+  def basis_1per4: Tailwind = Tailwind()
   /** {{{
     * .basis-2/4 {
     *   flex-basis: 50%;
     * }
     * }}}
     */
-  def basis_2$4: Tailwind = Tailwind()
+  def basis_2per4: Tailwind = Tailwind()
   /** {{{
     * .basis-3/4 {
     *   flex-basis: 75%;
     * }
     * }}}
     */
-  def basis_3$4: Tailwind = Tailwind()
+  def basis_3per4: Tailwind = Tailwind()
   /** {{{
     * .basis-1/5 {
     *   flex-basis: 20%;
     * }
     * }}}
     */
-  def basis_1$5: Tailwind = Tailwind()
+  def basis_1per5: Tailwind = Tailwind()
   /** {{{
     * .basis-2/5 {
     *   flex-basis: 40%;
     * }
     * }}}
     */
-  def basis_2$5: Tailwind = Tailwind()
+  def basis_2per5: Tailwind = Tailwind()
   /** {{{
     * .basis-3/5 {
     *   flex-basis: 60%;
     * }
     * }}}
     */
-  def basis_3$5: Tailwind = Tailwind()
+  def basis_3per5: Tailwind = Tailwind()
   /** {{{
     * .basis-4/5 {
     *   flex-basis: 80%;
     * }
     * }}}
     */
-  def basis_4$5: Tailwind = Tailwind()
+  def basis_4per5: Tailwind = Tailwind()
   /** {{{
     * .basis-1/6 {
     *   flex-basis: 16.6667%;
     * }
     * }}}
     */
-  def basis_1$6: Tailwind = Tailwind()
+  def basis_1per6: Tailwind = Tailwind()
   /** {{{
     * .basis-2/6 {
     *   flex-basis: 33.3333%;
     * }
     * }}}
     */
-  def basis_2$6: Tailwind = Tailwind()
+  def basis_2per6: Tailwind = Tailwind()
   /** {{{
     * .basis-3/6 {
     *   flex-basis: 50%;
     * }
     * }}}
     */
-  def basis_3$6: Tailwind = Tailwind()
+  def basis_3per6: Tailwind = Tailwind()
   /** {{{
     * .basis-4/6 {
     *   flex-basis: 66.6667%;
     * }
     * }}}
     */
-  def basis_4$6: Tailwind = Tailwind()
+  def basis_4per6: Tailwind = Tailwind()
   /** {{{
     * .basis-5/6 {
     *   flex-basis: 83.3333%;
     * }
     * }}}
     */
-  def basis_5$6: Tailwind = Tailwind()
+  def basis_5per6: Tailwind = Tailwind()
   /** {{{
     * .basis-1/12 {
     *   flex-basis: 8.33333%;
     * }
     * }}}
     */
-  def basis_1$12: Tailwind = Tailwind()
+  def basis_1per12: Tailwind = Tailwind()
   /** {{{
     * .basis-2/12 {
     *   flex-basis: 16.6667%;
     * }
     * }}}
     */
-  def basis_2$12: Tailwind = Tailwind()
+  def basis_2per12: Tailwind = Tailwind()
   /** {{{
     * .basis-3/12 {
     *   flex-basis: 25%;
     * }
     * }}}
     */
-  def basis_3$12: Tailwind = Tailwind()
+  def basis_3per12: Tailwind = Tailwind()
   /** {{{
     * .basis-4/12 {
     *   flex-basis: 33.3333%;
     * }
     * }}}
     */
-  def basis_4$12: Tailwind = Tailwind()
+  def basis_4per12: Tailwind = Tailwind()
   /** {{{
     * .basis-5/12 {
     *   flex-basis: 41.6667%;
     * }
     * }}}
     */
-  def basis_5$12: Tailwind = Tailwind()
+  def basis_5per12: Tailwind = Tailwind()
   /** {{{
     * .basis-6/12 {
     *   flex-basis: 50%;
     * }
     * }}}
     */
-  def basis_6$12: Tailwind = Tailwind()
+  def basis_6per12: Tailwind = Tailwind()
   /** {{{
     * .basis-7/12 {
     *   flex-basis: 58.3333%;
     * }
     * }}}
     */
-  def basis_7$12: Tailwind = Tailwind()
+  def basis_7per12: Tailwind = Tailwind()
   /** {{{
     * .basis-8/12 {
     *   flex-basis: 66.6667%;
     * }
     * }}}
     */
-  def basis_8$12: Tailwind = Tailwind()
+  def basis_8per12: Tailwind = Tailwind()
   /** {{{
     * .basis-9/12 {
     *   flex-basis: 75%;
     * }
     * }}}
     */
-  def basis_9$12: Tailwind = Tailwind()
+  def basis_9per12: Tailwind = Tailwind()
   /** {{{
     * .basis-10/12 {
     *   flex-basis: 83.3333%;
     * }
     * }}}
     */
-  def basis_10$12: Tailwind = Tailwind()
+  def basis_10per12: Tailwind = Tailwind()
   /** {{{
     * .basis-11/12 {
     *   flex-basis: 91.6667%;
     * }
     * }}}
     */
-  def basis_11$12: Tailwind = Tailwind()
+  def basis_11per12: Tailwind = Tailwind()
   /** {{{
     * .basis-full {
     *   flex-basis: 100%;
@@ -15153,7 +15153,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_x_1$2: Tailwind = Tailwind()
+  def translate_x_1per2: Tailwind = Tailwind()
   /** {{{
     * .translate-x-1/3 {
     *   --tw-translate-x: 33.3333%;
@@ -15165,7 +15165,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_x_1$3: Tailwind = Tailwind()
+  def translate_x_1per3: Tailwind = Tailwind()
   /** {{{
     * .translate-x-2/3 {
     *   --tw-translate-x: 66.6667%;
@@ -15177,7 +15177,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_x_2$3: Tailwind = Tailwind()
+  def translate_x_2per3: Tailwind = Tailwind()
   /** {{{
     * .translate-x-1/4 {
     *   --tw-translate-x: 25%;
@@ -15189,7 +15189,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_x_1$4: Tailwind = Tailwind()
+  def translate_x_1per4: Tailwind = Tailwind()
   /** {{{
     * .translate-x-2/4 {
     *   --tw-translate-x: 50%;
@@ -15201,7 +15201,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_x_2$4: Tailwind = Tailwind()
+  def translate_x_2per4: Tailwind = Tailwind()
   /** {{{
     * .translate-x-3/4 {
     *   --tw-translate-x: 75%;
@@ -15213,7 +15213,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_x_3$4: Tailwind = Tailwind()
+  def translate_x_3per4: Tailwind = Tailwind()
   /** {{{
     * .translate-x-full {
     *   --tw-translate-x: 100%;
@@ -15405,32 +15405,32 @@ object tw:
     * 
     * }}}
     */
-  def _translate_x_1$2: Tailwind = Tailwind()
+  def _translate_x_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_1$3: Tailwind = Tailwind()
+  def _translate_x_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_2$3: Tailwind = Tailwind()
+  def _translate_x_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_1$4: Tailwind = Tailwind()
+  def _translate_x_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_2$4: Tailwind = Tailwind()
+  def _translate_x_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_3$4: Tailwind = Tailwind()
+  def _translate_x_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -15867,7 +15867,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_y_1$2: Tailwind = Tailwind()
+  def translate_y_1per2: Tailwind = Tailwind()
   /** {{{
     * .translate-y-1/3 {
     *   --tw-translate-y: 33.3333%;
@@ -15879,7 +15879,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_y_1$3: Tailwind = Tailwind()
+  def translate_y_1per3: Tailwind = Tailwind()
   /** {{{
     * .translate-y-2/3 {
     *   --tw-translate-y: 66.6667%;
@@ -15891,7 +15891,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_y_2$3: Tailwind = Tailwind()
+  def translate_y_2per3: Tailwind = Tailwind()
   /** {{{
     * .translate-y-1/4 {
     *   --tw-translate-y: 25%;
@@ -15903,7 +15903,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_y_1$4: Tailwind = Tailwind()
+  def translate_y_1per4: Tailwind = Tailwind()
   /** {{{
     * .translate-y-2/4 {
     *   --tw-translate-y: 50%;
@@ -15915,7 +15915,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_y_2$4: Tailwind = Tailwind()
+  def translate_y_2per4: Tailwind = Tailwind()
   /** {{{
     * .translate-y-3/4 {
     *   --tw-translate-y: 75%;
@@ -15927,7 +15927,7 @@ object tw:
     * }
     * }}}
     */
-  def translate_y_3$4: Tailwind = Tailwind()
+  def translate_y_3per4: Tailwind = Tailwind()
   /** {{{
     * .translate-y-full {
     *   --tw-translate-y: 100%;
@@ -16119,32 +16119,32 @@ object tw:
     * 
     * }}}
     */
-  def _translate_y_1$2: Tailwind = Tailwind()
+  def _translate_y_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_1$3: Tailwind = Tailwind()
+  def _translate_y_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_2$3: Tailwind = Tailwind()
+  def _translate_y_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_1$4: Tailwind = Tailwind()
+  def _translate_y_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_2$4: Tailwind = Tailwind()
+  def _translate_y_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_3$4: Tailwind = Tailwind()
+  def _translate_y_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -90670,42 +90670,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_1$2: Tailwind = Tailwind()
+  def inset_1per2: Tailwind = Tailwind()
   /** {{{
     * .inset-1/3 {
     *   inset: 33.3333%;
     * }
     * }}}
     */
-  def inset_1$3: Tailwind = Tailwind()
+  def inset_1per3: Tailwind = Tailwind()
   /** {{{
     * .inset-2/3 {
     *   inset: 66.6667%;
     * }
     * }}}
     */
-  def inset_2$3: Tailwind = Tailwind()
+  def inset_2per3: Tailwind = Tailwind()
   /** {{{
     * .inset-1/4 {
     *   inset: 25%;
     * }
     * }}}
     */
-  def inset_1$4: Tailwind = Tailwind()
+  def inset_1per4: Tailwind = Tailwind()
   /** {{{
     * .inset-2/4 {
     *   inset: 50%;
     * }
     * }}}
     */
-  def inset_2$4: Tailwind = Tailwind()
+  def inset_2per4: Tailwind = Tailwind()
   /** {{{
     * .inset-3/4 {
     *   inset: 75%;
     * }
     * }}}
     */
-  def inset_3$4: Tailwind = Tailwind()
+  def inset_3per4: Tailwind = Tailwind()
   /** {{{
     * .inset-full {
     *   inset: 100%;
@@ -90892,32 +90892,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _inset_1$2: Tailwind = Tailwind()
+  def _inset_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_1$3: Tailwind = Tailwind()
+  def _inset_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_2$3: Tailwind = Tailwind()
+  def _inset_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_1$4: Tailwind = Tailwind()
+  def _inset_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_2$4: Tailwind = Tailwind()
+  def _inset_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_3$4: Tailwind = Tailwind()
+  def _inset_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -91218,7 +91218,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_x_1$2: Tailwind = Tailwind()
+  def inset_x_1per2: Tailwind = Tailwind()
   /** {{{
     * .inset-x-1/3 {
     *   left: 33.3333%;
@@ -91226,7 +91226,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_x_1$3: Tailwind = Tailwind()
+  def inset_x_1per3: Tailwind = Tailwind()
   /** {{{
     * .inset-x-2/3 {
     *   left: 66.6667%;
@@ -91234,7 +91234,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_x_2$3: Tailwind = Tailwind()
+  def inset_x_2per3: Tailwind = Tailwind()
   /** {{{
     * .inset-x-1/4 {
     *   left: 25%;
@@ -91242,7 +91242,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_x_1$4: Tailwind = Tailwind()
+  def inset_x_1per4: Tailwind = Tailwind()
   /** {{{
     * .inset-x-2/4 {
     *   left: 50%;
@@ -91250,7 +91250,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_x_2$4: Tailwind = Tailwind()
+  def inset_x_2per4: Tailwind = Tailwind()
   /** {{{
     * .inset-x-3/4 {
     *   left: 75%;
@@ -91258,7 +91258,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_x_3$4: Tailwind = Tailwind()
+  def inset_x_3per4: Tailwind = Tailwind()
   /** {{{
     * .inset-x-full {
     *   left: 100%;
@@ -91446,32 +91446,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _inset_x_1$2: Tailwind = Tailwind()
+  def _inset_x_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_1$3: Tailwind = Tailwind()
+  def _inset_x_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_2$3: Tailwind = Tailwind()
+  def _inset_x_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_1$4: Tailwind = Tailwind()
+  def _inset_x_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_2$4: Tailwind = Tailwind()
+  def _inset_x_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_x_3$4: Tailwind = Tailwind()
+  def _inset_x_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -91772,7 +91772,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_y_1$2: Tailwind = Tailwind()
+  def inset_y_1per2: Tailwind = Tailwind()
   /** {{{
     * .inset-y-1/3 {
     *   top: 33.3333%;
@@ -91780,7 +91780,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_y_1$3: Tailwind = Tailwind()
+  def inset_y_1per3: Tailwind = Tailwind()
   /** {{{
     * .inset-y-2/3 {
     *   top: 66.6667%;
@@ -91788,7 +91788,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_y_2$3: Tailwind = Tailwind()
+  def inset_y_2per3: Tailwind = Tailwind()
   /** {{{
     * .inset-y-1/4 {
     *   top: 25%;
@@ -91796,7 +91796,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_y_1$4: Tailwind = Tailwind()
+  def inset_y_1per4: Tailwind = Tailwind()
   /** {{{
     * .inset-y-2/4 {
     *   top: 50%;
@@ -91804,7 +91804,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_y_2$4: Tailwind = Tailwind()
+  def inset_y_2per4: Tailwind = Tailwind()
   /** {{{
     * .inset-y-3/4 {
     *   top: 75%;
@@ -91812,7 +91812,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def inset_y_3$4: Tailwind = Tailwind()
+  def inset_y_3per4: Tailwind = Tailwind()
   /** {{{
     * .inset-y-full {
     *   top: 100%;
@@ -92000,32 +92000,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _inset_y_1$2: Tailwind = Tailwind()
+  def _inset_y_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_1$3: Tailwind = Tailwind()
+  def _inset_y_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_2$3: Tailwind = Tailwind()
+  def _inset_y_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_1$4: Tailwind = Tailwind()
+  def _inset_y_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_2$4: Tailwind = Tailwind()
+  def _inset_y_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _inset_y_3$4: Tailwind = Tailwind()
+  def _inset_y_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -92289,42 +92289,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def start_1$2: Tailwind = Tailwind()
+  def start_1per2: Tailwind = Tailwind()
   /** {{{
     * .start-1/3 {
     *   inset-inline-start: 33.3333%;
     * }
     * }}}
     */
-  def start_1$3: Tailwind = Tailwind()
+  def start_1per3: Tailwind = Tailwind()
   /** {{{
     * .start-2/3 {
     *   inset-inline-start: 66.6667%;
     * }
     * }}}
     */
-  def start_2$3: Tailwind = Tailwind()
+  def start_2per3: Tailwind = Tailwind()
   /** {{{
     * .start-1/4 {
     *   inset-inline-start: 25%;
     * }
     * }}}
     */
-  def start_1$4: Tailwind = Tailwind()
+  def start_1per4: Tailwind = Tailwind()
   /** {{{
     * .start-2/4 {
     *   inset-inline-start: 50%;
     * }
     * }}}
     */
-  def start_2$4: Tailwind = Tailwind()
+  def start_2per4: Tailwind = Tailwind()
   /** {{{
     * .start-3/4 {
     *   inset-inline-start: 75%;
     * }
     * }}}
     */
-  def start_3$4: Tailwind = Tailwind()
+  def start_3per4: Tailwind = Tailwind()
   /** {{{
     * .start-full {
     *   inset-inline-start: 100%;
@@ -92511,32 +92511,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _start_1$2: Tailwind = Tailwind()
+  def _start_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_1$3: Tailwind = Tailwind()
+  def _start_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_2$3: Tailwind = Tailwind()
+  def _start_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_1$4: Tailwind = Tailwind()
+  def _start_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_2$4: Tailwind = Tailwind()
+  def _start_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _start_3$4: Tailwind = Tailwind()
+  def _start_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -92800,42 +92800,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def end_1$2: Tailwind = Tailwind()
+  def end_1per2: Tailwind = Tailwind()
   /** {{{
     * .end-1/3 {
     *   inset-inline-end: 33.3333%;
     * }
     * }}}
     */
-  def end_1$3: Tailwind = Tailwind()
+  def end_1per3: Tailwind = Tailwind()
   /** {{{
     * .end-2/3 {
     *   inset-inline-end: 66.6667%;
     * }
     * }}}
     */
-  def end_2$3: Tailwind = Tailwind()
+  def end_2per3: Tailwind = Tailwind()
   /** {{{
     * .end-1/4 {
     *   inset-inline-end: 25%;
     * }
     * }}}
     */
-  def end_1$4: Tailwind = Tailwind()
+  def end_1per4: Tailwind = Tailwind()
   /** {{{
     * .end-2/4 {
     *   inset-inline-end: 50%;
     * }
     * }}}
     */
-  def end_2$4: Tailwind = Tailwind()
+  def end_2per4: Tailwind = Tailwind()
   /** {{{
     * .end-3/4 {
     *   inset-inline-end: 75%;
     * }
     * }}}
     */
-  def end_3$4: Tailwind = Tailwind()
+  def end_3per4: Tailwind = Tailwind()
   /** {{{
     * .end-full {
     *   inset-inline-end: 100%;
@@ -93022,32 +93022,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _end_1$2: Tailwind = Tailwind()
+  def _end_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_1$3: Tailwind = Tailwind()
+  def _end_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_2$3: Tailwind = Tailwind()
+  def _end_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_1$4: Tailwind = Tailwind()
+  def _end_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_2$4: Tailwind = Tailwind()
+  def _end_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _end_3$4: Tailwind = Tailwind()
+  def _end_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -93311,42 +93311,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def top_1$2: Tailwind = Tailwind()
+  def top_1per2: Tailwind = Tailwind()
   /** {{{
     * .top-1/3 {
     *   top: 33.3333%;
     * }
     * }}}
     */
-  def top_1$3: Tailwind = Tailwind()
+  def top_1per3: Tailwind = Tailwind()
   /** {{{
     * .top-2/3 {
     *   top: 66.6667%;
     * }
     * }}}
     */
-  def top_2$3: Tailwind = Tailwind()
+  def top_2per3: Tailwind = Tailwind()
   /** {{{
     * .top-1/4 {
     *   top: 25%;
     * }
     * }}}
     */
-  def top_1$4: Tailwind = Tailwind()
+  def top_1per4: Tailwind = Tailwind()
   /** {{{
     * .top-2/4 {
     *   top: 50%;
     * }
     * }}}
     */
-  def top_2$4: Tailwind = Tailwind()
+  def top_2per4: Tailwind = Tailwind()
   /** {{{
     * .top-3/4 {
     *   top: 75%;
     * }
     * }}}
     */
-  def top_3$4: Tailwind = Tailwind()
+  def top_3per4: Tailwind = Tailwind()
   /** {{{
     * .top-full {
     *   top: 100%;
@@ -93533,32 +93533,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _top_1$2: Tailwind = Tailwind()
+  def _top_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_1$3: Tailwind = Tailwind()
+  def _top_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_2$3: Tailwind = Tailwind()
+  def _top_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_1$4: Tailwind = Tailwind()
+  def _top_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_2$4: Tailwind = Tailwind()
+  def _top_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _top_3$4: Tailwind = Tailwind()
+  def _top_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -93822,42 +93822,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def right_1$2: Tailwind = Tailwind()
+  def right_1per2: Tailwind = Tailwind()
   /** {{{
     * .right-1/3 {
     *   right: 33.3333%;
     * }
     * }}}
     */
-  def right_1$3: Tailwind = Tailwind()
+  def right_1per3: Tailwind = Tailwind()
   /** {{{
     * .right-2/3 {
     *   right: 66.6667%;
     * }
     * }}}
     */
-  def right_2$3: Tailwind = Tailwind()
+  def right_2per3: Tailwind = Tailwind()
   /** {{{
     * .right-1/4 {
     *   right: 25%;
     * }
     * }}}
     */
-  def right_1$4: Tailwind = Tailwind()
+  def right_1per4: Tailwind = Tailwind()
   /** {{{
     * .right-2/4 {
     *   right: 50%;
     * }
     * }}}
     */
-  def right_2$4: Tailwind = Tailwind()
+  def right_2per4: Tailwind = Tailwind()
   /** {{{
     * .right-3/4 {
     *   right: 75%;
     * }
     * }}}
     */
-  def right_3$4: Tailwind = Tailwind()
+  def right_3per4: Tailwind = Tailwind()
   /** {{{
     * .right-full {
     *   right: 100%;
@@ -94044,32 +94044,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _right_1$2: Tailwind = Tailwind()
+  def _right_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_1$3: Tailwind = Tailwind()
+  def _right_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_2$3: Tailwind = Tailwind()
+  def _right_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_1$4: Tailwind = Tailwind()
+  def _right_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_2$4: Tailwind = Tailwind()
+  def _right_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _right_3$4: Tailwind = Tailwind()
+  def _right_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -94333,42 +94333,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def bottom_1$2: Tailwind = Tailwind()
+  def bottom_1per2: Tailwind = Tailwind()
   /** {{{
     * .bottom-1/3 {
     *   bottom: 33.3333%;
     * }
     * }}}
     */
-  def bottom_1$3: Tailwind = Tailwind()
+  def bottom_1per3: Tailwind = Tailwind()
   /** {{{
     * .bottom-2/3 {
     *   bottom: 66.6667%;
     * }
     * }}}
     */
-  def bottom_2$3: Tailwind = Tailwind()
+  def bottom_2per3: Tailwind = Tailwind()
   /** {{{
     * .bottom-1/4 {
     *   bottom: 25%;
     * }
     * }}}
     */
-  def bottom_1$4: Tailwind = Tailwind()
+  def bottom_1per4: Tailwind = Tailwind()
   /** {{{
     * .bottom-2/4 {
     *   bottom: 50%;
     * }
     * }}}
     */
-  def bottom_2$4: Tailwind = Tailwind()
+  def bottom_2per4: Tailwind = Tailwind()
   /** {{{
     * .bottom-3/4 {
     *   bottom: 75%;
     * }
     * }}}
     */
-  def bottom_3$4: Tailwind = Tailwind()
+  def bottom_3per4: Tailwind = Tailwind()
   /** {{{
     * .bottom-full {
     *   bottom: 100%;
@@ -94555,32 +94555,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _bottom_1$2: Tailwind = Tailwind()
+  def _bottom_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_1$3: Tailwind = Tailwind()
+  def _bottom_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_2$3: Tailwind = Tailwind()
+  def _bottom_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_1$4: Tailwind = Tailwind()
+  def _bottom_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_2$4: Tailwind = Tailwind()
+  def _bottom_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _bottom_3$4: Tailwind = Tailwind()
+  def _bottom_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -94844,42 +94844,42 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def left_1$2: Tailwind = Tailwind()
+  def left_1per2: Tailwind = Tailwind()
   /** {{{
     * .left-1/3 {
     *   left: 33.3333%;
     * }
     * }}}
     */
-  def left_1$3: Tailwind = Tailwind()
+  def left_1per3: Tailwind = Tailwind()
   /** {{{
     * .left-2/3 {
     *   left: 66.6667%;
     * }
     * }}}
     */
-  def left_2$3: Tailwind = Tailwind()
+  def left_2per3: Tailwind = Tailwind()
   /** {{{
     * .left-1/4 {
     *   left: 25%;
     * }
     * }}}
     */
-  def left_1$4: Tailwind = Tailwind()
+  def left_1per4: Tailwind = Tailwind()
   /** {{{
     * .left-2/4 {
     *   left: 50%;
     * }
     * }}}
     */
-  def left_2$4: Tailwind = Tailwind()
+  def left_2per4: Tailwind = Tailwind()
   /** {{{
     * .left-3/4 {
     *   left: 75%;
     * }
     * }}}
     */
-  def left_3$4: Tailwind = Tailwind()
+  def left_3per4: Tailwind = Tailwind()
   /** {{{
     * .left-full {
     *   left: 100%;
@@ -95066,32 +95066,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _left_1$2: Tailwind = Tailwind()
+  def _left_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_1$3: Tailwind = Tailwind()
+  def _left_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_2$3: Tailwind = Tailwind()
+  def _left_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_1$4: Tailwind = Tailwind()
+  def _left_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_2$4: Tailwind = Tailwind()
+  def _left_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _left_3$4: Tailwind = Tailwind()
+  def _left_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -100497,7 +100497,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_1$2: Tailwind = Tailwind()
+  def size_1per2: Tailwind = Tailwind()
   /** {{{
     * .size-1/3 {
     *   width: 33.3333%;
@@ -100505,7 +100505,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_1$3: Tailwind = Tailwind()
+  def size_1per3: Tailwind = Tailwind()
   /** {{{
     * .size-2/3 {
     *   width: 66.6667%;
@@ -100513,7 +100513,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_2$3: Tailwind = Tailwind()
+  def size_2per3: Tailwind = Tailwind()
   /** {{{
     * .size-1/4 {
     *   width: 25%;
@@ -100521,7 +100521,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_1$4: Tailwind = Tailwind()
+  def size_1per4: Tailwind = Tailwind()
   /** {{{
     * .size-2/4 {
     *   width: 50%;
@@ -100529,7 +100529,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_2$4: Tailwind = Tailwind()
+  def size_2per4: Tailwind = Tailwind()
   /** {{{
     * .size-3/4 {
     *   width: 75%;
@@ -100537,7 +100537,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_3$4: Tailwind = Tailwind()
+  def size_3per4: Tailwind = Tailwind()
   /** {{{
     * .size-1/5 {
     *   width: 20%;
@@ -100545,7 +100545,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_1$5: Tailwind = Tailwind()
+  def size_1per5: Tailwind = Tailwind()
   /** {{{
     * .size-2/5 {
     *   width: 40%;
@@ -100553,7 +100553,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_2$5: Tailwind = Tailwind()
+  def size_2per5: Tailwind = Tailwind()
   /** {{{
     * .size-3/5 {
     *   width: 60%;
@@ -100561,7 +100561,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_3$5: Tailwind = Tailwind()
+  def size_3per5: Tailwind = Tailwind()
   /** {{{
     * .size-4/5 {
     *   width: 80%;
@@ -100569,7 +100569,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_4$5: Tailwind = Tailwind()
+  def size_4per5: Tailwind = Tailwind()
   /** {{{
     * .size-1/6 {
     *   width: 16.6667%;
@@ -100577,7 +100577,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_1$6: Tailwind = Tailwind()
+  def size_1per6: Tailwind = Tailwind()
   /** {{{
     * .size-2/6 {
     *   width: 33.3333%;
@@ -100585,7 +100585,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_2$6: Tailwind = Tailwind()
+  def size_2per6: Tailwind = Tailwind()
   /** {{{
     * .size-3/6 {
     *   width: 50%;
@@ -100593,7 +100593,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_3$6: Tailwind = Tailwind()
+  def size_3per6: Tailwind = Tailwind()
   /** {{{
     * .size-4/6 {
     *   width: 66.6667%;
@@ -100601,7 +100601,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_4$6: Tailwind = Tailwind()
+  def size_4per6: Tailwind = Tailwind()
   /** {{{
     * .size-5/6 {
     *   width: 83.3333%;
@@ -100609,7 +100609,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_5$6: Tailwind = Tailwind()
+  def size_5per6: Tailwind = Tailwind()
   /** {{{
     * .size-1/12 {
     *   width: 8.33333%;
@@ -100617,7 +100617,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_1$12: Tailwind = Tailwind()
+  def size_1per12: Tailwind = Tailwind()
   /** {{{
     * .size-2/12 {
     *   width: 16.6667%;
@@ -100625,7 +100625,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_2$12: Tailwind = Tailwind()
+  def size_2per12: Tailwind = Tailwind()
   /** {{{
     * .size-3/12 {
     *   width: 25%;
@@ -100633,7 +100633,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_3$12: Tailwind = Tailwind()
+  def size_3per12: Tailwind = Tailwind()
   /** {{{
     * .size-4/12 {
     *   width: 33.3333%;
@@ -100641,7 +100641,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_4$12: Tailwind = Tailwind()
+  def size_4per12: Tailwind = Tailwind()
   /** {{{
     * .size-5/12 {
     *   width: 41.6667%;
@@ -100649,7 +100649,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_5$12: Tailwind = Tailwind()
+  def size_5per12: Tailwind = Tailwind()
   /** {{{
     * .size-6/12 {
     *   width: 50%;
@@ -100657,7 +100657,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_6$12: Tailwind = Tailwind()
+  def size_6per12: Tailwind = Tailwind()
   /** {{{
     * .size-7/12 {
     *   width: 58.3333%;
@@ -100665,7 +100665,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_7$12: Tailwind = Tailwind()
+  def size_7per12: Tailwind = Tailwind()
   /** {{{
     * .size-8/12 {
     *   width: 66.6667%;
@@ -100673,7 +100673,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_8$12: Tailwind = Tailwind()
+  def size_8per12: Tailwind = Tailwind()
   /** {{{
     * .size-9/12 {
     *   width: 75%;
@@ -100681,7 +100681,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_9$12: Tailwind = Tailwind()
+  def size_9per12: Tailwind = Tailwind()
   /** {{{
     * .size-10/12 {
     *   width: 83.3333%;
@@ -100689,7 +100689,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_10$12: Tailwind = Tailwind()
+  def size_10per12: Tailwind = Tailwind()
   /** {{{
     * .size-11/12 {
     *   width: 91.6667%;
@@ -100697,7 +100697,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def size_11$12: Tailwind = Tailwind()
+  def size_11per12: Tailwind = Tailwind()
   /** {{{
     * .size-full {
     *   width: 100%;
@@ -100988,105 +100988,105 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def h_1$2: Tailwind = Tailwind()
+  def h_1per2: Tailwind = Tailwind()
   /** {{{
     * .h-1/3 {
     *   height: 33.3333%;
     * }
     * }}}
     */
-  def h_1$3: Tailwind = Tailwind()
+  def h_1per3: Tailwind = Tailwind()
   /** {{{
     * .h-2/3 {
     *   height: 66.6667%;
     * }
     * }}}
     */
-  def h_2$3: Tailwind = Tailwind()
+  def h_2per3: Tailwind = Tailwind()
   /** {{{
     * .h-1/4 {
     *   height: 25%;
     * }
     * }}}
     */
-  def h_1$4: Tailwind = Tailwind()
+  def h_1per4: Tailwind = Tailwind()
   /** {{{
     * .h-2/4 {
     *   height: 50%;
     * }
     * }}}
     */
-  def h_2$4: Tailwind = Tailwind()
+  def h_2per4: Tailwind = Tailwind()
   /** {{{
     * .h-3/4 {
     *   height: 75%;
     * }
     * }}}
     */
-  def h_3$4: Tailwind = Tailwind()
+  def h_3per4: Tailwind = Tailwind()
   /** {{{
     * .h-1/5 {
     *   height: 20%;
     * }
     * }}}
     */
-  def h_1$5: Tailwind = Tailwind()
+  def h_1per5: Tailwind = Tailwind()
   /** {{{
     * .h-2/5 {
     *   height: 40%;
     * }
     * }}}
     */
-  def h_2$5: Tailwind = Tailwind()
+  def h_2per5: Tailwind = Tailwind()
   /** {{{
     * .h-3/5 {
     *   height: 60%;
     * }
     * }}}
     */
-  def h_3$5: Tailwind = Tailwind()
+  def h_3per5: Tailwind = Tailwind()
   /** {{{
     * .h-4/5 {
     *   height: 80%;
     * }
     * }}}
     */
-  def h_4$5: Tailwind = Tailwind()
+  def h_4per5: Tailwind = Tailwind()
   /** {{{
     * .h-1/6 {
     *   height: 16.6667%;
     * }
     * }}}
     */
-  def h_1$6: Tailwind = Tailwind()
+  def h_1per6: Tailwind = Tailwind()
   /** {{{
     * .h-2/6 {
     *   height: 33.3333%;
     * }
     * }}}
     */
-  def h_2$6: Tailwind = Tailwind()
+  def h_2per6: Tailwind = Tailwind()
   /** {{{
     * .h-3/6 {
     *   height: 50%;
     * }
     * }}}
     */
-  def h_3$6: Tailwind = Tailwind()
+  def h_3per6: Tailwind = Tailwind()
   /** {{{
     * .h-4/6 {
     *   height: 66.6667%;
     * }
     * }}}
     */
-  def h_4$6: Tailwind = Tailwind()
+  def h_4per6: Tailwind = Tailwind()
   /** {{{
     * .h-5/6 {
     *   height: 83.3333%;
     * }
     * }}}
     */
-  def h_5$6: Tailwind = Tailwind()
+  def h_5per6: Tailwind = Tailwind()
   /** {{{
     * .h-full {
     *   height: 100%;
@@ -102010,182 +102010,182 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def w_1$2: Tailwind = Tailwind()
+  def w_1per2: Tailwind = Tailwind()
   /** {{{
     * .w-1/3 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_1$3: Tailwind = Tailwind()
+  def w_1per3: Tailwind = Tailwind()
   /** {{{
     * .w-2/3 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_2$3: Tailwind = Tailwind()
+  def w_2per3: Tailwind = Tailwind()
   /** {{{
     * .w-1/4 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_1$4: Tailwind = Tailwind()
+  def w_1per4: Tailwind = Tailwind()
   /** {{{
     * .w-2/4 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_2$4: Tailwind = Tailwind()
+  def w_2per4: Tailwind = Tailwind()
   /** {{{
     * .w-3/4 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_3$4: Tailwind = Tailwind()
+  def w_3per4: Tailwind = Tailwind()
   /** {{{
     * .w-1/5 {
     *   width: 20%;
     * }
     * }}}
     */
-  def w_1$5: Tailwind = Tailwind()
+  def w_1per5: Tailwind = Tailwind()
   /** {{{
     * .w-2/5 {
     *   width: 40%;
     * }
     * }}}
     */
-  def w_2$5: Tailwind = Tailwind()
+  def w_2per5: Tailwind = Tailwind()
   /** {{{
     * .w-3/5 {
     *   width: 60%;
     * }
     * }}}
     */
-  def w_3$5: Tailwind = Tailwind()
+  def w_3per5: Tailwind = Tailwind()
   /** {{{
     * .w-4/5 {
     *   width: 80%;
     * }
     * }}}
     */
-  def w_4$5: Tailwind = Tailwind()
+  def w_4per5: Tailwind = Tailwind()
   /** {{{
     * .w-1/6 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_1$6: Tailwind = Tailwind()
+  def w_1per6: Tailwind = Tailwind()
   /** {{{
     * .w-2/6 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_2$6: Tailwind = Tailwind()
+  def w_2per6: Tailwind = Tailwind()
   /** {{{
     * .w-3/6 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_3$6: Tailwind = Tailwind()
+  def w_3per6: Tailwind = Tailwind()
   /** {{{
     * .w-4/6 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_4$6: Tailwind = Tailwind()
+  def w_4per6: Tailwind = Tailwind()
   /** {{{
     * .w-5/6 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_5$6: Tailwind = Tailwind()
+  def w_5per6: Tailwind = Tailwind()
   /** {{{
     * .w-1/12 {
     *   width: 8.33333%;
     * }
     * }}}
     */
-  def w_1$12: Tailwind = Tailwind()
+  def w_1per12: Tailwind = Tailwind()
   /** {{{
     * .w-2/12 {
     *   width: 16.6667%;
     * }
     * }}}
     */
-  def w_2$12: Tailwind = Tailwind()
+  def w_2per12: Tailwind = Tailwind()
   /** {{{
     * .w-3/12 {
     *   width: 25%;
     * }
     * }}}
     */
-  def w_3$12: Tailwind = Tailwind()
+  def w_3per12: Tailwind = Tailwind()
   /** {{{
     * .w-4/12 {
     *   width: 33.3333%;
     * }
     * }}}
     */
-  def w_4$12: Tailwind = Tailwind()
+  def w_4per12: Tailwind = Tailwind()
   /** {{{
     * .w-5/12 {
     *   width: 41.6667%;
     * }
     * }}}
     */
-  def w_5$12: Tailwind = Tailwind()
+  def w_5per12: Tailwind = Tailwind()
   /** {{{
     * .w-6/12 {
     *   width: 50%;
     * }
     * }}}
     */
-  def w_6$12: Tailwind = Tailwind()
+  def w_6per12: Tailwind = Tailwind()
   /** {{{
     * .w-7/12 {
     *   width: 58.3333%;
     * }
     * }}}
     */
-  def w_7$12: Tailwind = Tailwind()
+  def w_7per12: Tailwind = Tailwind()
   /** {{{
     * .w-8/12 {
     *   width: 66.6667%;
     * }
     * }}}
     */
-  def w_8$12: Tailwind = Tailwind()
+  def w_8per12: Tailwind = Tailwind()
   /** {{{
     * .w-9/12 {
     *   width: 75%;
     * }
     * }}}
     */
-  def w_9$12: Tailwind = Tailwind()
+  def w_9per12: Tailwind = Tailwind()
   /** {{{
     * .w-10/12 {
     *   width: 83.3333%;
     * }
     * }}}
     */
-  def w_10$12: Tailwind = Tailwind()
+  def w_10per12: Tailwind = Tailwind()
   /** {{{
     * .w-11/12 {
     *   width: 91.6667%;
     * }
     * }}}
     */
-  def w_11$12: Tailwind = Tailwind()
+  def w_11per12: Tailwind = Tailwind()
   /** {{{
     * .w-full {
     *   width: 100%;
@@ -103272,182 +103272,182 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def basis_1$2: Tailwind = Tailwind()
+  def basis_1per2: Tailwind = Tailwind()
   /** {{{
     * .basis-1/3 {
     *   flex-basis: 33.3333%;
     * }
     * }}}
     */
-  def basis_1$3: Tailwind = Tailwind()
+  def basis_1per3: Tailwind = Tailwind()
   /** {{{
     * .basis-2/3 {
     *   flex-basis: 66.6667%;
     * }
     * }}}
     */
-  def basis_2$3: Tailwind = Tailwind()
+  def basis_2per3: Tailwind = Tailwind()
   /** {{{
     * .basis-1/4 {
     *   flex-basis: 25%;
     * }
     * }}}
     */
-  def basis_1$4: Tailwind = Tailwind()
+  def basis_1per4: Tailwind = Tailwind()
   /** {{{
     * .basis-2/4 {
     *   flex-basis: 50%;
     * }
     * }}}
     */
-  def basis_2$4: Tailwind = Tailwind()
+  def basis_2per4: Tailwind = Tailwind()
   /** {{{
     * .basis-3/4 {
     *   flex-basis: 75%;
     * }
     * }}}
     */
-  def basis_3$4: Tailwind = Tailwind()
+  def basis_3per4: Tailwind = Tailwind()
   /** {{{
     * .basis-1/5 {
     *   flex-basis: 20%;
     * }
     * }}}
     */
-  def basis_1$5: Tailwind = Tailwind()
+  def basis_1per5: Tailwind = Tailwind()
   /** {{{
     * .basis-2/5 {
     *   flex-basis: 40%;
     * }
     * }}}
     */
-  def basis_2$5: Tailwind = Tailwind()
+  def basis_2per5: Tailwind = Tailwind()
   /** {{{
     * .basis-3/5 {
     *   flex-basis: 60%;
     * }
     * }}}
     */
-  def basis_3$5: Tailwind = Tailwind()
+  def basis_3per5: Tailwind = Tailwind()
   /** {{{
     * .basis-4/5 {
     *   flex-basis: 80%;
     * }
     * }}}
     */
-  def basis_4$5: Tailwind = Tailwind()
+  def basis_4per5: Tailwind = Tailwind()
   /** {{{
     * .basis-1/6 {
     *   flex-basis: 16.6667%;
     * }
     * }}}
     */
-  def basis_1$6: Tailwind = Tailwind()
+  def basis_1per6: Tailwind = Tailwind()
   /** {{{
     * .basis-2/6 {
     *   flex-basis: 33.3333%;
     * }
     * }}}
     */
-  def basis_2$6: Tailwind = Tailwind()
+  def basis_2per6: Tailwind = Tailwind()
   /** {{{
     * .basis-3/6 {
     *   flex-basis: 50%;
     * }
     * }}}
     */
-  def basis_3$6: Tailwind = Tailwind()
+  def basis_3per6: Tailwind = Tailwind()
   /** {{{
     * .basis-4/6 {
     *   flex-basis: 66.6667%;
     * }
     * }}}
     */
-  def basis_4$6: Tailwind = Tailwind()
+  def basis_4per6: Tailwind = Tailwind()
   /** {{{
     * .basis-5/6 {
     *   flex-basis: 83.3333%;
     * }
     * }}}
     */
-  def basis_5$6: Tailwind = Tailwind()
+  def basis_5per6: Tailwind = Tailwind()
   /** {{{
     * .basis-1/12 {
     *   flex-basis: 8.33333%;
     * }
     * }}}
     */
-  def basis_1$12: Tailwind = Tailwind()
+  def basis_1per12: Tailwind = Tailwind()
   /** {{{
     * .basis-2/12 {
     *   flex-basis: 16.6667%;
     * }
     * }}}
     */
-  def basis_2$12: Tailwind = Tailwind()
+  def basis_2per12: Tailwind = Tailwind()
   /** {{{
     * .basis-3/12 {
     *   flex-basis: 25%;
     * }
     * }}}
     */
-  def basis_3$12: Tailwind = Tailwind()
+  def basis_3per12: Tailwind = Tailwind()
   /** {{{
     * .basis-4/12 {
     *   flex-basis: 33.3333%;
     * }
     * }}}
     */
-  def basis_4$12: Tailwind = Tailwind()
+  def basis_4per12: Tailwind = Tailwind()
   /** {{{
     * .basis-5/12 {
     *   flex-basis: 41.6667%;
     * }
     * }}}
     */
-  def basis_5$12: Tailwind = Tailwind()
+  def basis_5per12: Tailwind = Tailwind()
   /** {{{
     * .basis-6/12 {
     *   flex-basis: 50%;
     * }
     * }}}
     */
-  def basis_6$12: Tailwind = Tailwind()
+  def basis_6per12: Tailwind = Tailwind()
   /** {{{
     * .basis-7/12 {
     *   flex-basis: 58.3333%;
     * }
     * }}}
     */
-  def basis_7$12: Tailwind = Tailwind()
+  def basis_7per12: Tailwind = Tailwind()
   /** {{{
     * .basis-8/12 {
     *   flex-basis: 66.6667%;
     * }
     * }}}
     */
-  def basis_8$12: Tailwind = Tailwind()
+  def basis_8per12: Tailwind = Tailwind()
   /** {{{
     * .basis-9/12 {
     *   flex-basis: 75%;
     * }
     * }}}
     */
-  def basis_9$12: Tailwind = Tailwind()
+  def basis_9per12: Tailwind = Tailwind()
   /** {{{
     * .basis-10/12 {
     *   flex-basis: 83.3333%;
     * }
     * }}}
     */
-  def basis_10$12: Tailwind = Tailwind()
+  def basis_10per12: Tailwind = Tailwind()
   /** {{{
     * .basis-11/12 {
     *   flex-basis: 91.6667%;
     * }
     * }}}
     */
-  def basis_11$12: Tailwind = Tailwind()
+  def basis_11per12: Tailwind = Tailwind()
   /** {{{
     * .basis-full {
     *   flex-basis: 100%;
@@ -105286,7 +105286,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_x_1$2: Tailwind = Tailwind()
+  def translate_x_1per2: Tailwind = Tailwind()
   /** {{{
     * .translate-x-1/3 {
     *   --tw-translate-x: 33.3333%;
@@ -105298,7 +105298,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_x_1$3: Tailwind = Tailwind()
+  def translate_x_1per3: Tailwind = Tailwind()
   /** {{{
     * .translate-x-2/3 {
     *   --tw-translate-x: 66.6667%;
@@ -105310,7 +105310,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_x_2$3: Tailwind = Tailwind()
+  def translate_x_2per3: Tailwind = Tailwind()
   /** {{{
     * .translate-x-1/4 {
     *   --tw-translate-x: 25%;
@@ -105322,7 +105322,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_x_1$4: Tailwind = Tailwind()
+  def translate_x_1per4: Tailwind = Tailwind()
   /** {{{
     * .translate-x-2/4 {
     *   --tw-translate-x: 50%;
@@ -105334,7 +105334,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_x_2$4: Tailwind = Tailwind()
+  def translate_x_2per4: Tailwind = Tailwind()
   /** {{{
     * .translate-x-3/4 {
     *   --tw-translate-x: 75%;
@@ -105346,7 +105346,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_x_3$4: Tailwind = Tailwind()
+  def translate_x_3per4: Tailwind = Tailwind()
   /** {{{
     * .translate-x-full {
     *   --tw-translate-x: 100%;
@@ -105538,32 +105538,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _translate_x_1$2: Tailwind = Tailwind()
+  def _translate_x_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_1$3: Tailwind = Tailwind()
+  def _translate_x_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_2$3: Tailwind = Tailwind()
+  def _translate_x_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_1$4: Tailwind = Tailwind()
+  def _translate_x_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_2$4: Tailwind = Tailwind()
+  def _translate_x_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_x_3$4: Tailwind = Tailwind()
+  def _translate_x_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -106000,7 +106000,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_y_1$2: Tailwind = Tailwind()
+  def translate_y_1per2: Tailwind = Tailwind()
   /** {{{
     * .translate-y-1/3 {
     *   --tw-translate-y: 33.3333%;
@@ -106012,7 +106012,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_y_1$3: Tailwind = Tailwind()
+  def translate_y_1per3: Tailwind = Tailwind()
   /** {{{
     * .translate-y-2/3 {
     *   --tw-translate-y: 66.6667%;
@@ -106024,7 +106024,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_y_2$3: Tailwind = Tailwind()
+  def translate_y_2per3: Tailwind = Tailwind()
   /** {{{
     * .translate-y-1/4 {
     *   --tw-translate-y: 25%;
@@ -106036,7 +106036,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_y_1$4: Tailwind = Tailwind()
+  def translate_y_1per4: Tailwind = Tailwind()
   /** {{{
     * .translate-y-2/4 {
     *   --tw-translate-y: 50%;
@@ -106048,7 +106048,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_y_2$4: Tailwind = Tailwind()
+  def translate_y_2per4: Tailwind = Tailwind()
   /** {{{
     * .translate-y-3/4 {
     *   --tw-translate-y: 75%;
@@ -106060,7 +106060,7 @@ extension (tailwind: Tailwind)
     * }
     * }}}
     */
-  def translate_y_3$4: Tailwind = Tailwind()
+  def translate_y_3per4: Tailwind = Tailwind()
   /** {{{
     * .translate-y-full {
     *   --tw-translate-y: 100%;
@@ -106252,32 +106252,32 @@ extension (tailwind: Tailwind)
     * 
     * }}}
     */
-  def _translate_y_1$2: Tailwind = Tailwind()
+  def _translate_y_1per2: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_1$3: Tailwind = Tailwind()
+  def _translate_y_1per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_2$3: Tailwind = Tailwind()
+  def _translate_y_2per3: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_1$4: Tailwind = Tailwind()
+  def _translate_y_1per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_2$4: Tailwind = Tailwind()
+  def _translate_y_2per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
     */
-  def _translate_y_3$4: Tailwind = Tailwind()
+  def _translate_y_3per4: Tailwind = Tailwind()
   /** {{{
     * 
     * }}}
@@ -180282,7 +180282,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   import quotes.reflect.*
 
   def fmtToTailwind(rawName: String) =
-    rawName.replace("_", "-").replace("$", "/").replace("dot", ".")
+    rawName.replace("_", "-").replace("per", "/").replace("dot", ".")
 
   def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
     var stack = List((term, prefix, important))

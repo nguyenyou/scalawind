@@ -146,10 +146,10 @@ To use classes which start with negative values like `-left-1`, just replace `-`
 
 ### Percentage value
 
-For utilities like `w-1/2`, we have to replace the `/` backward slash character with the `$` dollar sign character because the `/` backward slash character is invalid for method name.
+For utilities like `w-1/2`, we have to replace the `/` backward slash character with the `per` word because the `/` backward slash character is invalid for method name.
 
 ```scala
-val styles: String = tw.w_1$2
+val styles: String = tw.w_1per2
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
