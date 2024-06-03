@@ -221,12 +221,6 @@ val styles: String = tw.bg_("#bada55").text_("22px")
 val styles: String = "bg-[#bada55] text-[22px]"
 ```
 
-Because this is quite "arbitrary" thing that you might not want your team to break your design system, you need to explicitly enable this feature via `--arbitrary-values` (or `-av` alias) flag.
-
-### Known issues with arbitrary values
-
-The arbitrary works well when use it alone and is the first method call in the chain, in other usecase, it might cause compile error, I'm trying to fix this.
-
 ## Arbitrary variants
 
 We have support for [arbitrary variants](https://tailwindcss.com/docs/adding-custom-styles#arbitrary-variants) feature.
