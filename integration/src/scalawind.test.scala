@@ -33,4 +33,7 @@ class ComplexChainingTests extends munit.FunSuite {
   test("responsive") {
     assert(sw(tw.md(tw.hover(tw.text_red_500))) == "md:hover:text-red-500")
   }
+  test("arbitrary values") {
+    assert(sw(tw.flex.text_("#ff0").items_center.bg_("#00f")) == "flex text-[#ff0] items-center bg-[#00f]")
+  }
 }
