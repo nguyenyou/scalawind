@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.7.1
+
+### Patch Changes
+
+- 77f2c06: add implicit conversion to sw inline method
+
 ## 0.7.0
 
 ### Minor Changes
