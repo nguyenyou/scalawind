@@ -7,12 +7,20 @@ case class Tailwind() {
   {{#each modifiers}}
   def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
+  {{#each opacityColors}}
+  def {{this}}(@unused value: Int): Tailwind = Tailwind()
+  {{/each}}
+  {{#each standard}}
+  {{this.doc}}
+  def {{this.prop}}: Tailwind = Tailwind()
+  {{/each}}
+  {{#each arbitrary}}
+  def {{this.methodName}}(value: String): Tailwind = Tailwind()
+  {{/each}}
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
   def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-  def opacity(value: Int): Tailwind = Tailwind()
-  def o(value: Int): Tailwind = Tailwind()
 }
 
 object tw:
@@ -27,19 +35,13 @@ object tw:
   {{#each modifiers}}
   def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
   {{/each}}
+  {{#each opacityColors}}
+  def {{this}}(@unused value: Int): Tailwind = Tailwind()
+  {{/each}}
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
   def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-
-extension (tailwind: Tailwind)
-  {{#each standard}}
-  {{this.doc}}
-  def {{this.prop}}: Tailwind = Tailwind()
-  {{/each}}
-  {{#each arbitrary}}
-  def {{this.methodName}}(value: String): Tailwind = Tailwind()
-  {{/each}}
 
 inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
@@ -62,10 +64,6 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
         case Apply(Select(inner, "important"), List(styles)) =>
           stack = (styles, currentPrefix, true) :: stack
           stack = (inner, currentPrefix, currentImportant) :: stack
-        case Apply(Select(inner, "opacity"), List(Literal(IntConstant(value)))) =>
-          val classes = extractClassNames(inner, currentPrefix, currentImportant)
-          if (classes.isEmpty) report.errorAndAbort("Opacity applied without preceding class.")
-          classNames = classNames ++ classes.init :+ s"${classes.last}/$value"
         case Inlined(_, _, inner) =>
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Select(inner, name) =>
@@ -117,7 +115,5 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   val term = tailwindExpr.asTerm
   val classNames = extractClassNames(term)
   val combinedClasses = classNames.reverse.mkString(" ")
-  {{#if previewCompliedResult}}
   report.info(s"$combinedClasses")
-  {{/if}}
   Expr(combinedClasses)

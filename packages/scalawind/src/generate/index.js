@@ -70,6 +70,8 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
 
+  const opacityColors = [...colorSet]
+
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];
   for (const [name] of candidates) {
@@ -98,6 +100,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     standard, 
     previewCompliedResult,
     arbitrary,
+    opacityColors
   })
 
   return generatedScalawind

@@ -1,4 +1,5 @@
 //> using test.dep org.scalameta::munit::1.0.0
+package tests.only
 
 import scalawind.*
 
@@ -27,13 +28,6 @@ class SimpleSingleTests extends munit.FunSuite {
       sw(
         tw.text_("#ff0")
       ) == "text-[#ff0]"
-    )
-  }
-  test("opacity color") {
-    assert(
-      sw(
-        tw.bg_red_400.opacity(10)
-      ) == "bg-red-400/10"
     )
   }
   test("dot values") {
