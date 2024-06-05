@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.5.7
+
+### Patch Changes
+
+- 78ab099: remove color opacity modifier, we will need to rework this feature
+
 ## 0.5.6
 
 ### Patch Changes
