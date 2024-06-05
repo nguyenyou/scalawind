@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.6.0
+
+### Minor Changes
+
+- 95f5937: add support for color opacity
+
 ## 0.5.7
 
 ### Patch Changes
