@@ -68,8 +68,13 @@ class SimpleSingleTests extends munit.FunSuite {
   test("color opacity") {
     assert(
       sw(
-        tw.text_red_400$(10)
+        tw.text_red_400$("10")
       ) == "text-red-400/10"
+    )
+    assert(
+      sw(
+        tw.bg_black$("[.05]")
+      ) == "bg-black/[.05]"
     )
   }
 }
@@ -142,19 +147,19 @@ class ComplexChainingTests extends munit.FunSuite {
   test("color opacity") {
     assert(
       sw(
-        tw.text_red_400$(10).bg_green_500$(20)
+        tw.text_red_400$("10").bg_green_500$("20")
       ) == "text-red-400/10 bg-green-500/20"
     )
 
     assert(
       sw(
-        tw.font_bold.text_red_400$(10).bg_green_500$(20).hover(tw.text_black)
+        tw.font_bold.text_red_400$("10").bg_green_500$("20").hover(tw.text_black)
       ) == "font-bold text-red-400/10 bg-green-500/20 hover:text-black"
     )
 
     assert(
       sw(
-        tw.bg_blue_500$(25).text_white.rounded.py_3.px_4
+        tw.bg_blue_500$("25").text_white.rounded.py_3.px_4
       ) == "bg-blue-500/25 text-white rounded py-3 px-4"
     )
   }
