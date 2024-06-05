@@ -25,7 +25,7 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 - [x] Arbitrary values, like `bg-[#de3423] text-[#380d09] h-[100px]`
 - [x] Normal modifiers, like `hover:bg-red-500` or `md:text-xs`
 - [x] Important modifiers, like `!text-red-500`
-- [x] Color opacity, like `bg-blue-500/25`
+- [x] Color opacity, like `bg-blue-500/25` or `bg-black/[.05]`
 - [x] Raw, an escape hatch to pass in raw tailwind utility classes
 - [x] Arbitrary variants, like `[&:nth-child(3)]:text-red-500`
 - [x] Negative values, like `-top-1`
@@ -173,11 +173,11 @@ val styles: String = "w-1.2"
 You can write color opacity class, by writing the color class name follow by `$` dollar sign and invoke function call with a opacity value in number:
 
 ```scala
-val styles: String = tw.bg_red_500$25
+val styles: String = tw.text_red_500$("25").bg_black$("[.05]")
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
-val styles: String = "bg-red-500/25"
+val styles: String = "text-red-500/25 bg-black/[.05]"
 ```
 
 
@@ -198,7 +198,7 @@ This behavior is the same as tailwindcss [ordering stacked modifiers](https://ta
 
 ### Important modifier
 
-To specify a class to be important, you can wrap it inside the `tw.important()` or `tw.i()` modifier.
+To specify a class to be important, you can wrap it inside the `tw.important()` modifier.
 
 ```scala
 button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
