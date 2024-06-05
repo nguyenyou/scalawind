@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.7.0
+
+### Minor Changes
+
+- a771b7d: Cut the generated file size in half, really, roughly 50%
+
 ## 0.6.2
 
 ### Patch Changes
