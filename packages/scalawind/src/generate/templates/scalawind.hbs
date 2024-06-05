@@ -3,43 +3,7 @@ package {{packageName}}
 import scala.quoted.*
 import scala.annotation.unused
 
-case class Tailwind() {
-  {{#each modifiers}}
-  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
-  {{/each}}
-  {{#each opacityColors}}
-  def {{this}}(@unused value: String): Tailwind = Tailwind()
-  {{/each}}
-  {{#each standard}}
-  {{this.doc}}
-  def {{this.prop}}: Tailwind = Tailwind()
-  {{/each}}
-  {{#each arbitrary}}
-  def {{this.methodName}}(value: String): Tailwind = Tailwind()
-  {{/each}}
-  def important(@unused styles: Tailwind): Tailwind = Tailwind()
-  def raw(@unused classString: String): Tailwind = Tailwind()
-  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-}
-
-object tw:
-  def apply(): Tailwind = Tailwind()
-  {{#each standard}}
-  {{this.doc}}
-  def {{this.prop}}: Tailwind = Tailwind()
-  {{/each}}
-  {{#each arbitrary}}
-  def {{this.methodName}}(value: String): Tailwind = Tailwind()
-  {{/each}}
-  {{#each modifiers}}
-  def {{this.name}}(@unused styles: Tailwind): Tailwind = Tailwind()
-  {{/each}}
-  {{#each opacityColors}}
-  def {{this}}(@unused value: String): Tailwind = Tailwind()
-  {{/each}}
-  def important(@unused styles: Tailwind): Tailwind = Tailwind()
-  def raw(@unused classString: String): Tailwind = Tailwind()
-  def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
+val tw = Tailwind()
 
 inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
@@ -123,3 +87,22 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   report.info(s"$combinedClasses")
   {{/if}}
   Expr(combinedClasses)
+
+case class Tailwind() {
+  {{#each modifiers}}
+  def {{this.name}}(@unused styles: Tailwind): Tailwind = this
+  {{/each}}
+  {{#each opacityColors}}
+  def {{this}}(@unused value: String): Tailwind = this
+  {{/each}}
+  {{#each standard}}
+  {{this.doc}}
+  def {{this.prop}}: Tailwind = this
+  {{/each}}
+  {{#each arbitrary}}
+  def {{this.methodName}}(value: String): Tailwind = this
+  {{/each}}
+  def important(@unused styles: Tailwind): Tailwind = this
+  def raw(@unused classString: String): Tailwind = this
+  def variant(selector: String, styles: Tailwind): Tailwind = this
+}

@@ -7,7 +7,7 @@ import { tailwindConfig } from './config'
 test('basic test', () => {
   const actual = generateContent(tailwindConfig, "scalawind", true)
   const filepath = path.join(__dirname, "./expected.txt")
-  // utils.writeFile(filepath, actual)
+  utils.writeFile(filepath, actual)
   const expected = utils.readFile(filepath)
   expect(actual).toBe(expected)
 })
