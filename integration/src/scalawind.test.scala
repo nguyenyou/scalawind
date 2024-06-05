@@ -176,7 +176,7 @@ class CreateNextAppHomePageTests extends munit.FunSuite {
     assert(
       sw(
         tw.font_sans.grid
-          .grid_rows_("20px-1fr-20px")
+          .grid_rows_("20px_1fr_20px")
           .items_center
           .justify_items_center
           .min_h_screen
