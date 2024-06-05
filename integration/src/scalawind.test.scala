@@ -77,6 +77,20 @@ class SimpleSingleTests extends munit.FunSuite {
       ) == "bg-black/[.05]"
     )
   }
+
+  test("responsive design") {
+    assert(
+      sw(
+        tw._2xl(tw.text_black)
+      ) == "2xl:text-black"
+    )
+
+    assert(
+      sw(
+        tw.md(tw.text_black)
+      ) == "md:text-black"
+    )
+  }
 }
 
 class ComplexChainingTests extends munit.FunSuite {
