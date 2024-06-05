@@ -5,7 +5,7 @@ import scala.annotation.unused
 
 val tw = Tailwind()
 
-inline def sw(inline tailwind: Tailwind): String =
+implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
 def methodNameToTailwindClass(rawName: String) =
