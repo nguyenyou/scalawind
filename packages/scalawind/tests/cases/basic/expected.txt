@@ -168,12 +168,617 @@ case class Tailwind() {
   def dark(@unused styles: Tailwind): Tailwind = Tailwind()
   def forced_colors(@unused styles: Tailwind): Tailwind = Tailwind()
   def print(@unused styles: Tailwind): Tailwind = Tailwind()
+  def text_black$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_50$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_100$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_200$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_300$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_400$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_500$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_600$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_700$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_800$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_900$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_950$(@unused value: Int): Tailwind = Tailwind()
+  
+  def container: Tailwind = Tailwind()
+  /** {{{
+    * .w-0 {
+    *   width: 0;
+    * }
+    * }}}
+    */
+  def w_0: Tailwind = Tailwind()
+  /** {{{
+    * .w-1 {
+    *   width: .25rem;
+    * }
+    * }}}
+    */
+  def w_1: Tailwind = Tailwind()
+  /** {{{
+    * .w-2 {
+    *   width: .5rem;
+    * }
+    * }}}
+    */
+  def w_2: Tailwind = Tailwind()
+  /** {{{
+    * .w-3 {
+    *   width: .75rem;
+    * }
+    * }}}
+    */
+  def w_3: Tailwind = Tailwind()
+  /** {{{
+    * .w-4 {
+    *   width: 1rem;
+    * }
+    * }}}
+    */
+  def w_4: Tailwind = Tailwind()
+  /** {{{
+    * .w-5 {
+    *   width: 1.25rem;
+    * }
+    * }}}
+    */
+  def w_5: Tailwind = Tailwind()
+  /** {{{
+    * .w-6 {
+    *   width: 1.5rem;
+    * }
+    * }}}
+    */
+  def w_6: Tailwind = Tailwind()
+  /** {{{
+    * .w-7 {
+    *   width: 1.75rem;
+    * }
+    * }}}
+    */
+  def w_7: Tailwind = Tailwind()
+  /** {{{
+    * .w-8 {
+    *   width: 2rem;
+    * }
+    * }}}
+    */
+  def w_8: Tailwind = Tailwind()
+  /** {{{
+    * .w-9 {
+    *   width: 2.25rem;
+    * }
+    * }}}
+    */
+  def w_9: Tailwind = Tailwind()
+  /** {{{
+    * .w-10 {
+    *   width: 2.5rem;
+    * }
+    * }}}
+    */
+  def w_10: Tailwind = Tailwind()
+  /** {{{
+    * .w-11 {
+    *   width: 2.75rem;
+    * }
+    * }}}
+    */
+  def w_11: Tailwind = Tailwind()
+  /** {{{
+    * .w-12 {
+    *   width: 3rem;
+    * }
+    * }}}
+    */
+  def w_12: Tailwind = Tailwind()
+  /** {{{
+    * .w-14 {
+    *   width: 3.5rem;
+    * }
+    * }}}
+    */
+  def w_14: Tailwind = Tailwind()
+  /** {{{
+    * .w-16 {
+    *   width: 4rem;
+    * }
+    * }}}
+    */
+  def w_16: Tailwind = Tailwind()
+  /** {{{
+    * .w-20 {
+    *   width: 5rem;
+    * }
+    * }}}
+    */
+  def w_20: Tailwind = Tailwind()
+  /** {{{
+    * .w-24 {
+    *   width: 6rem;
+    * }
+    * }}}
+    */
+  def w_24: Tailwind = Tailwind()
+  /** {{{
+    * .w-28 {
+    *   width: 7rem;
+    * }
+    * }}}
+    */
+  def w_28: Tailwind = Tailwind()
+  /** {{{
+    * .w-32 {
+    *   width: 8rem;
+    * }
+    * }}}
+    */
+  def w_32: Tailwind = Tailwind()
+  /** {{{
+    * .w-36 {
+    *   width: 9rem;
+    * }
+    * }}}
+    */
+  def w_36: Tailwind = Tailwind()
+  /** {{{
+    * .w-40 {
+    *   width: 10rem;
+    * }
+    * }}}
+    */
+  def w_40: Tailwind = Tailwind()
+  /** {{{
+    * .w-44 {
+    *   width: 11rem;
+    * }
+    * }}}
+    */
+  def w_44: Tailwind = Tailwind()
+  /** {{{
+    * .w-48 {
+    *   width: 12rem;
+    * }
+    * }}}
+    */
+  def w_48: Tailwind = Tailwind()
+  /** {{{
+    * .w-52 {
+    *   width: 13rem;
+    * }
+    * }}}
+    */
+  def w_52: Tailwind = Tailwind()
+  /** {{{
+    * .w-56 {
+    *   width: 14rem;
+    * }
+    * }}}
+    */
+  def w_56: Tailwind = Tailwind()
+  /** {{{
+    * .w-60 {
+    *   width: 15rem;
+    * }
+    * }}}
+    */
+  def w_60: Tailwind = Tailwind()
+  /** {{{
+    * .w-64 {
+    *   width: 16rem;
+    * }
+    * }}}
+    */
+  def w_64: Tailwind = Tailwind()
+  /** {{{
+    * .w-72 {
+    *   width: 18rem;
+    * }
+    * }}}
+    */
+  def w_72: Tailwind = Tailwind()
+  /** {{{
+    * .w-80 {
+    *   width: 20rem;
+    * }
+    * }}}
+    */
+  def w_80: Tailwind = Tailwind()
+  /** {{{
+    * .w-96 {
+    *   width: 24rem;
+    * }
+    * }}}
+    */
+  def w_96: Tailwind = Tailwind()
+  /** {{{
+    * .w-auto {
+    *   width: auto;
+    * }
+    * }}}
+    */
+  def w_auto: Tailwind = Tailwind()
+  /** {{{
+    * .w-px {
+    *   width: 1px;
+    * }
+    * }}}
+    */
+  def w_px: Tailwind = Tailwind()
+  /** {{{
+    * .w-0.5 {
+    *   width: .125rem;
+    * }
+    * }}}
+    */
+  def w_0dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1.5 {
+    *   width: .375rem;
+    * }
+    * }}}
+    */
+  def w_1dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-2.5 {
+    *   width: .625rem;
+    * }
+    * }}}
+    */
+  def w_2dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-3.5 {
+    *   width: .875rem;
+    * }
+    * }}}
+    */
+  def w_3dot5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1/2 {
+    *   width: 50%;
+    * }
+    * }}}
+    */
+  def w_1per2: Tailwind = Tailwind()
+  /** {{{
+    * .w-1/3 {
+    *   width: 33.3333%;
+    * }
+    * }}}
+    */
+  def w_1per3: Tailwind = Tailwind()
+  /** {{{
+    * .w-2/3 {
+    *   width: 66.6667%;
+    * }
+    * }}}
+    */
+  def w_2per3: Tailwind = Tailwind()
+  /** {{{
+    * .w-1/4 {
+    *   width: 25%;
+    * }
+    * }}}
+    */
+  def w_1per4: Tailwind = Tailwind()
+  /** {{{
+    * .w-2/4 {
+    *   width: 50%;
+    * }
+    * }}}
+    */
+  def w_2per4: Tailwind = Tailwind()
+  /** {{{
+    * .w-3/4 {
+    *   width: 75%;
+    * }
+    * }}}
+    */
+  def w_3per4: Tailwind = Tailwind()
+  /** {{{
+    * .w-1/5 {
+    *   width: 20%;
+    * }
+    * }}}
+    */
+  def w_1per5: Tailwind = Tailwind()
+  /** {{{
+    * .w-2/5 {
+    *   width: 40%;
+    * }
+    * }}}
+    */
+  def w_2per5: Tailwind = Tailwind()
+  /** {{{
+    * .w-3/5 {
+    *   width: 60%;
+    * }
+    * }}}
+    */
+  def w_3per5: Tailwind = Tailwind()
+  /** {{{
+    * .w-4/5 {
+    *   width: 80%;
+    * }
+    * }}}
+    */
+  def w_4per5: Tailwind = Tailwind()
+  /** {{{
+    * .w-1/6 {
+    *   width: 16.6667%;
+    * }
+    * }}}
+    */
+  def w_1per6: Tailwind = Tailwind()
+  /** {{{
+    * .w-2/6 {
+    *   width: 33.3333%;
+    * }
+    * }}}
+    */
+  def w_2per6: Tailwind = Tailwind()
+  /** {{{
+    * .w-3/6 {
+    *   width: 50%;
+    * }
+    * }}}
+    */
+  def w_3per6: Tailwind = Tailwind()
+  /** {{{
+    * .w-4/6 {
+    *   width: 66.6667%;
+    * }
+    * }}}
+    */
+  def w_4per6: Tailwind = Tailwind()
+  /** {{{
+    * .w-5/6 {
+    *   width: 83.3333%;
+    * }
+    * }}}
+    */
+  def w_5per6: Tailwind = Tailwind()
+  /** {{{
+    * .w-1/12 {
+    *   width: 8.33333%;
+    * }
+    * }}}
+    */
+  def w_1per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-2/12 {
+    *   width: 16.6667%;
+    * }
+    * }}}
+    */
+  def w_2per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-3/12 {
+    *   width: 25%;
+    * }
+    * }}}
+    */
+  def w_3per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-4/12 {
+    *   width: 33.3333%;
+    * }
+    * }}}
+    */
+  def w_4per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-5/12 {
+    *   width: 41.6667%;
+    * }
+    * }}}
+    */
+  def w_5per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-6/12 {
+    *   width: 50%;
+    * }
+    * }}}
+    */
+  def w_6per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-7/12 {
+    *   width: 58.3333%;
+    * }
+    * }}}
+    */
+  def w_7per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-8/12 {
+    *   width: 66.6667%;
+    * }
+    * }}}
+    */
+  def w_8per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-9/12 {
+    *   width: 75%;
+    * }
+    * }}}
+    */
+  def w_9per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-10/12 {
+    *   width: 83.3333%;
+    * }
+    * }}}
+    */
+  def w_10per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-11/12 {
+    *   width: 91.6667%;
+    * }
+    * }}}
+    */
+  def w_11per12: Tailwind = Tailwind()
+  /** {{{
+    * .w-full {
+    *   width: 100%;
+    * }
+    * }}}
+    */
+  def w_full: Tailwind = Tailwind()
+  /** {{{
+    * .w-screen {
+    *   width: 100vw;
+    * }
+    * }}}
+    */
+  def w_screen: Tailwind = Tailwind()
+  /** {{{
+    * .w-svw {
+    *   width: 100svw;
+    * }
+    * }}}
+    */
+  def w_svw: Tailwind = Tailwind()
+  /** {{{
+    * .w-lvw {
+    *   width: 100lvw;
+    * }
+    * }}}
+    */
+  def w_lvw: Tailwind = Tailwind()
+  /** {{{
+    * .w-dvw {
+    *   width: 100dvw;
+    * }
+    * }}}
+    */
+  def w_dvw: Tailwind = Tailwind()
+  /** {{{
+    * .w-min {
+    *   width: min-content;
+    * }
+    * }}}
+    */
+  def w_min: Tailwind = Tailwind()
+  /** {{{
+    * .w-max {
+    *   width: max-content;
+    * }
+    * }}}
+    */
+  def w_max: Tailwind = Tailwind()
+  /** {{{
+    * .w-fit {
+    *   width: fit-content;
+    * }
+    * }}}
+    */
+  def w_fit: Tailwind = Tailwind()
+  /** {{{
+    * .animate-none {
+    *   animation: none;
+    * }
+    * }}}
+    */
+  def animate_none: Tailwind = Tailwind()
+  
+  def animate_spin: Tailwind = Tailwind()
+  
+  def animate_ping: Tailwind = Tailwind()
+  
+  def animate_pulse: Tailwind = Tailwind()
+  
+  def animate_bounce: Tailwind = Tailwind()
+  /** {{{
+    * .text-black {
+    *   color: #000;
+    * }
+    * }}}
+    */
+  def text_black: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-50 {
+    *   color: #fef2f2;
+    * }
+    * }}}
+    */
+  def text_red_50: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-100 {
+    *   color: #fee2e2;
+    * }
+    * }}}
+    */
+  def text_red_100: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-200 {
+    *   color: #fecaca;
+    * }
+    * }}}
+    */
+  def text_red_200: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-300 {
+    *   color: #fca5a5;
+    * }
+    * }}}
+    */
+  def text_red_300: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-400 {
+    *   color: #f87171;
+    * }
+    * }}}
+    */
+  def text_red_400: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-500 {
+    *   color: #ef4444;
+    * }
+    * }}}
+    */
+  def text_red_500: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-600 {
+    *   color: #dc2626;
+    * }
+    * }}}
+    */
+  def text_red_600: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-700 {
+    *   color: #b91c1c;
+    * }
+    * }}}
+    */
+  def text_red_700: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-800 {
+    *   color: #991b1b;
+    * }
+    * }}}
+    */
+  def text_red_800: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-900 {
+    *   color: #7f1d1d;
+    * }
+    * }}}
+    */
+  def text_red_900: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-950 {
+    *   color: #450a0a;
+    * }
+    * }}}
+    */
+  def text_red_950: Tailwind = Tailwind()
+  def container_(value: String): Tailwind = Tailwind()
+  def w_(value: String): Tailwind = Tailwind()
+  def animate_(value: String): Tailwind = Tailwind()
+  def text_(value: String): Tailwind = Tailwind()
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
   def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-  def opacity(value: Int): Tailwind = Tailwind()
-  def o(value: Int): Tailwind = Tailwind()
 }
 
 object tw:
@@ -692,6 +1297,83 @@ object tw:
     * }}}
     */
   def text_black: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-50 {
+    *   color: #fef2f2;
+    * }
+    * }}}
+    */
+  def text_red_50: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-100 {
+    *   color: #fee2e2;
+    * }
+    * }}}
+    */
+  def text_red_100: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-200 {
+    *   color: #fecaca;
+    * }
+    * }}}
+    */
+  def text_red_200: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-300 {
+    *   color: #fca5a5;
+    * }
+    * }}}
+    */
+  def text_red_300: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-400 {
+    *   color: #f87171;
+    * }
+    * }}}
+    */
+  def text_red_400: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-500 {
+    *   color: #ef4444;
+    * }
+    * }}}
+    */
+  def text_red_500: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-600 {
+    *   color: #dc2626;
+    * }
+    * }}}
+    */
+  def text_red_600: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-700 {
+    *   color: #b91c1c;
+    * }
+    * }}}
+    */
+  def text_red_700: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-800 {
+    *   color: #991b1b;
+    * }
+    * }}}
+    */
+  def text_red_800: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-900 {
+    *   color: #7f1d1d;
+    * }
+    * }}}
+    */
+  def text_red_900: Tailwind = Tailwind()
+  /** {{{
+    * .text-red-950 {
+    *   color: #450a0a;
+    * }
+    * }}}
+    */
+  def text_red_950: Tailwind = Tailwind()
   def container_(value: String): Tailwind = Tailwind()
   def w_(value: String): Tailwind = Tailwind()
   def animate_(value: String): Tailwind = Tailwind()
@@ -860,530 +1542,22 @@ object tw:
   def dark(@unused styles: Tailwind): Tailwind = Tailwind()
   def forced_colors(@unused styles: Tailwind): Tailwind = Tailwind()
   def print(@unused styles: Tailwind): Tailwind = Tailwind()
+  def text_black$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_50$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_100$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_200$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_300$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_400$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_500$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_600$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_700$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_800$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_900$(@unused value: Int): Tailwind = Tailwind()
+  def text_red_950$(@unused value: Int): Tailwind = Tailwind()
   def important(@unused styles: Tailwind): Tailwind = Tailwind()
   def i(@unused styles: Tailwind): Tailwind = Tailwind()
   def raw(@unused classString: String): Tailwind = Tailwind()
   def variant(selector: String, styles: Tailwind): Tailwind = Tailwind()
-
-extension (tailwind: Tailwind)
-  
-  def container: Tailwind = Tailwind()
-  /** {{{
-    * .w-0 {
-    *   width: 0;
-    * }
-    * }}}
-    */
-  def w_0: Tailwind = Tailwind()
-  /** {{{
-    * .w-1 {
-    *   width: .25rem;
-    * }
-    * }}}
-    */
-  def w_1: Tailwind = Tailwind()
-  /** {{{
-    * .w-2 {
-    *   width: .5rem;
-    * }
-    * }}}
-    */
-  def w_2: Tailwind = Tailwind()
-  /** {{{
-    * .w-3 {
-    *   width: .75rem;
-    * }
-    * }}}
-    */
-  def w_3: Tailwind = Tailwind()
-  /** {{{
-    * .w-4 {
-    *   width: 1rem;
-    * }
-    * }}}
-    */
-  def w_4: Tailwind = Tailwind()
-  /** {{{
-    * .w-5 {
-    *   width: 1.25rem;
-    * }
-    * }}}
-    */
-  def w_5: Tailwind = Tailwind()
-  /** {{{
-    * .w-6 {
-    *   width: 1.5rem;
-    * }
-    * }}}
-    */
-  def w_6: Tailwind = Tailwind()
-  /** {{{
-    * .w-7 {
-    *   width: 1.75rem;
-    * }
-    * }}}
-    */
-  def w_7: Tailwind = Tailwind()
-  /** {{{
-    * .w-8 {
-    *   width: 2rem;
-    * }
-    * }}}
-    */
-  def w_8: Tailwind = Tailwind()
-  /** {{{
-    * .w-9 {
-    *   width: 2.25rem;
-    * }
-    * }}}
-    */
-  def w_9: Tailwind = Tailwind()
-  /** {{{
-    * .w-10 {
-    *   width: 2.5rem;
-    * }
-    * }}}
-    */
-  def w_10: Tailwind = Tailwind()
-  /** {{{
-    * .w-11 {
-    *   width: 2.75rem;
-    * }
-    * }}}
-    */
-  def w_11: Tailwind = Tailwind()
-  /** {{{
-    * .w-12 {
-    *   width: 3rem;
-    * }
-    * }}}
-    */
-  def w_12: Tailwind = Tailwind()
-  /** {{{
-    * .w-14 {
-    *   width: 3.5rem;
-    * }
-    * }}}
-    */
-  def w_14: Tailwind = Tailwind()
-  /** {{{
-    * .w-16 {
-    *   width: 4rem;
-    * }
-    * }}}
-    */
-  def w_16: Tailwind = Tailwind()
-  /** {{{
-    * .w-20 {
-    *   width: 5rem;
-    * }
-    * }}}
-    */
-  def w_20: Tailwind = Tailwind()
-  /** {{{
-    * .w-24 {
-    *   width: 6rem;
-    * }
-    * }}}
-    */
-  def w_24: Tailwind = Tailwind()
-  /** {{{
-    * .w-28 {
-    *   width: 7rem;
-    * }
-    * }}}
-    */
-  def w_28: Tailwind = Tailwind()
-  /** {{{
-    * .w-32 {
-    *   width: 8rem;
-    * }
-    * }}}
-    */
-  def w_32: Tailwind = Tailwind()
-  /** {{{
-    * .w-36 {
-    *   width: 9rem;
-    * }
-    * }}}
-    */
-  def w_36: Tailwind = Tailwind()
-  /** {{{
-    * .w-40 {
-    *   width: 10rem;
-    * }
-    * }}}
-    */
-  def w_40: Tailwind = Tailwind()
-  /** {{{
-    * .w-44 {
-    *   width: 11rem;
-    * }
-    * }}}
-    */
-  def w_44: Tailwind = Tailwind()
-  /** {{{
-    * .w-48 {
-    *   width: 12rem;
-    * }
-    * }}}
-    */
-  def w_48: Tailwind = Tailwind()
-  /** {{{
-    * .w-52 {
-    *   width: 13rem;
-    * }
-    * }}}
-    */
-  def w_52: Tailwind = Tailwind()
-  /** {{{
-    * .w-56 {
-    *   width: 14rem;
-    * }
-    * }}}
-    */
-  def w_56: Tailwind = Tailwind()
-  /** {{{
-    * .w-60 {
-    *   width: 15rem;
-    * }
-    * }}}
-    */
-  def w_60: Tailwind = Tailwind()
-  /** {{{
-    * .w-64 {
-    *   width: 16rem;
-    * }
-    * }}}
-    */
-  def w_64: Tailwind = Tailwind()
-  /** {{{
-    * .w-72 {
-    *   width: 18rem;
-    * }
-    * }}}
-    */
-  def w_72: Tailwind = Tailwind()
-  /** {{{
-    * .w-80 {
-    *   width: 20rem;
-    * }
-    * }}}
-    */
-  def w_80: Tailwind = Tailwind()
-  /** {{{
-    * .w-96 {
-    *   width: 24rem;
-    * }
-    * }}}
-    */
-  def w_96: Tailwind = Tailwind()
-  /** {{{
-    * .w-auto {
-    *   width: auto;
-    * }
-    * }}}
-    */
-  def w_auto: Tailwind = Tailwind()
-  /** {{{
-    * .w-px {
-    *   width: 1px;
-    * }
-    * }}}
-    */
-  def w_px: Tailwind = Tailwind()
-  /** {{{
-    * .w-0.5 {
-    *   width: .125rem;
-    * }
-    * }}}
-    */
-  def w_0dot5: Tailwind = Tailwind()
-  /** {{{
-    * .w-1.5 {
-    *   width: .375rem;
-    * }
-    * }}}
-    */
-  def w_1dot5: Tailwind = Tailwind()
-  /** {{{
-    * .w-2.5 {
-    *   width: .625rem;
-    * }
-    * }}}
-    */
-  def w_2dot5: Tailwind = Tailwind()
-  /** {{{
-    * .w-3.5 {
-    *   width: .875rem;
-    * }
-    * }}}
-    */
-  def w_3dot5: Tailwind = Tailwind()
-  /** {{{
-    * .w-1/2 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
-  def w_1per2: Tailwind = Tailwind()
-  /** {{{
-    * .w-1/3 {
-    *   width: 33.3333%;
-    * }
-    * }}}
-    */
-  def w_1per3: Tailwind = Tailwind()
-  /** {{{
-    * .w-2/3 {
-    *   width: 66.6667%;
-    * }
-    * }}}
-    */
-  def w_2per3: Tailwind = Tailwind()
-  /** {{{
-    * .w-1/4 {
-    *   width: 25%;
-    * }
-    * }}}
-    */
-  def w_1per4: Tailwind = Tailwind()
-  /** {{{
-    * .w-2/4 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
-  def w_2per4: Tailwind = Tailwind()
-  /** {{{
-    * .w-3/4 {
-    *   width: 75%;
-    * }
-    * }}}
-    */
-  def w_3per4: Tailwind = Tailwind()
-  /** {{{
-    * .w-1/5 {
-    *   width: 20%;
-    * }
-    * }}}
-    */
-  def w_1per5: Tailwind = Tailwind()
-  /** {{{
-    * .w-2/5 {
-    *   width: 40%;
-    * }
-    * }}}
-    */
-  def w_2per5: Tailwind = Tailwind()
-  /** {{{
-    * .w-3/5 {
-    *   width: 60%;
-    * }
-    * }}}
-    */
-  def w_3per5: Tailwind = Tailwind()
-  /** {{{
-    * .w-4/5 {
-    *   width: 80%;
-    * }
-    * }}}
-    */
-  def w_4per5: Tailwind = Tailwind()
-  /** {{{
-    * .w-1/6 {
-    *   width: 16.6667%;
-    * }
-    * }}}
-    */
-  def w_1per6: Tailwind = Tailwind()
-  /** {{{
-    * .w-2/6 {
-    *   width: 33.3333%;
-    * }
-    * }}}
-    */
-  def w_2per6: Tailwind = Tailwind()
-  /** {{{
-    * .w-3/6 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
-  def w_3per6: Tailwind = Tailwind()
-  /** {{{
-    * .w-4/6 {
-    *   width: 66.6667%;
-    * }
-    * }}}
-    */
-  def w_4per6: Tailwind = Tailwind()
-  /** {{{
-    * .w-5/6 {
-    *   width: 83.3333%;
-    * }
-    * }}}
-    */
-  def w_5per6: Tailwind = Tailwind()
-  /** {{{
-    * .w-1/12 {
-    *   width: 8.33333%;
-    * }
-    * }}}
-    */
-  def w_1per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-2/12 {
-    *   width: 16.6667%;
-    * }
-    * }}}
-    */
-  def w_2per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-3/12 {
-    *   width: 25%;
-    * }
-    * }}}
-    */
-  def w_3per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-4/12 {
-    *   width: 33.3333%;
-    * }
-    * }}}
-    */
-  def w_4per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-5/12 {
-    *   width: 41.6667%;
-    * }
-    * }}}
-    */
-  def w_5per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-6/12 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
-  def w_6per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-7/12 {
-    *   width: 58.3333%;
-    * }
-    * }}}
-    */
-  def w_7per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-8/12 {
-    *   width: 66.6667%;
-    * }
-    * }}}
-    */
-  def w_8per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-9/12 {
-    *   width: 75%;
-    * }
-    * }}}
-    */
-  def w_9per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-10/12 {
-    *   width: 83.3333%;
-    * }
-    * }}}
-    */
-  def w_10per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-11/12 {
-    *   width: 91.6667%;
-    * }
-    * }}}
-    */
-  def w_11per12: Tailwind = Tailwind()
-  /** {{{
-    * .w-full {
-    *   width: 100%;
-    * }
-    * }}}
-    */
-  def w_full: Tailwind = Tailwind()
-  /** {{{
-    * .w-screen {
-    *   width: 100vw;
-    * }
-    * }}}
-    */
-  def w_screen: Tailwind = Tailwind()
-  /** {{{
-    * .w-svw {
-    *   width: 100svw;
-    * }
-    * }}}
-    */
-  def w_svw: Tailwind = Tailwind()
-  /** {{{
-    * .w-lvw {
-    *   width: 100lvw;
-    * }
-    * }}}
-    */
-  def w_lvw: Tailwind = Tailwind()
-  /** {{{
-    * .w-dvw {
-    *   width: 100dvw;
-    * }
-    * }}}
-    */
-  def w_dvw: Tailwind = Tailwind()
-  /** {{{
-    * .w-min {
-    *   width: min-content;
-    * }
-    * }}}
-    */
-  def w_min: Tailwind = Tailwind()
-  /** {{{
-    * .w-max {
-    *   width: max-content;
-    * }
-    * }}}
-    */
-  def w_max: Tailwind = Tailwind()
-  /** {{{
-    * .w-fit {
-    *   width: fit-content;
-    * }
-    * }}}
-    */
-  def w_fit: Tailwind = Tailwind()
-  /** {{{
-    * .animate-none {
-    *   animation: none;
-    * }
-    * }}}
-    */
-  def animate_none: Tailwind = Tailwind()
-  
-  def animate_spin: Tailwind = Tailwind()
-  
-  def animate_ping: Tailwind = Tailwind()
-  
-  def animate_pulse: Tailwind = Tailwind()
-  
-  def animate_bounce: Tailwind = Tailwind()
-  /** {{{
-    * .text-black {
-    *   color: #000;
-    * }
-    * }}}
-    */
-  def text_black: Tailwind = Tailwind()
-  def container_(value: String): Tailwind = Tailwind()
-  def w_(value: String): Tailwind = Tailwind()
-  def animate_(value: String): Tailwind = Tailwind()
-  def text_(value: String): Tailwind = Tailwind()
 
 inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
@@ -1406,10 +1580,6 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
         case Apply(Select(inner, "important"), List(styles)) =>
           stack = (styles, currentPrefix, true) :: stack
           stack = (inner, currentPrefix, currentImportant) :: stack
-        case Apply(Select(inner, "opacity"), List(Literal(IntConstant(value)))) =>
-          val classes = extractClassNames(inner, currentPrefix, currentImportant)
-          if (classes.isEmpty) report.errorAndAbort("Opacity applied without preceding class.")
-          classNames = classNames ++ classes.init :+ s"${classes.last}/$value"
         case Inlined(_, _, inner) =>
           stack = (inner, currentPrefix, currentImportant) :: stack
         case Select(inner, name) =>

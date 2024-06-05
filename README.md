@@ -27,7 +27,6 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 - [x] Important modifiers, like `!text-red-500`
 - [x] Raw, an escape hatch to pass in raw tailwind utility classes
 - [x] Arbitrary variants, like `[&:nth-child(3)]:text-red-500`
-- [x] Color opacity, like `bg-red-500/20`
 - [x] Negative values, like `-top-1`
 - [x] Percentage values, like `w-1/2`
 - [x] Dot values, like `w-1.5`
@@ -167,20 +166,6 @@ val styles: String = tw.w_1dot2
 
 val styles: String = "w-1.2"
 ```
-
-### Color Opacity
-
-In case you need color opacity utility classes like `bg-red-500/20`, we have support for that:
-
-```scala
-val styles: String = tw.text_blue_500.opacity(10).bg_red_500
-
-// ↓ ↓ ↓ ↓ ↓ ↓
-
-val styles: String = "text-blue-500/10 bg-red-500"
-```
-
-As you can see, the `opacity` method (or alias `o` method) only apply the opacity value to the immediate preceding class.
 
 ## Modifiers
 
