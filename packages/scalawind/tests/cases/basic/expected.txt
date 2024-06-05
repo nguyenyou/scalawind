@@ -1561,7 +1561,8 @@ inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
 def methodNameToTailwindClass(rawName: String) =
-    rawName.replace("_", "-").replace("per", "/").replace("dot", ".")
+  val name = if rawName.startsWith("_") && rawName.charAt(1).isDigit then rawName.stripPrefix("_") else rawName
+  name.replace("_", "-").replace("per", "/").replace("dot", ".")
 
 def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   import quotes.reflect.*
