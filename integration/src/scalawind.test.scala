@@ -176,7 +176,7 @@ class CreateNextAppHomePageTests extends munit.FunSuite {
     assert(
       sw(
         tw.font_sans.grid
-          .grid_rows_("20px-1fr-20px")
+          .grid_rows_("20px_1fr_20px")
           .items_center
           .justify_items_center
           .min_h_screen
@@ -184,7 +184,7 @@ class CreateNextAppHomePageTests extends munit.FunSuite {
           .pb_20
           .gap_16
           .sm(tw.p_20)
-      ) == "font-sans grid grid-rows-[20px-1fr-20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20"
+      ) == "font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20"
     )
 
     assert(
