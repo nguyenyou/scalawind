@@ -164,3 +164,104 @@ class ComplexChainingTests extends munit.FunSuite {
     )
   }
 }
+
+class CreateNextAppHomePageTests extends munit.FunSuite {
+  test("index page") {
+    assert(
+      sw(
+        tw.flex
+      ) == "flex"
+    )
+
+    assert(
+      sw(
+        tw.font_sans.grid
+          .grid_rows_("20px-1fr-20px")
+          .items_center
+          .justify_items_center
+          .min_h_screen
+          .p_8
+          .pb_20
+          .gap_16
+          .sm(tw.p_20)
+      ) == "font-sans grid grid-rows-[20px-1fr-20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20"
+    )
+
+    assert(
+      sw(
+        tw.flex.flex_col.gap_8.row_start_2.items_center.sm(tw.items_start)
+      ) == "flex flex-col gap-8 row-start-2 items-center sm:items-start"
+    )
+
+    assert(
+      sw(
+        tw.dark(tw.invert)
+      ) == "dark:invert"
+    )
+
+    assert(
+      sw(
+        tw.font_mono.list_inside.list_decimal.text_sm.text_center.sm(tw.text_left)
+      ) == "font-mono list-inside list-decimal text-sm text-center sm:text-left"
+    )
+
+    assert(
+      sw(
+        tw.bg_black$("[.05]").dark(tw.bg_white$("[.06]")).px_1.py_0dot5.rounded.font_semibold
+      ) == "bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold"
+    )
+
+    assert(
+      sw(
+        tw.flex.gap_4.items_center.flex_col.sm(tw.flex_row)
+      ) == "flex gap-4 items-center flex-col sm:flex-row"
+    )
+
+    assert(
+      sw(
+        tw.rounded_full.border.border_solid.border_transparent.transition_colors.flex.items_center.justify_center.bg_foreground.text_background.gap_2
+          .hover(tw.bg_("#383838"))
+          .dark(tw.hover(tw.bg_("#333")))
+          .text_sm
+          .sm(tw.text_base)
+          .h_10
+          .sm(tw.h_12)
+          .px_4
+          .sm(tw.px_5)
+      ) == "rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#333] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+    )
+
+    assert(
+      sw(
+        tw.rounded_full.border.border_solid
+          .border_black$("[.08]")
+          .dark(tw.border_white$("[.145]"))
+          .transition_colors
+          .flex
+          .items_center
+          .justify_center
+          .hover(tw.bg_("#f2f2f2"))
+          .dark(tw.hover(tw.bg_("#1a1a1a")))
+          .hover(tw.border_transparent)
+          .text_sm
+          .sm(tw.text_base)
+          .h_10
+          .sm(tw.h_12)
+          .px_4
+          .sm(tw.px_5.min_w_44)
+      ) == "rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+    )
+
+    assert(
+      sw(
+        tw.row_start_3.flex.gap_6.flex_wrap.items_center.justify_center
+      ) == "row-start-3 flex gap-6 flex-wrap items-center justify-center"
+    )
+
+    assert(
+      sw(
+        tw.flex.items_center.gap_2.hover(tw.underline.underline_offset_4)
+      ) == "flex items-center gap-2 hover:underline hover:underline-offset-4"
+    )
+  }
+}
