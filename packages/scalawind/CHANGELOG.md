@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.6.2
+
+### Patch Changes
+
+- 92b0caf: fix for modifiers start with a number
+
 ## 0.6.1
 
 ### Patch Changes
