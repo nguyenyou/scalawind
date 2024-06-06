@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.7.3
+
+### Patch Changes
+
+- 2041738: add helper methods for scalajs-react
+
 ## 0.7.2
 
 ### Patch Changes
