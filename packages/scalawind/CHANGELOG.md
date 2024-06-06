@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.7.2
+
+### Patch Changes
+
+- fc293bf: add --laminar cli option for auto generate laminar helpers
+
 ## 0.7.1
 
 ### Patch Changes
