@@ -261,16 +261,41 @@ val styles = "text-black bg-white hover:text-white hover:bg-black"
 
 Depends on your UI library, if we're lucky, we can leverage the implicit conversion feature to shorten our code.
 
+#### Slinky
+
 In slinky, we can just completely skip the `sw` macro method, like this:
 
 ```scala
 className := tw.flex.items_center.justify_center
 ```
 
+#### Laminar
+
 In laminar, we can skip `sw` macro method, like this:
 
 ```scala
 cls[String](tw.flex.items_center.justify_center)
+
+// or if you don't want to pass [String] to every cls call, then you can do this:
+import com.raquo.laminar.api.L.cls
+def clx(styles: String) = cls(styles)
+// now, the implicit conversion works
+clx(tw.flex.items_center.justify_center)
+```
+Another way to skip the `sw` is using infix notation:
+
+```scala
+import com.raquo.laminar.api.L.cls
+case class Clx() {
+  def :=(styles: String) = cls(styles)
+}
+
+def clx = Clx()
+
+div(
+  clx := tw.text_green_500,
+  "Scala ❤️ Tailwind"
+),
 ```
 
 ## Reducing Generated Code Size
