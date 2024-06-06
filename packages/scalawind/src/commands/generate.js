@@ -14,6 +14,7 @@ const initOptionsSchema = z.object({
   output: z.string(),
   packageName: z.string(),
   previewCompliedResult: z.boolean(),
+  laminar: z.boolean()
 })
 
 export const generate = new Command()
@@ -32,6 +33,11 @@ export const generate = new Command()
   .option(
     "-pcr, --preview-complied-result",
     "enable show preview compiled result",
+    false
+  )
+  .option(
+    "-l, --laminar",
+    "generate some helper methods for using with Laminar",
     false
   )
   .option(

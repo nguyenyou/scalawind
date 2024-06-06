@@ -286,14 +286,25 @@ Another way to skip the `sw` is using infix notation:
 
 ```scala
 import com.raquo.laminar.api.L.cls
-case class Clx() {
+object clx:
+  def apply(styles: String) = cls(styles)
   def :=(styles: String) = cls(styles)
-}
-
-def clx = Clx()
 
 div(
   clx := tw.text_green_500,
+  "Scala ❤️ Tailwind"
+),
+```
+
+We also have a CLI option for this, use `-l` or `--laminar` to auto generate the `clx` object for you.
+
+Another way is defining your custom string interpolation
+
+```scala
+extension (sc: StringContext) def clx(args: String*): Modifier[HtmlElement] = cls(sc.s(args*))
+
+div(
+  clx"${tw.text_red_500}",
   "Scala ❤️ Tailwind"
 ),
 ```
