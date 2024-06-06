@@ -1,0 +1,8 @@
+node_modules
+dist
+.parcel-cache
+.bsp
+.metals
+.vscode
+.scala-build
+scalajs-modules
