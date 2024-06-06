@@ -10,7 +10,7 @@ const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scal
 
 const template = Handlebars.compile(scalawindTemplate);
 
-export function generateContent(userConfig, packageName = "scalawind", previewCompliedResult = false) {
+export function generateContent(userConfig, packageName = "scalawind", previewCompliedResult = false, laminar = false) {
   const resolvedConfig = resolveConfig(userConfig);
   const ctx = createContext(resolvedConfig);
 
@@ -99,6 +99,7 @@ export function generateContent(userConfig, packageName = "scalawind", previewCo
     modifiers, 
     standard, 
     previewCompliedResult,
+    laminar,
     arbitrary,
     opacityColors
   })
@@ -168,7 +169,7 @@ export function writeToDisk(path, content) {
 }
 
 export default function generate(userConfig, options) {
-  const { packageName, output, previewCompliedResult } = options
-  const content = generateContent(userConfig, packageName, previewCompliedResult)
+  const { packageName, output, previewCompliedResult, laminar } = options
+  const content = generateContent(userConfig, packageName, previewCompliedResult, laminar)
   writeToDisk(output, content)
 }
