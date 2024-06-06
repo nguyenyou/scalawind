@@ -255,6 +255,24 @@ val styles = sw(tw.text_black.bg_white.hover(tw.raw("text-white bg-black")))
 val styles = "text-black bg-white hover:text-white hover:bg-black"
 ```
 
+## Advanced Usage
+
+### Implicit Conversion
+
+Depends on your UI library, if we're lucky, we can leverage the implicit conversion feature to shorten our code.
+
+In slinky, we can just completely skip the `sw` macro method, like this:
+
+```scala
+className := tw.flex.items_center.justify_center
+```
+
+In laminar, we can skip `sw` macro method, like this:
+
+```scala
+cls[String](tw.flex.items_center.justify_center)
+```
+
 ## Reducing Generated Code Size
 
 ### Colors
