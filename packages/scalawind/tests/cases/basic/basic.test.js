@@ -5,7 +5,13 @@ import * as utils from '../../test-utils'
 import { tailwindConfig } from './config'
 
 test('basic test', () => {
-  const actual = generateContent(tailwindConfig, "scalawind", true, true)
+  const actual = generateContent({
+    userConfig: tailwindConfig,
+    packageName: "scalawind",
+    previewCompliedResult: true,
+    laminar: false,
+    scalajsReact: true,
+  })
   const filepath = path.join(__dirname, "./expected.txt")
   // utils.writeFile(filepath, actual)
   const expected = utils.readFile(filepath)

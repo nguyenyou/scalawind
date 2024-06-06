@@ -309,6 +309,25 @@ div(
 ),
 ```
 
+### Scalajs-React
+
+Similar to Laminar, we also have support for helper methods via the `-sr` or `--scalajs-react` flag. Running the generate command with this flag, you will have:
+
+```scala
+import japgolly.scalajs.react.vdom.html_<^.*
+
+object clx:
+  def apply(styles: String): TagMod = ^.cls := styles
+  def :=(styles: String): TagMod = ^.cls := styles
+
+// usage
+
+<.div(
+  cls(tw.flex.items_center.justify_center),
+  "Hello, world!"
+)
+```
+
 ## Reducing Generated Code Size
 
 ### Colors
