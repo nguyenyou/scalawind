@@ -14,7 +14,8 @@ const initOptionsSchema = z.object({
   output: z.string(),
   packageName: z.string(),
   previewCompliedResult: z.boolean(),
-  laminar: z.boolean()
+  laminar: z.boolean(),
+  scalajsReact: z.boolean(),
 })
 
 export const generate = new Command()
@@ -38,6 +39,11 @@ export const generate = new Command()
   .option(
     "-l, --laminar",
     "generate some helper methods for using with Laminar",
+    false
+  )
+  .option(
+    "-sr, --scalajs-react",
+    "generate some helper methods for using with Scalajs-React",
     false
   )
   .option(
