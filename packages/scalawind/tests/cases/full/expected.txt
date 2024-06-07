@@ -20,15 +20,17 @@ def methodNameToTailwindClass(rawName: String) =
 def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   import quotes.reflect.*
 
-  def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
+  def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] =
     var stack = List((term, prefix, important))
     var classNames = List.empty[String]
 
-    while (stack.nonEmpty) {
+    while
+      stack.nonEmpty
+    do
       val (currentTerm, currentPrefix, currentImportant) = stack.head
       stack = stack.tail
 
-      currentTerm match {
+      currentTerm match
         case Apply(Select(inner, "important"), List(styles)) =>
           stack = (styles, currentPrefix, true) :: stack
           stack = (inner, currentPrefix, currentImportant) :: stack
@@ -80,10 +82,9 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
           stack = (inner, currentPrefix, currentImportant) :: stack
         case unexpectedTerm =>
           report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
-      }
-    }
+
     classNames
-  }
+  end extractClassNames
 
   val term = tailwindExpr.asTerm
   val classNames = extractClassNames(term)
