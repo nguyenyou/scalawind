@@ -1,5 +1,12 @@
 # scalawind
 
+## 0.7.4
+
+### Patch Changes
+
+- da0b764: use scala 3 syntax
+- 784e894: use scala3 syntax case class
+
 ## 0.7.3
 
 ### Patch Changes
