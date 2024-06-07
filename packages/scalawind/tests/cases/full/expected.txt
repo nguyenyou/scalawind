@@ -2,6 +2,7 @@ package scalawind
 
 import scala.quoted.*
 import scala.annotation.unused
+import scala.language.implicitConversions
 import com.raquo.laminar.api.L.cls
 
 object clx:
