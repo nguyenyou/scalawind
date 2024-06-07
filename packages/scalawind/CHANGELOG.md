@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.7.5
+
+### Patch Changes
+
+- f95ab26: add import scala.language.implicitConversions
+
 ## 0.7.4
 
 ### Patch Changes
