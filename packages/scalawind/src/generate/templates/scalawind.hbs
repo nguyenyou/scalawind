@@ -102,7 +102,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   {{/if}}
   Expr(combinedClasses)
 
-case class Tailwind() {
+case class Tailwind():
   {{#each modifiers}}
   def {{this.name}}(@unused styles: Tailwind): Tailwind = this
   {{/each}}
@@ -119,4 +119,3 @@ case class Tailwind() {
   def important(@unused styles: Tailwind): Tailwind = this
   def raw(@unused classString: String): Tailwind = this
   def variant(selector: String, styles: Tailwind): Tailwind = this
-}
