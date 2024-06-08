@@ -11,7 +11,8 @@ test('basic test', () => {
     previewCompliedResult: true,
     laminar: false,
     scalajsReact: true,
-    classesValidation: true
+    checkDuplication: true,
+    checkOptimization: true,
   })
   const filepath = path.join(__dirname, "./expected.txt")
   // utils.writeFile(filepath, actual)

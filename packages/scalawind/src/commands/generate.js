@@ -16,7 +16,8 @@ const initOptionsSchema = z.object({
   previewCompliedResult: z.boolean(),
   laminar: z.boolean(),
   scalajsReact: z.boolean(),
-  classesValidation: z.boolean()
+  checkDuplication: z.boolean(),
+  checkOptimization: z.boolean()
 })
 
 export const generate = new Command()
@@ -38,8 +39,13 @@ export const generate = new Command()
     false
   )
   .option(
-    "-cv, --classes-validation",
-    "enable classes validation",
+    "-cd, --check-duplication",
+    "enable check duplication",
+    false
+  )
+  .option(
+    "-co, --check-optimization",
+    "enable check optimization",
     false
   )
   .option(
