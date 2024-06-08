@@ -5,20 +5,22 @@ import scala.annotation.unused
 import scala.language.implicitConversions
 import com.raquo.laminar.api.L.cls
 
-object clx:
+object clx {
   def apply(styles: String) = cls(styles)
   def :=(styles: String) = cls(styles)
+}
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
-def methodNameToTailwindClass(rawName: String) =
+def methodNameToTailwindClass(rawName: String) = {
   val name = if rawName.startsWith("_") && rawName.charAt(1).isDigit then rawName.stripPrefix("_") else rawName
   name.replace("_", "-").replace("per", "/").replace("dot", ".")
+}
 
-def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
+def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   import quotes.reflect.*
-
-  def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] =
+  
+  def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
     var stack = List((term, prefix, important))
     var classNames = List.empty[String]
 
@@ -28,7 +30,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
       val (currentTerm, currentPrefix, currentImportant) = stack.head
       stack = stack.tail
 
-      currentTerm match
+      currentTerm match {
         case Apply(Select(inner, "important"), List(styles)) =>
           stack = (styles, currentPrefix, true) :: stack
           stack = (inner, currentPrefix, currentImportant) :: stack
@@ -80,19 +82,20 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
           stack = (inner, currentPrefix, currentImportant) :: stack
         case unexpectedTerm =>
           report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
-
+      }
+      
     classNames
-  end extractClassNames
+  }
 
   val term = tailwindExpr.asTerm
-  val classNames = extractClassNames(term)
-  val combinedClasses = classNames.reverse.mkString(" ")
+  val classList = extractClassNames(term).reverse
+  val combinedClasses = classList.mkString(" ")
   report.info(s"$combinedClasses")
   Expr(combinedClasses)
-
+}
 val tw = Tailwind()
 
-case class Tailwind():
+case class Tailwind() {
   def first_letter(@unused styles: Tailwind): Tailwind = this
   def first_line(@unused styles: Tailwind): Tailwind = this
   def marker(@unused styles: Tailwind): Tailwind = this
@@ -96398,3 +96401,4 @@ case class Tailwind():
   def important(@unused styles: Tailwind): Tailwind = this
   def raw(@unused classString: String): Tailwind = this
   def variant(selector: String, styles: Tailwind): Tailwind = this
+}

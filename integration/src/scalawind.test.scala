@@ -279,3 +279,53 @@ class CreateNextAppHomePageTests extends munit.FunSuite {
     )
   }
 }
+
+class ClassesValidationTests extends munit.FunSuite {
+  test("duplication") {
+    assertNoDiff(
+      compileErrors("sw(tw.flex.flex)"),
+      """|error: [Duplication] flex
+        |      compileErrors("sw(tw.flex.flex)"),
+        |                  ^
+        |""".stripMargin
+    )
+
+    assertNoDiff(
+      compileErrors("sw(tw.flex.hover(tw.items_center.items_center))"),
+      """|error: [Duplication] hover:items-center
+        |      compileErrors("sw(tw.flex.hover(tw.items_center.items_center))"),
+        |                  ^
+        |""".stripMargin
+    )
+  }
+
+  test("optimization one-direction class to two-directions class") {
+    assertNoDiff(
+      compileErrors("sw(tw.mr_2.ml_2)"),
+      """|error: [Optimization] Use mx-2 instead of ml-2 and mr-2
+        |      compileErrors("sw(tw.mr_2.ml_2)"),
+        |                  ^
+        |""".stripMargin
+    )
+  }
+
+  test("optimization two-directions class to four-directions class") {
+    assertNoDiff(
+      compileErrors("sw(tw.mx_2.my_2)"),
+      """|error: [Optimization] Use m-2 instead of mx-2 and my-2
+        |      compileErrors("sw(tw.mx_2.my_2)"),
+        |                  ^
+        |""".stripMargin
+    )
+  }
+
+  test("optimization one-direction class to four-directions class") {
+    assertNoDiff(
+      compileErrors("sw(tw.ml_2.mr_2.mt_2.mb_2)"),
+      """|error: [Optimization] Use m-2 instead of mt-2, mb-2, ml-2 and mr-2
+        |      compileErrors("sw(tw.ml_2.mr_2.mt_2.mb_2)"),
+        |                  ^
+        |""".stripMargin
+    )
+  }
+}

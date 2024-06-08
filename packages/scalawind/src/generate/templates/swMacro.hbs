@@ -1,14 +1,16 @@
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
-def methodNameToTailwindClass(rawName: String) =
+def methodNameToTailwindClass(rawName: String) = {
   val name = if rawName.startsWith("_") && rawName.charAt(1).isDigit then rawName.stripPrefix("_") else rawName
   name.replace("_", "-").replace("per", "/").replace("dot", ".")
+}
 
-def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
+def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   import quotes.reflect.*
-
-  def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] =
+  {{> classesValidation this }}
+  
+  def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
     var stack = List((term, prefix, important))
     var classNames = List.empty[String]
 
@@ -18,7 +20,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
       val (currentTerm, currentPrefix, currentImportant) = stack.head
       stack = stack.tail
 
-      currentTerm match
+      currentTerm match {
         case Apply(Select(inner, "important"), List(styles)) =>
           stack = (styles, currentPrefix, true) :: stack
           stack = (inner, currentPrefix, currentImportant) :: stack
@@ -70,14 +72,19 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
           stack = (inner, currentPrefix, currentImportant) :: stack
         case unexpectedTerm =>
           report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
-
+      }
+      
     classNames
-  end extractClassNames
+  }
 
   val term = tailwindExpr.asTerm
-  val classNames = extractClassNames(term)
-  val combinedClasses = classNames.reverse.mkString(" ")
+  val classList = extractClassNames(term).reverse
+  {{#if classesValidation}}
+  validate(classList)
+  {{/if}}
+  val combinedClasses = classList.mkString(" ")
   {{#if previewCompliedResult}}
   report.info(s"$combinedClasses")
   {{/if}}
   Expr(combinedClasses)
+}

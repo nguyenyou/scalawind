@@ -2,7 +2,7 @@
   "name": "integration-test",
   "type": "module",
   "scripts": {
-    "generate": "scalawind generate -pcr -o ./src/scalawind.scala",
+    "generate": "scalawind generate --classes-validation -pcr -o ./src/scalawind.scala",
     "test:scala": "scala-cli test src --test-only 'tests.only*'"
   },
   "dependencies": {

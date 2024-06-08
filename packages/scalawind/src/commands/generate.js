@@ -16,6 +16,7 @@ const initOptionsSchema = z.object({
   previewCompliedResult: z.boolean(),
   laminar: z.boolean(),
   scalajsReact: z.boolean(),
+  classesValidation: z.boolean()
 })
 
 export const generate = new Command()
@@ -34,6 +35,11 @@ export const generate = new Command()
   .option(
     "-pcr, --preview-complied-result",
     "enable show preview compiled result",
+    false
+  )
+  .option(
+    "-cv, --classes-validation",
+    "enable classes validation",
     false
   )
   .option(
