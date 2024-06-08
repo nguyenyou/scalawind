@@ -236,7 +236,6 @@ val styles: String = tw.variant("&:nth-child(3)", tw.text_red_500.bg_black)
 val styles: String = "[&:nth-child(3)]:text-red-500 [&:nth-child(3)]:bg-black"
 ```
 
-
 ## Escape Hatches
 
 There're cases you need some Tailwind classes that Scalawind currently doesn't support, you can use the `raw` method to directly write the utilities that you need, for example:
@@ -254,6 +253,22 @@ val styles = sw(tw.text_black.bg_white.hover(tw.raw("text-white bg-black")))
 
 val styles = "text-black bg-white hover:text-white hover:bg-black"
 ```
+
+## Classes Validation
+
+Passing the flag `-cv` or `--classes-validation` to enable this feature.
+
+### Check Duplication
+When writing a long list of utility classes, it's sometime necessary to check if we accidentally duplicate our class, with class validation feature enabled, we check it for you:
+
+### Usage Optimization
+In Tailwind, we have `margin` and `padding` classes that can be used in three different fashions:
+
+- One-direction: `mt-2`, `mb-2`, `ml-2` and `mr-2`
+- Two-directions: `my-2` and `mx-2`
+- Four-directions: `m-2`
+
+It makes sense that we provide a check for efficient usage, such as, we should use `m-2` instead of combination of `my-2` and `mx-2` or we should use `mx-2` instead of combination of `mr-2` and `ml-2`.
 
 ## Advanced Usage
 
