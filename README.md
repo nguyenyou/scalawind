@@ -261,6 +261,8 @@ Passing the flag `-cv` or `--classes-validation` to enable this feature.
 ### Check Duplication
 When writing a long list of utility classes, it's sometime necessary to check if we accidentally duplicate our class, with class validation feature enabled, we check it for you:
 
+<img width="767" alt="Screenshot 2024-06-08 at 13 41 44" src="https://github.com/nguyenyou/scalawind/assets/38455472/d20d635a-3496-4f3d-a8bf-56c66eb1cd5d">
+
 ### Usage Optimization
 In Tailwind, we have `margin` and `padding` classes that can be used in three different fashions:
 
@@ -269,6 +271,9 @@ In Tailwind, we have `margin` and `padding` classes that can be used in three di
 - Four-directions: `m-2`
 
 It makes sense that we provide a check for efficient usage, such as, we should use `m-2` instead of combination of `my-2` and `mx-2` or we should use `mx-2` instead of combination of `mr-2` and `ml-2`.
+
+<img width="792" alt="Screenshot 2024-06-08 at 13 40 57" src="https://github.com/nguyenyou/scalawind/assets/38455472/ee46b420-cede-4511-bf19-7bcaa07f4fbf">
+
 
 ## Advanced Usage
 
