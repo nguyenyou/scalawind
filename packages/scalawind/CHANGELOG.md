@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.1
+
+### Patch Changes
+
+- 42d72fb: separate check flags for duplication and optimization
+
 ## 0.8.0
 
 ### Minor Changes
