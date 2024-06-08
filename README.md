@@ -32,6 +32,8 @@ https://github.com/nguyenyou/scalawind/assets/38455472/5668b9bc-244c-4274-bf4c-d
 - [x] Percentage values, like `w-1/2`
 - [x] Dot values, like `w-1.5`
 
+You can have a quick check for how far Scalawind can contruct Tailwind classes by looking at the test cases at: [scalawind.test.scala](https://github.com/nguyenyou/scalawind/blob/main/integration/src/scalawind.test.scala)
+
 # Scalawind - Zero-Runtime Typesafe TailwindCSS in Scala
 
 > Although this library is still very early, the actual code is just a single file generated and output directly into your project. You can twist it, fix it, make changes to it however you like. 
