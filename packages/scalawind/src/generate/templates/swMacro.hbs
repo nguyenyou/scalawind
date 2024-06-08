@@ -8,7 +8,9 @@ def methodNameToTailwindClass(rawName: String) = {
 
 def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   import quotes.reflect.*
+  {{#if hasValidation}}
   {{> classesValidation this }}
+  {{/if}}
   
   def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
     var stack = List((term, prefix, important))
@@ -79,7 +81,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
 
   val term = tailwindExpr.asTerm
   val classList = extractClassNames(term).reverse
-  {{#if classesValidation}}
+  {{#if hasValidation}}
   validate(classList)
   {{/if}}
   val combinedClasses = classList.mkString(" ")

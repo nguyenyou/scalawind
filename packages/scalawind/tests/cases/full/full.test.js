@@ -11,6 +11,8 @@ test('full config test', () => {
     previewCompliedResult: true,
     laminar: true,
     scalajsReact: false,
+    checkDuplication: false,
+    checkOptimization: false,
   })
   const filepath = path.join(__dirname, "./expected.txt")
   // utils.writeFile(filepath, actual)

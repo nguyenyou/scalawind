@@ -258,14 +258,18 @@ val styles = "text-black bg-white hover:text-white hover:bg-black"
 
 ## Classes Validation
 
-Passing the flag `-cv` or `--classes-validation` to enable this feature.
-
 ### Check Duplication
+
+Passing the flag `-cd` or `--check-duplication` to enable this feature.
+
 When writing a long list of utility classes, it's sometime necessary to check if we accidentally duplicate our class, with class validation feature enabled, we check it for you:
 
 <img width="767" alt="Screenshot 2024-06-08 at 13 41 44" src="https://github.com/nguyenyou/scalawind/assets/38455472/d20d635a-3496-4f3d-a8bf-56c66eb1cd5d">
 
 ### Usage Optimization
+
+Passing the flag `-co` or `--check-optimization` to enable this feature.
+
 In Tailwind, we have `margin` and `padding` classes that can be used in three different fashions:
 
 - One-direction: `mt-2`, `mb-2`, `ml-2` and `mr-2`

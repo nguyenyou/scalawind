@@ -105,11 +105,14 @@ export function generateContent(options) {
     return ({ name: mod, value: mod})
   })
 
+  const hasValidation = options.checkDuplication || options.checkOptimization
+
   const generatedScalawind = template({ 
     modifiers, 
     standard, 
     arbitrary,
     opacityColors,
+    hasValidation,
     ...options,
   })
 

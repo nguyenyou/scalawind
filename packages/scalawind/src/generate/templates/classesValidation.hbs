@@ -1,17 +1,23 @@
-{{#if classesValidation}}
 def validate(classes: List[String]): Unit = {
+  {{#if checkDuplication}}
   checkDuplication(classes)
+  {{/if}}
+  {{#if checkOptimization}}
   val optimizationSuggestions = checkOptimization(classes)
   if optimizationSuggestions.nonEmpty then
     report.errorAndAbort(s"[Optimization] ${optimizationSuggestions.mkString(", ")}")
+  {{/if}}
 }
 
+{{#if checkDuplication}}
 def checkDuplication(classes: List[String]): Unit = {
   val duplicates = classes.groupBy(identity).collect { case (x, List(_, _, _*)) => x }
   if duplicates.nonEmpty then
     report.errorAndAbort(s"[Duplication] ${duplicates.mkString(", ")}")
 }
+{{/if}}
 
+{{#if checkOptimization}}
 def checkOptimization(classes: List[String]): List[String] = {
   val properties = List("p", "m")
 
