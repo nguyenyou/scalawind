@@ -93,9 +93,9 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   report.info(s"$combinedClasses")
   Expr(combinedClasses)
 }
-val tw = Tailwind()
+object tw extends Tailwind
 
-case class Tailwind() {
+trait Tailwind:
   def first_letter(@unused styles: Tailwind): Tailwind = this
   def first_line(@unused styles: Tailwind): Tailwind = this
   def marker(@unused styles: Tailwind): Tailwind = this
@@ -96401,4 +96401,3 @@ case class Tailwind() {
   def important(@unused styles: Tailwind): Tailwind = this
   def raw(@unused classString: String): Tailwind = this
   def variant(selector: String, styles: Tailwind): Tailwind = this
-}
