@@ -1,0 +1,7 @@
+{{#if laminar}}
+import com.raquo.laminar.api.L.cls
+
+object clx:
+  def apply(styles: String) = cls(styles)
+  def :=(styles: String) = cls(styles)
+{{/if}}

@@ -8,9 +8,6 @@ import com.raquo.laminar.api.L.cls
 object clx:
   def apply(styles: String) = cls(styles)
   def :=(styles: String) = cls(styles)
-
-val tw = Tailwind()
-
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
@@ -92,6 +89,8 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] =
   val combinedClasses = classNames.reverse.mkString(" ")
   report.info(s"$combinedClasses")
   Expr(combinedClasses)
+
+val tw = Tailwind()
 
 case class Tailwind():
   def first_letter(@unused styles: Tailwind): Tailwind = this
