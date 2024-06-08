@@ -4,7 +4,7 @@ import { generateContent } from '../../../src/generate'
 import { tailwindConfig } from './config'
 import * as utils from '../../test-utils'
 
-test.skip('full config test', () => {
+test('full config test', () => {
   const actual = generateContent({
     userConfig: tailwindConfig,
     packageName: "scalawind",
