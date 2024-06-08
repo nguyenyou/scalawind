@@ -6,18 +6,21 @@ import { createDoc } from './createDoc'
 
 import Handlebars from "handlebars";
 
-const scalawindTemplate = fs.readFileSync(path.join(__dirname, "./templates/scalawind.hbs"), "utf-8")
+function readTemplate(filename) {
+  return fs.readFileSync(path.join(__dirname, `./templates/${filename}.hbs`), "utf-8")
+}
 
-const template = Handlebars.compile(scalawindTemplate);
+Handlebars.registerPartial({
+  swMacro: Handlebars.compile(readTemplate('swMacro')),
+  tailwind: Handlebars.compile(readTemplate('tailwind')),
+  laminar: Handlebars.compile(readTemplate('laminar')),
+  scalajsReact: Handlebars.compile(readTemplate('scalajsReact')),
+});
+
+const template = Handlebars.compile(readTemplate('scalawind'));
 
 export function generateContent(options) {
-  const {
-    userConfig,
-    packageName = "scalawind",
-    previewCompliedResult = false,
-    laminar = false,
-    scalajsReact = false,
-  } = options
+  const { userConfig } = options
   const resolvedConfig = resolveConfig(userConfig);
   const ctx = createContext(resolvedConfig);
 
@@ -106,7 +109,7 @@ export function generateContent(options) {
     standard, 
     arbitrary,
     opacityColors,
-    ...options
+    ...options,
   })
 
   return generatedScalawind
