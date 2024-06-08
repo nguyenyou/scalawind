@@ -1,5 +1,15 @@
 # scalawind
 
+## 0.8.0
+
+### Minor Changes
+
+- 805ea2a: add class optimization for padding and margin utilities
+
+### Patch Changes
+
+- 0fc14b3: refactor template, break the one big template into many smaller templates
+
 ## 0.7.5
 
 ### Patch Changes
