@@ -15,6 +15,7 @@ Handlebars.registerPartial({
   tailwind: Handlebars.compile(readTemplate('tailwind')),
   laminar: Handlebars.compile(readTemplate('laminar')),
   scalajsReact: Handlebars.compile(readTemplate('scalajsReact')),
+  classesValidation: Handlebars.compile(readTemplate('classesValidation')),
 });
 
 const template = Handlebars.compile(readTemplate('scalawind'));
