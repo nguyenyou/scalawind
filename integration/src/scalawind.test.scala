@@ -23,6 +23,13 @@ class SimpleSingleTests extends munit.FunSuite {
       ) == "hover:text-red-500"
     )
   }
+  test("modifier md") {
+    assert(
+      sw(
+        tw.md(tw.text_red_500)
+      ) == "md:text-red-500"
+    )
+  }
   test("arbitrary values") {
     assert(
       sw(
