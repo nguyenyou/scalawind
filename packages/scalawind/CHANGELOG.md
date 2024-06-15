@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.2
+
+### Patch Changes
+
+- ebef136: improve method name for "per" and "dot" classes
+
 ## 0.8.1
 
 ### Patch Changes
