@@ -33,14 +33,14 @@ class SimpleSingleTests extends munit.FunSuite {
   test("dot values") {
     assert(
       sw(
-        tw.w_1dot5
+        tw.`w_1.5`
       ) == "w-1.5"
     )
   }
   test("percentage values") {
     assert(
       sw(
-        tw.w_1per2
+        tw.`w_1/2`
       ) == "w-1/2"
     )
   }
@@ -149,12 +149,12 @@ class ComplexChainingTests extends munit.FunSuite {
   test("dot values, percentage values") {
     assert(
       sw(
-        tw.w_1per2.h_1dot5._left_1
+        tw.`w_1/2`.`h_1.5`._left_1
       ) == "w-1/2 h-1.5 -left-1"
     )
     assert(
       sw(
-        tw.md(tw.hover(tw.w_1per2.h_1dot5._left_1))
+        tw.md(tw.hover(tw.`w_1/2`.`h_1.5`._left_1))
       ) == "md:hover:w-1/2 md:hover:h-1.5 md:hover:-left-1"
     )
   }
@@ -221,7 +221,7 @@ class CreateNextAppHomePageTests extends munit.FunSuite {
 
     assert(
       sw(
-        tw.bg_black$("[.05]").dark(tw.bg_white$("[.06]")).px_1.py_0dot5.rounded.font_semibold
+        tw.bg_black$("[.05]").dark(tw.bg_white$("[.06]")).px_1.`py_0.5`.rounded.font_semibold
       ) == "bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold"
     )
 

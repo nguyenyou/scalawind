@@ -148,10 +148,10 @@ To use classes which start with negative values like `-left-1`, just replace `-`
 
 ### Percentage value
 
-For utilities like `w-1/2`, we have to replace the `/` backward slash character with the `per` word because the `/` backward slash character is invalid for method name.
+For utilities like `w-1/2`, we have to call the method in backticks. Example usage:
 
 ```scala
-val styles: String = tw.w_1per2
+val styles: String = tw.`w_1/2`
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -160,14 +160,14 @@ val styles: String = "w-1/2"
 
 ### Dot value
 
-For utilities like `w-1.5`, we have to replace the `.` dot character with the `dot` word. Example usage:
+For utilities like `w-1.5`, we have to call the method in backticks. Example usage:
 
 ```scala
-val styles: String = tw.w_1dot2
+val styles: String = tw.`w_1.5`
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
-val styles: String = "w-1.2"
+val styles: String = "w-1.5"
 ```
 
 ### Color opacity
