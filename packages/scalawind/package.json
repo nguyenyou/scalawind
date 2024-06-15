@@ -1,6 +1,6 @@
 {
   "name": "scalawind",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Zero-Runtime Typesafe TailwindCSS in Scala",
   "license": "MIT",
   "homepage": "https://github.com/nguyenyou/scalawind",
