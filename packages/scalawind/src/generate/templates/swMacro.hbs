@@ -1,9 +1,13 @@
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
-def methodNameToTailwindClass(rawName: String) = {
+def methodNameToTailwindClass(rawName: String, prefix: String = "") = {
   val name = if rawName.startsWith("_") && rawName.charAt(1).isDigit then rawName.stripPrefix("_") else rawName
-  name.replace("_", "-").replace("per", "/").replace("dot", ".")
+  val validName = name.replace("_", "-").replace("per", "/").replace("dot", ".")
+  if (prefix != "") {
+    s"$prefix-$validName"
+  }
+  validName
 }
 
 def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
@@ -11,6 +15,8 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   {{#if hasValidation}}
   {{> classesValidation this }}
   {{/if}}
+
+  val prefix = "sw"
   
   def extractClassNames(term: Term, prefix: String = "", important: Boolean = false): List[String] = {
     var stack = List((term, prefix, important))

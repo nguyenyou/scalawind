@@ -1,4 +1,3 @@
-//> using test.dep org.scalameta::munit::1.0.0
 package tests.only
 
 import scalawind.*

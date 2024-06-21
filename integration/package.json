@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "generate": "scalawind generate --check-duplication --check-optimization -pcr -o ./src/scalawind.scala",
-    "test:scala": "scala-cli test src --test-only 'tests.only*'"
+    "test:scala": "scala-cli test src --test-only 'tests.only*'",
+    "test:scala:prefix": "scala-cli test src --test-only 'tests.prefix.only*'"
   },
   "dependencies": {
     "scalawind": "link:scalawind"
