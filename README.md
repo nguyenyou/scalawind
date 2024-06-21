@@ -45,7 +45,7 @@ The idea is very simple, you can generate typesafe scala code from tailwind conf
 ```scala
 import scalawind.*
 
-val styles: String = sw(tw.bg_black.text_white.hover(tw.bg_white.text_black))
+val styles: String = tw.bg_black.text_white.hover(tw.bg_white.text_black).css
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -54,7 +54,7 @@ val styles: String = "bg-black text-white hover:bg-white hover:text-black
 
 We use fluent syntax to type our tailwind classes. These classes will be compiled at *compile-time* so there's no runtime cost for this.
 
-The `sw` method is a macro that will transform the all the function calls into just one single literal string at *compile-time*.
+The `css` method is what we use to trigger the macro magic to compile our classes.
 
 ## Quickstart
 
@@ -96,10 +96,10 @@ Then, `import scalawind.*` and you're ready to go.
 import scalawind.*
 
 button(
-  cls := sw(tw.bg_blue_500
-        .hover(tw.bg_blue_600).first_letter(tw.text_red_500.font_bold)
-        .text_white.rounded.py_3.px_4.md(tw.py_4.px_5)
-        .dark(tw.bg_sky_900.hover(tw.bg_sky_800))),
+  cls := tw.bg_blue_500
+          .hover(tw.bg_blue_600).first_letter(tw.text_red_500.font_bold)
+          .text_white.rounded.py_3.px_4.md(tw.py_4.px_5)
+          .dark(tw.bg_sky_900.hover(tw.bg_sky_800)).css,
   "Click me"
 )
 
@@ -203,7 +203,7 @@ This behavior is the same as tailwindcss [ordering stacked modifiers](https://ta
 To specify a class to be important, you can wrap it inside the `tw.important()` modifier.
 
 ```scala
-button(cls := sw(tw.important(tw.text_black).hover(tw.important(tw.text_blue_700))), "Click me")
+button(cls := tw.important(tw.text_black).hover(tw.important(tw.text_blue_700)).css, "Click me")
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -249,7 +249,7 @@ tw.raw("some-very-special-class")
 Of course, this method can be chain in the fluent style like any other methods:
 
 ```scala
-val styles = sw(tw.text_black.bg_white.hover(tw.raw("text-white bg-black")))
+val styles = tw.text_black.bg_white.hover(tw.raw("text-white bg-black")).css
 
 // ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -289,7 +289,7 @@ Depends on your UI library, if we're lucky, we can leverage the implicit convers
 
 #### Slinky
 
-In slinky, we can just completely skip the `sw` macro method, like this:
+In slinky, we can skipp the `css` method, like this:
 
 ```scala
 className := tw.flex.items_center.justify_center
@@ -297,7 +297,7 @@ className := tw.flex.items_center.justify_center
 
 #### Laminar / Scalajs-React
 
-In Laminar/ Scalajs-React, the implicit conversion might now work as expected. In that case, you can use the `css` method, like so:
+In Laminar/ Scalajs-React, we need to use the `css` method, like:
 
 ```scala
 cls := tw.flex.items_center.justify_center.css
