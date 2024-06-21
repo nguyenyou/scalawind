@@ -329,3 +329,18 @@ class ClassesValidationTests extends munit.FunSuite {
     )
   }
 }
+
+class ImplicitConversionTests extends munit.FunSuite {
+  test("string implicit conversion") {
+    val css: String = tw.flex.items_center.justify_center
+    assert(
+      css == "flex items-center justify-center"
+    )
+  }
+
+  test("css method") {
+    assert(
+      tw.flex.items_center.justify_center.css == "flex items-center justify-center"
+    )
+  }
+}

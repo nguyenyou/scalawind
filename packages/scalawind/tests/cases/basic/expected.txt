@@ -3,12 +3,13 @@ package scalawind
 import scala.quoted.*
 import scala.annotation.unused
 import scala.language.implicitConversions
-import japgolly.scalajs.react.vdom.html_<^.*
 
-object clx {
-  def apply(styles: String): TagMod = ^.cls := styles
-  def :=(styles: String): TagMod = ^.cls := styles
-}
+extension (inline tailwind: Tailwind)
+  /** css method is used in case the implicit conversion of sw method doesn't work, in Laminar, for example.
+    */
+  inline def css: String =
+    ${ swImpl('tailwind) }
+    
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
