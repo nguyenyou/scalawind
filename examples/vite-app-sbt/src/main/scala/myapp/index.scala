@@ -11,10 +11,10 @@ def App(): Unit =
   render(
     container,
     div(
-      cls := sw(tw.w_screen.h_screen.flex.items_center.justify_center),
+      cls := tw.w_screen.h_screen.flex.items_center.justify_center.css,
       div(
         "Scala ❤️ Tailwind",
-        cls := sw(tw.p_2.text_primary.hover(tw.bg_black.text_white))
+        cls := tw.p_2.text_primary.hover(tw.bg_black.text_white).css
       )
     )
   )
