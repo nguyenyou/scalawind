@@ -5,8 +5,6 @@ import scala.annotation.unused
 import scala.language.implicitConversions
 
 extension (inline tailwind: Tailwind)
-  /** css method is used in case the implicit conversion of sw method doesn't work, in Laminar, for example.
-    */
   inline def css: String =
     ${ swImpl('tailwind) }
     
