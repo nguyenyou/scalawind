@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.4
+
+### Patch Changes
+
+- 4873c98: remove comments of css method
+
 ## 0.8.3
 
 ### Patch Changes
