@@ -13,8 +13,6 @@ function readTemplate(filename) {
 Handlebars.registerPartial({
   swMacro: Handlebars.compile(readTemplate('swMacro')),
   tailwind: Handlebars.compile(readTemplate('tailwind'), {noEscape: true}),
-  laminar: Handlebars.compile(readTemplate('laminar')),
-  scalajsReact: Handlebars.compile(readTemplate('scalajsReact')),
   classesValidation: Handlebars.compile(readTemplate('classesValidation')),
 });
 
