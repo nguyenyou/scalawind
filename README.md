@@ -295,64 +295,14 @@ In slinky, we can just completely skip the `sw` macro method, like this:
 className := tw.flex.items_center.justify_center
 ```
 
-#### Laminar
+#### Laminar / Scalajs-React
 
-In laminar, we can skip `sw` macro method, like this:
-
-```scala
-cls[String](tw.flex.items_center.justify_center)
-
-// or if you don't want to pass [String] to every cls call, then you can do this:
-import com.raquo.laminar.api.L.cls
-def clx(styles: String) = cls(styles)
-// now, the implicit conversion works
-clx(tw.flex.items_center.justify_center)
-```
-Another way to skip the `sw` is using infix notation:
+In Laminar/ Scalajs-React, the implicit conversion might now work as expected. In that case, you can use the `css` method, like so:
 
 ```scala
-import com.raquo.laminar.api.L.cls
-object clx:
-  def apply(styles: String) = cls(styles)
-  def :=(styles: String) = cls(styles)
-
-div(
-  clx := tw.text_green_500,
-  "Scala ❤️ Tailwind"
-),
+cls := tw.flex.items_center.justify_center.css
 ```
 
-We also have a CLI option for this, use `-l` or `--laminar` to auto generate the `clx` object for you.
-
-Another way is defining your custom string interpolation
-
-```scala
-extension (sc: StringContext) def clx(args: String*): Modifier[HtmlElement] = cls(sc.s(args*))
-
-div(
-  clx"${tw.text_red_500}",
-  "Scala ❤️ Tailwind"
-),
-```
-
-### Scalajs-React
-
-Similar to Laminar, we also have support for helper methods via the `-sr` or `--scalajs-react` flag. Running the generate command with this flag, you will have:
-
-```scala
-import japgolly.scalajs.react.vdom.html_<^.*
-
-object clx:
-  def apply(styles: String): TagMod = ^.cls := styles
-  def :=(styles: String): TagMod = ^.cls := styles
-
-// usage
-
-<.div(
-  cls(tw.flex.items_center.justify_center),
-  "Hello, world!"
-)
-```
 
 ## Reducing Generated Code Size
 
