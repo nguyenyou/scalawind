@@ -1,0 +1,25 @@
+{
+  "name": "scalawind-vite-sbt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postinstall": "scalawind generate -pcr -o ./src/main/scala/myapp/scalawind.scala",
+    "dev:scala": "sbt \"~fastLinkJS\"",
+    "build:scala": "sbt \"fullLinkJS\""
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "scalawind": "latest",
+    "tailwindcss": "3.4.3",
+    "vite": "5.2.11"
+  }
+}
