@@ -12,7 +12,7 @@ def App(): Unit =
     container,
     div(
       button(
-        cls := tw.btn.btn_primary.css,
+        tw.btn.btn_primary,
         "Click me"
       )
     )
