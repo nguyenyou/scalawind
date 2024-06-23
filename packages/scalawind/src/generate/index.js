@@ -14,10 +14,25 @@ function readTemplate(filename) {
 Handlebars.registerPartial({
   swMacro: Handlebars.compile(readTemplate('swMacro')),
   tailwind: Handlebars.compile(readTemplate('tailwind'), {noEscape: true}),
+  laminar: Handlebars.compile(readTemplate('laminar')),
+  scalajsReact: Handlebars.compile(readTemplate('scalajsReact')),
   classesValidation: Handlebars.compile(readTemplate('classesValidation')),
 });
 
 const template = Handlebars.compile(readTemplate('scalawind'));
+
+function getImplicitConversionHelpers(framework) {
+  switch (framework) {
+    case "laminar":
+      return { laminar: true, scalajsReact: false }
+    case "scalajs-react":
+      return { laminar: false, scalajsReact: true } 
+    case "both":
+      return { laminar: true, scalajsReact: true }  
+    default:
+      return { laminar: false, scalajsReact: false }
+  }
+}
 
 export function generateContent(options) {
   const { userConfig } = options
@@ -112,6 +127,7 @@ export function generateContent(options) {
     arbitrary,
     opacityColors,
     hasValidation,
+    ...(getImplicitConversionHelpers(options.framework)),
     ...options,
   })
 

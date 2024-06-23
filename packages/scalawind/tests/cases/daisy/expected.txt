@@ -3,7 +3,16 @@ package scalawind
 import scala.quoted.*
 import scala.annotation.unused
 import scala.language.implicitConversions
+import japgolly.scalajs.react.vdom.html_<^.*
 
+implicit inline def cw(inline tailwind: Tailwind): TagMod = {
+  ${ cwImpl('tailwind) }
+}
+
+def cwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TagMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ ^.cls := ${ Expr(value) } }
+}
 extension (inline tailwind: Tailwind)
   inline def css: String =
     ${ swImpl('tailwind) }

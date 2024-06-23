@@ -15,7 +15,8 @@ const initOptionsSchema = z.object({
   packageName: z.string(),
   previewCompliedResult: z.boolean(),
   checkDuplication: z.boolean(),
-  checkOptimization: z.boolean()
+  checkOptimization: z.boolean(),
+  framework: z.union([z.literal("laminar"), z.literal("scalajs-react"), z.literal("both")])
 })
 
 export const generate = new Command()
@@ -39,6 +40,11 @@ export const generate = new Command()
   .option(
     "-cd, --check-duplication",
     "enable check duplication",
+    false
+  )
+  .option(
+    "-f, --framework",
+    "generate implicit conversion helpers for framework, can be: laminar, scalajs-react, both",
     false
   )
   .option(
