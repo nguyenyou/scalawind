@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.5
+
+### Patch Changes
+
+- 0c399e3: add daisy example
+
 ## 0.8.4
 
 ### Patch Changes
