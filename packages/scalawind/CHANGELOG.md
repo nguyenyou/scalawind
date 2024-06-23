@@ -1,5 +1,12 @@
 # scalawind
 
+## 0.8.6
+
+### Patch Changes
+
+- 5da54db: implicit conversion for laminar and scalajs-react
+- e8784c6: default framework is none
+
 ## 0.8.5
 
 ### Patch Changes
