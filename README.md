@@ -311,25 +311,46 @@ Create a `helper.scala` file (or anyname you want) with the following code:
 package scalawind
 
 import com.raquo.laminar.api.L
-import com.raquo.laminar.modifiers.CompositeKeySetter
-
 import scala.quoted.*
 
-final case class TwClasses(value: String)
-    extends CompositeKeySetter(
-      key = L.cls,
-      itemsToAdd = L.StringValueMapper.toNormalizedList(value, separator = " ")
-    )
-
-implicit inline def lw(inline tailwind: Tailwind): TwClasses = {
+implicit inline def lw(inline tailwind: Tailwind): L.Modifier[L.HtmlElement] = {
   ${ lwImpl('tailwind) }
 }
 
-def lwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TwClasses] = {
+def lwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[L.Modifier[L.HtmlElement]] = {
   val value = swImpl(tailwindExpr).valueOrAbort
-  '{ TwClasses(${ Expr(value) }) }
+  '{ L.cls := ${ Expr(value) } }
+}
+```
+
+Then, you can write like this:
+
+```scala
+div(
+  tw.text_red_500.bg_black,
+  "Hello, world"
+)
+```
+
+### Implicit Conversion to Scalajs-React TagMode
+
+Similar to Laminar, in Scalajs-React, you can use this:
+
+```scala
+package scalawind
+
+import scala.quoted.*
+import japgolly.scalajs.react.*
+import japgolly.scalajs.react.vdom.html_<^.*
+
+implicit inline def cw(inline tailwind: Tailwind): TagMod = {
+  ${ cwImpl('tailwind) }
 }
 
+def cwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TagMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ ^.cls := ${ Expr(value) } }
+}
 ```
 
 Then, you can write like this:
