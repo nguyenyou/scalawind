@@ -15,9 +15,9 @@ def App(): Unit =
     .useState(0)
     .render((props, count) => {
       <.div(
-        ^.cls := tw.w_screen.h_screen.flex.items_center.justify_center.css,
+        tw.w_screen.h_screen.flex.items_center.justify_center,
         <.div(
-          ^.cls := tw.p_2.text_primary.hover(tw.bg_black.text_white).css,
+          tw.p_2.text_primary.hover(tw.bg_black.text_white),
           "Scala ❤️ Tailwind"
         )
       )
