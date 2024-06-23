@@ -43,7 +43,7 @@ export const generate = new Command()
     false
   )
   .option(
-    "-f, --framework",
+    "-f, --framework <framework>",
     "generate implicit conversion helpers for framework, can be: laminar, scalajs-react, both, none",
     "none"
   )
