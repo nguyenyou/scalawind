@@ -13,10 +13,11 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.3",
+    "daisyui": "^4.12.2",
     "tsup": "^6.5.0",
-    "turbo": "^2.0.3"
+    "turbo": "^2.0.4"
   },
-  "packageManager": "pnpm@9.1.4",
+  "packageManager": "pnpm@9.4.0",
   "engines": {
     "node": ">=18"
   }
