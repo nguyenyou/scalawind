@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.9
+
+### Patch Changes
+
+- ad3b292: remove redundant import
+
 ## 0.8.8
 
 ### Patch Changes
