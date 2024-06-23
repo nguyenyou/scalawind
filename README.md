@@ -311,54 +311,35 @@ Create a `helper.scala` file (or anyname you want) with the following code:
 package scalawind
 
 import com.raquo.laminar.api.L
+import com.raquo.laminar.modifiers.CompositeKeySetter
+
 import scala.quoted.*
 
-final case class TwStyle(value: String)
+final case class TwClasses(value: String)
+    extends CompositeKeySetter(
+      key = L.cls,
+      itemsToAdd = L.StringValueMapper.toNormalizedList(value, separator = " ")
+    )
 
-object TwStyle:
-  given ToExpr[TwStyle] with
-    def apply(twStyle: TwStyle)(using Quotes): Expr[TwStyle] =
-      '{ TwStyle(${ Expr(twStyle.value) }) }
-
-extension (inline tailwind: Tailwind)
-  inline def cls: TwStyle =
-    ${ cwImpl('tailwind) }
-
-def cwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TwStyle] = {
-  val value = swImpl(tailwindExpr).valueOrAbort
-  val twStyle = TwStyle(value = value)
-  Expr(twStyle)
+implicit inline def lw(inline tailwind: Tailwind): TwClasses = {
+  ${ lwImpl('tailwind) }
 }
 
-
-implicit def convertToLaminarModifier(twStyle: TwStyle): L.Modifier[L.HtmlElement] = {
-  new L.Modifier[L.HtmlElement] {
-    override def apply(element: L.HtmlElement): Unit = {
-      element.amend(L.cls.apply(twStyle.value))
-    }
-  }
+def lwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TwClasses] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ TwClasses(${ Expr(value) }) }
 }
 
 ```
 
-Then, you can use it like this:
+Then, you can write like this:
 
 ```scala
 div(
-  tw.text_red_500.bg_black.cls,
-  "Hello, Laminar"
+  tw.text_red_500.bg_black,
+  "Hello, world"
 )
 ```
-
-### Implicit Conversion to Scalajs-React
-
-Similar to Laminar, but replace `convertToLaminarModifier` with `convertToTagMod`:
-
-```scala
-implicit def convertToTagMod(twStyle: TwStyle): TagMod = ^.cls := twStyle.value
-```
-
-
 
 ## Reducing Generated Code Size
 
