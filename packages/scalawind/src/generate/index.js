@@ -3,6 +3,7 @@ import { createContext } from 'tailwindcss/lib/lib/setupContextUtils';
 import fs from 'fs'
 import path from 'path'
 import { createDoc } from './createDoc'
+import { fmtToScalawind } from '../utils/fmtToScalawind'
 
 import Handlebars from "handlebars";
 
@@ -86,7 +87,7 @@ export function generateContent(options) {
   for (const [name] of candidates) {
     const ident = fmtToScalawind(name) + '_';
     // edge case, we don't want the *_ method
-    if(ident === "*_") {
+    if(ident === "*_" || ident === "`*`_") {
       continue
     }
 
@@ -116,15 +117,6 @@ export function generateContent(options) {
 
   return generatedScalawind
 }
-
-const fmtToScalawind = (s) => {
-  const validName = s.replace(/-/g, '_').replace(/^\@/, '$').replace(/%/, '')
-  const regex = /[\/.]/;
-  if(regex.test(validName)) {
-    return "\`"+ validName + "\`"
-  }
-  return validName
-};
 
 function getCandidateItem(
   map,
