@@ -56,6 +56,18 @@ We use fluent syntax to type our tailwind classes. These classes will be compile
 
 The `css` method is what we use to trigger the macro magic to compile our classes.
 
+If you're using Laminar or Scalajs-React, you should use the `-f` flag, which accepts values: `laminar`, `scalajs-react` or `both`, which will allow you to use scalawind directly in your UI code:
+
+```scala
+div(
+  tw.flex.items_center.justify_center,
+  div(
+    tw.text_red_500.bg_black,
+    "Hello world"
+  ),
+)
+```
+
 ## Quickstart
 
 You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite example that's already setup everything for you to get started.
@@ -283,83 +295,58 @@ It makes sense that we provide a check for efficient usage, such as, we should u
 
 ## Advanced Usage
 
-### Implicit Conversion To String
-
-Depends on your UI library, if we're lucky, we can leverage the implicit conversion feature to shorten our code.
-
-#### Slinky
-
-In slinky, we can skipp the `css` method, like this:
-
-```scala
-className := tw.flex.items_center.justify_center
-```
-
-#### Laminar / Scalajs-React
-
-In Laminar/ Scalajs-React, we need to use the `css` method, like:
-
-```scala
-cls := tw.flex.items_center.justify_center.css
-```
-
 ### Implicit Conversion to Laminar Modifier
 
-Create a `helper.scala` file (or anyname you want) with the following code:
+Using the `-f laminar` flag when generating scalawind code, it will allow you code like this:
 
 ```scala
-package scalawind
+div(
+  cls := tw.text_red_500.bg_black.css,
+  "Hello, world"
+)
 
-import com.raquo.laminar.api.L
-import scala.quoted.*
+// ↓ ↓ ↓ ↓ ↓ ↓
 
-implicit inline def lw(inline tailwind: Tailwind): L.Modifier[L.HtmlElement] = {
-  ${ lwImpl('tailwind) }
-}
-
-def lwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[L.Modifier[L.HtmlElement]] = {
-  val value = swImpl(tailwindExpr).valueOrAbort
-  '{ L.cls := ${ Expr(value) } }
-}
-```
-
-Then, you can write like this:
-
-```scala
 div(
   tw.text_red_500.bg_black,
   "Hello, world"
 )
 ```
+
+Yes! You can omit the `cls :=` and `.css` parts.
+
+_Use `-f both` will generate code for both Laminar and Scalajs-React code._
 
 ### Implicit Conversion to Scalajs-React TagMode
 
-Similar to Laminar, in Scalajs-React, you can use this:
-
-```scala
-package scalawind
-
-import scala.quoted.*
-import japgolly.scalajs.react.*
-import japgolly.scalajs.react.vdom.html_<^.*
-
-implicit inline def cw(inline tailwind: Tailwind): TagMod = {
-  ${ cwImpl('tailwind) }
-}
-
-def cwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TagMod] = {
-  val value = swImpl(tailwindExpr).valueOrAbort
-  '{ ^.cls := ${ Expr(value) } }
-}
-```
+Using the `-f scalajs-react` flag when generating scalawind code, it will allow you code like this:
 
 Then, you can write like this:
 
 ```scala
-div(
+<.div(
+  ^.cls := tw.text_red_500.bg_black.css,
+  "Hello, world"
+)
+
+// ↓ ↓ ↓ ↓ ↓ ↓
+
+<.div(
   tw.text_red_500.bg_black,
   "Hello, world"
 )
+```
+
+Yes! You can omit the `^.cls :=` and `.css` parts.
+
+_Use `-f both` will generate code for both Laminar and Scalajs-React code._
+
+### Slinky
+
+In slinky, we can skip the `css` method, like this:
+
+```scala
+className := tw.flex.items_center.justify_center
 ```
 
 ## Reducing Generated Code Size
