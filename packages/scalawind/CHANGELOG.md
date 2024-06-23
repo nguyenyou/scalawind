@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.8
+
+### Patch Changes
+
+- d1452d6: fix framework flag should be string
+
 ## 0.8.7
 
 ### Patch Changes
