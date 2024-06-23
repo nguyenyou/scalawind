@@ -1,8 +1,6 @@
 {{#if laminar}}
 import com.raquo.laminar.api.L
 
-import scala.quoted.*
-
 implicit inline def lw(inline tailwind: Tailwind): L.Modifier[L.HtmlElement] = {
   ${ lwImpl('tailwind) }
 }
