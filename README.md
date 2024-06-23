@@ -56,7 +56,7 @@ We use fluent syntax to type our tailwind classes. These classes will be compile
 
 The `css` method is what we use to trigger the macro magic to compile our classes.
 
-If you're using Laminar or Scalajs-React, you should use the `-f` flag, which accepts values: `laminar`, `scalajs-react` or `both`, which will allow you to use scalawind directly in your UI code:
+If you're using Laminar or Scalajs-React, you should use the `-f` flag while generating scalawind, which accepts values: `laminar`, `scalajs-react` or `both`, it will generate some implicit conversion codes which will allow you to use scalawind directly in your UI code:
 
 ```scala
 div(
