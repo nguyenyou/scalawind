@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.7
+
+### Patch Changes
+
+- af5a149: fix framework flag
+
 ## 0.8.6
 
 ### Patch Changes
