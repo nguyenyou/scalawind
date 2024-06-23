@@ -16,7 +16,7 @@ const initOptionsSchema = z.object({
   previewCompliedResult: z.boolean(),
   checkDuplication: z.boolean(),
   checkOptimization: z.boolean(),
-  framework: z.union([z.literal("laminar"), z.literal("scalajs-react"), z.literal("both"), z.literal("none")])
+  framework: z.string()
 })
 
 export const generate = new Command()
