@@ -3,7 +3,28 @@ package scalawind
 import scala.quoted.*
 import scala.annotation.unused
 import scala.language.implicitConversions
+import com.raquo.laminar.api.L
 
+import scala.quoted.*
+
+implicit inline def lw(inline tailwind: Tailwind): L.Modifier[L.HtmlElement] = {
+  ${ lwImpl('tailwind) }
+}
+
+def lwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[L.Modifier[L.HtmlElement]] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ L.cls := ${ Expr(value) } }
+}
+import japgolly.scalajs.react.vdom.html_<^.*
+
+implicit inline def cw(inline tailwind: Tailwind): TagMod = {
+  ${ cwImpl('tailwind) }
+}
+
+def cwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TagMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ ^.cls := ${ Expr(value) } }
+}
 extension (inline tailwind: Tailwind)
   inline def css: String =
     ${ swImpl('tailwind) }

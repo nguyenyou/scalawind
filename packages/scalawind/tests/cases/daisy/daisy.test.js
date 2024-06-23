@@ -9,8 +9,7 @@ test('daisy test', () => {
     userConfig: tailwindConfig,
     packageName: "scalawind",
     previewCompliedResult: true,
-    laminar: false,
-    scalajsReact: true,
+    framework: "scalajs-react",
     checkDuplication: true,
     checkOptimization: true,
   })

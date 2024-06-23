@@ -9,10 +9,9 @@ test('basic test', () => {
     userConfig: tailwindConfig,
     packageName: "scalawind",
     previewCompliedResult: true,
-    laminar: false,
-    scalajsReact: true,
     checkDuplication: true,
     checkOptimization: true,
+    framework: 'both',
   })
   const filepath = path.join(__dirname, "./expected.txt")
   // utils.writeFile(filepath, actual)

@@ -9,8 +9,7 @@ test('full config test', () => {
     userConfig: tailwindConfig,
     packageName: "scalawind",
     previewCompliedResult: true,
-    laminar: true,
-    scalajsReact: false,
+    framework: "laminar",
     checkDuplication: false,
     checkOptimization: false,
   })

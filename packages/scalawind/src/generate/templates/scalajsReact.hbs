@@ -1,0 +1,12 @@
+{{#if scalajsReact}}
+import japgolly.scalajs.react.vdom.html_<^.*
+
+implicit inline def cw(inline tailwind: Tailwind): TagMod = {
+  ${ cwImpl('tailwind) }
+}
+
+def cwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[TagMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ ^.cls := ${ Expr(value) } }
+}
+{{/if}}
