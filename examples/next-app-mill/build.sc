@@ -8,6 +8,6 @@ object myapp extends ScalaJSModule {
   def moduleSplitStyle = ModuleSplitStyle.SmallModulesFor(List("myapp"))
 
   def ivyDeps = Agg(
-    ivy"com.github.japgolly.scalajs-react::core::3.0.0-beta3"
+    ivy"com.github.japgolly.scalajs-react::core::3.0.0-beta6"
   )
 }

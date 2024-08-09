@@ -1,4 +1,4 @@
-//> using scala 3.4.2
+//> using scala 3.3.3
 //> using platform scala-js
 
 //> using options "-Wunused:all"
