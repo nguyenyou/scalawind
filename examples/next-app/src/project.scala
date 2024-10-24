@@ -4,7 +4,7 @@
 //> using options "-Wunused:all"
 
 //> using dep "org.scala-js::scalajs-dom::2.8.0"
-//> using dep "com.raquo::laminar::17.0.0"
+//> using dep "com.raquo::laminar::17.1.0"
 //> using dep "com.github.japgolly.scalajs-react::core::3.0.0-beta6"
 //> using dep "com.github.japgolly.scalajs-react::extra::3.0.0-beta6"
 

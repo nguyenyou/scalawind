@@ -7,9 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postinstall": "scalawind generate --check-duplication --check-optimization -f laminar -pcr -o ./src/scalawind.scala",
-    "dev:scala": "scala-cli --cli-version 1.3.2 --power package . -w -f -o scalajs-modules",
-    "build:scala": "scala-cli --cli-version 1.3.2 --power package . -f -o scalajs-modules"
+    "postinstall": "scalawind generate --check-duplication --check-optimization -f laminar -o ./src/scalawind.scala",
+    "dev:scala": "scala-cli --cli-version 1.5.1 --power package . -w -f -o scalajs-modules",
+    "build:scala": "scala-cli --cli-version 1.5.1 --power package . -f -o scalajs-modules"
   },
   "devDependencies": {
     "autoprefixer": "10.4.19",

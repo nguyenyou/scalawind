@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "scalawind generate -pcr -o ./src/scalawind.scala",
-    "dev:scala": "scala-cli --cli-version 1.3.2 --power package . -w -f -o scalajs-modules",
-    "build:scala": "scala-cli --cli-version 1.3.2 --power package . -f -o scalajs-modules"
+    "dev:scala": "scala-cli --cli-version 1.5.1 --power package . -w -f -o scalajs-modules",
+    "build:scala": "scala-cli --cli-version 1.5.1 --power package . -f -o scalajs-modules"
   },
   "dependencies": {
     "react": "19.0.0-rc-f994737d14-20240522",

@@ -11,7 +11,7 @@ scalaJSLinkerConfig ~= {
 }
 
 libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0"
-libraryDependencies += "com.raquo" %%% "laminar" % "17.0.0"
+libraryDependencies += "com.raquo" %%% "laminar" % "17.1.0"
 
 Compile / fastLinkJS / scalaJSLinkerOutputDirectory := target.value / "scalajs-modules"
 Compile / fullLinkJS / scalaJSLinkerOutputDirectory := target.value / "scalajs-modules"
