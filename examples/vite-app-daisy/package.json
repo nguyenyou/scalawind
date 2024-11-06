@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postinstall": "scalawind generate --check-duplication --check-optimization -f laminar -pcr -o ./src/scalawind.scala",
+    "postinstall": "scalawind generate --check-duplication --check-optimization -f laminar -o ./src/scalawind.scala",
     "dev:scala": "scala-cli --cli-version 1.5.1 --power package . -w -f -o scalajs-modules",
     "build:scala": "scala-cli --cli-version 1.5.1 --power package . -f -o scalajs-modules"
   },

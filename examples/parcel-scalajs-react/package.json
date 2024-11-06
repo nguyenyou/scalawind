@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "postinstall": "scalawind generate -sr -pcr -o ./src/scalawind.scala",
+    "postinstall": "scalawind generate -sr -o ./src/scalawind.scala",
     "dev:scala": "scala-cli --cli-version 1.5.1 --power package . -w -f -o scalajs-modules",
     "build:scala": "scala-cli --cli-version 1.5.1 --power package . -f -o scalajs-modules"
   },

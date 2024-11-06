@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "scalawind generate -pcr -o ./src/main/scala/myapp/scalawind.scala",
+    "postinstall": "scalawind generate -o ./src/main/scala/myapp/scalawind.scala",
     "dev:scala": "sbt \"~fastLinkJS\"",
     "build:scala": "sbt \"fullLinkJS\""
   },
