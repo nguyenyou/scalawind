@@ -8,7 +8,7 @@ object myapp extends ScalaJSModule {
   def moduleSplitStyle = ModuleSplitStyle.SmallModulesFor(List("myapp"))
 
   def ivyDeps = Agg(
-    ivy"org.scala-js::scalajs-dom::2.4.0",
+    ivy"org.scala-js::scalajs-dom::2.8.0",
     ivy"com.raquo::laminar::17.1.0"
   )
 }

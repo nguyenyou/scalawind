@@ -10,7 +10,7 @@ scalaJSLinkerConfig ~= {
     .withModuleSplitStyle(ModuleSplitStyle.SmallModulesFor(List("myapp")))
 }
 
-libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0"
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.8.0"
 libraryDependencies += "com.raquo" %%% "laminar" % "17.1.0"
 
 Compile / fastLinkJS / scalaJSLinkerOutputDirectory := target.value / "scalajs-modules"
