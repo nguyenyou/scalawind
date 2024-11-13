@@ -7,7 +7,7 @@ import japgolly.scalajs.react.*
 import japgolly.scalajs.react.vdom.html_<^.*
 
 @main
-def App(): Unit =
+def main(): Unit =
   val container = dom.document.getElementById("app")
 
   val Component = ScalaFnComponent

@@ -6,7 +6,7 @@ import com.raquo.laminar.api.L.*
 import scalawind.*
 
 @main
-def App(): Unit =
+def main(): Unit =
   val container = dom.document.getElementById("app")
   render(
     container,

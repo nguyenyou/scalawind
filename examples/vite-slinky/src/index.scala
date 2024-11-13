@@ -40,7 +40,7 @@ val Counter = FunctionalComponent[Int] { props =>
 }
 
 @main
-def App(): Unit =
+def main(): Unit =
   val container = dom.document.getElementById("app")
 
   ReactDOM.render(Counter(2024), container)
