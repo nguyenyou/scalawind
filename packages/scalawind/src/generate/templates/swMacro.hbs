@@ -1,6 +1,7 @@
-extension (inline tailwind: Tailwind)
+extension (inline tailwind: Tailwind) {
   inline def css: String =
     ${ swImpl('tailwind) }
+}
     
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
