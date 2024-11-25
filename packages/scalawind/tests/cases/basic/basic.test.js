@@ -11,6 +11,10 @@ test('basic test', () => {
     previewCompliedResult: true,
     checkDuplication: true,
     checkOptimization: true,
+    genDoc: false,
+    supportArbitrary: false,
+    supportOpacityColor: false,
+    supportNegativeValue: false,
     framework: 'both',
   })
   const filepath = path.join(__dirname, "./expected.txt")

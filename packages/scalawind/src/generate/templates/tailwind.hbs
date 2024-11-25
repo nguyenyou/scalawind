@@ -7,10 +7,17 @@ case class Tailwind() {
   {{#each opacityColors}}
   def {{this}}(@unused value: String): Tailwind = this
   {{/each}}
+  {{#if genDoc}}
   {{#each standard}}
   {{this.doc}}
   def {{this.prop}}: Tailwind = this
   {{/each}}
+  {{/if}}
+  {{#unless genDoc}}
+  {{#each standard}}
+  def {{this.prop}}: Tailwind = this
+  {{/each}}
+  {{/unless}}
   {{#each arbitrary}}
   def {{this.methodName}}(value: String): Tailwind = this
   {{/each}}

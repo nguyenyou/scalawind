@@ -10,6 +10,10 @@ test('full config test', () => {
     packageName: "scalawind",
     previewCompliedResult: true,
     framework: "laminar",
+    genDoc: true,
+    supportArbitrary: true,
+    supportOpacityColor: true,
+    supportNegativeValue: true,
     checkDuplication: false,
     checkOptimization: false,
   })

@@ -10,6 +10,10 @@ test('daisy test', () => {
     packageName: "scalawind",
     previewCompliedResult: true,
     framework: "scalajs-react",
+    genDoc: true,
+    supportArbitrary: true,
+    supportOpacityColor: true,
+    supportNegativeValue: true,
     checkDuplication: true,
     checkOptimization: true,
   })

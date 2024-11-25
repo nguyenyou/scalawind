@@ -348,613 +348,418 @@ case class Tailwind() {
   def dark(@unused styles: Tailwind): Tailwind = this
   def forced_colors(@unused styles: Tailwind): Tailwind = this
   def print(@unused styles: Tailwind): Tailwind = this
-  def text_black$(@unused value: String): Tailwind = this
-  def text_red_50$(@unused value: String): Tailwind = this
-  def text_red_100$(@unused value: String): Tailwind = this
-  def text_red_200$(@unused value: String): Tailwind = this
-  def text_red_300$(@unused value: String): Tailwind = this
-  def text_red_400$(@unused value: String): Tailwind = this
-  def text_red_500$(@unused value: String): Tailwind = this
-  def text_red_600$(@unused value: String): Tailwind = this
-  def text_red_700$(@unused value: String): Tailwind = this
-  def text_red_800$(@unused value: String): Tailwind = this
-  def text_red_900$(@unused value: String): Tailwind = this
-  def text_red_950$(@unused value: String): Tailwind = this
-  
   def container: Tailwind = this
-  /** {{{
-    * .w-0 {
-    *   width: 0;
-    * }
-    * }}}
-    */
+  def m_0: Tailwind = this
+  def m_1: Tailwind = this
+  def m_2: Tailwind = this
+  def m_3: Tailwind = this
+  def m_4: Tailwind = this
+  def m_5: Tailwind = this
+  def m_6: Tailwind = this
+  def m_7: Tailwind = this
+  def m_8: Tailwind = this
+  def m_9: Tailwind = this
+  def m_10: Tailwind = this
+  def m_11: Tailwind = this
+  def m_12: Tailwind = this
+  def m_14: Tailwind = this
+  def m_16: Tailwind = this
+  def m_20: Tailwind = this
+  def m_24: Tailwind = this
+  def m_28: Tailwind = this
+  def m_32: Tailwind = this
+  def m_36: Tailwind = this
+  def m_40: Tailwind = this
+  def m_44: Tailwind = this
+  def m_48: Tailwind = this
+  def m_52: Tailwind = this
+  def m_56: Tailwind = this
+  def m_60: Tailwind = this
+  def m_64: Tailwind = this
+  def m_72: Tailwind = this
+  def m_80: Tailwind = this
+  def m_96: Tailwind = this
+  def m_auto: Tailwind = this
+  def m_px: Tailwind = this
+  def `m_0.5`: Tailwind = this
+  def `m_1.5`: Tailwind = this
+  def `m_2.5`: Tailwind = this
+  def `m_3.5`: Tailwind = this
+  def mx_0: Tailwind = this
+  def mx_1: Tailwind = this
+  def mx_2: Tailwind = this
+  def mx_3: Tailwind = this
+  def mx_4: Tailwind = this
+  def mx_5: Tailwind = this
+  def mx_6: Tailwind = this
+  def mx_7: Tailwind = this
+  def mx_8: Tailwind = this
+  def mx_9: Tailwind = this
+  def mx_10: Tailwind = this
+  def mx_11: Tailwind = this
+  def mx_12: Tailwind = this
+  def mx_14: Tailwind = this
+  def mx_16: Tailwind = this
+  def mx_20: Tailwind = this
+  def mx_24: Tailwind = this
+  def mx_28: Tailwind = this
+  def mx_32: Tailwind = this
+  def mx_36: Tailwind = this
+  def mx_40: Tailwind = this
+  def mx_44: Tailwind = this
+  def mx_48: Tailwind = this
+  def mx_52: Tailwind = this
+  def mx_56: Tailwind = this
+  def mx_60: Tailwind = this
+  def mx_64: Tailwind = this
+  def mx_72: Tailwind = this
+  def mx_80: Tailwind = this
+  def mx_96: Tailwind = this
+  def mx_auto: Tailwind = this
+  def mx_px: Tailwind = this
+  def `mx_0.5`: Tailwind = this
+  def `mx_1.5`: Tailwind = this
+  def `mx_2.5`: Tailwind = this
+  def `mx_3.5`: Tailwind = this
+  def my_0: Tailwind = this
+  def my_1: Tailwind = this
+  def my_2: Tailwind = this
+  def my_3: Tailwind = this
+  def my_4: Tailwind = this
+  def my_5: Tailwind = this
+  def my_6: Tailwind = this
+  def my_7: Tailwind = this
+  def my_8: Tailwind = this
+  def my_9: Tailwind = this
+  def my_10: Tailwind = this
+  def my_11: Tailwind = this
+  def my_12: Tailwind = this
+  def my_14: Tailwind = this
+  def my_16: Tailwind = this
+  def my_20: Tailwind = this
+  def my_24: Tailwind = this
+  def my_28: Tailwind = this
+  def my_32: Tailwind = this
+  def my_36: Tailwind = this
+  def my_40: Tailwind = this
+  def my_44: Tailwind = this
+  def my_48: Tailwind = this
+  def my_52: Tailwind = this
+  def my_56: Tailwind = this
+  def my_60: Tailwind = this
+  def my_64: Tailwind = this
+  def my_72: Tailwind = this
+  def my_80: Tailwind = this
+  def my_96: Tailwind = this
+  def my_auto: Tailwind = this
+  def my_px: Tailwind = this
+  def `my_0.5`: Tailwind = this
+  def `my_1.5`: Tailwind = this
+  def `my_2.5`: Tailwind = this
+  def `my_3.5`: Tailwind = this
+  def ms_0: Tailwind = this
+  def ms_1: Tailwind = this
+  def ms_2: Tailwind = this
+  def ms_3: Tailwind = this
+  def ms_4: Tailwind = this
+  def ms_5: Tailwind = this
+  def ms_6: Tailwind = this
+  def ms_7: Tailwind = this
+  def ms_8: Tailwind = this
+  def ms_9: Tailwind = this
+  def ms_10: Tailwind = this
+  def ms_11: Tailwind = this
+  def ms_12: Tailwind = this
+  def ms_14: Tailwind = this
+  def ms_16: Tailwind = this
+  def ms_20: Tailwind = this
+  def ms_24: Tailwind = this
+  def ms_28: Tailwind = this
+  def ms_32: Tailwind = this
+  def ms_36: Tailwind = this
+  def ms_40: Tailwind = this
+  def ms_44: Tailwind = this
+  def ms_48: Tailwind = this
+  def ms_52: Tailwind = this
+  def ms_56: Tailwind = this
+  def ms_60: Tailwind = this
+  def ms_64: Tailwind = this
+  def ms_72: Tailwind = this
+  def ms_80: Tailwind = this
+  def ms_96: Tailwind = this
+  def ms_auto: Tailwind = this
+  def ms_px: Tailwind = this
+  def `ms_0.5`: Tailwind = this
+  def `ms_1.5`: Tailwind = this
+  def `ms_2.5`: Tailwind = this
+  def `ms_3.5`: Tailwind = this
+  def me_0: Tailwind = this
+  def me_1: Tailwind = this
+  def me_2: Tailwind = this
+  def me_3: Tailwind = this
+  def me_4: Tailwind = this
+  def me_5: Tailwind = this
+  def me_6: Tailwind = this
+  def me_7: Tailwind = this
+  def me_8: Tailwind = this
+  def me_9: Tailwind = this
+  def me_10: Tailwind = this
+  def me_11: Tailwind = this
+  def me_12: Tailwind = this
+  def me_14: Tailwind = this
+  def me_16: Tailwind = this
+  def me_20: Tailwind = this
+  def me_24: Tailwind = this
+  def me_28: Tailwind = this
+  def me_32: Tailwind = this
+  def me_36: Tailwind = this
+  def me_40: Tailwind = this
+  def me_44: Tailwind = this
+  def me_48: Tailwind = this
+  def me_52: Tailwind = this
+  def me_56: Tailwind = this
+  def me_60: Tailwind = this
+  def me_64: Tailwind = this
+  def me_72: Tailwind = this
+  def me_80: Tailwind = this
+  def me_96: Tailwind = this
+  def me_auto: Tailwind = this
+  def me_px: Tailwind = this
+  def `me_0.5`: Tailwind = this
+  def `me_1.5`: Tailwind = this
+  def `me_2.5`: Tailwind = this
+  def `me_3.5`: Tailwind = this
+  def mt_0: Tailwind = this
+  def mt_1: Tailwind = this
+  def mt_2: Tailwind = this
+  def mt_3: Tailwind = this
+  def mt_4: Tailwind = this
+  def mt_5: Tailwind = this
+  def mt_6: Tailwind = this
+  def mt_7: Tailwind = this
+  def mt_8: Tailwind = this
+  def mt_9: Tailwind = this
+  def mt_10: Tailwind = this
+  def mt_11: Tailwind = this
+  def mt_12: Tailwind = this
+  def mt_14: Tailwind = this
+  def mt_16: Tailwind = this
+  def mt_20: Tailwind = this
+  def mt_24: Tailwind = this
+  def mt_28: Tailwind = this
+  def mt_32: Tailwind = this
+  def mt_36: Tailwind = this
+  def mt_40: Tailwind = this
+  def mt_44: Tailwind = this
+  def mt_48: Tailwind = this
+  def mt_52: Tailwind = this
+  def mt_56: Tailwind = this
+  def mt_60: Tailwind = this
+  def mt_64: Tailwind = this
+  def mt_72: Tailwind = this
+  def mt_80: Tailwind = this
+  def mt_96: Tailwind = this
+  def mt_auto: Tailwind = this
+  def mt_px: Tailwind = this
+  def `mt_0.5`: Tailwind = this
+  def `mt_1.5`: Tailwind = this
+  def `mt_2.5`: Tailwind = this
+  def `mt_3.5`: Tailwind = this
+  def mr_0: Tailwind = this
+  def mr_1: Tailwind = this
+  def mr_2: Tailwind = this
+  def mr_3: Tailwind = this
+  def mr_4: Tailwind = this
+  def mr_5: Tailwind = this
+  def mr_6: Tailwind = this
+  def mr_7: Tailwind = this
+  def mr_8: Tailwind = this
+  def mr_9: Tailwind = this
+  def mr_10: Tailwind = this
+  def mr_11: Tailwind = this
+  def mr_12: Tailwind = this
+  def mr_14: Tailwind = this
+  def mr_16: Tailwind = this
+  def mr_20: Tailwind = this
+  def mr_24: Tailwind = this
+  def mr_28: Tailwind = this
+  def mr_32: Tailwind = this
+  def mr_36: Tailwind = this
+  def mr_40: Tailwind = this
+  def mr_44: Tailwind = this
+  def mr_48: Tailwind = this
+  def mr_52: Tailwind = this
+  def mr_56: Tailwind = this
+  def mr_60: Tailwind = this
+  def mr_64: Tailwind = this
+  def mr_72: Tailwind = this
+  def mr_80: Tailwind = this
+  def mr_96: Tailwind = this
+  def mr_auto: Tailwind = this
+  def mr_px: Tailwind = this
+  def `mr_0.5`: Tailwind = this
+  def `mr_1.5`: Tailwind = this
+  def `mr_2.5`: Tailwind = this
+  def `mr_3.5`: Tailwind = this
+  def mb_0: Tailwind = this
+  def mb_1: Tailwind = this
+  def mb_2: Tailwind = this
+  def mb_3: Tailwind = this
+  def mb_4: Tailwind = this
+  def mb_5: Tailwind = this
+  def mb_6: Tailwind = this
+  def mb_7: Tailwind = this
+  def mb_8: Tailwind = this
+  def mb_9: Tailwind = this
+  def mb_10: Tailwind = this
+  def mb_11: Tailwind = this
+  def mb_12: Tailwind = this
+  def mb_14: Tailwind = this
+  def mb_16: Tailwind = this
+  def mb_20: Tailwind = this
+  def mb_24: Tailwind = this
+  def mb_28: Tailwind = this
+  def mb_32: Tailwind = this
+  def mb_36: Tailwind = this
+  def mb_40: Tailwind = this
+  def mb_44: Tailwind = this
+  def mb_48: Tailwind = this
+  def mb_52: Tailwind = this
+  def mb_56: Tailwind = this
+  def mb_60: Tailwind = this
+  def mb_64: Tailwind = this
+  def mb_72: Tailwind = this
+  def mb_80: Tailwind = this
+  def mb_96: Tailwind = this
+  def mb_auto: Tailwind = this
+  def mb_px: Tailwind = this
+  def `mb_0.5`: Tailwind = this
+  def `mb_1.5`: Tailwind = this
+  def `mb_2.5`: Tailwind = this
+  def `mb_3.5`: Tailwind = this
+  def ml_0: Tailwind = this
+  def ml_1: Tailwind = this
+  def ml_2: Tailwind = this
+  def ml_3: Tailwind = this
+  def ml_4: Tailwind = this
+  def ml_5: Tailwind = this
+  def ml_6: Tailwind = this
+  def ml_7: Tailwind = this
+  def ml_8: Tailwind = this
+  def ml_9: Tailwind = this
+  def ml_10: Tailwind = this
+  def ml_11: Tailwind = this
+  def ml_12: Tailwind = this
+  def ml_14: Tailwind = this
+  def ml_16: Tailwind = this
+  def ml_20: Tailwind = this
+  def ml_24: Tailwind = this
+  def ml_28: Tailwind = this
+  def ml_32: Tailwind = this
+  def ml_36: Tailwind = this
+  def ml_40: Tailwind = this
+  def ml_44: Tailwind = this
+  def ml_48: Tailwind = this
+  def ml_52: Tailwind = this
+  def ml_56: Tailwind = this
+  def ml_60: Tailwind = this
+  def ml_64: Tailwind = this
+  def ml_72: Tailwind = this
+  def ml_80: Tailwind = this
+  def ml_96: Tailwind = this
+  def ml_auto: Tailwind = this
+  def ml_px: Tailwind = this
+  def `ml_0.5`: Tailwind = this
+  def `ml_1.5`: Tailwind = this
+  def `ml_2.5`: Tailwind = this
+  def `ml_3.5`: Tailwind = this
   def w_0: Tailwind = this
-  /** {{{
-    * .w-1 {
-    *   width: .25rem;
-    * }
-    * }}}
-    */
   def w_1: Tailwind = this
-  /** {{{
-    * .w-2 {
-    *   width: .5rem;
-    * }
-    * }}}
-    */
   def w_2: Tailwind = this
-  /** {{{
-    * .w-3 {
-    *   width: .75rem;
-    * }
-    * }}}
-    */
   def w_3: Tailwind = this
-  /** {{{
-    * .w-4 {
-    *   width: 1rem;
-    * }
-    * }}}
-    */
   def w_4: Tailwind = this
-  /** {{{
-    * .w-5 {
-    *   width: 1.25rem;
-    * }
-    * }}}
-    */
   def w_5: Tailwind = this
-  /** {{{
-    * .w-6 {
-    *   width: 1.5rem;
-    * }
-    * }}}
-    */
   def w_6: Tailwind = this
-  /** {{{
-    * .w-7 {
-    *   width: 1.75rem;
-    * }
-    * }}}
-    */
   def w_7: Tailwind = this
-  /** {{{
-    * .w-8 {
-    *   width: 2rem;
-    * }
-    * }}}
-    */
   def w_8: Tailwind = this
-  /** {{{
-    * .w-9 {
-    *   width: 2.25rem;
-    * }
-    * }}}
-    */
   def w_9: Tailwind = this
-  /** {{{
-    * .w-10 {
-    *   width: 2.5rem;
-    * }
-    * }}}
-    */
   def w_10: Tailwind = this
-  /** {{{
-    * .w-11 {
-    *   width: 2.75rem;
-    * }
-    * }}}
-    */
   def w_11: Tailwind = this
-  /** {{{
-    * .w-12 {
-    *   width: 3rem;
-    * }
-    * }}}
-    */
   def w_12: Tailwind = this
-  /** {{{
-    * .w-14 {
-    *   width: 3.5rem;
-    * }
-    * }}}
-    */
   def w_14: Tailwind = this
-  /** {{{
-    * .w-16 {
-    *   width: 4rem;
-    * }
-    * }}}
-    */
   def w_16: Tailwind = this
-  /** {{{
-    * .w-20 {
-    *   width: 5rem;
-    * }
-    * }}}
-    */
   def w_20: Tailwind = this
-  /** {{{
-    * .w-24 {
-    *   width: 6rem;
-    * }
-    * }}}
-    */
   def w_24: Tailwind = this
-  /** {{{
-    * .w-28 {
-    *   width: 7rem;
-    * }
-    * }}}
-    */
   def w_28: Tailwind = this
-  /** {{{
-    * .w-32 {
-    *   width: 8rem;
-    * }
-    * }}}
-    */
   def w_32: Tailwind = this
-  /** {{{
-    * .w-36 {
-    *   width: 9rem;
-    * }
-    * }}}
-    */
   def w_36: Tailwind = this
-  /** {{{
-    * .w-40 {
-    *   width: 10rem;
-    * }
-    * }}}
-    */
   def w_40: Tailwind = this
-  /** {{{
-    * .w-44 {
-    *   width: 11rem;
-    * }
-    * }}}
-    */
   def w_44: Tailwind = this
-  /** {{{
-    * .w-48 {
-    *   width: 12rem;
-    * }
-    * }}}
-    */
   def w_48: Tailwind = this
-  /** {{{
-    * .w-52 {
-    *   width: 13rem;
-    * }
-    * }}}
-    */
   def w_52: Tailwind = this
-  /** {{{
-    * .w-56 {
-    *   width: 14rem;
-    * }
-    * }}}
-    */
   def w_56: Tailwind = this
-  /** {{{
-    * .w-60 {
-    *   width: 15rem;
-    * }
-    * }}}
-    */
   def w_60: Tailwind = this
-  /** {{{
-    * .w-64 {
-    *   width: 16rem;
-    * }
-    * }}}
-    */
   def w_64: Tailwind = this
-  /** {{{
-    * .w-72 {
-    *   width: 18rem;
-    * }
-    * }}}
-    */
   def w_72: Tailwind = this
-  /** {{{
-    * .w-80 {
-    *   width: 20rem;
-    * }
-    * }}}
-    */
   def w_80: Tailwind = this
-  /** {{{
-    * .w-96 {
-    *   width: 24rem;
-    * }
-    * }}}
-    */
   def w_96: Tailwind = this
-  /** {{{
-    * .w-auto {
-    *   width: auto;
-    * }
-    * }}}
-    */
   def w_auto: Tailwind = this
-  /** {{{
-    * .w-px {
-    *   width: 1px;
-    * }
-    * }}}
-    */
   def w_px: Tailwind = this
-  /** {{{
-    * .w-0.5 {
-    *   width: .125rem;
-    * }
-    * }}}
-    */
   def `w_0.5`: Tailwind = this
-  /** {{{
-    * .w-1.5 {
-    *   width: .375rem;
-    * }
-    * }}}
-    */
   def `w_1.5`: Tailwind = this
-  /** {{{
-    * .w-2.5 {
-    *   width: .625rem;
-    * }
-    * }}}
-    */
   def `w_2.5`: Tailwind = this
-  /** {{{
-    * .w-3.5 {
-    *   width: .875rem;
-    * }
-    * }}}
-    */
   def `w_3.5`: Tailwind = this
-  /** {{{
-    * .w-1/2 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
   def `w_1/2`: Tailwind = this
-  /** {{{
-    * .w-1/3 {
-    *   width: 33.3333%;
-    * }
-    * }}}
-    */
   def `w_1/3`: Tailwind = this
-  /** {{{
-    * .w-2/3 {
-    *   width: 66.6667%;
-    * }
-    * }}}
-    */
   def `w_2/3`: Tailwind = this
-  /** {{{
-    * .w-1/4 {
-    *   width: 25%;
-    * }
-    * }}}
-    */
   def `w_1/4`: Tailwind = this
-  /** {{{
-    * .w-2/4 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
   def `w_2/4`: Tailwind = this
-  /** {{{
-    * .w-3/4 {
-    *   width: 75%;
-    * }
-    * }}}
-    */
   def `w_3/4`: Tailwind = this
-  /** {{{
-    * .w-1/5 {
-    *   width: 20%;
-    * }
-    * }}}
-    */
   def `w_1/5`: Tailwind = this
-  /** {{{
-    * .w-2/5 {
-    *   width: 40%;
-    * }
-    * }}}
-    */
   def `w_2/5`: Tailwind = this
-  /** {{{
-    * .w-3/5 {
-    *   width: 60%;
-    * }
-    * }}}
-    */
   def `w_3/5`: Tailwind = this
-  /** {{{
-    * .w-4/5 {
-    *   width: 80%;
-    * }
-    * }}}
-    */
   def `w_4/5`: Tailwind = this
-  /** {{{
-    * .w-1/6 {
-    *   width: 16.6667%;
-    * }
-    * }}}
-    */
   def `w_1/6`: Tailwind = this
-  /** {{{
-    * .w-2/6 {
-    *   width: 33.3333%;
-    * }
-    * }}}
-    */
   def `w_2/6`: Tailwind = this
-  /** {{{
-    * .w-3/6 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
   def `w_3/6`: Tailwind = this
-  /** {{{
-    * .w-4/6 {
-    *   width: 66.6667%;
-    * }
-    * }}}
-    */
   def `w_4/6`: Tailwind = this
-  /** {{{
-    * .w-5/6 {
-    *   width: 83.3333%;
-    * }
-    * }}}
-    */
   def `w_5/6`: Tailwind = this
-  /** {{{
-    * .w-1/12 {
-    *   width: 8.33333%;
-    * }
-    * }}}
-    */
   def `w_1/12`: Tailwind = this
-  /** {{{
-    * .w-2/12 {
-    *   width: 16.6667%;
-    * }
-    * }}}
-    */
   def `w_2/12`: Tailwind = this
-  /** {{{
-    * .w-3/12 {
-    *   width: 25%;
-    * }
-    * }}}
-    */
   def `w_3/12`: Tailwind = this
-  /** {{{
-    * .w-4/12 {
-    *   width: 33.3333%;
-    * }
-    * }}}
-    */
   def `w_4/12`: Tailwind = this
-  /** {{{
-    * .w-5/12 {
-    *   width: 41.6667%;
-    * }
-    * }}}
-    */
   def `w_5/12`: Tailwind = this
-  /** {{{
-    * .w-6/12 {
-    *   width: 50%;
-    * }
-    * }}}
-    */
   def `w_6/12`: Tailwind = this
-  /** {{{
-    * .w-7/12 {
-    *   width: 58.3333%;
-    * }
-    * }}}
-    */
   def `w_7/12`: Tailwind = this
-  /** {{{
-    * .w-8/12 {
-    *   width: 66.6667%;
-    * }
-    * }}}
-    */
   def `w_8/12`: Tailwind = this
-  /** {{{
-    * .w-9/12 {
-    *   width: 75%;
-    * }
-    * }}}
-    */
   def `w_9/12`: Tailwind = this
-  /** {{{
-    * .w-10/12 {
-    *   width: 83.3333%;
-    * }
-    * }}}
-    */
   def `w_10/12`: Tailwind = this
-  /** {{{
-    * .w-11/12 {
-    *   width: 91.6667%;
-    * }
-    * }}}
-    */
   def `w_11/12`: Tailwind = this
-  /** {{{
-    * .w-full {
-    *   width: 100%;
-    * }
-    * }}}
-    */
   def w_full: Tailwind = this
-  /** {{{
-    * .w-screen {
-    *   width: 100vw;
-    * }
-    * }}}
-    */
   def w_screen: Tailwind = this
-  /** {{{
-    * .w-svw {
-    *   width: 100svw;
-    * }
-    * }}}
-    */
   def w_svw: Tailwind = this
-  /** {{{
-    * .w-lvw {
-    *   width: 100lvw;
-    * }
-    * }}}
-    */
   def w_lvw: Tailwind = this
-  /** {{{
-    * .w-dvw {
-    *   width: 100dvw;
-    * }
-    * }}}
-    */
   def w_dvw: Tailwind = this
-  /** {{{
-    * .w-min {
-    *   width: min-content;
-    * }
-    * }}}
-    */
   def w_min: Tailwind = this
-  /** {{{
-    * .w-max {
-    *   width: max-content;
-    * }
-    * }}}
-    */
   def w_max: Tailwind = this
-  /** {{{
-    * .w-fit {
-    *   width: fit-content;
-    * }
-    * }}}
-    */
   def w_fit: Tailwind = this
-  /** {{{
-    * .animate-none {
-    *   animation: none;
-    * }
-    * }}}
-    */
   def animate_none: Tailwind = this
-  
   def animate_spin: Tailwind = this
-  
   def animate_ping: Tailwind = this
-  
   def animate_pulse: Tailwind = this
-  
   def animate_bounce: Tailwind = this
-  /** {{{
-    * .text-black {
-    *   color: #000;
-    * }
-    * }}}
-    */
   def text_black: Tailwind = this
-  /** {{{
-    * .text-red-50 {
-    *   color: #fef2f2;
-    * }
-    * }}}
-    */
   def text_red_50: Tailwind = this
-  /** {{{
-    * .text-red-100 {
-    *   color: #fee2e2;
-    * }
-    * }}}
-    */
   def text_red_100: Tailwind = this
-  /** {{{
-    * .text-red-200 {
-    *   color: #fecaca;
-    * }
-    * }}}
-    */
   def text_red_200: Tailwind = this
-  /** {{{
-    * .text-red-300 {
-    *   color: #fca5a5;
-    * }
-    * }}}
-    */
   def text_red_300: Tailwind = this
-  /** {{{
-    * .text-red-400 {
-    *   color: #f87171;
-    * }
-    * }}}
-    */
   def text_red_400: Tailwind = this
-  /** {{{
-    * .text-red-500 {
-    *   color: #ef4444;
-    * }
-    * }}}
-    */
   def text_red_500: Tailwind = this
-  /** {{{
-    * .text-red-600 {
-    *   color: #dc2626;
-    * }
-    * }}}
-    */
   def text_red_600: Tailwind = this
-  /** {{{
-    * .text-red-700 {
-    *   color: #b91c1c;
-    * }
-    * }}}
-    */
   def text_red_700: Tailwind = this
-  /** {{{
-    * .text-red-800 {
-    *   color: #991b1b;
-    * }
-    * }}}
-    */
   def text_red_800: Tailwind = this
-  /** {{{
-    * .text-red-900 {
-    *   color: #7f1d1d;
-    * }
-    * }}}
-    */
   def text_red_900: Tailwind = this
-  /** {{{
-    * .text-red-950 {
-    *   color: #450a0a;
-    * }
-    * }}}
-    */
   def text_red_950: Tailwind = this
-  def container_(value: String): Tailwind = this
-  def w_(value: String): Tailwind = this
-  def animate_(value: String): Tailwind = this
-  def text_(value: String): Tailwind = this
   def important(@unused styles: Tailwind): Tailwind = this
   def raw(@unused classString: String): Tailwind = this
   def variant(selector: String, styles: Tailwind): Tailwind = this

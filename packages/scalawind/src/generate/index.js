@@ -62,7 +62,10 @@ export function generateContent(options) {
 
   const colorSet = new Set();
 
-  const standard = [...new Set(classesWithCandidateItem)].map(([s, { rule: rules, rest }]) => {
+  const standard = [...new Set(classesWithCandidateItem)].filter(([methodName]) => {
+    if(options.supportNegativeValue) return true
+    return !methodName.startsWith("-")
+  }).map(([s, { rule: rules, rest }]) => {
     let css = '';
 
     if (rules) {
@@ -95,18 +98,21 @@ export function generateContent(options) {
     return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
 
-  const opacityColors = [...colorSet]
+  const opacityColors = options.supportOpacityColor ? [...colorSet] : []
 
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];
-  for (const [name] of candidates) {
-    const ident = fmtToScalawind(name) + '_';
-    // edge case, we don't want the *_ method
-    if(ident === "*_" || ident === "`*`_") {
-      continue
-    }
 
-    arbitrary.push({ methodName: ident, value: `${name}-`})
+  if(options.supportArbitrary) {
+    for (const [name] of candidates) {
+      const ident = fmtToScalawind(name) + '_';
+      // edge case, we don't want the *_ method
+      if(ident === "*_" || ident === "`*`_") {
+        continue
+      }
+  
+      arbitrary.push({ methodName: ident, value: `${name}-`})
+    }
   }
 
   const modifiers = [...variantMap.keys()]
@@ -120,7 +126,6 @@ export function generateContent(options) {
   })
 
   const hasValidation = options.checkDuplication || options.checkOptimization
-
   const generatedScalawind = template({ 
     modifiers, 
     standard, 
