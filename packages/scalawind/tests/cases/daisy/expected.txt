@@ -21,7 +21,7 @@ implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
 def methodNameToTailwindClass(rawName: String) = {
-  val name = if rawName.startsWith("_") && rawName.charAt(1).isDigit then rawName.stripPrefix("_") else rawName
+  val name = if (rawName.startsWith("_") && rawName.charAt(1).isDigit) rawName.stripPrefix("_") else rawName
   name.replace("_", "-").replace("per", "/").replace("dot", ".")
 }
 
@@ -30,14 +30,12 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   def validate(classes: List[String]): Unit = {
     checkDuplication(classes)
     val optimizationSuggestions = checkOptimization(classes)
-    if optimizationSuggestions.nonEmpty then
-      report.errorAndAbort(s"[Optimization] ${optimizationSuggestions.mkString(", ")}")
+    if (optimizationSuggestions.nonEmpty) report.errorAndAbort(s"[Optimization] ${optimizationSuggestions.mkString(", ")}")
   }
   
   def checkDuplication(classes: List[String]): Unit = {
     val duplicates = classes.groupBy(identity).collect { case (x, List(_, _, _*)) => x }
-    if duplicates.nonEmpty then
-      report.errorAndAbort(s"[Duplication] ${duplicates.mkString(", ")}")
+    if (duplicates.nonEmpty) report.errorAndAbort(s"[Duplication] ${duplicates.mkString(", ")}")
   }
   
   def checkOptimization(classes: List[String]): List[String] = {
@@ -58,35 +56,40 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
       }.groupBy(_._1).view.mapValues(_.map(_._2)).toMap
   
       def checkAndSuggest(key1: String, key2: String, combined: String): Unit = {
-        (classMap.get(key1), classMap.get(key2)) match
+        (classMap.get(key1), classMap.get(key2)) match {
           case (Some(List(c1)), Some(List(c2))) if c1.substring(3) == c2.substring(3) =>
             propertySuggestions += s"Use $combined${c1.substring(3)} instead of $c1 and $c2"
           case _ => ()
+        }
       }
   
       def checkFourWay(): Unit = {
-        (classMap.get(s"${property}t"), classMap.get(s"${property}b"), classMap.get(s"${property}l"), classMap.get(s"${property}r")) match
+        (classMap.get(s"${property}t"), classMap.get(s"${property}b"), classMap.get(s"${property}l"), classMap.get(s"${property}r")) match {
           case (Some(List(pt)), Some(List(pb)), Some(List(pl)), Some(List(pr))) if pt.substring(3) == pb.substring(3) && pl.substring(3) == pr.substring(3) && pt.substring(3) == pl.substring(3) =>
             propertySuggestions += s"Use ${property}-${pt.substring(3)} instead of $pt, $pb, $pl and $pr"
           case _ => ()
+        }
       }
   
       def checkPxPy(): Unit = {
-        (classMap.get(s"${property}x"), classMap.get(s"${property}y")) match
+        (classMap.get(s"${property}x"), classMap.get(s"${property}y")) match {
           case (Some(List(px)), Some(List(py))) if px.substring(3) == py.substring(3) =>
             propertySuggestions += s"Use ${property}-${px.substring(3)} instead of $px and $py"
           case _ => ()
+        }
       }
   
       // Check for four-way combination first
       checkFourWay()
   
       // Only check for two-way combinations if no four-way combination is found
-      if propertySuggestions.isEmpty then
+      if (propertySuggestions.isEmpty) {
         checkPxPy()
-        if propertySuggestions.isEmpty then
+        if (propertySuggestions.isEmpty) {
           checkAndSuggest(s"${property}t", s"${property}b", s"${property}y-")
           checkAndSuggest(s"${property}l", s"${property}r", s"${property}x-")
+        }
+      }
   
       propertySuggestions.toList
     }
@@ -98,9 +101,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
     var stack = List((term, prefix, important))
     var classNames = List.empty[String]
 
-    while
-      stack.nonEmpty
-    do
+    while (stack.nonEmpty) {
       val (currentTerm, currentPrefix, currentImportant) = stack.head
       stack = stack.tail
 
@@ -157,7 +158,8 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
         case unexpectedTerm =>
           report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
       }
-      
+    }
+    
     classNames
   }
 

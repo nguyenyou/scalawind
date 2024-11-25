@@ -14,7 +14,7 @@ test('basic test', () => {
     framework: 'both',
   })
   const filepath = path.join(__dirname, "./expected.txt")
-  // utils.writeFile(filepath, actual)
+  utils.writeFile(filepath, actual)
   const expected = utils.readFile(filepath)
   expect(actual).toBe(expected)
 })
