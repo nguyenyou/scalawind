@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.9.1
+
+### Patch Changes
+
+- 9cf591d: fix correct command flag value type
+
 ## 0.9.0
 
 ### Minor Changes
