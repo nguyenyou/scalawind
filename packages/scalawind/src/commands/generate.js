@@ -57,22 +57,22 @@ export const generate = new Command()
     false
   )
   .option(
-    "-gd, --gen-doc",
+    "-gd, --gen-doc <genDoc>",
     "generate documentation for methods",
     "true"
   )
   .option(
-    "-sa, --support-arbitrary",
+    "-sa, --support-arbitrary <supportArbitrary>",
     "support arbitrary values",
     "true"
   )
   .option(
-    "-soc, --support-opacity-color",
+    "-soc, --support-opacity-color <supportOpacityColor>",
     "support opacity color",
     "true"
   )
   .option(
-    "-snv, --support-negative-value",
+    "-snv, --support-negative-value <supportNegativeValue>",
     "support opacity color",
     "true"
   )
