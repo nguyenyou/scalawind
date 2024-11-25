@@ -10,11 +10,12 @@ test('daisy test', () => {
     packageName: "scalawind",
     previewCompliedResult: true,
     framework: "scalajs-react",
+    genDoc: true,
     checkDuplication: true,
     checkOptimization: true,
   })
   const filepath = path.join(__dirname, "./expected.txt")
-  // utils.writeFile(filepath, actual) // uncomment to update snapshot
+  utils.writeFile(filepath, actual) // uncomment to update snapshot
   const expected = utils.readFile(filepath)
   expect(actual).toBe(expected)
 })

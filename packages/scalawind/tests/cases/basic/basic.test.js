@@ -11,10 +11,11 @@ test('basic test', () => {
     previewCompliedResult: true,
     checkDuplication: true,
     checkOptimization: true,
+    genDoc: false,
     framework: 'both',
   })
   const filepath = path.join(__dirname, "./expected.txt")
-  // utils.writeFile(filepath, actual) // uncomment to update snapshot
+  utils.writeFile(filepath, actual) // uncomment to update snapshot
   const expected = utils.readFile(filepath)
   expect(actual).toBe(expected)
 })

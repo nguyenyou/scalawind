@@ -16,6 +16,7 @@ const initOptionsSchema = z.object({
   previewCompliedResult: z.boolean(),
   checkDuplication: z.boolean(),
   checkOptimization: z.boolean(),
+  genDoc: z.boolean(),
   framework: z.string()
 })
 
@@ -51,6 +52,11 @@ export const generate = new Command()
     "-co, --check-optimization",
     "enable check optimization",
     false
+  )
+  .option(
+    "-gd, --gen-doc",
+    "generate documentation for methods",
+    true
   )
   .option(
     "-c, --cwd <cwd>",
