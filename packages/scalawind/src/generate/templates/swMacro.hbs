@@ -6,7 +6,7 @@ implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
 def methodNameToTailwindClass(rawName: String) = {
-  val name = if rawName.startsWith("_") && rawName.charAt(1).isDigit then rawName.stripPrefix("_") else rawName
+  val name = if (rawName.startsWith("_") && rawName.charAt(1).isDigit) rawName.stripPrefix("_") else rawName
   name.replace("_", "-").replace("per", "/").replace("dot", ".")
 }
 
@@ -20,9 +20,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
     var stack = List((term, prefix, important))
     var classNames = List.empty[String]
 
-    while
-      stack.nonEmpty
-    do
+    while (stack.nonEmpty) {
       val (currentTerm, currentPrefix, currentImportant) = stack.head
       stack = stack.tail
 
@@ -79,7 +77,8 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
         case unexpectedTerm =>
           report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
       }
-      
+    }
+    
     classNames
   }
 
