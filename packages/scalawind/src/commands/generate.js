@@ -16,10 +16,10 @@ const initOptionsSchema = z.object({
   previewCompliedResult: z.boolean(),
   checkDuplication: z.boolean(),
   checkOptimization: z.boolean(),
-  genDoc: z.boolean(),
-  supportArbitrary: z.boolean(),
-  supportOpacityColor: z.boolean(),
-  supportNegativeValue: z.boolean(),
+  genDoc: z.string(),
+  supportArbitrary: z.string(),
+  supportOpacityColor: z.string(),
+  supportNegativeValue: z.string(),
   framework: z.string()
 })
 
@@ -59,22 +59,22 @@ export const generate = new Command()
   .option(
     "-gd, --gen-doc",
     "generate documentation for methods",
-    true
+    "true"
   )
   .option(
     "-sa, --support-arbitrary",
     "support arbitrary values",
-    true
+    "true"
   )
   .option(
     "-soc, --support-opacity-color",
     "support opacity color",
-    true
+    "true"
   )
   .option(
     "-snv, --support-negative-value",
     "support opacity color",
-    true
+    "true"
   )
   .option(
     "-c, --cwd <cwd>",
