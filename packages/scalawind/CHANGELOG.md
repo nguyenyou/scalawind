@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.8.11
+
+### Patch Changes
+
+- 38d32c6: prefer curly brace syntax
+
 ## 0.8.10
 
 ### Patch Changes
