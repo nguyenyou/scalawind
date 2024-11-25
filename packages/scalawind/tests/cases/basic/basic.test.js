@@ -14,10 +14,11 @@ test('basic test', () => {
     genDoc: false,
     supportArbitrary: false,
     supportOpacityColor: false,
+    supportNegativeValue: false,
     framework: 'both',
   })
   const filepath = path.join(__dirname, "./expected.txt")
-  utils.writeFile(filepath, actual) // uncomment to update snapshot
+  // utils.writeFile(filepath, actual) // uncomment to update snapshot
   const expected = utils.readFile(filepath)
   expect(actual).toBe(expected)
 })

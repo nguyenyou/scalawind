@@ -13,5 +13,6 @@ export const tailwindConfig = {
     'container',
     'animation',
     'width',
+    'margin'
   ]
 };

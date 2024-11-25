@@ -19,6 +19,7 @@ const initOptionsSchema = z.object({
   genDoc: z.boolean(),
   supportArbitrary: z.boolean(),
   supportOpacityColor: z.boolean(),
+  supportNegativeValue: z.boolean(),
   framework: z.string()
 })
 
@@ -67,6 +68,11 @@ export const generate = new Command()
   )
   .option(
     "-soc, --support-opacity-color",
+    "support opacity color",
+    true
+  )
+  .option(
+    "-snv, --support-negative-value",
     "support opacity color",
     true
   )

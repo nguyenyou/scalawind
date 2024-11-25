@@ -62,7 +62,10 @@ export function generateContent(options) {
 
   const colorSet = new Set();
 
-  const standard = [...new Set(classesWithCandidateItem)].map(([s, { rule: rules, rest }]) => {
+  const standard = [...new Set(classesWithCandidateItem)].filter(([methodName]) => {
+    if(options.supportNegativeValue) return true
+    return !methodName.startsWith("-")
+  }).map(([s, { rule: rules, rest }]) => {
     let css = '';
 
     if (rules) {
@@ -99,8 +102,6 @@ export function generateContent(options) {
 
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];
-
-  console.log(options)
 
   if(options.supportArbitrary) {
     for (const [name] of candidates) {
