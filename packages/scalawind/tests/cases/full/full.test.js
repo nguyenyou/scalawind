@@ -11,6 +11,7 @@ test('full config test', () => {
     previewCompliedResult: true,
     framework: "laminar",
     genDoc: true,
+    supportArbitrary: true,
     checkDuplication: false,
     checkOptimization: false,
   })

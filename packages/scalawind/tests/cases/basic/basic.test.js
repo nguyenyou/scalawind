@@ -12,6 +12,7 @@ test('basic test', () => {
     checkDuplication: true,
     checkOptimization: true,
     genDoc: false,
+    supportArbitrary: false,
     framework: 'both',
   })
   const filepath = path.join(__dirname, "./expected.txt")

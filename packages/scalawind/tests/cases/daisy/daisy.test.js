@@ -11,6 +11,7 @@ test('daisy test', () => {
     previewCompliedResult: true,
     framework: "scalajs-react",
     genDoc: true,
+    supportArbitrary: true,
     checkDuplication: true,
     checkOptimization: true,
   })

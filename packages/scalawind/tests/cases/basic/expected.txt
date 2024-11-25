@@ -448,10 +448,6 @@ case class Tailwind() {
   def text_red_800: Tailwind = this
   def text_red_900: Tailwind = this
   def text_red_950: Tailwind = this
-  def container_(value: String): Tailwind = this
-  def w_(value: String): Tailwind = this
-  def animate_(value: String): Tailwind = this
-  def text_(value: String): Tailwind = this
   def important(@unused styles: Tailwind): Tailwind = this
   def raw(@unused classString: String): Tailwind = this
   def variant(selector: String, styles: Tailwind): Tailwind = this

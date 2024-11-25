@@ -17,6 +17,7 @@ const initOptionsSchema = z.object({
   checkDuplication: z.boolean(),
   checkOptimization: z.boolean(),
   genDoc: z.boolean(),
+  supportArbitrary: z.boolean(),
   framework: z.string()
 })
 
@@ -56,6 +57,11 @@ export const generate = new Command()
   .option(
     "-gd, --gen-doc",
     "generate documentation for methods",
+    true
+  )
+  .option(
+    "-sa, --support-arbitrary",
+    "support arbitrary values",
     true
   )
   .option(

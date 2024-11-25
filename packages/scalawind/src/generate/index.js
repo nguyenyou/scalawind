@@ -99,14 +99,19 @@ export function generateContent(options) {
 
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];
-  for (const [name] of candidates) {
-    const ident = fmtToScalawind(name) + '_';
-    // edge case, we don't want the *_ method
-    if(ident === "*_" || ident === "`*`_") {
-      continue
-    }
 
-    arbitrary.push({ methodName: ident, value: `${name}-`})
+  console.log(options)
+
+  if(options.supportArbitrary) {
+    for (const [name] of candidates) {
+      const ident = fmtToScalawind(name) + '_';
+      // edge case, we don't want the *_ method
+      if(ident === "*_" || ident === "`*`_") {
+        continue
+      }
+  
+      arbitrary.push({ methodName: ident, value: `${name}-`})
+    }
   }
 
   const modifiers = [...variantMap.keys()]
