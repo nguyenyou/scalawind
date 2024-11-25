@@ -63,7 +63,7 @@ export function generateContent(options) {
   const colorSet = new Set();
 
   const standard = [...new Set(classesWithCandidateItem)].filter(([methodName]) => {
-    if(options.supportNegativeValue) return true
+    if(options.supportNegativeValue === "true") return true
     return !methodName.startsWith("-")
   }).map(([s, { rule: rules, rest }]) => {
     let css = '';
@@ -98,12 +98,12 @@ export function generateContent(options) {
     return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
 
-  const opacityColors = options.supportOpacityColor ? [...colorSet] : []
+  const opacityColors = options.supportOpacityColor === "true" ? [...colorSet] : []
 
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];
 
-  if(options.supportArbitrary) {
+  if(options.supportArbitrary === "true") {
     for (const [name] of candidates) {
       const ident = fmtToScalawind(name) + '_';
       // edge case, we don't want the *_ method
@@ -134,6 +134,7 @@ export function generateContent(options) {
     hasValidation,
     ...(getImplicitConversionHelpers(options.framework)),
     ...options,
+    genDoc: options.genDoc === "true"
   })
 
   return generatedScalawind
