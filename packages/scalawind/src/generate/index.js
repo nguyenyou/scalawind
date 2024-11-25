@@ -95,7 +95,7 @@ export function generateContent(options) {
     return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
   })
 
-  const opacityColors = [...colorSet]
+  const opacityColors = options.supportOpacityColor ? [...colorSet] : []
 
   const candidates = [...candidateRuleMap.entries()];
   const arbitrary = [];

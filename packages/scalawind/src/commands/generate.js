@@ -18,6 +18,7 @@ const initOptionsSchema = z.object({
   checkOptimization: z.boolean(),
   genDoc: z.boolean(),
   supportArbitrary: z.boolean(),
+  supportOpacityColor: z.boolean(),
   framework: z.string()
 })
 
@@ -62,6 +63,11 @@ export const generate = new Command()
   .option(
     "-sa, --support-arbitrary",
     "support arbitrary values",
+    true
+  )
+  .option(
+    "-soc, --support-opacity-color",
+    "support opacity color",
     true
   )
   .option(

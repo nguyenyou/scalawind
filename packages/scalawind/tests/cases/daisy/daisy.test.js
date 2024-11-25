@@ -12,6 +12,7 @@ test('daisy test', () => {
     framework: "scalajs-react",
     genDoc: true,
     supportArbitrary: true,
+    supportOpacityColor: true,
     checkDuplication: true,
     checkOptimization: true,
   })

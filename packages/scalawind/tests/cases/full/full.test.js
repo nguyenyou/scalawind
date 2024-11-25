@@ -12,6 +12,7 @@ test('full config test', () => {
     framework: "laminar",
     genDoc: true,
     supportArbitrary: true,
+    supportOpacityColor: true,
     checkDuplication: false,
     checkOptimization: false,
   })
