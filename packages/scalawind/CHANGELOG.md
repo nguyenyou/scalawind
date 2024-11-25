@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.9.2
+
+### Patch Changes
+
+- c3e11ec: fix commander flag name
+
 ## 0.9.1
 
 ### Patch Changes
