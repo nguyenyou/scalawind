@@ -14,7 +14,7 @@ test('full config test', () => {
     checkOptimization: false,
   })
   const filepath = path.join(__dirname, "./expected.txt")
-  utils.writeFile(filepath, actual)
+  // utils.writeFile(filepath, actual) // uncomment to update snapshot
   const expected = utils.readFile(filepath)
   expect(actual).toBe(expected)
 })
