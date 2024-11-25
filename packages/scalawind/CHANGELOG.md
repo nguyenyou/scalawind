@@ -1,5 +1,11 @@
 # scalawind
 
+## 0.9.0
+
+### Minor Changes
+
+- 56551b5: allow turn off arbitrary, opacity color, negative color supports
+
 ## 0.8.11
 
 ### Patch Changes
