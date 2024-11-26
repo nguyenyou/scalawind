@@ -103,64 +103,65 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
     var classNames = List.empty[String]
 
     while (stack.nonEmpty) {
-      val (currentTerm, currentPrefix, currentImportant) = stack.head
-      stack = stack.tail
+      stack.headOption.foreach { (currentTerm, currentPrefix, currentImportant) =>
+        stack = stack.drop(1)
 
-      currentTerm match {
-        case Apply(Select(inner, "important"), List(styles)) =>
-          stack = (styles, currentPrefix, true) :: stack
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Inlined(_, _, inner) =>
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Select(inner, name) =>
-          val methodName = methodNameToTailwindClass(name)
-          val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
-          classNames = classNames :+ className
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Ident("tw") =>
-        // No action needed, just continue processing the remaining stack
-        case Apply(Ident(name), List(arg)) =>
-          val methodName = methodNameToTailwindClass(name)
-          val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
-          classNames = classNames :+ className
-          stack = (arg, currentPrefix, currentImportant) :: stack
-        case Apply(Select(inner, name), List(Literal(StringConstant(value)))) if name == "raw" =>
-          val className = s"$currentPrefix${if (currentImportant) "!" else ""}$value"
-          classNames = classNames :+ className
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Apply(Select(inner, name), List(Literal(StringConstant(opacity)))) if name.endsWith("$") =>
-          val methodName = methodNameToTailwindClass(name.stripSuffix("$"))
-          val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}/${opacity}"
-          classNames = classNames :+ className
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Apply(Select(inner, name), List(Literal(StringConstant(value)))) =>
-          val methodName = methodNameToTailwindClass(name)
-          val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
-          classNames = classNames :+ className
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Apply(Apply(Ident(name), args), List(Literal(StringConstant(value)))) =>
-          val methodName = methodNameToTailwindClass(name)
-          val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
-          classNames = classNames :+ className
-          stack = args.map(arg => (arg, currentPrefix, currentImportant)) ++ stack
-        case Apply(Select(Ident("tw"), name), List(inner)) =>
-          val methodName = methodNameToTailwindClass(name)
-          stack = (inner, s"$currentPrefix${methodName}:", currentImportant) :: stack
-        case Apply(Select(inner, "variant"), List(Literal(StringConstant(selector)), styles)) =>
-          val variantPrefix = s"$currentPrefix[$selector]:" // Use the selector as provided
-          val styleClasses = extractClassNames(styles, variantPrefix, currentImportant) // Extract classes with the variant prefix
-          classNames = classNames ++ styleClasses
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case Apply(Select(inner, name), args) =>
-          val methodName = methodNameToTailwindClass(name)
-          val innerClasses = args.flatMap(arg => extractClassNames(arg, s"$currentPrefix${methodName}:"))
-          classNames = classNames ++ innerClasses
-          stack = (inner, currentPrefix, currentImportant) :: stack
-        case unexpectedTerm =>
-          report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
+        currentTerm match {
+          case Apply(Select(inner, "important"), List(styles)) =>
+            stack = (styles, currentPrefix, true) :: stack
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Inlined(_, _, inner) =>
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Select(inner, name) =>
+            val methodName = methodNameToTailwindClass(name)
+            val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
+            classNames = classNames :+ className
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Ident("tw") =>
+          // No action needed, just continue processing the remaining stack
+          case Apply(Ident(name), List(arg)) =>
+            val methodName = methodNameToTailwindClass(name)
+            val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}"
+            classNames = classNames :+ className
+            stack = (arg, currentPrefix, currentImportant) :: stack
+          case Apply(Select(inner, name), List(Literal(StringConstant(value)))) if name == "raw" =>
+            val className = s"$currentPrefix${if (currentImportant) "!" else ""}$value"
+            classNames = classNames :+ className
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Apply(Select(inner, name), List(Literal(StringConstant(opacity)))) if name.endsWith("$") =>
+            val methodName = methodNameToTailwindClass(name.stripSuffix("$"))
+            val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}/${opacity}"
+            classNames = classNames :+ className
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Apply(Select(inner, name), List(Literal(StringConstant(value)))) =>
+            val methodName = methodNameToTailwindClass(name)
+            val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
+            classNames = classNames :+ className
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Apply(Apply(Ident(name), args), List(Literal(StringConstant(value)))) =>
+            val methodName = methodNameToTailwindClass(name)
+            val className = s"$currentPrefix${if (currentImportant) "!" else ""}${methodName}[$value]"
+            classNames = classNames :+ className
+            stack = args.map(arg => (arg, currentPrefix, currentImportant)) ++ stack
+          case Apply(Select(Ident("tw"), name), List(inner)) =>
+            val methodName = methodNameToTailwindClass(name)
+            stack = (inner, s"$currentPrefix${methodName}:", currentImportant) :: stack
+          case Apply(Select(inner, "variant"), List(Literal(StringConstant(selector)), styles)) =>
+            val variantPrefix = s"$currentPrefix[$selector]:" // Use the selector as provided
+            val styleClasses = extractClassNames(styles, variantPrefix, currentImportant) // Extract classes with the variant prefix
+            classNames = classNames ++ styleClasses
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case Apply(Select(inner, name), args) =>
+            val methodName = methodNameToTailwindClass(name)
+            val innerClasses = args.flatMap(arg => extractClassNames(arg, s"$currentPrefix${methodName}:"))
+            classNames = classNames ++ innerClasses
+            stack = (inner, currentPrefix, currentImportant) :: stack
+          case unexpectedTerm =>
+            report.errorAndAbort(s"Unexpected term: $unexpectedTerm")
+        }
       }
     }
-    
+
     classNames
   }
 
