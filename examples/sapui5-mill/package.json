@@ -1,0 +1,25 @@
+{
+  "name": "scalawind-vite-mill",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:scala": "./millw -w myapp.fastLinkJS",
+    "build:scala": "./millw myapp.fullLinkJS"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "tailwindcss": "3.4.3",
+    "vite": "6.0.1"
+  },
+  "dependencies": {
+    "@ui5/webcomponents": "2.4.0",
+    "@ui5/webcomponents-compat": "2.4.0",
+    "@ui5/webcomponents-fiori": "2.4.0",
+    "@ui5/webcomponents-icons": "2.4.0"
+  }
+}
