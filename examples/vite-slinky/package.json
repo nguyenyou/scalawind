@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "postinstall": "scalawind generate -o ./src/scalawind.scala",
-    "dev:scala": "scala-cli --cli-version 1.5.1 --power package . -w -f -o scalajs-modules",
-    "build:scala": "scala-cli --cli-version 1.5.1 --power package . -f -o scalajs-modules"
+    "dev:scala": "scala-cli --cli-version 1.5.4 --power package . -w -f -o scalajs-modules",
+    "build:scala": "scala-cli --cli-version 1.5.4 --power package . -f -o scalajs-modules"
   },
   "dependencies": {
     "react": "^18",
