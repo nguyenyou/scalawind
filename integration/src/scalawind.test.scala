@@ -1,4 +1,4 @@
-//> using test.dep org.scalameta::munit::1.0.0
+//> using test.dep org.scalameta::munit::1.0.3
 package tests.only
 
 import scalawind.*
@@ -144,6 +144,11 @@ class ComplexChainingTests extends munit.FunSuite {
       sw(
         tw.variant("&:nth-child(3)", tw.underline).list_disc.mx_5.text_white
       ) == "[&:nth-child(3)]:underline list-disc mx-5 text-white"
+    )
+    assert(
+      sw(
+        tw.variant("&:nth-child(3)", tw.underline.flex).list_disc.mx_5.text_white
+      ) == "[&:nth-child(3)]:underline [&:nth-child(3)]:flex list-disc mx-5 text-white"
     )
   }
   test("dot values, percentage values") {
