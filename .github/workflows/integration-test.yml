@@ -20,10 +20,10 @@ jobs:
       - uses: VirtusLab/scala-cli-setup@main
         with:
           jvm: adopt:11
-      - name: Setup Node.js 20.x
+      - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
 
       - name: Install Dependencies & Build & Test Generator
         run: |

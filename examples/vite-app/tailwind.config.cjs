@@ -1,9 +1,11 @@
 const colors = require("tailwindcss/colors");
+const { scalaSourceTransform } = require("scalawind/dist/transform");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: {
-    files: ['./index.html', './scalajs-modules/**/*.js'],
+    files: ["./index.html", "./src/**/*.scala"],
+    transform: scalaSourceTransform,
   },
   theme: {
     colors: {
