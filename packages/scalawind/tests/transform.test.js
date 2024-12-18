@@ -1,5 +1,5 @@
 import { expect, test, describe } from "bun:test";
-import { transformSource } from "../src/transform";
+import { transformSource, scalaSourceTransform } from "../src/transform";
 
 describe("transform scala source", () => {
   test("case 1", () => {
@@ -305,4 +305,19 @@ describe("transform scala source", () => {
     const expected = "dark:md:hover:focus:active:group-hover:disabled:bg-red-500";
     expect(actual).toBe(expected);
   });
+
+  test("should preserve original source", () => {
+    const source = `
+      div(
+        cls := "bg-red-500",
+        tw.flex.items_center
+      )
+    `;
+    const actual = scalaSourceTransform.scala(source)
+    const expected = `${source}
+    
+    flex items-center
+    `
+    expect(actual).toBe(expected);
+  })
 });

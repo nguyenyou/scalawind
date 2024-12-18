@@ -147,5 +147,11 @@ export function transformSource(source) {
 }
 
 export const scalaSourceTransform = {
-  scala: (content) => transformSource(content),
+  scala: (content) => {
+    const transformed = transformSource(content)
+    return `${content}
+    
+    ${transformed}
+    `
+  },
 };
