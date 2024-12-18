@@ -1,5 +1,11 @@
 # scalawind
 
+## 1.0.1
+
+### Patch Changes
+
+- 5f72dfe: refactor code to use pipe pattern for transform source
+
 ## 1.0.0
 
 ### Major Changes
