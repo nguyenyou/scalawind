@@ -1,12 +1,50 @@
 {{#if laminar}}
 import com.raquo.laminar.api.L
 
-implicit inline def lw(inline tailwind: Tailwind): L.Modifier[L.HtmlElement] = {
-  ${ lwImpl('tailwind) }
+extension (inline tailwind: Tailwind) {
+  inline def toHtmlMod: L.HtmlMod =
+    ${ laminarTailwindImpl('tailwind) }
+  inline def toSvgMod: L.SvgMod =
+    ${ laminarSvgTailwindImpl('tailwind) }
+  inline def <--(inline boolSignal: L.Signal[Boolean]): L.HtmlMod =
+    ${ boolSignalClsImpl('tailwind, 'boolSignal) }
+  inline def :=(inline bool: Boolean): L.HtmlMod =
+    ${ boolClsImpl('tailwind, 'bool) }
 }
 
-def lwImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[L.Modifier[L.HtmlElement]] = {
+def boolSignalClsImpl(tailwindExpr: Expr[Tailwind], boolSignal: Expr[L.Signal[Boolean]])(using Quotes): Expr[L.HtmlMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ L.cls(${ Expr(value) }) <-- ${ boolSignal } }
+}
+
+def boolClsImpl(tailwindExpr: Expr[Tailwind], bool: Expr[Boolean])(using Quotes): Expr[L.HtmlMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ L.cls(${ Expr(value) }) := ${ bool } }
+}
+
+implicit inline def laminarTailwind(inline tailwind: Tailwind): L.HtmlMod = {
+  ${ laminarTailwindImpl('tailwind) }
+}
+
+def laminarTailwindImpl(
+  tailwindExpr: Expr[Tailwind]
+)(
+  using Quotes
+): Expr[L.HtmlMod] = {
   val value = swImpl(tailwindExpr).valueOrAbort
   '{ L.cls := ${ Expr(value) } }
+}
+
+implicit inline def laminarSvgTailwind(inline tailwind: Tailwind): L.SvgMod = {
+  ${ laminarSvgTailwindImpl('tailwind) }
+}
+
+def laminarSvgTailwindImpl(
+  tailwindExpr: Expr[Tailwind]
+)(
+  using Quotes
+): Expr[L.SvgMod] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ L.svg.className := ${ Expr(value) } }
 }
 {{/if}}
