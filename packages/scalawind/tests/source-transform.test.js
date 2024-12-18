@@ -1,10 +1,12 @@
-import { expect, test, describe } from "bun:test";
-import { transformSource } from "../src/transform";
+// THIS FILE IS FOR INTERNAL USAGE, PLEASE IGNORE THIS FILE
 
-describe("transform scala source", () => {
+import { expect, test, describe } from "bun:test";
+import { transformSource } from "../src/source-transform";
+
+describe("source transform scala source", () => {
   test("case 1", () => {
     const source = `
-    tw.bg_red_500.p_4
+    tw.bgRed500.p4
   `;
     const actual = transformSource(source);
     const expected = "bg-red-500 p-4";
@@ -22,15 +24,15 @@ describe("transform scala source", () => {
 
   test("case 3", () => {
     const source = `
-    tw.font_sans.grid
-          .grid_rows_("20px_1fr_20px")
-          .items_center
-          .justify_items_center
-          .min_h_screen
-          .p_8
-          .pb_20
-          .gap_16
-          .sm(tw.p_20)
+    tw.fontSans.grid
+          .gridRows_("20px_1fr_20px")
+          .itemsCenter
+          .justifyItemsCenter
+          .minHScreen
+          .p8
+          .pb20
+          .gap16
+          .sm(tw.p20)
   `;
     const actual = transformSource(source);
     const expected =
@@ -41,7 +43,7 @@ describe("transform scala source", () => {
   test("case 4", () => {
     const source = `
     tw.text_("#ff0")
-    tw.flex.text_("#ff0").items_center.bg_("#00f")
+    tw.flex.text_("#ff0").itemsCenter.bg_("#00f")
   `;
     const actual = transformSource(source);
     const expected = "text-[#ff0] flex items-center bg-[#00f]";
@@ -51,7 +53,7 @@ describe("transform scala source", () => {
   test("case 5", () => {
     const source = `
     tw.text_("#ff0")
-    tw.flex.text_("#ff0").items_center.bg_("#00f")
+    tw.flex.text_("#ff0").itemsCenter.bg_("#00f")
   `;
     const actual = transformSource(source);
     const expected = "text-[#ff0] flex items-center bg-[#00f]";
@@ -79,7 +81,7 @@ describe("transform scala source", () => {
 
   test("case 8", () => {
     const source = `
-    tw.variant("&:nth-child(3)", tw.underline).list_disc.mx_5.text_white
+    tw.variant("&:nth-child(3)", tw.underline).listDisc.mx5.textWhite
   `;
     const actual = transformSource(source);
     const expected = "[&:nth-child(3)]:underline list-disc mx-5 text-white";
@@ -99,7 +101,7 @@ describe("transform scala source", () => {
     const source = `
     tw.variant("&:is(.foo, .bar)", 
         tw.underline)
-        .p_4
+        .p4
   `;
     const actual = transformSource(source);
     const expected = "[&:is(.foo, .bar)]:underline p-4";
@@ -108,7 +110,7 @@ describe("transform scala source", () => {
 
   test("case 11", () => {
     const source = `
-    tw.important(tw.text_red_400)
+    tw.important(tw.textRed400)
   `;
     const actual = transformSource(source);
     const expected = "!text-red-400";
@@ -117,7 +119,7 @@ describe("transform scala source", () => {
 
   test("case 12", () => {
     const source = `
-    tw.text_red_400$("10")
+    tw.textRed400$("10")
   `;
     const actual = transformSource(source);
     const expected = "text-red-400/10";
@@ -126,7 +128,7 @@ describe("transform scala source", () => {
 
   test("case 12", () => {
     const source = `
-    tw.bg_black$("[.05]")
+    tw.bgBlack$("[.05]")
   `;
     const actual = transformSource(source);
     const expected = "bg-black/[.05]";
@@ -134,7 +136,7 @@ describe("transform scala source", () => {
   });
   test("case 13", () => {
     const source = `
-    tw.font_bold.text_red_400$("10").bg_green_500$("20").hover(tw.text_black)
+    tw.fontBold.textRed400$("10").bgGreen500$("20").hover(tw.textBlack)
   `;
     const actual = transformSource(source);
     const expected = "font-bold text-red-400/10 bg-green-500/20 hover:text-black";
@@ -142,7 +144,7 @@ describe("transform scala source", () => {
   });
   test("case 14", () => {
     const source = `
-    tw.sm(tw.hover(tw.important(tw.font_bold)))
+    tw.sm(tw.hover(tw.important(tw.fontBold)))
   `;
     const actual = transformSource(source);
     const expected = "sm:hover:!font-bold";
@@ -160,11 +162,12 @@ describe("transform scala source", () => {
     const expected = "hover:w-1/2";
     expect(actual).toBe(expected);
   });
+  
   test("case 17", () => {
     const source = `
       div(
         div(
-          tw.my_24.text_center.text_20.leading_32.text_gray_8.w_full.font_semi_bold,
+          tw.my24.textCenter.text20.leading32.textGray8.wFull.fontSemiBold,
           "scalawind"
         )
       )
@@ -182,7 +185,7 @@ describe("transform scala source", () => {
           "scalawind"
         ),
         div(
-          tw.items_center.hover(tw.text_20)
+          tw.itemsCenter.hover(tw.text20)
         )
       )
     `;
@@ -194,7 +197,7 @@ describe("transform scala source", () => {
   test("case 18", () => {
     const source = `
       div(
-        tw.bg_red_500.p_4.hover(tw.bg_blue_500).md(tw.focus(tw.bg_green_500.text_white)).flex.flex_col.gap_10
+        tw.bgRed500.p4.hover(tw.bgBlue500).md(tw.focus(tw.bgGreen500.textWhite)).flex.flexCol.gap10
       )
     `;
     const actual = transformSource(source);
@@ -210,7 +213,7 @@ describe("transform scala source", () => {
   });
 
   test("case 20", () => {
-    const source = "tw.bg_blue_500.hover(tw.bg_blue_600).first_letter(tw.text_red_500.font_bold).text_white.rounded.py_3.px_4.md(tw.py_4.px_5).dark(tw.bg_sky_900.hover(tw.bg_sky_800))";
+    const source = "tw.bgBlue500.hover(tw.bgBlue600).firstLetter(tw.textRed500.fontBold).textWhite.rounded.py3.px4.md(tw.py4.px5).dark(tw.bgSky900.hover(tw.bgSky800))";
     const actual = transformSource(source);
     const expected = "bg-blue-500 hover:bg-blue-600 first-letter:text-red-500 first-letter:font-bold text-white rounded py-3 px-4 md:py-4 md:px-5 dark:bg-sky-900 dark:hover:bg-sky-800";
     expect(actual).toBe(expected);
@@ -218,15 +221,15 @@ describe("transform scala source", () => {
 
   test("case 21", () => {
     const source = `
-      tw.rounded_full.border.border_solid.border_transparent.transition_colors.flex.items_center.justify_center.bg_foreground.text_background.gap_2
+      tw.roundedFull.border.borderSolid.borderTransparent.transitionColors.flex.itemsCenter.justifyCenter.bgForeground.textBackground.gap2
           .hover(tw.bg_("#383838"))
           .dark(tw.hover(tw.bg_("#333")))
-          .text_sm
-          .sm(tw.text_base)
-          .h_10
-          .sm(tw.h_12)
-          .px_4
-          .sm(tw.px_5)
+          .textSm
+          .sm(tw.textBase)
+          .h10
+          .sm(tw.h12)
+          .px4
+          .sm(tw.px5)
     `
     const actual = transformSource(source);
     const expected = "rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#333] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5";
@@ -242,9 +245,9 @@ describe("transform scala source", () => {
 
   test("nested 1 level", () => {
     const source = `
-      tw.hover(tw.bg_red_500)
-      tw.flex.hover(tw.bg_red_500)
-      tw.flex.hover(tw.bg_red_500).p_4
+      tw.hover(tw.bgRed500)
+      tw.flex.hover(tw.bgRed500)
+      tw.flex.hover(tw.bgRed500).p4
     `;
     const actual = transformSource(source);
     const expected = "hover:bg-red-500 flex p-4";
@@ -254,7 +257,7 @@ describe("transform scala source", () => {
 
   test("nested 2 level", () => {
     const source = `
-      tw.md(tw.hover(tw.bg_red_500))
+      tw.md(tw.hover(tw.bgRed500))
     `;
     const actual = transformSource(source);
     const expected = "md:hover:bg-red-500";
@@ -263,7 +266,7 @@ describe("transform scala source", () => {
 
   test("nested 3 level", () => {
     const source = `
-      tw.md(tw.hover(tw.focus(tw.bg_red_500)))
+      tw.md(tw.hover(tw.focus(tw.bgRed500)))
     `;
     const actual = transformSource(source);
     const expected = "md:hover:focus:bg-red-500";
@@ -272,7 +275,7 @@ describe("transform scala source", () => {
 
   test("nested 4 level", () => {
     const source = `
-      tw.md(tw.hover(tw.focus(tw.active(tw.bg_red_500))))
+      tw.md(tw.hover(tw.focus(tw.active(tw.bgRed500))))
     `;
     const actual = transformSource(source);
     const expected = "md:hover:focus:active:bg-red-500";
@@ -281,7 +284,7 @@ describe("transform scala source", () => {
 
   test("nested 5 level", () => {
     const source = `
-      tw.md(tw.hover(tw.focus(tw.active(tw.group_hover(tw.bg_red_500)))))
+      tw.md(tw.hover(tw.focus(tw.active(tw.groupHover(tw.bgRed500)))))
     `;
     const actual = transformSource(source);
     const expected = "md:hover:focus:active:group-hover:bg-red-500";
@@ -290,7 +293,7 @@ describe("transform scala source", () => {
 
   test("nested 6 level", () => {
     const source = `
-      tw.md(tw.hover(tw.focus(tw.active(tw.group_hover(tw.disabled(tw.bg_red_500))))))
+      tw.md(tw.hover(tw.focus(tw.active(tw.groupHover(tw.disabled(tw.bgRed500))))))
     `;
     const actual = transformSource(source);
     const expected = "md:hover:focus:active:group-hover:disabled:bg-red-500";
@@ -299,7 +302,7 @@ describe("transform scala source", () => {
 
   test("nested 7 level", () => {
     const source = `
-      tw.dark(tw.md(tw.hover(tw.focus(tw.active(tw.group_hover(tw.disabled(tw.bg_red_500)))))))
+      tw.dark(tw.md(tw.hover(tw.focus(tw.active(tw.groupHover(tw.disabled(tw.bgRed500)))))))
     `;
     const actual = transformSource(source);
     const expected = "dark:md:hover:focus:active:group-hover:disabled:bg-red-500";

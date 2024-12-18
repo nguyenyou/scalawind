@@ -40,7 +40,7 @@
     "@swc/cli": "^0.1.62",
     "@swc/jest": "^0.2.26",
     "@swc/register": "^0.1.10",
-    "bun": "^1.1.11",
+    "bun": "^1.1.40",
     "tailwindcss": "^3.4.3"
   },
   "engines": {
