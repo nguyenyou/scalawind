@@ -1,5 +1,11 @@
 # scalawind
 
+## 1.0.2
+
+### Patch Changes
+
+- 96c7c7d: add try-catch for transform scala source
+
 ## 1.0.1
 
 ### Patch Changes
