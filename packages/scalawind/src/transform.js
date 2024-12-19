@@ -62,7 +62,10 @@ const flattenClasses = (twString) => {
 };
 
 // Main function to extract and process TW
-export const extractTw = (source, customClassTransformer = input => input) => {
+export const extractTw = (
+  source,
+  customClassTransformer = (input) => input
+) => {
   try {
     return pipe(
       (source) => source.replace(/_2xl/g, "2xl"),
@@ -108,13 +111,16 @@ export const extractTw = (source, customClassTransformer = input => input) => {
                 (_, content) => "`" + content.replace(/\./g, "§") + "`"
               ),
             (source) =>
-              source.replace(PATTERNS.TW_REPLACE, (match) => REPLACEMENTS[match]),
+              source.replace(
+                PATTERNS.TW_REPLACE,
+                (match) => REPLACEMENTS[match]
+              ),
             flattenClasses
           )(match)
         ),
       (classes) => [...new Set(classes)],
-      (classes) => classes.map(cls => customClassTransformer(cls)),
-      (classes) => classes.map(cls => cls.replace(/_/g, "-")),
+      (classes) => classes.map((cls) => customClassTransformer(cls)),
+      (classes) => classes.map((cls) => cls.replace(/_/g, "-")),
       (classes) => classes.join(" "),
       (step) => step.replace(/¥([^¥]+)¥/g, "[$1]"),
       (step) => step.replace(/€([^€]+)€/g, "$1"),
@@ -148,10 +154,16 @@ export function transformSource(source) {
 
 export const scalaSourceTransform = {
   scala: (content) => {
-    const transformed = transformSource(content)
-    return `${content}
+    try {
+      const transformed = transformSource(content);
+      const result = `${content}
     
     ${transformed}
-    `
+    `;
+      return result;
+    } catch (error) {
+      console.log("[Scalawind]: Can't transform scala source!")
+      return content;
+    }
   },
 };
