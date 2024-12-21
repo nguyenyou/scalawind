@@ -42,3 +42,4 @@ scalajs-modules
 .bsp
 .bloop
 src/scalawind.scala
+out
