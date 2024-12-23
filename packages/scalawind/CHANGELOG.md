@@ -1,5 +1,11 @@
 # scalawind
 
+## 1.0.3
+
+### Patch Changes
+
+- 9b90689: add support for camelCase
+
 ## 1.0.2
 
 ### Patch Changes
