@@ -78,9 +78,12 @@ extension (inline tailwind: Tailwind) {
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
+
+
+
 def methodNameToTailwindClass(rawName: String) = {
   val name = if (rawName.startsWith("_") && rawName.charAt(1).isDigit) rawName.stripPrefix("_") else rawName
-  name.replace("_", "-")
+    name.replace("_", "-")
 }
 
 def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {

@@ -7,8 +7,8 @@ process.on("SIGTERM", () => process.exit(0))
 
 async function main() {
   const program = new Command()
-    .name("nguyenyou-ui")
-    .description("add components and dependencies to your project")
+    .name("scalawind")
+    .description("generate scalawind code")
     .version(
       "1.0.0",
       "-v, --version",

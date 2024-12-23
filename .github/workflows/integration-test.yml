@@ -42,3 +42,10 @@ jobs:
           bun generate
           scala-cli test src
         working-directory: ./integration
+
+      - name: Camelcase Integration Test
+        run: |
+          bun install
+          bun generate
+          scala-cli test src
+        working-directory: ./camelcase-integration
