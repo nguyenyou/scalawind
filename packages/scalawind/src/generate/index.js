@@ -3,7 +3,7 @@ import { createContext } from 'tailwindcss/lib/lib/setupContextUtils';
 import fs from 'fs'
 import path from 'path'
 import { createDoc } from './createDoc'
-import { fmtToScalawind } from '../utils/fmtToScalawind'
+import { tailwindClassToScalaMethod } from '../utils/tailwind-class-to-scala-method'
 
 import Handlebars from "handlebars";
 
@@ -35,7 +35,7 @@ function getImplicitConversionHelpers(framework) {
 }
 
 export function generateContent(options) {
-  const { userConfig } = options
+  const { userConfig, camelCase } = options
   const resolvedConfig = resolveConfig(userConfig);
   const ctx = createContext(resolvedConfig);
 
@@ -79,7 +79,7 @@ export function generateContent(options) {
           );
 
           if (isColor && rest && flatColorsList.includes(rest)) {
-            const key = fmtToScalawind(s) + '$';
+            const key = tailwindClassToScalaMethod(s, camelCase) + '$';
 
             colorSet.add(key);
           }
@@ -95,7 +95,7 @@ export function generateContent(options) {
       }
     }
 
-    return { prop: fmtToScalawind(s), raw: s, doc: createDoc(css) };
+    return { prop: tailwindClassToScalaMethod(s, camelCase), raw: s, doc: createDoc(css) };
   })
 
   const opacityColors = options.supportOpacityColor === "true" ? [...colorSet] : []
@@ -105,7 +105,7 @@ export function generateContent(options) {
 
   if(options.supportArbitrary === "true") {
     for (const [name] of candidates) {
-      const ident = fmtToScalawind(name) + '_';
+      const ident = tailwindClassToScalaMethod(name, camelCase) + '_';
       // edge case, we don't want the *_ method
       if(ident === "*_" || ident === "`*`_") {
         continue
@@ -121,7 +121,7 @@ export function generateContent(options) {
   .map((s) => {
     s = /^\d/.test(s) ? `_${s}` : s;
 
-    const mod = fmtToScalawind(s);
+    const mod = tailwindClassToScalaMethod(s, camelCase);
     return ({ name: mod, value: mod})
   })
 
@@ -133,6 +133,7 @@ export function generateContent(options) {
     opacityColors,
     hasValidation,
     ...(getImplicitConversionHelpers(options.framework)),
+    camelCase,
     ...options,
     genDoc: options.genDoc === "true"
   })

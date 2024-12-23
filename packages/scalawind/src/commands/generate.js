@@ -16,6 +16,7 @@ const initOptionsSchema = z.object({
   previewCompliedResult: z.boolean(),
   checkDuplication: z.boolean(),
   checkOptimization: z.boolean(),
+  camelCase: z.boolean(),
   genDoc: z.string(),
   supportArbitrary: z.string(),
   supportOpacityColor: z.string(),
@@ -39,6 +40,11 @@ export const generate = new Command()
   .option(
     "-pcr, --preview-complied-result",
     "enable show preview compiled result",
+    false
+  )
+  .option(
+    "-cc, --camel-case",
+    "enable camel case",
     false
   )
   .option(

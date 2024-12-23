@@ -6,9 +6,45 @@ extension (inline tailwind: Tailwind) {
 implicit inline def sw(inline tailwind: Tailwind): String =
   ${ swImpl('tailwind) }
 
+{{#if camelCase}}
+def convertCamelCaseToSnakeCase(methodName: String): String = {
+  val step1 = "[A-Z]".r.replaceAllIn(
+    methodName,
+    m => s"_${m.group(0).toLowerCase}"
+  )
+
+  val step2 = "([a-z]+)([0-9]+)".r.replaceAllIn(
+    step1,
+    m => {
+      val p1 = m.group(1)
+      val p2 = m.group(2)
+      s"${p1}_${p2}"
+    }
+  )
+
+  val step3 = "_([a-z]+)([0-9]+)".r.replaceAllIn(
+    step2,
+    m => {
+      val p1 = m.group(1)
+      val p2 = m.group(2)
+      s"_${p1}_${p2}"
+    }
+  )
+
+  step3.toLowerCase
+}
+{{/if}}
+
+
+
 def methodNameToTailwindClass(rawName: String) = {
   val name = if (rawName.startsWith("_") && rawName.charAt(1).isDigit) rawName.stripPrefix("_") else rawName
-  name.replace("_", "-")
+  {{#if camelCase}}
+    convertCamelCaseToSnakeCase(name).replace("_", "-")
+  {{/if}}
+  {{#unless camelCase}}
+    name.replace("_", "-")
+  {{/unless}}
 }
 
 def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {

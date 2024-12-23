@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test'
-import { fmtToScalawind as fmt } from './fmtToScalawind'
+import { tailwindClassToScalaMethod as fmt } from './tailwind-class-to-scala-method'
 
 test('format to scalawind', () => {
   expect(fmt("text-red-500")).toBe("text_red_500")

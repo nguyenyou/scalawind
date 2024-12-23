@@ -1,0 +1,14 @@
+{
+  "name": "camelcase-integration-test",
+  "type": "module",
+  "scripts": {
+    "generate": "scalawind generate --check-duplication --check-optimization --camel-case -pcr -o ./src/scalawind.scala",
+    "test:scala": "scala-cli test src --test-only 'tests.only*'"
+  },
+  "dependencies": {
+    "scalawind": "link:scalawind"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
