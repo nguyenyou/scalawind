@@ -66,6 +66,15 @@ div(
 )
 ```
 
+With Laminar, you also get some really cool conditional styling tricks:
+
+```scala
+div(
+  tw.text_red_500.bg_red_100 <-- isErrorSignal, // Signal[Boolean]
+  tw.bg_gray_400 := isDisabled, // Boolean
+)
+```
+
 ## Quickstart
 
 You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite example that's already setup everything for you to get started.
