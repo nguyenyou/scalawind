@@ -16,6 +16,11 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
@@ -23,7 +28,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          corepack enable
           pnpm install
 
       - name: Build
