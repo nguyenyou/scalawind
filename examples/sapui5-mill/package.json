@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "dev:scala": "./millw -w myapp.fastLinkJS",
-    "build:scala": "./millw myapp.fullLinkJS"
+    "dev:scala": "./mill -w myapp.fastLinkJS",
+    "build:scala": "./mill myapp.fullLinkJS"
   },
   "devDependencies": {
     "autoprefixer": "10.4.19",
