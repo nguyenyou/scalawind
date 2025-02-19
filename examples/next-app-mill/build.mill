@@ -1,7 +1,7 @@
 import mill._, scalalib._, scalajslib._, scalajslib.api._
 
 object myapp extends ScalaJSModule {
-  def scalaVersion = "3.3.3"
+  def scalaVersion = "3.6.3"
   def scalaJSVersion = "1.18.2"
 
   def moduleKind = ModuleKind.ESModule

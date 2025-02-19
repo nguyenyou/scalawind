@@ -2,7 +2,7 @@ import org.scalajs.linker.interface.ModuleSplitStyle
 
 enablePlugins(ScalaJSPlugin)
 
-scalaVersion := "3.3.3"
+scalaVersion := "3.6.3"
 scalaJSUseMainModuleInitializer := true
 
 scalaJSLinkerConfig ~= {
