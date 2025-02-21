@@ -6,8 +6,8 @@
     "start": "parcel",
     "build": "parcel build",
     "postinstall": "scalawind generate -sr -o ./src/scalawind.scala",
-    "dev:scala": "scala-cli --cli-version 1.5.4 --power package . -w -f -o scalajs-modules",
-    "build:scala": "scala-cli --cli-version 1.5.4 --power package . -f -o scalajs-modules"
+    "dev:scala": "scala-cli --cli-version 1.6.2 --power package . -w -f -o scalajs-modules",
+    "build:scala": "scala-cli --cli-version 1.6.2 --power package . -f -o scalajs-modules"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
