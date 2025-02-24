@@ -81,6 +81,9 @@ You can use [degit](https://github.com/Rich-Harris/degit) to clone the vite exam
 
 ```bash
 $ npx degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
+
+// Or bun
+# bunx --bun degit nguyenyou/scalawind/examples/vite-app my-scalawind-app
 ```
 
 https://github.com/nguyenyou/scalawind/assets/38455472/ed0dc006-a263-49be-a809-8a8c1c340ec1
