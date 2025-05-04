@@ -9,7 +9,7 @@ object Versions {
   val sjs = "1.19.0"
   val scalajsDom = "2.8.0"
   val laminar = "17.2.1"
-  val scalawind = "0.0.1"
+  val scalawind = "1.0.0"
 }
 
 object Dependencies {
