@@ -4,6 +4,33 @@ import scala.quoted.*
 import scala.annotation.unused
 import scala.language.implicitConversions
 import com.raquo.laminar.api.L
+import com.raquo.laminar.nodes.ReactiveHtmlElement
+import org.scalajs.dom.HTMLHeadingElement
+
+// Create a priority hierarchy for implicit conversions
+trait LowPriorityImplicits {
+  implicit inline def laminarTailwind(inline tailwind: Tailwind): L.HtmlMod = {
+    ${ laminarTailwindImpl('tailwind) }
+  }
+  
+  implicit inline def laminarSvgTailwind(inline tailwind: Tailwind): L.SvgMod = {
+    ${ laminarSvgTailwindImpl('tailwind) }
+  }
+}
+
+trait HighPriorityImplicits extends LowPriorityImplicits {
+  implicit inline def laminarHtmlHeading(inline tailwind: Tailwind): L.Modifier[ReactiveHtmlElement[HTMLHeadingElement]] = {
+    ${ toHtmlHeadingModImpl('tailwind) }
+  }
+}
+
+// Make the companion object extend the priority hierarchy
+object Tailwind extends HighPriorityImplicits {
+  def apply(): Tailwind = new Tailwind()
+  
+  implicit inline def sw(inline tailwind: Tailwind): String =
+    ${ swImpl('tailwind) }
+}
 
 extension (inline tailwind: Tailwind) {
   inline def toHtmlMod: L.HtmlMod =
@@ -26,10 +53,6 @@ def boolClsImpl(tailwindExpr: Expr[Tailwind], bool: Expr[Boolean])(using Quotes)
   '{ L.cls(${ Expr(value) }) := ${ bool } }
 }
 
-implicit inline def laminarTailwind(inline tailwind: Tailwind): L.HtmlMod = {
-  ${ laminarTailwindImpl('tailwind) }
-}
-
 def laminarTailwindImpl(
   tailwindExpr: Expr[Tailwind]
 )(
@@ -37,10 +60,6 @@ def laminarTailwindImpl(
 ): Expr[L.HtmlMod] = {
   val value = swImpl(tailwindExpr).valueOrAbort
   '{ L.cls := ${ Expr(value) } }
-}
-
-implicit inline def laminarSvgTailwind(inline tailwind: Tailwind): L.SvgMod = {
-  ${ laminarSvgTailwindImpl('tailwind) }
 }
 
 def laminarSvgTailwindImpl(
@@ -51,16 +70,16 @@ def laminarSvgTailwindImpl(
   val value = swImpl(tailwindExpr).valueOrAbort
   '{ L.svg.className := ${ Expr(value) } }
 }
+
+def toHtmlHeadingModImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[L.Modifier[ReactiveHtmlElement[HTMLHeadingElement]]] = {
+  val value = swImpl(tailwindExpr).valueOrAbort
+  '{ L.cls := ${ Expr(value) } }
+}
+
 extension (inline tailwind: Tailwind) {
   inline def css: String =
     ${ swImpl('tailwind) }
 }
-    
-implicit inline def sw(inline tailwind: Tailwind): String =
-  ${ swImpl('tailwind) }
-
-
-
 
 def methodNameToTailwindClass(rawName: String) = {
   val name = if (rawName.startsWith("_") && rawName.charAt(1).isDigit) rawName.stripPrefix("_") else rawName
@@ -142,6 +161,7 @@ def swImpl(tailwindExpr: Expr[Tailwind])(using Quotes): Expr[String] = {
   val combinedClasses = classList.mkString(" ")
   Expr(combinedClasses)
 }
+
 val tw = Tailwind()
 
 case class Tailwind() {
@@ -216,7 +236,8 @@ case class Tailwind() {
   def group_active(@unused styles: Tailwind): Tailwind = this
   def group_enabled(@unused styles: Tailwind): Tailwind = this
   def group_disabled(@unused styles: Tailwind): Tailwind = this
-  def group(@unused styles: Tailwind): Tailwind = this
+  def group: Tailwind = this
+  def group_(@unused styles: Tailwind): Tailwind = this
   def peer_first(@unused styles: Tailwind): Tailwind = this
   def peer_last(@unused styles: Tailwind): Tailwind = this
   def peer_only(@unused styles: Tailwind): Tailwind = this
