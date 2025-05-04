@@ -1,0 +1,47 @@
+package build
+
+import mill._, scalalib._, scalajslib._, scalajslib.api._, publish._
+import $ivy.`com.lihaoyi::mill-contrib-sonatypecentral:`
+import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
+
+object Versions {
+  val scala3 = "3.3.5"
+  val sjs = "1.19.0"
+  val scalajsDom = "2.8.0"
+  val laminar = "17.2.1"
+  val scalawind = "0.0.1"
+}
+
+object Dependencies {
+  val laminar = Agg(
+    ivy"com.raquo::laminar::${Versions.laminar}"
+  )
+
+  val scalajsDom = Agg(
+    ivy"org.scala-js::scalajs-dom::${Versions.scalajsDom}"
+  )
+}
+
+trait NoDoc extends ScalaModule {
+  override def docJar = T {
+    val outPath = T.dest / "empty-doc.jar"
+    os.write(outPath, Array.emptyByteArray)
+    PathRef(outPath)
+  }
+}
+
+object scalawind extends ScalaJSModule with SonatypeCentralPublishModule with NoDoc {
+  def scalaVersion = Versions.scala3
+  def scalaJSVersion = Versions.sjs
+  def publishVersion = Versions.scalawind
+  def ivyDeps = Dependencies.laminar ++ Dependencies.scalajsDom
+  
+  def pomSettings = PomSettings(
+    description = "Zero-Runtime Typesafe TailwindCSS in Scala",
+    organization = "io.github.nguyenyou",
+    url = "https://github.com/nguyenyou/scalawind",
+    licenses = Seq(License.MIT),
+    versionControl = VersionControl.github("nguyenyou", "scalawind"),
+    developers = Seq(Developer("nguyenyou", "Nguyen You", "https://github.com/nguyenyou")),
+  )
+}

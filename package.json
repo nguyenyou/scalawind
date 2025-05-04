@@ -9,7 +9,8 @@
     "release": "changeset publish",
     "release:snapshot": "pnpm version:snapshot && pnpm publish:snapshot",
     "version:snapshot": "changeset version --snapshot snapshot",
-    "publish:snapshot": "changeset publish --tag snapshot"
+    "publish:snapshot": "changeset publish --tag snapshot",
+    "release:scalawind": "./mill -i scalawind.publishSonatypeCentral"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.3",
