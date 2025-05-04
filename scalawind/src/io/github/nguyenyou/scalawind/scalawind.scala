@@ -1,4 +1,4 @@
-package scalawind
+package io.github.nguyenyou.scalawind
 
 import scala.quoted.*
 import scala.annotation.unused
