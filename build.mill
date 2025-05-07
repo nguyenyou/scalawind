@@ -10,6 +10,7 @@ object Versions {
   val scalajsDom = "2.8.0"
   val laminar = "17.2.1"
   val scalawind = "1.0.1"
+  val utest = "0.8.5"
 }
 
 object Dependencies {
@@ -19,6 +20,10 @@ object Dependencies {
 
   val scalajsDom = Agg(
     ivy"org.scala-js::scalajs-dom::${Versions.scalajsDom}"
+  )
+
+  val utest = Agg(
+    ivy"com.lihaoyi::utest::${Versions.utest}"
   )
 }
 
@@ -44,4 +49,9 @@ object scalawind extends ScalaJSModule with SonatypeCentralPublishModule with No
     versionControl = VersionControl.github("nguyenyou", "scalawind"),
     developers = Seq(Developer("nguyenyou", "Nguyen You", "https://github.com/nguyenyou")),
   )
+
+  object test extends ScalaJSTests {
+    def ivyDeps = Dependencies.utest
+    def testFramework = "utest.runner.Framework"
+  }
 }
