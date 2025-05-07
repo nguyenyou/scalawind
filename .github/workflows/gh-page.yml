@@ -1,0 +1,42 @@
+name: GitHub Pages
+
+on:
+  workflow_dispatch:
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  publish-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+            node-version: 23
+      - run: |
+          corepack enable
+          pnpm install
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Build ScalaJS
+        run: ./mill -i website.fullLinkJS
+      - name: Build Vite
+        run: pnpm --filter website build
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './website/dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

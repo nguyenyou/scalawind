@@ -3,6 +3,8 @@ package build
 import mill._, scalalib._, scalajslib._, scalajslib.api._, publish._
 import $ivy.`com.lihaoyi::mill-contrib-sonatypecentral:`
 import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
+import $ivy.`com.goyeau::mill-scalafix::0.5.0`
+import com.goyeau.mill.scalafix.ScalafixModule
 
 object Versions {
   val scala3 = "3.3.5"
@@ -11,6 +13,7 @@ object Versions {
   val laminar = "17.2.1"
   val scalawind = "1.0.1"
   val utest = "0.8.5"
+  val scalameta = "4.13.5"
 }
 
 object Dependencies {
@@ -24,6 +27,10 @@ object Dependencies {
 
   val utest = Agg(
     ivy"com.lihaoyi::utest::${Versions.utest}"
+  ) 
+
+  val scalameta = Agg(
+    ivy"org.scalameta:scalameta_sjs1_2.13:${Versions.scalameta}"
   )
 }
 
@@ -35,9 +42,16 @@ trait NoDoc extends ScalaModule {
   }
 }
 
-object scalawind extends ScalaJSModule with SonatypeCentralPublishModule with NoDoc {
+
+trait WebModule extends ScalaJSModule with ScalafixModule with NoDoc {
   def scalaVersion = Versions.scala3
   def scalaJSVersion = Versions.sjs
+
+  def scalacOptions = super.scalacOptions() ++ Seq("-Wunused:all", "-Wunused:imports")
+}
+
+
+object scalawind extends WebModule with SonatypeCentralPublishModule {
   def publishVersion = Versions.scalawind
   def ivyDeps = Dependencies.laminar ++ Dependencies.scalajsDom
   
@@ -54,4 +68,13 @@ object scalawind extends ScalaJSModule with SonatypeCentralPublishModule with No
     def ivyDeps = Dependencies.utest
     def testFramework = "utest.runner.Framework"
   }
+}
+
+object website extends WebModule {
+  def moduleKind = ModuleKind.ESModule
+
+  def ivyDeps = super.ivyDeps() ++
+  Dependencies.laminar ++
+  Dependencies.scalajsDom ++
+  Dependencies.scalameta
 }
