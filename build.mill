@@ -69,6 +69,13 @@ object scalawind extends WebModule with SonatypeCentralPublishModule {
   }
 }
 
+object tailwind extends WebModule {
+  object test extends ScalaJSTests {
+    def mvnDeps = Dependencies.utest
+    def testFramework = "utest.runner.Framework"
+  }
+}
+
 object website extends WebModule {
   def moduleKind = ModuleKind.ESModule
 
