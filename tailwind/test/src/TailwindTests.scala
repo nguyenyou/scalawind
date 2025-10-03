@@ -1,12 +1,13 @@
 package tailwind
 
 import utest.*
-import io.github.nguyenyou.tailwind.*
+import io.github.nguyenyou.tailwind.{*, given}
 
 object TailwindTests extends TestSuite {
   val tests = Tests {
     test("normal") {
-      assert(tw.flex.bg_black.toString == "flex bg-black")
+      val classes: String = tw.flex.bg_black
+      assert(classes == "flex bg-black")
     }
   }
 }
