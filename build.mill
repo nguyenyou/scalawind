@@ -1,47 +1,47 @@
+//| mvnDeps:
+//| - com.goyeau::mill-scalafix::0.6.0
+
 package build
 
-import mill._, scalalib._, scalajslib._, scalajslib.api._, publish._
-import $ivy.`com.lihaoyi::mill-contrib-sonatypecentral:`
-import mill.contrib.sonatypecentral.SonatypeCentralPublishModule
-import $ivy.`com.goyeau::mill-scalafix::0.5.0`
+import mill.*, scalalib.*, scalajslib.*, scalajslib.api.*, publish.*
 import com.goyeau.mill.scalafix.ScalafixModule
+import mill.scalalib.SonatypeCentralPublishModule
 
 object Versions {
-  val scala3 = "3.3.5"
-  val sjs = "1.19.0"
-  val scalajsDom = "2.8.0"
+  val scala3 = "3.3.6"
+  val sjs = "1.20.1"
+  val scalajsDom = "2.8.1"
   val laminar = "17.2.1"
   val scalawind = "1.0.1"
-  val utest = "0.8.5"
+  val utest = "0.9.1"
   val scalameta = "4.13.5"
 }
 
 object Dependencies {
-  val laminar = Agg(
-    ivy"com.raquo::laminar::${Versions.laminar}"
+  val laminar = Seq(
+    mvn"com.raquo::laminar::${Versions.laminar}"
   )
 
-  val scalajsDom = Agg(
-    ivy"org.scala-js::scalajs-dom::${Versions.scalajsDom}"
+  val scalajsDom = Seq(
+    mvn"org.scala-js::scalajs-dom::${Versions.scalajsDom}"
   )
 
-  val utest = Agg(
-    ivy"com.lihaoyi::utest::${Versions.utest}"
-  ) 
+  val utest = Seq(
+    mvn"com.lihaoyi::utest::${Versions.utest}"
+  )
 
-  val scalameta = Agg(
-    ivy"org.scalameta:scalameta_sjs1_2.13:${Versions.scalameta}"
+  val scalameta = Seq(
+    mvn"org.scalameta:scalameta_sjs1_2.13:${Versions.scalameta}"
   )
 }
 
 trait NoDoc extends ScalaModule {
-  override def docJar = T {
-    val outPath = T.dest / "empty-doc.jar"
+  override def docJar = Task {
+    val outPath = Task.dest / "empty-doc.jar"
     os.write(outPath, Array.emptyByteArray)
     PathRef(outPath)
   }
 }
-
 
 trait WebModule extends ScalaJSModule with ScalafixModule with NoDoc {
   def scalaVersion = Versions.scala3
@@ -50,22 +50,21 @@ trait WebModule extends ScalaJSModule with ScalafixModule with NoDoc {
   def scalacOptions = super.scalacOptions() ++ Seq("-Wunused:all", "-Wunused:imports")
 }
 
-
 object scalawind extends WebModule with SonatypeCentralPublishModule {
   def publishVersion = Versions.scalawind
-  def ivyDeps = Dependencies.laminar ++ Dependencies.scalajsDom
-  
+  def mvnDeps = Dependencies.laminar ++ Dependencies.scalajsDom
+
   def pomSettings = PomSettings(
     description = "Zero-Runtime Typesafe TailwindCSS in Scala",
     organization = "io.github.nguyenyou",
     url = "https://github.com/nguyenyou/scalawind",
     licenses = Seq(License.MIT),
     versionControl = VersionControl.github("nguyenyou", "scalawind"),
-    developers = Seq(Developer("nguyenyou", "Nguyen You", "https://github.com/nguyenyou")),
+    developers = Seq(Developer("nguyenyou", "Nguyen You", "https://github.com/nguyenyou"))
   )
 
   object test extends ScalaJSTests {
-    def ivyDeps = Dependencies.utest
+    def mvnDeps = Dependencies.utest
     def testFramework = "utest.runner.Framework"
   }
 }
@@ -73,8 +72,8 @@ object scalawind extends WebModule with SonatypeCentralPublishModule {
 object website extends WebModule {
   def moduleKind = ModuleKind.ESModule
 
-  def ivyDeps = super.ivyDeps() ++
-  Dependencies.laminar ++
-  Dependencies.scalajsDom ++
-  Dependencies.scalameta
+  def mvnDeps = super.mvnDeps() ++
+    Dependencies.laminar ++
+    Dependencies.scalajsDom ++
+    Dependencies.scalameta
 }
