@@ -103202,11 +103202,11 @@ case class Tailwind() {
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
     *   --tw-text-opacity: 1;
+    *   width: fit-content;
+    *   height: 1.25rem;
     *   color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
     *   justify-content: center;
     *   align-items: center;
-    *   width: fit-content;
-    *   height: 1.25rem;
     *   padding-left: .563rem;
     *   padding-right: .563rem;
     *   font-size: .875rem;
@@ -103656,11 +103656,11 @@ case class Tailwind() {
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
     *   --tw-text-opacity: 1;
-    *   color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
     *   width: fit-content;
     *   min-width: 2.75rem;
     *   max-width: 90%;
     *   min-height: 2.75rem;
+    *   color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
     *   padding: .5rem 1rem;
     *   display: block;
     *   position: relative;
@@ -103840,13 +103840,13 @@ case class Tailwind() {
     * .collapse-arrow > .collapse-title:after {
     *   --tw-translate-y: -100%;
     *   --tw-rotate: 45deg;
+    *   width: .5rem;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   top: 1.9rem;
     *   content: "";
     *   transform-origin: 75% 75%;
     *   pointer-events: none;
-    *   width: .5rem;
-    *   height: .5rem;
     *   transition-property: all;
     *   transition-duration: .2s;
     *   transition-timing-function: cubic-bezier(0, 0, .2, 1);
@@ -103918,10 +103918,10 @@ case class Tailwind() {
     * 
     * .collapse-content {
     *   visibility: hidden;
+    *   min-height: 0;
     *   cursor: unset;
     *   grid-row-start: 2;
     *   grid-column-start: 1;
-    *   min-height: 0;
     *   padding-left: 1rem;
     *   padding-right: 1rem;
     *   transition: padding .2s ease-out, background-color .2s ease-out;
@@ -104052,6 +104052,8 @@ case class Tailwind() {
     *   background-color: var(--fallback-b1, oklch(var(--b1) / .5));
     *   --tw-shadow: 0 1px 2px 0 #0000000d;
     *   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    *   width: 2rem;
+    *   height: 2rem;
     *   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     *   outline-offset: -3px;
     *   outline-style: solid;
@@ -104059,8 +104061,6 @@ case class Tailwind() {
     *   --tw-backdrop-blur: blur(8px);
     *   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
     *   border-radius: 9999px;
-    *   width: 2rem;
-    *   height: 2rem;
     *   position: absolute;
     *   top: 50%;
     *   bottom: 0;
@@ -104556,6 +104556,7 @@ case class Tailwind() {
     *   background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
     *   text-transform: uppercase;
     *   --tw-text-opacity: 1;
+    *   height: 100%;
     *   color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
     *   border-width: var(--border-btn, 1px);
     *   animation: button-pop var(--animation-btn, .25s) ease-out;
@@ -104563,7 +104564,6 @@ case class Tailwind() {
     *   flex-shrink: 0;
     *   justify-content: center;
     *   align-items: center;
-    *   height: 100%;
     *   margin-inline-end: 1rem;
     *   padding-left: 1rem;
     *   padding-right: 1rem;
@@ -104917,12 +104917,12 @@ case class Tailwind() {
     *   content: "";
     *   aspect-ratio: 1;
     *   --tw-translate-y: -50%;
+    *   height: .75rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   opacity: .6;
     *   border-width: 2px;
     *   border-color: currentColor;
     *   border-radius: 9999px;
-    *   height: .75rem;
     *   position: absolute;
     *   top: 50%;
     *   left: .5rem;
@@ -104932,12 +104932,12 @@ case class Tailwind() {
     *   content: "";
     *   --tw-translate-y: 25%;
     *   --tw-rotate: -45deg;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   opacity: .6;
     *   border-width: 1px;
     *   border-color: currentColor;
     *   border-radius: 9999px;
-    *   height: .5rem;
     *   position: absolute;
     *   top: 50%;
     *   left: 1.25rem;
@@ -105101,9 +105101,9 @@ case class Tailwind() {
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
     *   --tw-text-opacity: 1;
+    *   min-width: 18rem;
     *   color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
     *   direction: ltr;
-    *   min-width: 18rem;
     *   padding-top: 1.25rem;
     *   padding-bottom: 1.25rem;
     *   position: relative;
@@ -105233,12 +105233,12 @@ case class Tailwind() {
     *   content: "";
     *   aspect-ratio: 1;
     *   --tw-translate-y: -50%;
+    *   height: .75rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   opacity: .6;
     *   border-width: 2px;
     *   border-color: currentColor;
     *   border-radius: 9999px;
-    *   height: .75rem;
     *   position: absolute;
     *   top: 50%;
     *   left: .5rem;
@@ -105248,12 +105248,12 @@ case class Tailwind() {
     *   content: "";
     *   --tw-translate-y: 25%;
     *   --tw-rotate: -45deg;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   opacity: .6;
     *   border-width: 1px;
     *   border-color: currentColor;
     *   border-radius: 9999px;
-    *   height: .5rem;
     *   position: absolute;
     *   top: 50%;
     *   left: 1.25rem;
@@ -105268,13 +105268,13 @@ case class Tailwind() {
     *   overscroll-behavior: contain;
     *   overscroll-behavior: contain;
     *   z-index: 999;
-    *   color: inherit;
-    *   background-color: #0000;
-    *   justify-items: center;
     *   width: 100%;
     *   max-width: none;
     *   height: 100%;
     *   max-height: none;
+    *   color: inherit;
+    *   background-color: #0000;
+    *   justify-items: center;
     *   margin: 0;
     *   padding: 0;
     *   transition-property: transform, opacity, visibility;
@@ -105336,6 +105336,9 @@ case class Tailwind() {
     * .modal-box {
     *   --tw-scale-x: .9;
     *   --tw-scale-y: .9;
+    *   width: 91.6667%;
+    *   max-width: 32rem;
+    *   max-height: calc(100vh - 5em);
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-bottom-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-left-radius: var(--rounded-box, 1rem);
@@ -105346,9 +105349,6 @@ case class Tailwind() {
     *   overscroll-behavior: contain;
     *   grid-row-start: 1;
     *   grid-column-start: 1;
-    *   width: 91.6667%;
-    *   max-width: 32rem;
-    *   max-height: calc(100vh - 5em);
     *   padding: 1.5rem;
     *   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     *   transition-duration: .2s;
@@ -105371,39 +105371,39 @@ case class Tailwind() {
     *   --tw-translate-y: -2.5rem;
     *   --tw-scale-x: 1;
     *   --tw-scale-y: 1;
+    *   width: 100%;
+    *   max-width: none;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-bottom-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-left-radius: var(--rounded-box, 1rem);
     *   border-top-left-radius: 0;
     *   border-top-right-radius: 0;
-    *   width: 100%;
-    *   max-width: none;
     * }
     * 
     * .modal-middle :where(.modal-box) {
     *   --tw-translate-y: 0px;
     *   --tw-scale-x: .9;
     *   --tw-scale-y: .9;
+    *   width: 91.6667%;
+    *   max-width: 32rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-top-left-radius: var(--rounded-box, 1rem);
     *   border-top-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-left-radius: var(--rounded-box, 1rem);
-    *   width: 91.6667%;
-    *   max-width: 32rem;
     * }
     * 
     * .modal-bottom :where(.modal-box) {
     *   --tw-translate-y: 2.5rem;
     *   --tw-scale-x: 1;
     *   --tw-scale-y: 1;
+    *   width: 100%;
+    *   max-width: none;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-top-left-radius: var(--rounded-box, 1rem);
     *   border-top-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-right-radius: 0;
     *   border-bottom-left-radius: 0;
-    *   width: 100%;
-    *   max-width: none;
     * }
     * }}}
     */
@@ -105700,13 +105700,13 @@ case class Tailwind() {
     *   background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
     *   -webkit-appearance: none;
     *   appearance: none;
+    *   width: 1.5rem;
+    *   height: 1.5rem;
     *   color: var(--range-shdw);
     *   --filler-size: 100rem;
     *   --filler-offset: .6rem;
     *   box-shadow: 0 0 0 3px var(--range-shdw) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
     *   border-style: none;
-    *   width: 1.5rem;
-    *   height: 1.5rem;
     *   position: relative;
     *   top: 50%;
     *   transform: translateY(-50%);
@@ -105716,13 +105716,13 @@ case class Tailwind() {
     *   border-radius: var(--rounded-box, 1rem);
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+    *   width: 1.5rem;
+    *   height: 1.5rem;
     *   color: var(--range-shdw);
     *   --filler-size: 100rem;
     *   --filler-offset: .5rem;
     *   box-shadow: 0 0 0 3px var(--range-shdw) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
     *   border-style: none;
-    *   width: 1.5rem;
-    *   height: 1.5rem;
     *   position: relative;
     *   top: 50%;
     * }
@@ -105981,6 +105981,8 @@ case class Tailwind() {
     * }
     * 
     * .steps .step:before {
+    *   width: 100%;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
@@ -105989,8 +105991,6 @@ case class Tailwind() {
     *   content: "";
     *   grid-row-start: 1;
     *   grid-column-start: 1;
-    *   width: 100%;
-    *   height: .5rem;
     *   margin-inline-start: -100%;
     *   top: 0;
     * }
@@ -106002,14 +106002,14 @@ case class Tailwind() {
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
     *   --tw-text-opacity: 1;
+    *   width: 2rem;
+    *   height: 2rem;
     *   color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
     *   border-radius: 9999px;
     *   grid-row-start: 1;
     *   grid-column-start: 1;
     *   place-self: center;
     *   place-items: center;
-    *   width: 2rem;
-    *   height: 2rem;
     *   display: grid;
     *   position: relative;
     * }
@@ -106115,6 +106115,8 @@ case class Tailwind() {
     * }
     * 
     * .steps .step:before {
+    *   width: 100%;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
@@ -106123,8 +106125,6 @@ case class Tailwind() {
     *   content: "";
     *   grid-row-start: 1;
     *   grid-column-start: 1;
-    *   width: 100%;
-    *   height: .5rem;
     *   margin-inline-start: -100%;
     *   top: 0;
     * }
@@ -106136,14 +106136,14 @@ case class Tailwind() {
     *   --tw-bg-opacity: 1;
     *   background-color: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
     *   --tw-text-opacity: 1;
+    *   width: 2rem;
+    *   height: 2rem;
     *   color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
     *   border-radius: 9999px;
     *   grid-row-start: 1;
     *   grid-column-start: 1;
     *   place-self: center;
     *   place-items: center;
-    *   width: 2rem;
-    *   height: 2rem;
     *   display: grid;
     *   position: relative;
     * }
@@ -106179,10 +106179,10 @@ case class Tailwind() {
     * .steps-horizontal .step:before {
     *   --tw-translate-x: 0px;
     *   --tw-translate-y: 0px;
-    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    *   content: "";
     *   width: 100%;
     *   height: .5rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    *   content: "";
     *   margin-inline-start: -100%;
     * }
     * 
@@ -106202,9 +106202,9 @@ case class Tailwind() {
     * .steps-vertical .step:before {
     *   --tw-translate-x: -50%;
     *   --tw-translate-y: -50%;
-    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   width: .5rem;
     *   height: 100%;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   margin-inline-start: 50%;
     * }
     * 
@@ -106405,7 +106405,7 @@ case class Tailwind() {
     *   border-start-end-radius: var(--tab-radius, .5rem);
     * }
     * 
-    * .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]), .tabs-lifted > .tabinput:checked {
+    * .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]), .tabs-lifted > .tab:is(input:checked) {
     *   background-color: var(--tab-bg);
     *   border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
     *   border-inline-start-color: var(--tab-border-color);
@@ -106426,7 +106426,7 @@ case class Tailwind() {
     *   padding-top: 0;
     * }
     * 
-    * .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):before, .tabs-lifted > .tabinput:checked:before {
+    * .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):before, .tabs-lifted > .tab:is(input:checked):before {
     *   z-index: 1;
     *   content: "";
     *   width: calc(100% + var(--tab-radius, .5rem) * 2);
@@ -106451,28 +106451,28 @@ case class Tailwind() {
     *   bottom: 0;
     * }
     * 
-    * .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):first-child:before, .tabs-lifted > .tabinput:checked:first-child:before {
+    * .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):first-child:before, .tabs-lifted > .tab:is(input:checked):first-child:before {
     *   background-image: var(--radius-end);
     *   background-position: 100% 0;
     *   background-image: var(--radius-end);
     *   background-position: 100% 0;
     * }
     * 
-    * [dir="rtl"] .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):first-child:before, [dir="rtl"] .tabs-lifted > .tabinput:checked:first-child:before, .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):last-child:before, .tabs-lifted > .tabinput:checked:last-child:before {
+    * [dir="rtl"] .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):first-child:before, [dir="rtl"] .tabs-lifted > .tab:is(input:checked):first-child:before, .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):last-child:before, .tabs-lifted > .tab:is(input:checked):last-child:before {
     *   background-image: var(--radius-start);
     *   background-position: 0 0;
     *   background-image: var(--radius-start);
     *   background-position: 0 0;
     * }
     * 
-    * [dir="rtl"] .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):last-child:before, [dir="rtl"] .tabs-lifted > .tabinput:checked:last-child:before, .tabs-lifted > :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]) + .tabs-lifted :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):before, .tabs-lifted > .tabinput:checked + .tabs-lifted .tabinput:checked:before {
+    * [dir="rtl"] .tabs-lifted > .tab:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):last-child:before, [dir="rtl"] .tabs-lifted > .tab:is(input:checked):last-child:before, .tabs-lifted > :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]) + .tabs-lifted :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):before, .tabs-lifted > .tab:is(input:checked) + .tabs-lifted .tab:is(input:checked):before {
     *   background-image: var(--radius-end);
     *   background-position: 100% 0;
     *   background-image: var(--radius-end);
     *   background-position: 100% 0;
     * }
     * 
-    * .tabs-lifted > :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]) + .tabs-lifted :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):before, .tabs-lifted > .tabinput:checked + .tabs-lifted .tabinput:checked:before {
+    * .tabs-lifted > :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]) + .tabs-lifted :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]):before, .tabs-lifted > .tab:is(input:checked) + .tabs-lifted .tab:is(input:checked):before {
     *   background-image: var(--radius-end);
     *   background-position: 100% 0;
     * }
@@ -106839,6 +106839,8 @@ case class Tailwind() {
     *   cursor: pointer;
     *   appearance: none;
     *   border-radius: var(--rounded-badge, 1.9rem);
+    *   width: 3rem;
+    *   height: 1.5rem;
     *   color: var(--fallback-bc, oklch(var(--bc) / .5));
     *   transition: background, box-shadow var(--animation-input, .2s) ease-out;
     *   box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
@@ -106846,8 +106848,6 @@ case class Tailwind() {
     *   border-width: 1px;
     *   border-color: currentColor;
     *   flex-shrink: 0;
-    *   width: 3rem;
-    *   height: 1.5rem;
     * }
     * 
     * [dir="rtl"] .toggle {
@@ -107287,13 +107287,13 @@ case class Tailwind() {
     * .collapse-arrow > .collapse-title:after {
     *   --tw-translate-y: -100%;
     *   --tw-rotate: 45deg;
+    *   width: .5rem;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   top: 1.9rem;
     *   content: "";
     *   transform-origin: 75% 75%;
     *   pointer-events: none;
-    *   width: .5rem;
-    *   height: .5rem;
     *   transition-property: all;
     *   transition-duration: .2s;
     *   transition-timing-function: cubic-bezier(0, 0, .2, 1);
@@ -108258,12 +108258,12 @@ case class Tailwind() {
     *   content: "";
     *   aspect-ratio: 1;
     *   --tw-translate-y: -50%;
+    *   height: .75rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   opacity: .6;
     *   border-width: 2px;
     *   border-color: currentColor;
     *   border-radius: 9999px;
-    *   height: .75rem;
     *   position: absolute;
     *   top: 50%;
     *   left: .5rem;
@@ -108273,12 +108273,12 @@ case class Tailwind() {
     *   content: "";
     *   --tw-translate-y: 25%;
     *   --tw-rotate: -45deg;
+    *   height: .5rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   opacity: .6;
     *   border-width: 1px;
     *   border-color: currentColor;
     *   border-radius: 9999px;
-    *   height: .5rem;
     *   position: absolute;
     *   top: 50%;
     *   left: 1.25rem;
@@ -110019,13 +110019,13 @@ case class Tailwind() {
     *   --tw-translate-y: -2.5rem;
     *   --tw-scale-x: 1;
     *   --tw-scale-y: 1;
+    *   width: 100%;
+    *   max-width: none;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-bottom-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-left-radius: var(--rounded-box, 1rem);
     *   border-top-left-radius: 0;
     *   border-top-right-radius: 0;
-    *   width: 100%;
-    *   max-width: none;
     * }
     * }}}
     */
@@ -110039,13 +110039,13 @@ case class Tailwind() {
     *   --tw-translate-y: 0px;
     *   --tw-scale-x: .9;
     *   --tw-scale-y: .9;
+    *   width: 91.6667%;
+    *   max-width: 32rem;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-top-left-radius: var(--rounded-box, 1rem);
     *   border-top-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-left-radius: var(--rounded-box, 1rem);
-    *   width: 91.6667%;
-    *   max-width: 32rem;
     * }
     * }}}
     */
@@ -110059,13 +110059,13 @@ case class Tailwind() {
     *   --tw-translate-y: 2.5rem;
     *   --tw-scale-x: 1;
     *   --tw-scale-y: 1;
+    *   width: 100%;
+    *   max-width: none;
     *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   border-top-left-radius: var(--rounded-box, 1rem);
     *   border-top-right-radius: var(--rounded-box, 1rem);
     *   border-bottom-right-radius: 0;
     *   border-bottom-left-radius: 0;
-    *   width: 100%;
-    *   max-width: none;
     * }
     * }}}
     */
@@ -110390,10 +110390,10 @@ case class Tailwind() {
     * .steps-horizontal .step:before {
     *   --tw-translate-x: 0px;
     *   --tw-translate-y: 0px;
-    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    *   content: "";
     *   width: 100%;
     *   height: .5rem;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    *   content: "";
     *   margin-inline-start: -100%;
     * }
     * 
@@ -110422,9 +110422,9 @@ case class Tailwind() {
     * .steps-vertical .step:before {
     *   --tw-translate-x: -50%;
     *   --tw-translate-y: -50%;
-    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   width: .5rem;
     *   height: 100%;
+    *   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     *   margin-inline-start: 50%;
     * }
     * 
@@ -110864,10 +110864,10 @@ case class Tailwind() {
     * 
     * .tooltip:before {
     *   background-color: var(--tooltip-color);
+    *   max-width: 20rem;
     *   color: var(--tooltip-text-color);
     *   border-radius: .25rem;
     *   width: max-content;
-    *   max-width: 20rem;
     *   padding: .25rem .5rem;
     *   font-size: .875rem;
     *   line-height: 1.25rem;

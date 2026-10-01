@@ -6,6 +6,7 @@
     "test:scala": "scala-cli test src --test-only 'tests.only*'"
   },
   "dependencies": {
-    "scalawind": "link:scalawind"
-  }
+    "scalawind": "workspace:*"
+  },
+  "private": true
 }

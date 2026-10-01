@@ -6,9 +6,10 @@
     "test:scala": "scala-cli test src --test-only 'tests.only*'"
   },
   "dependencies": {
-    "scalawind": "link:scalawind"
+    "scalawind": "workspace:*"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
-  }
+    "tailwindcss": "^3.4.19"
+  },
+  "private": true
 }

@@ -16,8 +16,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
 
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
@@ -26,11 +28,11 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pnpm install
+          bun install --frozen-lockfile
 
       - name: Build
         run: |
-          pnpm --filter scalawind build
+          bun run --filter scalawind build
           cp README.md packages/scalawind/README.md
 
       - name: Create Release Pull Request or Publish to npm
@@ -38,7 +40,8 @@ jobs:
         uses: changesets/action@v1
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: pnpm release
+          version: bunx changeset version
+          publish: bun run release
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -15,13 +15,14 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
       # - uses: coursier/cache-action@v6
       - uses: VirtusLab/scala-cli-setup@main
         with:
           jvm: adopt:11
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
@@ -29,24 +30,18 @@ jobs:
 
       - name: Install Dependencies & Build & Test Generator
         run: |
-          pnpm install
-          pnpm build
-          pnpm test
-
-      - name: Register Link Package
-        run: bun link
-        working-directory: ./packages/scalawind
+          bun install --frozen-lockfile
+          bun run build
+          bun run test
 
       - name: Integration Test
         run: |
-          bun install
-          bun generate
+          bun run generate
           scala-cli test src
         working-directory: ./integration
 
       - name: Camelcase Integration Test
         run: |
-          bun install
-          bun generate
+          bun run generate
           scala-cli test src
         working-directory: ./camelcase-integration

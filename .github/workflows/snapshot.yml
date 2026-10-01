@@ -16,8 +16,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
       
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
 
       - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
@@ -34,16 +36,16 @@ jobs:
           
       - name: Install Dependencies
         run: |
-          pnpm install
+          bun install --frozen-lockfile
 
       - name: Build
         run: |
-          pnpm build
+          bun run build
           cp README.md packages/scalawind/README.md
 
       - name: Snapshot Release
         run: |
-          pnpm release:snapshot
+          bun run release:snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

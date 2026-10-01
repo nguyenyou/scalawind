@@ -15,7 +15,7 @@ $ npm install
 # or
 $ bun install
 # or
-$ pnpm install
+$ bun install
 # or
 $ yarn install
 ```
@@ -27,7 +27,7 @@ $ npm run dev:scala
 # or
 $ bun dev:scala
 # or
-$ pnpm dev:scala
+$ bun run dev:scala
 # or
 $ yarn dev:scala
 ```
@@ -39,7 +39,7 @@ $ npm run dev
 # or
 $ bun dev
 # or
-$ pnpm dev
+$ bun run dev
 # or
 $ yarn dev
 ```

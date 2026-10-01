@@ -20,9 +20,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
             node-version: 23
-      - run: |
-          corepack enable
-          pnpm install
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
+      - run: bun install --frozen-lockfile
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -30,7 +31,7 @@ jobs:
       - name: Build ScalaJS
         run: ./mill -i website.fullLinkJS
       - name: Build Vite
-        run: pnpm --filter website build
+        run: bun run --filter website build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
