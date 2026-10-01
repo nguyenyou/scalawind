@@ -27,7 +27,7 @@
     },
     "packages/scalawind": {
       "name": "scalawind",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "bin": "./dist/index.js",
       "dependencies": {
         "@swc/core": "^1.3.55",
